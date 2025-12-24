@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "id": "kin-001", "topic": "kinematics", "subtopic": "A.1 Kinematics", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A car travels 100 m in 10 s at constant speed. What is its speed?",
+      "markscheme_answer": "Speed = distance / time = 100 m / 10 s = 10 m/s"
+    },
+    {
+      "id": "kin-002", "topic": "kinematics", "subtopic": "A.1 Kinematics", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A ball is dropped from rest and falls for 3 s. How far does it fall? (g = 10 m/s²)",
+      "markscheme_answer": "s = ½gt² = ½ × 10 × 9 = 45 m"
+    },
+    {
+      "id": "kin-003", "topic": "kinematics", "subtopic": "A.1 Kinematics", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A car accelerates from 5 m/s to 25 m/s over a distance of 60 m. What is its acceleration?",
+      "markscheme_answer": "v² = u² + 2as → 625 = 25 + 2a(60) → a = 600/120 = 5 m/s²"
+    },
+    {
+      "id": "kin-004", "topic": "kinematics", "subtopic": "A.1 Kinematics", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A projectile is launched at 30° above horizontal with initial speed 20 m/s. Find the maximum height reached. (g = 10 m/s²)",
+      "markscheme_answer": "v_y = 20 sin(30°) = 10 m/s. At max height, v = 0: h = v²/(2g) = 100/20 = 5 m"
+    },
+    {
+      "id": "kin-005", "topic": "kinematics", "subtopic": "A.1 Kinematics", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "Two balls are thrown simultaneously: Ball A is thrown upward at 15 m/s from ground level, Ball B is dropped from 25 m height. When and where do they meet? (g = 10 m/s²)",
+      "markscheme_answer": "Position A: y_A = 15t - 5t². Position B: y_B = 25 - 5t². When they meet: 15t - 5t² = 25 - 5t² → 15t = 25 → t = 5/3 s. Height: y = 15(5/3) - 5(25/9) = 25 - 125/9 = 100/9 ≈ 11.1 m"
+    },
+    {
+      "id": "for-001", "topic": "forces-momentum", "subtopic": "A.2 Forces", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "A 2 kg object experiences a net force of 10 N. What is its acceleration?",
+      "markscheme_answer": "a = F/m = 10/2 = 5 m/s²"
+    },
+    {
+      "id": "for-002", "topic": "forces-momentum", "subtopic": "A.2 Forces", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 5 kg box rests on a horizontal surface. The coefficient of static friction is 0.4. What is the maximum horizontal force that can be applied before the box moves? (g = 10 m/s²)",
+      "markscheme_answer": "F_max = μN = μmg = 0.4 × 5 × 10 = 20 N"
+    },
+    {
+      "id": "for-003", "topic": "forces-momentum", "subtopic": "A.2 Forces", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 3 kg object moving at 4 m/s collides with a stationary 1 kg object. They stick together. Find their common velocity after collision.",
+      "markscheme_answer": "Conservation of momentum: m₁v₁ + m₂v₂ = (m₁+m₂)v. 3×4 + 0 = 4v → v = 3 m/s"
+    },
+    {
+      "id": "for-004", "topic": "forces-momentum", "subtopic": "A.2 Forces", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 2 kg block on a 30° incline is connected by a massless rope over a pulley to a hanging 3 kg mass. Find the acceleration of the system. (μ = 0.2, g = 10 m/s²)",
+      "markscheme_answer": "For hanging mass: 30 - T = 3a. For block: T - 2g(sin30° + μcos30°) = 2a. T - 10 - 0.2×2×10×0.866 = 2a. T - 13.46 = 2a. Solving: a = (30 - 13.46)/5 = 3.3 m/s²"
+    },
+    {
+      "id": "for-005", "topic": "forces-momentum", "subtopic": "A.2 Forces", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A rocket of initial mass 1000 kg ejects gas at 500 m/s relative to the rocket at a rate of 5 kg/s. What is the initial acceleration of the rocket if it launches vertically? (g = 10 m/s²)",
+      "markscheme_answer": "Thrust = v_exhaust × dm/dt = 500 × 5 = 2500 N. Weight = 1000 × 10 = 10000 N. Net force = 2500 - 10000 = -7500 N (cannot lift off initially). If thrust exceeds weight: a = (F - mg)/m"
+    },
+    {
+      "id": "wep-001", "topic": "work-energy-power", "subtopic": "A.3 Work, Energy, Power", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "A 10 N force moves an object 5 m in the direction of the force. Calculate the work done.",
+      "markscheme_answer": "W = Fd = 10 × 5 = 50 J"
+    },
+    {
+      "id": "wep-002", "topic": "work-energy-power", "subtopic": "A.3 Work, Energy, Power", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 2 kg ball is dropped from 20 m. What is its speed just before hitting the ground? (g = 10 m/s²)",
+      "markscheme_answer": "mgh = ½mv² → v = √(2gh) = √(2×10×20) = 20 m/s"
+    },
+    {
+      "id": "wep-003", "topic": "work-energy-power", "subtopic": "A.3 Work, Energy, Power", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 1500 kg car accelerates from rest to 20 m/s in 10 s. Calculate the average power developed.",
+      "markscheme_answer": "KE = ½mv² = ½×1500×400 = 300,000 J. Power = Work/time = 300,000/10 = 30,000 W = 30 kW"
+    },
+    {
+      "id": "wep-004", "topic": "work-energy-power", "subtopic": "A.3 Work, Energy, Power", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A spring with k = 200 N/m is compressed 0.3 m. A 0.5 kg ball is placed against it and released. The ball then slides up a frictionless ramp. What maximum height does it reach?",
+      "markscheme_answer": "Spring PE = ½kx² = ½×200×0.09 = 9 J. At max height: mgh = 9 → h = 9/(0.5×10) = 1.8 m"
+    },
+    {
+      "id": "wep-005", "topic": "work-energy-power", "subtopic": "A.3 Work, Energy, Power", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A roller coaster car of mass 500 kg starts from rest at height 40 m. It loses 20% of its energy to friction by the time it reaches a loop of radius 10 m. Find the normal force on the car at the top of the loop.",
+      "markscheme_answer": "Initial PE = mgh = 500×10×40 = 200,000 J. After friction: 0.8×200,000 = 160,000 J. At top of loop (h=20m): PE = 100,000 J, KE = 60,000 J. v² = 2×60,000/500 = 240. At top: N + mg = mv²/r → N = m(v²/r - g) = 500(240/10 - 10) = 500×14 = 7000 N"
+    },
+    {
+      "id": "tet-001", "topic": "thermal-energy-transfers", "subtopic": "B.1 Thermal Energy", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "What type of heat transfer occurs primarily through electromagnetic waves?",
+      "markscheme_answer": "Radiation"
+    },
+    {
+      "id": "tet-002", "topic": "thermal-energy-transfers", "subtopic": "B.1 Thermal Energy", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "How much heat is needed to raise the temperature of 2 kg of water by 10°C? (c = 4200 J/kg·K)",
+      "markscheme_answer": "Q = mcΔT = 2 × 4200 × 10 = 84,000 J = 84 kJ"
+    },
+    {
+      "id": "tet-003", "topic": "thermal-energy-transfers", "subtopic": "B.1 Thermal Energy", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 0.5 kg block of copper at 100°C is placed in 2 kg of water at 20°C. Find the final equilibrium temperature. (c_copper = 400 J/kg·K, c_water = 4200 J/kg·K)",
+      "markscheme_answer": "Heat lost = Heat gained: 0.5×400×(100-T) = 2×4200×(T-20). 200(100-T) = 8400(T-20). 20000 - 200T = 8400T - 168000. 188000 = 8600T. T ≈ 21.9°C"
+    },
+    {
+      "id": "tet-004", "topic": "thermal-energy-transfers", "subtopic": "B.1 Thermal Energy", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A metal rod of length 1 m and cross-sectional area 0.01 m² connects two reservoirs at 100°C and 0°C. If k = 50 W/m·K, calculate the rate of heat transfer.",
+      "markscheme_answer": "P = kAΔT/L = 50 × 0.01 × 100 / 1 = 50 W"
+    },
+    {
+      "id": "tet-005", "topic": "thermal-energy-transfers", "subtopic": "B.1 Thermal Energy", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A black body sphere of radius 0.1 m and emissivity 0.9 is at 500 K in surroundings at 300 K. Calculate the net power radiated. (σ = 5.67×10⁻⁸ W/m²·K⁴)",
+      "markscheme_answer": "A = 4πr² = 4π(0.01) = 0.126 m². P_net = εσA(T⁴ - T_s⁴) = 0.9 × 5.67×10⁻⁸ × 0.126 × (500⁴ - 300⁴) = 0.9 × 5.67×10⁻⁸ × 0.126 × (6.25×10¹⁰ - 8.1×10⁹) = 346 W"
+    },
+    {
+      "id": "wm-001", "topic": "wave-model", "subtopic": "C.2 Wave Model", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "What is the relationship between wave speed (v), frequency (f), and wavelength (λ)?",
+      "markscheme_answer": "v = fλ"
+    },
+    {
+      "id": "wm-002", "topic": "wave-model", "subtopic": "C.2 Wave Model", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A wave has frequency 500 Hz and wavelength 0.68 m. Calculate the wave speed.",
+      "markscheme_answer": "v = fλ = 500 × 0.68 = 340 m/s"
+    },
+    {
+      "id": "wm-003", "topic": "wave-model", "subtopic": "C.2 Wave Model", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A transverse wave on a string has amplitude 5 cm and period 0.2 s. The string is 4 m long with 3 complete wavelengths. Find the wave speed.",
+      "markscheme_answer": "λ = 4/3 m. f = 1/T = 1/0.2 = 5 Hz. v = fλ = 5 × 4/3 = 20/3 ≈ 6.67 m/s"
+    },
+    {
+      "id": "wm-004", "topic": "wave-model", "subtopic": "C.2 Wave Model", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "Two coherent sources emit waves of wavelength 2 cm. A point P is 30 cm from one source and 34 cm from the other. Is there constructive or destructive interference at P?",
+      "markscheme_answer": "Path difference = 34 - 30 = 4 cm = 2λ. Since path difference = nλ (n = 2), there is constructive interference."
+    },
+    {
+      "id": "wm-005", "topic": "wave-model", "subtopic": "C.2 Wave Model", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "Light of wavelength 600 nm passes through a double slit with separation 0.1 mm. The screen is 2 m away. Calculate the distance between the central maximum and the third bright fringe.",
+      "markscheme_answer": "y = mλD/d = 3 × 600×10⁻⁹ × 2 / (0.1×10⁻³) = 3 × 1.2×10⁻⁵ / 10⁻⁴ = 0.036 m = 36 mm"
+    },
+    {
+      "id": "swr-001", "topic": "standing-waves-resonance", "subtopic": "C.4 Standing Waves", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "What are the points of zero displacement in a standing wave called?",
+      "markscheme_answer": "Nodes"
+    },
+    {
+      "id": "swr-002", "topic": "standing-waves-resonance", "subtopic": "C.4 Standing Waves", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A string fixed at both ends has length 1.2 m. What is the wavelength of the third harmonic?",
+      "markscheme_answer": "For nth harmonic: L = nλ/2. For n=3: λ = 2L/3 = 2.4/3 = 0.8 m"
+    },
+    {
+      "id": "swr-003", "topic": "standing-waves-resonance", "subtopic": "C.4 Standing Waves", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A pipe open at both ends has length 0.85 m. The speed of sound is 340 m/s. What is the fundamental frequency?",
+      "markscheme_answer": "For open pipe: f₁ = v/(2L) = 340/(2×0.85) = 200 Hz"
+    },
+    {
+      "id": "swr-004", "topic": "standing-waves-resonance", "subtopic": "C.4 Standing Waves", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A pipe closed at one end resonates at 170 Hz in its fundamental mode. What is the frequency of the next resonant mode? (Speed of sound = 340 m/s)",
+      "markscheme_answer": "Closed pipe: only odd harmonics. Next mode is 3rd harmonic: f₃ = 3f₁ = 3 × 170 = 510 Hz"
+    },
+    {
+      "id": "swr-005", "topic": "standing-waves-resonance", "subtopic": "C.4 Standing Waves", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "Two tuning forks of frequencies 256 Hz and 260 Hz produce beats. A string resonates with the beat frequency. If the string has mass per unit length 0.01 kg/m and length 0.4 m, what tension produces resonance in the fundamental mode?",
+      "markscheme_answer": "Beat frequency = |260-256| = 4 Hz. For fundamental: f = (1/2L)√(T/μ). 4 = (1/0.8)√(T/0.01). 3.2 = √(T/0.01). T = 0.01 × 10.24 = 0.1024 N"
+    },
+    {
+      "id": "cc-001", "topic": "current-circuits", "subtopic": "B.5 Circuits", "level": "SL", "paper": "Paper 1", "difficulty": "baby",
+      "tags": ["No Calculator"],
+      "question_text": "State Ohm's Law.",
+      "markscheme_answer": "V = IR (Voltage equals current times resistance)"
+    },
+    {
+      "id": "cc-002", "topic": "current-circuits", "subtopic": "B.5 Circuits", "level": "SL", "paper": "Paper 1", "difficulty": "beginner",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A 12 V battery is connected to a 4 Ω resistor. Calculate the current flowing.",
+      "markscheme_answer": "I = V/R = 12/4 = 3 A"
+    },
+    {
+      "id": "cc-003", "topic": "current-circuits", "subtopic": "B.5 Circuits", "level": "SL", "paper": "Paper 2", "difficulty": "intermediate",
+      "tags": ["Calculator Allowed"],
+      "question_text": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. Find the equivalent resistance.",
+      "markscheme_answer": "1/R = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. R = 1 Ω"
+    },
+    {
+      "id": "cc-004", "topic": "current-circuits", "subtopic": "B.5 Circuits", "level": "HL", "paper": "Paper 2", "difficulty": "advanced",
+      "tags": ["Calculator Allowed"],
+      "question_text": "A cell of emf 6 V and internal resistance 0.5 Ω is connected to an external resistance of 2.5 Ω. Find the terminal voltage and power dissipated in the external resistor.",
+      "markscheme_answer": "I = E/(R+r) = 6/3 = 2 A. Terminal voltage V = E - Ir = 6 - 1 = 5 V. Power = I²R = 4 × 2.5 = 10 W"
+    },
+    {
+      "id": "cc-005", "topic": "current-circuits", "subtopic": "B.5 Circuits", "level": "HL", "paper": "Paper 2", "difficulty": "monster",
+      "tags": ["Calculator Allowed"],
+      "question_text": "In a Wheatstone bridge, R₁ = 100 Ω, R₂ = 200 Ω, R₃ = 150 Ω. What value of R₄ balances the bridge? If the galvanometer has resistance 50 Ω and the bridge is supplied by 6 V, find the galvanometer current when R₄ = 250 Ω.",
+      "markscheme_answer": "For balance: R₁/R₂ = R₃/R₄ → 100/200 = 150/R₄ → R₄ = 300 Ω. When R₄ = 250 Ω, bridge is unbalanced. Use Thevenin equivalent or mesh analysis to find galvanometer current."
+    }
+  ]
+}

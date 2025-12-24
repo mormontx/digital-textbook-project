@@ -70,86 +70,46 @@
         </div>
     </div>
 
-    <!-- Monster Mode View -->
-    <div class="view-container monster-mode" id="monster-view" style="display: none;">
-        <!-- Corner accent overlays -->
-        <div class="corner-accent-tr"></div>
-        <div class="corner-accent-bl"></div>
-        <div class="corner-accent-br"></div>
-        <div class="monster-container">
-            <!-- Arena Header -->
-            <div class="arena-header">
-                <h1 class="arena-title"><span class="title-physics">PHYSICS</span> <span class="title-monster">MONSTER</span></h1>
-                <p class="arena-subtitle">Prove Your Mastery</p>
-            </div>
-
-            <!-- Arena Selection (shown when no challenge active) -->
-            <div class="arena-selection" id="arena-selection">
-                <h2 class="arena-prompt">SELECT YOUR ARENA</h2>
-                <div class="arena-grid" id="arena-grid">
-                    <!-- Topic cards will be dynamically generated -->
+    <!-- Question Bank Mode (Physics Monster) -->
+    <div class="view-container question-bank-mode" id="monster-view" style="display: none; background: linear-gradient(135deg, #0a0014 0%, #1a0028 50%, #0a0014 100%) !important;">
+        <div class="qb-container">
+            <!-- Left Sidebar with Topics and Progress -->
+            <aside class="qb-sidebar" id="qb-sidebar">
+                <div class="qb-sidebar-header">
+                    <h2>Become a Physics Monster</h2>
+                    <p class="qb-sidebar-subtitle">Practice Problems</p>
                 </div>
-            </div>
+                <nav class="qb-topics" id="qb-topics">
+                    <!-- Topics with progress rings will be dynamically generated -->
+                </nav>
+            </aside>
 
-            <!-- Challenge Area (shown during challenge) -->
-            <div class="challenge-area" id="challenge-area" style="display: none;">
-                <div class="challenge-header">
-                    <div class="challenge-topic" id="challenge-topic">Kinematics</div>
-                    <div class="challenge-progress">
-                        <span id="question-number">Question 1/5</span>
-                        <div class="progress-dots" id="progress-dots">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
-                    <div class="difficulty-indicator" id="difficulty-indicator">
-                        <span class="difficulty-label">Difficulty:</span>
-                        <span class="difficulty-stars" id="difficulty-stars">*</span>
-                    </div>
+            <!-- Main Content Area -->
+            <main class="qb-main">
+                <!-- Top Filters -->
+                <div class="qb-filters" id="qb-filters">
+                    <select id="filter-status" class="qb-filter-select">
+                        <option value="all">All Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="incomplete">Incomplete</option>
+                    </select>
+                    <select id="filter-paper" class="qb-filter-select">
+                        <option value="all">All Papers</option>
+                        <option value="Paper 1">Paper 1</option>
+                        <option value="Paper 2">Paper 2</option>
+                    </select>
+                    <select id="filter-level" class="qb-filter-select">
+                        <option value="all">All Levels</option>
+                        <option value="SL">SL</option>
+                        <option value="HL">HL</option>
+                    </select>
                 </div>
 
-                <div class="question-display" id="question-display">
-                    <p class="question-text" id="question-text">Question text goes here...</p>
+                <!-- Question Cards Container -->
+                <div class="qb-questions" id="qb-questions">
+                    <!-- Question cards will be dynamically generated -->
                 </div>
-
-                <div class="hint-container">
-                    <button class="hint-btn" id="hint-btn" onclick="showHint()">
-                        <span class="hint-icon">?</span> Need a hint?
-                    </button>
-                </div>
-                <div class="hint-display" id="hint-display" style="display: none;">
-                    <span class="hint-label">HINT:</span>
-                    <p id="hint-text"></p>
-                </div>
-
-                <div class="answer-area" id="answer-area">
-                    <!-- Answer options will be dynamically generated -->
-                </div>
-
-                <button class="submit-btn" id="submit-btn" disabled>SUBMIT</button>
-            </div>
-
-            <!-- Report Card (shown after challenge complete) -->
-            <div class="report-card" id="report-card" style="display: none;">
-                <div class="report-header">
-                    <h2>CHALLENGE COMPLETE</h2>
-                </div>
-                <div class="report-level" id="report-level">
-                    <span class="level-icon" id="level-icon">M</span>
-                    <span class="level-title" id="level-title">MONSTER</span>
-                </div>
-                <div class="report-score" id="report-score">5/5</div>
-                <p class="report-quote" id="report-quote">You are the Physics Monster!</p>
-                
-                <div class="report-breakdown" id="report-breakdown">
-                    <!-- Question breakdown will be shown here -->
-                </div>
-
-                <button class="arena-btn" id="back-to-arena">BACK TO ARENA</button>
-            </div>
+            </main>
         </div>
     </div>
 

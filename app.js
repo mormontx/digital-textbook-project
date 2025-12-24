@@ -848,3 +848,216 @@ function resetHint() {
         hintBtn.innerHTML = '<span class="hint-icon">?</span> Need a hint?';
     }
 }
+
+// ===========================
+// Question Bank Mode
+// ===========================
+let questionBankData = null;
+let completedQuestions = JSON.parse(localStorage.getItem('qb_completed') || '[]');
+let currentTopicFilter = 'all';
+let currentStatusFilter = 'all';
+let currentPaperFilter = 'all';
+let currentLevelFilter = 'all';
+
+async function loadQuestionBankData() {
+    try {
+        const response = await fetch('data/question-bank.json');
+        questionBankData = await response.json();
+        return questionBankData;
+    } catch (error) {
+        console.error('Error loading question bank data:', error);
+        return null;
+    }
+}
+
+async function initQuestionBankMode() {
+    if (!questionBankData) {
+        await loadQuestionBankData();
+    }
+    
+    renderQBSidebar();
+    setupQBFilters();
+    renderQBQuestions();
+}
+
+function renderQBSidebar() {
+    const sidebar = document.getElementById('qb-topics');
+    if (!sidebar || !navigationData) return;
+    
+    let html = '';
+    
+    navigationData.coreThemes.forEach(theme => {
+        // Count questions for this theme
+        const themeQuestions = questionBankData?.questions?.filter(q => 
+            theme.topics.some(t => t.id === q.topic)
+        ) || [];
+        const completed = themeQuestions.filter(q => completedQuestions.includes(q.id)).length;
+        const total = themeQuestions.length;
+        const percent = total > 0 ? (completed / total) * 100 : 0;
+        const circumference = 2 * Math.PI * 14;
+        const offset = circumference - (percent / 100) * circumference;
+        
+        html += `
+            <div class="qb-topic-item" data-theme="${theme.id}" onclick="filterByTheme('${theme.id}')">
+                <div class="qb-progress-ring">
+                    <svg width="36" height="36" viewBox="0 0 36 36">
+                        <circle class="bg" cx="18" cy="18" r="14"/>
+                        <circle class="progress" cx="18" cy="18" r="14" 
+                            stroke-dasharray="${circumference}" 
+                            stroke-dashoffset="${offset}"/>
+                    </svg>
+                    <span class="qb-progress-text">${completed}/${total}</span>
+                </div>
+                <span class="qb-topic-name">${theme.title}</span>
+            </div>
+        `;
+        
+        // Subtopics
+        html += '<div class="qb-subtopics">';
+        theme.topics.forEach(topic => {
+            html += `
+                <div class="qb-subtopic-item" data-topic="${topic.id}" onclick="filterByTopic('${topic.id}')">
+                    ${topic.title}
+                </div>
+            `;
+        });
+        html += '</div>';
+    });
+    
+    sidebar.innerHTML = html;
+}
+
+function setupQBFilters() {
+    const statusFilter = document.getElementById('filter-status');
+    const paperFilter = document.getElementById('filter-paper');
+    const levelFilter = document.getElementById('filter-level');
+    
+    if (statusFilter) {
+        statusFilter.addEventListener('change', (e) => {
+            currentStatusFilter = e.target.value;
+            renderQBQuestions();
+        });
+    }
+    
+    if (paperFilter) {
+        paperFilter.addEventListener('change', (e) => {
+            currentPaperFilter = e.target.value;
+            renderQBQuestions();
+        });
+    }
+    
+    if (levelFilter) {
+        levelFilter.addEventListener('change', (e) => {
+            currentLevelFilter = e.target.value;
+            renderQBQuestions();
+        });
+    }
+}
+
+function filterByTheme(themeId) {
+    currentTopicFilter = themeId;
+    document.querySelectorAll('.qb-topic-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.theme === themeId);
+    });
+    renderQBQuestions();
+}
+
+function filterByTopic(topicId) {
+    currentTopicFilter = topicId;
+    document.querySelectorAll('.qb-subtopic-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.topic === topicId);
+    });
+    renderQBQuestions();
+}
+
+function renderQBQuestions() {
+    const container = document.getElementById('qb-questions');
+    if (!container || !questionBankData) return;
+    
+    let questions = questionBankData.questions || [];
+    
+    // Apply filters
+    if (currentTopicFilter !== 'all') {
+        questions = questions.filter(q => 
+            q.topic === currentTopicFilter || 
+            navigationData.coreThemes.find(t => t.id === currentTopicFilter)?.topics.some(topic => topic.id === q.topic)
+        );
+    }
+    
+    if (currentStatusFilter === 'completed') {
+        questions = questions.filter(q => completedQuestions.includes(q.id));
+    } else if (currentStatusFilter === 'incomplete') {
+        questions = questions.filter(q => !completedQuestions.includes(q.id));
+    }
+    
+    if (currentPaperFilter !== 'all') {
+        questions = questions.filter(q => q.paper === currentPaperFilter);
+    }
+    
+    if (currentLevelFilter !== 'all') {
+        questions = questions.filter(q => q.level === currentLevelFilter);
+    }
+    
+    if (questions.length === 0) {
+        container.innerHTML = '<p style="color: #888; text-align: center; padding: 2rem;">No questions match your filters.</p>';
+        return;
+    }
+    
+    let html = '';
+    questions.forEach((q, idx) => {
+        const levelClass = q.level === 'HL' ? 'hl' : 'sl';
+        const paperClass = q.paper === 'Paper 1' ? 'paper1' : 'paper2';
+        
+        html += `
+            <div class="qb-question-card" data-id="${q.id}">
+                <div class="qb-card-header">
+                    <span class="qb-question-number">Question ${idx + 1}</span>
+                    <div class="qb-tags">
+                        <span class="qb-tag ${levelClass}">${q.level}</span>
+                        <span class="qb-tag ${paperClass}">${q.paper}</span>
+                        <span class="qb-tag ${q.difficulty}">${q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1)}</span>
+                        ${q.tags?.map(tag => `<span class="qb-tag">${tag}</span>`).join('') || ''}
+                    </div>
+                </div>
+                <div class="qb-question-text">${q.question_text}</div>
+                <div class="qb-answer-area">
+                    <textarea class="qb-answer-textarea" placeholder="Write your answer here..."></textarea>
+                </div>
+                <div class="qb-card-actions">
+                    <button class="qb-btn qb-btn-markscheme" onclick="toggleMarkscheme('${q.id}')">Markscheme</button>
+                    <button class="qb-btn qb-btn-grade" onclick="gradeAnswer('${q.id}')">Grade Answer</button>
+                </div>
+                <div class="qb-markscheme" id="markscheme-${q.id}">
+                    <div class="qb-markscheme-label">Markscheme</div>
+                    <div class="qb-markscheme-content">${q.markscheme_answer}</div>
+                </div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+}
+
+function toggleMarkscheme(questionId) {
+    const markscheme = document.getElementById(`markscheme-${questionId}`);
+    if (markscheme) {
+        markscheme.classList.toggle('visible');
+    }
+    
+    // Mark as completed
+    if (!completedQuestions.includes(questionId)) {
+        completedQuestions.push(questionId);
+        localStorage.setItem('qb_completed', JSON.stringify(completedQuestions));
+        renderQBSidebar(); // Update progress rings
+    }
+}
+
+function gradeAnswer(questionId) {
+    // For now, just reveal the markscheme and mark as completed
+    toggleMarkscheme(questionId);
+}
+
+// Override initMonsterMode to use Question Bank
+async function initMonsterMode() {
+    await initQuestionBankMode();
+}
