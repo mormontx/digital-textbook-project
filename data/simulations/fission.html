@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Fission: Enrichment & Critical Mass</title>
+    <style>
+        :root {
+            --primary-text: #2c3e50;
+            --bg-color: #f8f9fa;
+            --panel-bg: #ffffff;
+            --accent-color: #e74c3c;
+            --accent-hover: #c0392b;
+            --u235-color: #f39c12; /* Orange for fissile */
+            --u238-color: #3498db; /* Blue for non-fissile */
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text);
+            background-color: var(--bg-color);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .textbook-module {
+            background: var(--panel-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e1e4e8;
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot.u235 { background-color: var(--u235-color); }
+        .dot.u238 { background-color: var(--u238-color); }
+
+        canvas {
+            background-color: #111827;
+            border-radius: var(--border-radius);
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem 0;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f5f9;
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius);
+            gap: 1rem;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input[type=range] {
+            width: 200px;
+            accent-color: var(--u235-color);
+        }
+
+        .stats-badge {
+            background: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover { background-color: var(--accent-hover); }
+        button.secondary { background-color: #64748b; }
+        button.secondary:hover { background-color: #475569; }
+
+    </style>
+</head>
+<body>
+
+    <div class="textbook-module">
+        <h2>Interactive: Critical Mass & Enrichment</h2>
+        
+        <div class="legend">
+            <div class="legend-item"><div class="dot u235"></div> Fissile Uranium-235</div>
+            <div class="legend-item"><div class="dot u238"></div> Stable Uranium-238</div>
+        </div>
+
+        <p>Observe how the concentration of fissile isotopes dictates the nature of the chain reaction. Notice the energy release (visual flash) when a slow neutron is successfully captured.</p>
+
+        <canvas id="fissionCanvas" width="800" height="400"></canvas>
+
+        <div class="dashboard">
+            <div class="control-group">
+                <label for="enrichment">Enrichment Level: <span id="enrichmentVal" style="color: var(--u235-color);">5</span>% U-235</label>
+                <input type="range" id="enrichment" min="1" max="100" value="5">
+            </div>
+            
+            <div class="stats-badge">
+                Fissions: <span id="fissionCount" style="color: var(--accent-color);">0</span>
+            </div>
+
+            <div class="btn-group">
+                <button id="fireBtn">Fire Neutron</button>
+                <button id="resetBtn" class="secondary">Reset Core</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('fissionCanvas');
+        const ctx = canvas.getContext('2d');
+        const enrichmentSlider = document.getElementById('enrichment');
+        const enrichmentVal = document.getElementById('enrichmentVal');
+        const fireBtn = document.getElementById('fireBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const fissionCountDisplay = document.getElementById('fissionCount');
+
+        let atoms = [];
+        let neutrons = [];
+        let fissionCount = 0;
+        let animationId;
+
+        // Atom Class
+        class Atom {
+            constructor(x, y, isU235) {
+                this.x = x;
+                this.y = y;
+                this.isU235 = isU235;
+                this.split = false;
+                this.radius = 7;
+                this.flashAlpha = 0; // For the energy release visual
+            }
+            
+            draw() {
+                if (this.split) {
+                    // Draw the energy flash fading out
+                    if (this.flashAlpha > 0) {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(255, 255, 150, ${this.flashAlpha})`;
+                        ctx.fill();
+                        ctx.closePath();
+                        this.flashAlpha -= 0.05; // Fade rate
+                    }
+                    return;
+                }
+                
+                // Draw normal atom
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.isU235 ? '#f39c12' : '#3498db';
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        // Neutron Class
+        class Neutron {
+            constructor(x, y, vx, vy) {
+                this.x = x;
+                this.y = y;
+                this.vx = vx;
+                this.vy = vy;
+                this.radius = 2.5;
+                this.active = true;
+            }
+            
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                // Deactivate if it leaves the containment area
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.active = false;
+                }
+            }
+            
+            draw() {
+                if (!this.active) return;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.fill();
+                ctx.shadowBlur = 5;
+                ctx.shadowColor = "white";
+                ctx.closePath();
+                ctx.shadowBlur = 0; // Reset shadow
+            }
+        }
+
+        // Initialize the Reactor Core
+        function initGrid() {
+            atoms = [];
+            neutrons = [];
+            fissionCount = 0;
+            fissionCountDisplay.innerText = fissionCount;
+            cancelAnimationFrame(animationId);
+            
+            const enrichment = parseInt(enrichmentSlider.value) / 100;
+            const spacing = 22; // Tighter packing
+            
+            for (let x = 30; x < canvas.width - 30; x += spacing) {
+                for (let y = 30; y < canvas.height - 30; y += spacing) {
+                    const offsetX = (Math.random() - 0.5) * 8;
+                    const offsetY = (Math.random() - 0.5) * 8;
+                    const isU235 = Math.random() < enrichment;
+                    atoms.push(new Atom(x + offsetX, y + offsetY, isU235));
+                }
+            }
+            drawScene();
+        }
+
+        // Render Frame
+        function drawScene() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            atoms.forEach(atom => atom.draw());
+            neutrons.forEach(neutron => neutron.draw());
+        }
+
+        // Main Animation Loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            atoms.forEach(atom => atom.draw());
+            
+            neutrons.forEach(neutron => {
+                if (!neutron.active) return;
+                neutron.update();
+                neutron.draw();
+                
+                // Collision check
+                atoms.forEach(atom => {
+                    if (!atom.split && neutron.active) {
+                        const dx = neutron.x - atom.x;
+                        const dy = neutron.y - atom.y;
+                        const distance = Math.sqrt(dx*dx + dy*dy);
+                        
+                        if (distance < atom.radius + neutron.radius + 1) {
+                            neutron.active = false; 
+                            if (atom.isU235) {
+                                atom.split = true;
+                                atom.flashAlpha = 1.0; // Trigger the flash
+                                fissionCount++;
+                                fissionCountDisplay.innerText = fissionCount;
+                                
+                                // Fission product: 2 or 3 new neutrons
+                                const numNeutrons = Math.random() > 0.4 ? 3 : 2;
+                                for(let i=0; i<numNeutrons; i++) {
+                                    const angle = Math.random() * Math.PI * 2;
+                                    const speed = 2.5 + Math.random() * 1.5; // Slight speed variation
+                                    neutrons.push(new Neutron(atom.x, atom.y, Math.cos(angle)*speed, Math.sin(angle)*speed));
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Cleanup inactive neutrons to save memory
+            neutrons = neutrons.filter(n => n.active);
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // Event Listeners
+        enrichmentSlider.addEventListener('input', (e) => {
+            enrichmentVal.innerText = e.target.value;
+            initGrid();
+        });
+
+        resetBtn.addEventListener('click', initGrid);
+
+        fireBtn.addEventListener('click', () => {
+            // Fire a slow neutron from the left
+            neutrons.push(new Neutron(10, canvas.height/2, 3, (Math.random() - 0.5)));
+            animate();
+        });
+
+        // Start
+        initGrid();
+    </script>
+</body>
+</html>

@@ -2,242 +2,626 @@
   "sections": {
     "kinematics": {
       "title": "A.1 Kinematics",
-      "content": "<h1>Kinematics</h1>\n<p>Kinematics is the study of motion without considering the forces that cause it. We describe motion using quantities like <span class=\"key-term\">displacement</span>, <span class=\"key-term\">velocity</span>, and <span class=\"key-term\">acceleration</span>.</p>\n\n<h2>Scalars and Vectors</h2>\n<p>Physical quantities can be classified as <span class=\"key-term\">scalars</span> (magnitude only) or <span class=\"key-term\">vectors</span> (magnitude and direction).</p>\n<div class=\"callout callout-example\">\n<div class=\"callout-title\">Examples</div>\n<p><strong>Scalars:</strong> distance, speed, time, mass, energy</p>\n<p><strong>Vectors:</strong> displacement, velocity, acceleration, force</p>\n</div>\n\n<h2>Position, Displacement and Distance</h2>\n<p>The <strong>position</strong> of an object tells us where it is located in space. <strong>Displacement</strong> is the change in position—a vector from initial to final position. <strong>Distance</strong> is the total path length traveled (scalar).</p>\n\n<div class=\"equation-block\">\n$$\\vec{\\Delta x} = \\vec{x}_f - \\vec{x}_i$$\n</div>\n\n<h2>Velocity and Speed</h2>\n<p><span class=\"key-term\">Velocity</span> is the rate of change of displacement (vector). <span class=\"key-term\">Speed</span> is the rate of change of distance (scalar).</p>\n\n<div class=\"equation-block\">\n$$\\vec{v} = \\frac{d\\vec{x}}{dt}$$\n</div>\n\n<p><strong>Average velocity:</strong></p>\n<div class=\"equation-block\">\n$$\\vec{v}_{avg} = \\frac{\\Delta \\vec{x}}{\\Delta t}$$\n</div>\n\n<p><strong>Instantaneous velocity</strong> is the velocity at a specific moment—the limit of average velocity as Δt approaches zero.</p>\n\n<h2>Acceleration</h2>\n<p><span class=\"key-term\">Acceleration</span> is the rate of change of velocity:</p>\n\n<div class=\"equation-block\">\n$$\\vec{a} = \\frac{d\\vec{v}}{dt} = \\frac{d^2\\vec{x}}{dt^2}$$\n</div>\n\n<h2>Equations of Motion (SUVAT)</h2>\n<p>For <strong>uniformly accelerated motion</strong> (constant acceleration):</p>\n\n<div class=\"equation-block\">\n$$s = \\frac{u + v}{2} \\cdot t$$\n$$v = u + at$$\n$$s = ut + \\frac{1}{2}at^2$$\n$$v^2 = u^2 + 2as$$\n</div>\n\n<h2>Projectile Motion</h2>\n<p>A <span class=\"key-term\">projectile</span> moves under gravity only. Horizontal and vertical motions are independent.</p>\n\n<div class=\"callout callout-important\">\n<div class=\"callout-title\">Effect of Fluid Resistance</div>\n<p>Reduces range, max height, and time of flight. Trajectory becomes asymmetric; terminal speed is reached.</p>\n</div>",
+      "content": "<h1>Kinematics</h1>\n<p>Kinematics is the study of motion without considering the forces that cause it. We describe motion using quantities like <span class=\"key-term\">displacement</span>, <span class=\"key-term\">velocity</span>, and <span class=\"key-term\">acceleration</span>.</p>\n\n<h2>Scalars and Vectors</h2>\n<p>Physical quantities can be classified as <span class=\"key-term\">scalars</span> (magnitude only) or <span class=\"key-term\">vectors</span> (magnitude and direction).</p>\n<div class=\"callout callout-example\">\n<div class=\"callout-title\">Examples</div>\n<p><strong>Scalars:</strong> distance, speed, time, mass, energy</p>\n<p><strong>Vectors:</strong> displacement, velocity, acceleration, force</p>\n</div>\n\n<h2>Position, Displacement and Distance</h2>\n<p>The <strong>position</strong> of an object tells us where it is located in space. <strong>Displacement</strong> is the change in position\u2014a vector from initial to final position. <strong>Distance</strong> is the total path length traveled (scalar).</p>\n\n<div class=\"equation-block\">\n$$\\vec{\\Delta x} = \\vec{x}_f - \\vec{x}_i$$\n</div>\n\n<h2>Velocity and Speed</h2>\n<p><span class=\"key-term\">Velocity</span> is the rate of change of displacement (vector). <span class=\"key-term\">Speed</span> is the rate of change of distance (scalar).</p>\n\n<div class=\"equation-block\">\n$$\\vec{v} = \\frac{d\\vec{x}}{dt}$$\n</div>\n\n<p><strong>Average velocity:</strong></p>\n<div class=\"equation-block\">\n$$\\vec{v}_{avg} = \\frac{\\Delta \\vec{x}}{\\Delta t}$$\n</div>\n\n<p><strong>Instantaneous velocity</strong> is the velocity at a specific moment\u2014the limit of average velocity as \u0394t approaches zero.</p>\n\n<h2>Acceleration</h2>\n<p><span class=\"key-term\">Acceleration</span> is the rate of change of velocity:</p>\n\n<div class=\"equation-block\">\n$$\\vec{a} = \\frac{d\\vec{v}}{dt} = \\frac{d^2\\vec{x}}{dt^2}$$\n</div>\n\n<h2>Equations of Motion (SUVAT)</h2>\n<p>For <strong>uniformly accelerated motion</strong> (constant acceleration):</p>\n\n<div class=\"equation-block\">\n$$s = \\frac{u + v}{2} \\cdot t$$\n$$v = u + at$$\n$$s = ut + \\frac{1}{2}at^2$$\n$$v^2 = u^2 + 2as$$\n</div>\n\n<h2>Projectile Motion</h2>\n<p>A <span class=\"key-term\">projectile</span> moves under gravity only. Horizontal and vertical motions are independent.</p>\n\n<div class=\"callout callout-important\">\n<div class=\"callout-title\">Effect of Fluid Resistance</div>\n<p>Reduces range, max height, and time of flight. Trajectory becomes asymmetric; terminal speed is reached.</p>\n</div>",
       "questions": [
-        {"id": "k1", "question": "How can the motion of a body be described quantitatively and qualitatively?", "hint": "Consider position, velocity, acceleration, and how graphs represent motion."},
-        {"id": "k2", "question": "How does the motion of a mass in a gravitational field compare to the motion of a charged particle in an electric field?", "hint": "Think about the similarities in the equations of motion and the role of the field."},
-        {"id": "k3", "question": "When can certain types of problems on projectile motion be solved by applying conservation of energy instead of kinematic equations?", "hint": "Consider situations where you only need final speed, not time."},
-        {"id": "k4", "question": "How does graphical analysis allow for the determination of other physical quantities?", "hint": "Think about what the slope and area under velocity-time and acceleration-time graphs represent."}
+        {
+          "id": "k1",
+          "question": "How can the motion of a body be described quantitatively and qualitatively?",
+          "hint": "Consider position, velocity, acceleration, and how graphs represent motion."
+        },
+        {
+          "id": "k2",
+          "question": "How does the motion of a mass in a gravitational field compare to the motion of a charged particle in an electric field?",
+          "hint": "Think about the similarities in the equations of motion and the role of the field."
+        },
+        {
+          "id": "k3",
+          "question": "When can certain types of problems on projectile motion be solved by applying conservation of energy instead of kinematic equations?",
+          "hint": "Consider situations where you only need final speed, not time."
+        },
+        {
+          "id": "k4",
+          "question": "How does graphical analysis allow for the determination of other physical quantities?",
+          "hint": "Think about what the slope and area under velocity-time and acceleration-time graphs represent."
+        }
       ]
     },
     "forces-momentum": {
       "title": "A.2 Forces and Momentum",
-      "content": "<h1>Forces and Momentum</h1>\n<p>Forces are <span class=\"key-term\">interactions between bodies</span>. They can be represented in <span class=\"key-term\">free-body diagrams</span>.</p>\n\n<h2>Types of Forces</h2>\n<h3>Contact Forces</h3>\n<ul>\n<li><strong>Normal force (F<sub>N</sub>)</strong>: Perpendicular to surface</li>\n<li><strong>Friction</strong>: Static: F<sub>f</sub> ≤ μ<sub>s</sub>F<sub>N</sub>; Dynamic: F<sub>f</sub> = μ<sub>d</sub>F<sub>N</sub></li>\n<li><strong>Tension</strong>: Force through rope/string</li>\n<li><strong>Elastic force</strong>: F<sub>H</sub> = −kx (Hooke's Law)</li>\n<li><strong>Viscous drag</strong>: F<sub>d</sub> = 6πηrv</li>\n<li><strong>Buoyancy</strong>: F<sub>b</sub> = ρVg</li>\n</ul>\n\n<h3>Field Forces</h3>\n<ul>\n<li><strong>Gravitational</strong>: F<sub>g</sub> = mg</li>\n<li><strong>Electric</strong>: F<sub>e</sub></li>\n<li><strong>Magnetic</strong>: F<sub>m</sub></li>\n</ul>\n\n<h2>Newton's Laws</h2>\n<div class=\"callout callout-important\">\n<div class=\"callout-title\">First Law</div>\n<p>Objects remain at rest or in uniform motion unless acted upon by a net force.</p>\n</div>\n\n<div class=\"equation-block\">\n$$\\vec{F}_{net} = m\\vec{a} = \\frac{d\\vec{p}}{dt}$$\n</div>\n\n<h2>Momentum and Impulse</h2>\n<div class=\"equation-block\">\n$$\\vec{p} = m\\vec{v}$$\n$$\\vec{J} = \\vec{F}\\Delta t = \\Delta\\vec{p}$$\n</div>\n\n<h2>Circular Motion</h2>\n<div class=\"equation-block\">\n$$a = \\frac{v^2}{r} = \\omega^2 r = \\frac{4\\pi^2 r}{T^2}$$\n$$v = \\frac{2\\pi r}{T} = \\omega r$$\n</div>",
+      "content": "<h1>Forces and Momentum</h1>\n<p>Forces are <span class=\"key-term\">interactions between bodies</span>. They can be represented in <span class=\"key-term\">free-body diagrams</span>.</p>\n\n<h2>Types of Forces</h2>\n<h3>Contact Forces</h3>\n<ul>\n<li><strong>Normal force (F<sub>N</sub>)</strong>: Perpendicular to surface</li>\n<li><strong>Friction</strong>: Static: F<sub>f</sub> \u2264 \u03bc<sub>s</sub>F<sub>N</sub>; Dynamic: F<sub>f</sub> = \u03bc<sub>d</sub>F<sub>N</sub></li>\n<li><strong>Tension</strong>: Force through rope/string</li>\n<li><strong>Elastic force</strong>: F<sub>H</sub> = \u2212kx (Hooke's Law)</li>\n<li><strong>Viscous drag</strong>: F<sub>d</sub> = 6\u03c0\u03b7rv</li>\n<li><strong>Buoyancy</strong>: F<sub>b</sub> = \u03c1Vg</li>\n</ul>\n\n<h3>Field Forces</h3>\n<ul>\n<li><strong>Gravitational</strong>: F<sub>g</sub> = mg</li>\n<li><strong>Electric</strong>: F<sub>e</sub></li>\n<li><strong>Magnetic</strong>: F<sub>m</sub></li>\n</ul>\n\n<h2>Newton's Laws</h2>\n<div class=\"callout callout-important\">\n<div class=\"callout-title\">First Law</div>\n<p>Objects remain at rest or in uniform motion unless acted upon by a net force.</p>\n</div>\n\n<div class=\"equation-block\">\n$$\\vec{F}_{net} = m\\vec{a} = \\frac{d\\vec{p}}{dt}$$\n</div>\n\n<h2>Momentum and Impulse</h2>\n<div class=\"equation-block\">\n$$\\vec{p} = m\\vec{v}$$\n$$\\vec{J} = \\vec{F}\\Delta t = \\Delta\\vec{p}$$\n</div>\n\n<h2>Circular Motion</h2>\n<div class=\"equation-block\">\n$$a = \\frac{v^2}{r} = \\omega^2 r = \\frac{4\\pi^2 r}{T^2}$$\n$$v = \\frac{2\\pi r}{T} = \\omega r$$\n</div>",
       "questions": [
-        {"id": "f1", "question": "How can forces acting on a system be represented both visually and algebraically?", "hint": "Think about free-body diagrams and vector addition."},
-        {"id": "f2", "question": "How does the application of a restoring force acting on a particle result in simple harmonic motion?", "hint": "Consider what happens when the restoring force is proportional to displacement."},
-        {"id": "f3", "question": "Why is no work done on a body moving along a circular trajectory?", "hint": "Think about the angle between force and displacement in circular motion."},
-        {"id": "f4", "question": "In which way is conservation of momentum relevant to the workings of a nuclear power station?", "hint": "Consider neutron collisions in the moderator."}
+        {
+          "id": "f1",
+          "question": "How can forces acting on a system be represented both visually and algebraically?",
+          "hint": "Think about free-body diagrams and vector addition."
+        },
+        {
+          "id": "f2",
+          "question": "How does the application of a restoring force acting on a particle result in simple harmonic motion?",
+          "hint": "Consider what happens when the restoring force is proportional to displacement."
+        },
+        {
+          "id": "f3",
+          "question": "Why is no work done on a body moving along a circular trajectory?",
+          "hint": "Think about the angle between force and displacement in circular motion."
+        },
+        {
+          "id": "f4",
+          "question": "In which way is conservation of momentum relevant to the workings of a nuclear power station?",
+          "hint": "Consider neutron collisions in the moderator."
+        }
       ]
     },
     "work-energy-power": {
       "title": "A.3 Work, Energy and Power",
       "content": "<h1>Work, Energy and Power</h1>\n\n<h2>Work</h2>\n<div class=\"equation-block\">\n$$W = Fs\\cos\\theta$$\n</div>\n\n<div class=\"callout callout-important\">\n<div class=\"callout-title\">Key Insight</div>\n<p>Work done by resultant force = change in kinetic energy</p>\n</div>\n\n<h2>Mechanical Energy</h2>\n<div class=\"equation-block\">\n$$E_K = \\frac{1}{2}mv^2 = \\frac{p^2}{2m}$$\n$$E_P = mgh$$\n$$E_H = \\frac{1}{2}kx^2$$\n</div>\n\n<h2>Conservation of Energy</h2>\n<p>Energy cannot be created or destroyed. Sankey diagrams represent energy transfers.</p>\n\n<h2>Power and Efficiency</h2>\n<div class=\"equation-block\">\n$$P = \\frac{W}{t} = Fv$$\n$$\\eta = \\frac{E_{output}}{E_{input}} = \\frac{P_{output}}{P_{input}}$$\n</div>",
       "questions": [
-        {"id": "w1", "question": "How are concepts of work, energy and power used to predict changes within a system?", "hint": "Think about energy transformations and conservation laws."},
-        {"id": "w2", "question": "Which other quantities in physics involve rates of change?", "hint": "Consider velocity, acceleration, current, and power."},
-        {"id": "w3", "question": "How do travelling waves allow for a transfer of energy without a resultant displacement of matter?", "hint": "Think about the motion of particles in a wave versus the wave's propagation."},
-        {"id": "w4", "question": "Why is the equation ΔE<sub>P</sub> = mgΔh only relevant close to the surface of Earth?", "hint": "Consider how g changes with distance from Earth's center."}
+        {
+          "id": "w1",
+          "question": "How are concepts of work, energy and power used to predict changes within a system?",
+          "hint": "Think about energy transformations and conservation laws."
+        },
+        {
+          "id": "w2",
+          "question": "Which other quantities in physics involve rates of change?",
+          "hint": "Consider velocity, acceleration, current, and power."
+        },
+        {
+          "id": "w3",
+          "question": "How do travelling waves allow for a transfer of energy without a resultant displacement of matter?",
+          "hint": "Think about the motion of particles in a wave versus the wave's propagation."
+        },
+        {
+          "id": "w4",
+          "question": "Why is the equation \u0394E<sub>P</sub> = mg\u0394h only relevant close to the surface of Earth?",
+          "hint": "Consider how g changes with distance from Earth's center."
+        }
       ]
     },
     "rigid-body-mechanics": {
       "title": "A.4 Rigid Body Mechanics",
       "content": "<h1>Rigid Body Mechanics</h1>\n<p class=\"hl-note\">This is Higher Level content.</p>\n\n<h2>Torque</h2>\n<div class=\"equation-block\">\n$$\\tau = Fr\\sin\\theta$$\n$$\\tau = I\\alpha$$\n</div>\n\n<h2>Angular Motion Equations</h2>\n<div class=\"equation-block\">\n$$\\Delta\\theta = \\frac{\\omega_f + \\omega_i}{2}t$$\n$$\\omega_f = \\omega_i + \\alpha t$$\n$$\\Delta\\theta = \\omega_i t + \\frac{1}{2}\\alpha t^2$$\n$$\\omega_f^2 = \\omega_i^2 + 2\\alpha\\Delta\\theta$$\n</div>\n\n<h2>Moment of Inertia</h2>\n<div class=\"equation-block\">\n$$I = \\sum mr^2$$\n</div>\n\n<h2>Angular Momentum</h2>\n<div class=\"equation-block\">\n$$L = I\\omega$$\n$$E_K = \\frac{1}{2}I\\omega^2 = \\frac{L^2}{2I}$$\n</div>",
       "questions": [
-        {"id": "r1", "question": "How can the understanding of linear motion be applied to rotational motion?", "hint": "Compare the equations: v↔ω, a↔α, m↔I, F↔τ, p↔L"},
-        {"id": "r2", "question": "How does the distribution of mass within a body affect its rotational motion?", "hint": "Think about how moment of inertia I = Σmr² depends on distance from axis."},
-        {"id": "r3", "question": "How does conservation of angular momentum lead to the determination of the Bohr radius?", "hint": "Consider quantization of angular momentum in the Bohr model."},
-        {"id": "r4", "question": "How can rotation lead to the generation of an electric current?", "hint": "Think about electromagnetic induction and generators."}
+        {
+          "id": "r1",
+          "question": "How can the understanding of linear motion be applied to rotational motion?",
+          "hint": "Compare the equations: v\u2194\u03c9, a\u2194\u03b1, m\u2194I, F\u2194\u03c4, p\u2194L"
+        },
+        {
+          "id": "r2",
+          "question": "How does the distribution of mass within a body affect its rotational motion?",
+          "hint": "Think about how moment of inertia I = \u03a3mr\u00b2 depends on distance from axis."
+        },
+        {
+          "id": "r3",
+          "question": "How does conservation of angular momentum lead to the determination of the Bohr radius?",
+          "hint": "Consider quantization of angular momentum in the Bohr model."
+        },
+        {
+          "id": "r4",
+          "question": "How can rotation lead to the generation of an electric current?",
+          "hint": "Think about electromagnetic induction and generators."
+        }
       ]
     },
     "galilean-relativity": {
       "title": "A.5 Galilean & Special Relativity",
       "content": "<h1>Galilean & Special Relativity</h1>\n<p class=\"hl-note\">This is Higher Level content.</p>\n\n<h2>Galilean Transformations</h2>\n<div class=\"equation-block\">\n$$x' = x - vt, \\quad t' = t$$\n$$u' = u - v$$\n</div>\n\n<h2>Einstein's Postulates</h2>\n<ol>\n<li>Laws of physics are the same in all inertial frames</li>\n<li>Speed of light c is constant for all observers</li>\n</ol>\n\n<h2>Lorentz Transformations</h2>\n<div class=\"equation-block\">\n$$x' = \\gamma(x - vt)$$\n$$t' = \\gamma\\left(t - \\frac{vx}{c^2}\\right)$$\n$$\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}$$\n</div>\n\n<h2>Time Dilation & Length Contraction</h2>\n<div class=\"equation-block\">\n$$\\Delta t = \\gamma\\Delta t_0$$\n$$L = \\frac{L_0}{\\gamma}$$\n</div>",
       "questions": [
-        {"id": "sr1", "question": "How do observers in different reference frames describe events in terms of space and time?", "hint": "Consider simultaneity and how measurements depend on the observer's motion."},
-        {"id": "sr2", "question": "How does special relativity change our understanding of motion compared to Galilean relativity?", "hint": "Think about the invariance of c and the relativity of simultaneity."},
-        {"id": "sr3", "question": "Why is the equation for the Doppler effect for light so different from that for sound?", "hint": "Consider that light doesn't need a medium and c is invariant."},
-        {"id": "sr4", "question": "Special relativity places a limit on the speed of light. What other limits exist in physics?", "hint": "Think about absolute zero, Carnot efficiency, uncertainty principle."}
+        {
+          "id": "sr1",
+          "question": "How do observers in different reference frames describe events in terms of space and time?",
+          "hint": "Consider simultaneity and how measurements depend on the observer's motion."
+        },
+        {
+          "id": "sr2",
+          "question": "How does special relativity change our understanding of motion compared to Galilean relativity?",
+          "hint": "Think about the invariance of c and the relativity of simultaneity."
+        },
+        {
+          "id": "sr3",
+          "question": "Why is the equation for the Doppler effect for light so different from that for sound?",
+          "hint": "Consider that light doesn't need a medium and c is invariant."
+        },
+        {
+          "id": "sr4",
+          "question": "Special relativity places a limit on the speed of light. What other limits exist in physics?",
+          "hint": "Think about absolute zero, Carnot efficiency, uncertainty principle."
+        }
       ]
     },
     "thermal-energy-transfers": {
       "title": "B.1 Thermal Energy Transfers",
-      "content": "<h1>Thermal Energy Transfers</h1>\n\n<h2>Molecular Theory</h2>\n<p>Matter consists of particles in random motion. State depends on kinetic energy vs intermolecular forces.</p>\n\n<h2>Temperature</h2>\n<div class=\"equation-block\">\n$$\\bar{E}_K = \\frac{3}{2}k_B T$$\n</div>\n\n<h2>Heat Transfer</h2>\n<div class=\"equation-block\">\n$$Q = mc\\Delta T$$\n$$Q = mL$$\n$$\\frac{\\Delta Q}{\\Delta t} = kA\\frac{\\Delta T}{\\Delta x}$$\n</div>\n\n<h2>Black Body Radiation</h2>\n<div class=\"equation-block\">\n$$L = \\sigma AT^4$$\n$$b = \\frac{L}{4\\pi d^2}$$\n$$\\lambda_{max}T = 2.9 \\times 10^{-3} \\text{ m·K}$$\n</div>",
+      "content": "<h1>Thermal Energy Transfers</h1>\n\n<h2>Molecular Theory</h2>\n<p>Matter consists of particles in random motion. State depends on kinetic energy vs intermolecular forces.</p>\n\n<h2>Temperature</h2>\n<div class=\"equation-block\">\n$$\\bar{E}_K = \\frac{3}{2}k_B T$$\n</div>\n\n<h2>Heat Transfer</h2>\n<div class=\"equation-block\">\n$$Q = mc\\Delta T$$\n$$Q = mL$$\n$$\\frac{\\Delta Q}{\\Delta t} = kA\\frac{\\Delta T}{\\Delta x}$$\n</div>\n\n<h2>Black Body Radiation</h2>\n<div class=\"equation-block\">\n$$L = \\sigma AT^4$$\n$$b = \\frac{L}{4\\pi d^2}$$\n$$\\lambda_{max}T = 2.9 \\times 10^{-3} \\text{ m\u00b7K}$$\n</div>",
       "questions": [
-        {"id": "t1", "question": "How do macroscopic observations provide a model of the microscopic properties of a substance?", "hint": "Think about how temperature, pressure, and volume relate to molecular behavior."},
-        {"id": "t2", "question": "How can the phase change of water be used in the process of electricity generation?", "hint": "Consider steam turbines and the role of latent heat."},
-        {"id": "t3", "question": "What applications does the Stefan-Boltzmann law have in astrophysics and solar energy?", "hint": "Think about determining star temperatures and solar panel efficiency."},
-        {"id": "t4", "question": "Where do inverse square law relationships appear in other areas of physics?", "hint": "Consider gravity, electric fields, light intensity."}
+        {
+          "id": "t1",
+          "question": "How do macroscopic observations provide a model of the microscopic properties of a substance?",
+          "hint": "Think about how temperature, pressure, and volume relate to molecular behavior."
+        },
+        {
+          "id": "t2",
+          "question": "How can the phase change of water be used in the process of electricity generation?",
+          "hint": "Consider steam turbines and the role of latent heat."
+        },
+        {
+          "id": "t3",
+          "question": "What applications does the Stefan-Boltzmann law have in astrophysics and solar energy?",
+          "hint": "Think about determining star temperatures and solar panel efficiency."
+        },
+        {
+          "id": "t4",
+          "question": "Where do inverse square law relationships appear in other areas of physics?",
+          "hint": "Consider gravity, electric fields, light intensity."
+        }
       ]
     },
     "greenhouse-effect": {
       "title": "B.2 Greenhouse Effect",
-      "content": "<h1>The Greenhouse Effect</h1>\n\n<h2>Emissivity and Albedo</h2>\n<div class=\"equation-block\">\n$$\\text{Albedo} = \\frac{\\text{Scattered power}}{\\text{Incident power}}$$\n</div>\n\n<h2>Solar Constant</h2>\n<p>S ≈ 1361 W/m². Average intensity = S/4 due to Earth's spherical geometry.</p>\n\n<h2>Greenhouse Gases</h2>\n<p>CO₂, H₂O, CH₄, N₂O absorb infrared due to molecular vibrations at resonant frequencies.</p>\n\n<h2>Enhanced Greenhouse Effect</h2>\n<p>Human activities (burning fossil fuels) increase greenhouse gas concentrations.</p>",
+      "content": "<h1>The Greenhouse Effect</h1>\n\n<h2>Emissivity and Albedo</h2>\n<div class=\"equation-block\">\n$$\\text{Albedo} = \\frac{\\text{Scattered power}}{\\text{Incident power}}$$\n</div>\n\n<h2>Solar Constant</h2>\n<p>S \u2248 1361 W/m\u00b2. Average intensity = S/4 due to Earth's spherical geometry.</p>\n\n<h2>Greenhouse Gases</h2>\n<p>CO\u2082, H\u2082O, CH\u2084, N\u2082O absorb infrared due to molecular vibrations at resonant frequencies.</p>\n\n<h2>Enhanced Greenhouse Effect</h2>\n<p>Human activities (burning fossil fuels) increase greenhouse gas concentrations.</p>",
       "questions": [
-        {"id": "gh1", "question": "How does the greenhouse effect help to maintain life on Earth?", "hint": "Think about what temperature Earth would be without greenhouse gases."},
-        {"id": "gh2", "question": "What relevance do simple harmonic motion and resonance have to climate change?", "hint": "Consider how greenhouse gas molecules absorb specific IR frequencies."},
-        {"id": "gh3", "question": "How do different methods of electricity production affect the energy balance of the atmosphere?", "hint": "Compare fossil fuels, nuclear, solar, and wind in terms of emissions."},
-        {"id": "gh4", "question": "What limitations are there in using a resonance model to explain the greenhouse effect?", "hint": "Think about the complexity of molecular energy levels and re-emission."}
+        {
+          "id": "gh1",
+          "question": "How does the greenhouse effect help to maintain life on Earth?",
+          "hint": "Think about what temperature Earth would be without greenhouse gases."
+        },
+        {
+          "id": "gh2",
+          "question": "What relevance do simple harmonic motion and resonance have to climate change?",
+          "hint": "Consider how greenhouse gas molecules absorb specific IR frequencies."
+        },
+        {
+          "id": "gh3",
+          "question": "How do different methods of electricity production affect the energy balance of the atmosphere?",
+          "hint": "Compare fossil fuels, nuclear, solar, and wind in terms of emissions."
+        },
+        {
+          "id": "gh4",
+          "question": "What limitations are there in using a resonance model to explain the greenhouse effect?",
+          "hint": "Think about the complexity of molecular energy levels and re-emission."
+        }
       ]
     },
     "gas-laws": {
       "title": "B.3 Gas Laws",
       "content": "<h1>Gas Laws</h1>\n\n<h2>Ideal Gas</h2>\n<div class=\"equation-block\">\n$$PV = nRT = Nk_BT$$\n$$P = \\frac{1}{3}\\rho\\bar{v}^2$$\n$$U = \\frac{3}{2}Nk_BT = \\frac{3}{2}nRT$$\n</div>\n\n<p>Ideal gas assumptions: point particles, no intermolecular forces, elastic collisions.</p>",
       "questions": [
-        {"id": "g1", "question": "How are the macroscopic characteristics of a gas related to the behaviour of individual molecules?", "hint": "Think about how pressure arises from molecular collisions."},
-        {"id": "g2", "question": "How does the concept of force and momentum link mechanics and thermodynamics?", "hint": "Consider molecular collisions with container walls."},
-        {"id": "g3", "question": "How can gas particles of high kinetic energy be used to perform work?", "hint": "Think about expansion in heat engines."},
-        {"id": "g4", "question": "What other simplified models are relied upon to communicate the understanding of complex phenomena?", "hint": "Consider point masses, ideal circuits, perfect conductors."}
+        {
+          "id": "g1",
+          "question": "How are the macroscopic characteristics of a gas related to the behaviour of individual molecules?",
+          "hint": "Think about how pressure arises from molecular collisions."
+        },
+        {
+          "id": "g2",
+          "question": "How does the concept of force and momentum link mechanics and thermodynamics?",
+          "hint": "Consider molecular collisions with container walls."
+        },
+        {
+          "id": "g3",
+          "question": "How can gas particles of high kinetic energy be used to perform work?",
+          "hint": "Think about expansion in heat engines."
+        },
+        {
+          "id": "g4",
+          "question": "What other simplified models are relied upon to communicate the understanding of complex phenomena?",
+          "hint": "Consider point masses, ideal circuits, perfect conductors."
+        }
       ]
     },
     "thermodynamics": {
       "title": "B.4 Thermodynamics",
       "content": "<h1>Thermodynamics</h1>\n<p class=\"hl-note\">This is Higher Level content.</p>\n\n<h2>First Law</h2>\n<div class=\"equation-block\">\n$$Q = \\Delta U + W$$\n$$W = P\\Delta V$$\n$$\\Delta U = \\frac{3}{2}Nk_B\\Delta T$$\n</div>\n\n<h2>Entropy</h2>\n<div class=\"equation-block\">\n$$\\Delta S = \\frac{\\Delta Q}{T}$$\n$$S = k_B \\ln\\Omega$$\n</div>\n\n<h2>Heat Engines</h2>\n<div class=\"equation-block\">\n$$\\eta = \\frac{\\text{useful work}}{\\text{input energy}}$$\n$$\\eta_{Carnot} = 1 - \\frac{T_c}{T_h}$$\n</div>",
       "questions": [
-        {"id": "th1", "question": "How can energy transfers and energy storage within a system be analysed?", "hint": "Apply the first law: Q = ΔU + W"},
-        {"id": "th2", "question": "What are the consequences of the second law of thermodynamics to the universe as a whole?", "hint": "Think about entropy increase and heat death."},
-        {"id": "th3", "question": "Why is there an upper limit on the efficiency of any energy source or engine?", "hint": "Consider the Carnot limit and entropy."},
-        {"id": "th4", "question": "What paradigm shifts enabling change to human society can be attributed to advancements in physics understanding?", "hint": "Think about steam engines, electricity, nuclear power."}
+        {
+          "id": "th1",
+          "question": "How can energy transfers and energy storage within a system be analysed?",
+          "hint": "Apply the first law: Q = \u0394U + W"
+        },
+        {
+          "id": "th2",
+          "question": "What are the consequences of the second law of thermodynamics to the universe as a whole?",
+          "hint": "Think about entropy increase and heat death."
+        },
+        {
+          "id": "th3",
+          "question": "Why is there an upper limit on the efficiency of any energy source or engine?",
+          "hint": "Consider the Carnot limit and entropy."
+        },
+        {
+          "id": "th4",
+          "question": "What paradigm shifts enabling change to human society can be attributed to advancements in physics understanding?",
+          "hint": "Think about steam engines, electricity, nuclear power."
+        }
       ]
     },
     "current-circuits": {
       "title": "B.5 Current and Circuits",
       "content": "<h1>Current and Circuits</h1>\n\n<h2>Current and Voltage</h2>\n<div class=\"equation-block\">\n$$I = \\frac{\\Delta q}{\\Delta t}$$\n$$V = \\frac{W}{q}$$\n</div>\n\n<h2>Resistance</h2>\n<div class=\"equation-block\">\n$$R = \\frac{V}{I}$$\n$$\\rho = \\frac{RA}{L}$$\n</div>\n\n<h2>Power</h2>\n<div class=\"equation-block\">\n$$P = IV = I^2R = \\frac{V^2}{R}$$\n</div>\n\n<h2>EMF and Internal Resistance</h2>\n<div class=\"equation-block\">\n$$\\varepsilon = I(R + r)$$\n</div>",
       "questions": [
-        {"id": "c1", "question": "How do charged particles flow through materials?", "hint": "Think about drift velocity and collisions with lattice ions."},
-        {"id": "c2", "question": "What are the consequences of resistance in conductors?", "hint": "Consider power dissipation and heating effects."},
-        {"id": "c3", "question": "How can the heating of an electrical resistor be explained using other areas of physics?", "hint": "Link to molecular kinetic theory and collisions."},
-        {"id": "c4", "question": "What are the parallels in the models for thermal and electrical conductivity?", "hint": "Compare energy flow by conduction in both cases."}
+        {
+          "id": "c1",
+          "question": "How do charged particles flow through materials?",
+          "hint": "Think about drift velocity and collisions with lattice ions."
+        },
+        {
+          "id": "c2",
+          "question": "What are the consequences of resistance in conductors?",
+          "hint": "Consider power dissipation and heating effects."
+        },
+        {
+          "id": "c3",
+          "question": "How can the heating of an electrical resistor be explained using other areas of physics?",
+          "hint": "Link to molecular kinetic theory and collisions."
+        },
+        {
+          "id": "c4",
+          "question": "What are the parallels in the models for thermal and electrical conductivity?",
+          "hint": "Compare energy flow by conduction in both cases."
+        }
       ]
     },
     "simple-harmonic-motion": {
       "title": "C.1 Simple Harmonic Motion",
       "content": "<h1>Simple Harmonic Motion</h1>\n\n<h2>Definition</h2>\n<div class=\"equation-block\">\n$$a = -\\omega^2 x$$\n$$T = \\frac{1}{f} = \\frac{2\\pi}{\\omega}$$\n</div>\n\n<h2>Pendulum and Spring</h2>\n<div class=\"equation-block\">\n$$T = 2\\pi\\sqrt{\\frac{l}{g}}$$\n$$T = 2\\pi\\sqrt{\\frac{m}{k}}$$\n</div>\n\n<h2>SHM Equations (HL)</h2>\n<p class=\"hl-note\">This is Higher Level content.</p>\n<div class=\"equation-block\">\n$$x = x_0\\sin(\\omega t + \\phi)$$\n$$v = \\pm\\omega\\sqrt{x_0^2 - x^2}$$\n$$E_T = \\frac{1}{2}m\\omega^2 x_0^2$$\n</div>",
       "questions": [
-        {"id": "shm1", "question": "What makes the harmonic oscillator model applicable to a wide range of physical phenomena?", "hint": "Consider any system with a restoring force proportional to displacement."},
-        {"id": "shm2", "question": "How can greenhouse gases be modelled as simple harmonic oscillators?", "hint": "Think about molecular bonds vibrating at specific frequencies."},
-        {"id": "shm3", "question": "How can circular motion be used to visualize simple harmonic motion?", "hint": "Consider the projection of uniform circular motion onto a diameter."},
-        {"id": "shm4", "question": "How does damping affect periodic motion?", "hint": "Think about energy dissipation and amplitude decay."}
+        {
+          "id": "shm1",
+          "question": "What makes the harmonic oscillator model applicable to a wide range of physical phenomena?",
+          "hint": "Consider any system with a restoring force proportional to displacement."
+        },
+        {
+          "id": "shm2",
+          "question": "How can greenhouse gases be modelled as simple harmonic oscillators?",
+          "hint": "Think about molecular bonds vibrating at specific frequencies."
+        },
+        {
+          "id": "shm3",
+          "question": "How can circular motion be used to visualize simple harmonic motion?",
+          "hint": "Consider the projection of uniform circular motion onto a diameter."
+        },
+        {
+          "id": "shm4",
+          "question": "How does damping affect periodic motion?",
+          "hint": "Think about energy dissipation and amplitude decay."
+        }
       ]
     },
     "wave-model": {
       "title": "C.2 Wave Model",
-      "content": "<h1>Wave Model</h1>\n\n<h2>Wave Types</h2>\n<ul>\n<li><strong>Transverse</strong>: Oscillation ⟂ propagation (light, string waves)</li>\n<li><strong>Longitudinal</strong>: Oscillation ∥ propagation (sound)</li>\n</ul>\n\n<h2>Wave Equation</h2>\n<div class=\"equation-block\">\n$$v = f\\lambda = \\frac{\\lambda}{T}$$\n</div>\n\n<h2>EM Waves</h2>\n<p>Travel through vacuum at c = 3×10⁸ m/s</p>",
+      "content": "<h1>Wave Model</h1>\n\n<h2>Wave Types</h2>\n<ul>\n<li><strong>Transverse</strong>: Oscillation \u27c2 propagation (light, string waves)</li>\n<li><strong>Longitudinal</strong>: Oscillation \u2225 propagation (sound)</li>\n</ul>\n\n<h2>Wave Equation</h2>\n<div class=\"equation-block\">\n$$v = f\\lambda = \\frac{\\lambda}{T}$$\n</div>\n\n<h2>EM Waves</h2>\n<p>Travel through vacuum at c = 3\u00d710\u2078 m/s</p>",
       "questions": [
-        {"id": "wm1", "question": "What are the similarities and differences between different types of waves?", "hint": "Compare mechanical vs electromagnetic, transverse vs longitudinal."},
-        {"id": "wm2", "question": "How are electromagnetic waves able to travel through a vacuum?", "hint": "Think about oscillating electric and magnetic fields."},
-        {"id": "wm3", "question": "Can the wave model inform the understanding of quantum mechanics?", "hint": "Consider wave-particle duality and probability waves."},
-        {"id": "wm4", "question": "How were X-rays discovered?", "hint": "Research Röntgen's accidental discovery while studying cathode rays."}
+        {
+          "id": "wm1",
+          "question": "What are the similarities and differences between different types of waves?",
+          "hint": "Compare mechanical vs electromagnetic, transverse vs longitudinal."
+        },
+        {
+          "id": "wm2",
+          "question": "How are electromagnetic waves able to travel through a vacuum?",
+          "hint": "Think about oscillating electric and magnetic fields."
+        },
+        {
+          "id": "wm3",
+          "question": "Can the wave model inform the understanding of quantum mechanics?",
+          "hint": "Consider wave-particle duality and probability waves."
+        },
+        {
+          "id": "wm4",
+          "question": "How were X-rays discovered?",
+          "hint": "Research R\u00f6ntgen's accidental discovery while studying cathode rays."
+        }
       ]
     },
     "wave-phenomenon": {
       "title": "C.3 Wave Phenomena",
-      "content": "<h1>Wave Phenomena</h1>\n\n<h2>Snell's Law</h2>\n<div class=\"equation-block\">\n$$\\frac{n_1}{n_2} = \\frac{\\sin\\theta_2}{\\sin\\theta_1} = \\frac{v_2}{v_1}$$\n</div>\n\n<h2>Interference</h2>\n<ul>\n<li><strong>Constructive</strong>: path difference = nλ</li>\n<li><strong>Destructive</strong>: path difference = (n + ½)λ</li>\n</ul>\n\n<h2>Young's Double Slit</h2>\n<div class=\"equation-block\">\n$$s = \\frac{\\lambda D}{d}$$\n</div>\n\n<h2>Diffraction Gratings (HL)</h2>\n<div class=\"equation-block\">\n$$n\\lambda = d\\sin\\theta$$\n</div>",
+      "content": "<h1>Wave Phenomena</h1>\n\n<h2>Snell's Law</h2>\n<div class=\"equation-block\">\n$$\\frac{n_1}{n_2} = \\frac{\\sin\\theta_2}{\\sin\\theta_1} = \\frac{v_2}{v_1}$$\n</div>\n\n<h2>Interference</h2>\n<ul>\n<li><strong>Constructive</strong>: path difference = n\u03bb</li>\n<li><strong>Destructive</strong>: path difference = (n + \u00bd)\u03bb</li>\n</ul>\n\n<h2>Young's Double Slit</h2>\n<div class=\"equation-block\">\n$$s = \\frac{\\lambda D}{d}$$\n</div>\n\n<h2>Diffraction Gratings (HL)</h2>\n<div class=\"equation-block\">\n$$n\\lambda = d\\sin\\theta$$\n</div>",
       "questions": [
-        {"id": "wp1", "question": "How are observations of wave behaviours at a boundary between different media explained?", "hint": "Consider refraction, reflection, and transmission in terms of wave speeds."},
-        {"id": "wp2", "question": "What can an understanding of Young's double-slit experiment reveal about the nature of light?", "hint": "Think about the wave nature of light and interference patterns."},
-        {"id": "wp3", "question": "What evidence is there that particles possess wave-like properties such as wavelength?", "hint": "Consider electron diffraction experiments."},
-        {"id": "wp4", "question": "What happens when two waves meet at a point in space?", "hint": "Think about superposition and interference."}
+        {
+          "id": "wp1",
+          "question": "How are observations of wave behaviours at a boundary between different media explained?",
+          "hint": "Consider refraction, reflection, and transmission in terms of wave speeds."
+        },
+        {
+          "id": "wp2",
+          "question": "What can an understanding of Young's double-slit experiment reveal about the nature of light?",
+          "hint": "Think about the wave nature of light and interference patterns."
+        },
+        {
+          "id": "wp3",
+          "question": "What evidence is there that particles possess wave-like properties such as wavelength?",
+          "hint": "Consider electron diffraction experiments."
+        },
+        {
+          "id": "wp4",
+          "question": "What happens when two waves meet at a point in space?",
+          "hint": "Think about superposition and interference."
+        }
       ]
     },
     "standing-waves-resonance": {
       "title": "C.4 Standing Waves and Resonance",
       "content": "<h1>Standing Waves and Resonance</h1>\n\n<h2>Formation</h2>\n<p>Two identical waves travelling in opposite directions create standing waves.</p>\n\n<h2>Nodes and Antinodes</h2>\n<ul>\n<li><strong>Nodes</strong>: Zero amplitude</li>\n<li><strong>Antinodes</strong>: Maximum amplitude</li>\n</ul>\n\n<h2>Resonance</h2>\n<p>Maximum amplitude when driving frequency = natural frequency.</p>\n\n<h2>Damping</h2>\n<ul>\n<li><strong>Light</strong>: Slow decay, sharp resonance</li>\n<li><strong>Critical</strong>: Fastest return without oscillation</li>\n<li><strong>Heavy</strong>: Very slow return</li>\n</ul>",
       "questions": [
-        {"id": "sw1", "question": "What distinguishes standing waves from travelling waves?", "hint": "Consider energy transfer, nodes, and phase relationships."},
-        {"id": "sw2", "question": "How does the amplitude of vibration at resonance depend on the dissipation of energy?", "hint": "Think about damping and energy balance."},
-        {"id": "sw3", "question": "How can the idea of resonance of gas molecules be used to model the greenhouse effect?", "hint": "Consider molecular vibration frequencies matching IR radiation."},
-        {"id": "sw4", "question": "How can resonance be explained in terms of conservation of energy?", "hint": "Think about energy input matching energy dissipation at steady state."}
+        {
+          "id": "sw1",
+          "question": "What distinguishes standing waves from travelling waves?",
+          "hint": "Consider energy transfer, nodes, and phase relationships."
+        },
+        {
+          "id": "sw2",
+          "question": "How does the amplitude of vibration at resonance depend on the dissipation of energy?",
+          "hint": "Think about damping and energy balance."
+        },
+        {
+          "id": "sw3",
+          "question": "How can the idea of resonance of gas molecules be used to model the greenhouse effect?",
+          "hint": "Consider molecular vibration frequencies matching IR radiation."
+        },
+        {
+          "id": "sw4",
+          "question": "How can resonance be explained in terms of conservation of energy?",
+          "hint": "Think about energy input matching energy dissipation at steady state."
+        }
       ]
     },
     "doppler-effect": {
       "title": "C.5 Doppler Effect",
       "content": "<h1>Doppler Effect</h1>\n\n<h2>For Light</h2>\n<div class=\"equation-block\">\n$$\\frac{\\Delta f}{f} = \\frac{\\Delta\\lambda}{\\lambda} \\approx \\frac{v}{c}$$\n</div>\n\n<h2>For Sound (HL)</h2>\n<p class=\"hl-note\">This is Higher Level content.</p>\n<div class=\"equation-block\">\n$$f' = f\\frac{v}{v \\pm u_s}$$\n$$f' = f\\frac{v \\pm u_o}{v}$$\n</div>",
       "questions": [
-        {"id": "de1", "question": "What are the similarities and differences between light and sound waves?", "hint": "Compare mechanical vs electromagnetic, speed, medium requirements."},
-        {"id": "de2", "question": "How can the Doppler effect be utilized to measure the rotational speed of extended bodies?", "hint": "Think about redshift on one edge and blueshift on the other."},
-        {"id": "de3", "question": "What gives rise to emission spectra and how can they be used to determine astronomical distances?", "hint": "Consider spectral line shifts and Hubble's law."},
-        {"id": "de4", "question": "How can the use of Doppler effect for light be used to calculate speed?", "hint": "Apply the formula Δf/f = v/c."}
+        {
+          "id": "de1",
+          "question": "What are the similarities and differences between light and sound waves?",
+          "hint": "Compare mechanical vs electromagnetic, speed, medium requirements."
+        },
+        {
+          "id": "de2",
+          "question": "How can the Doppler effect be utilized to measure the rotational speed of extended bodies?",
+          "hint": "Think about redshift on one edge and blueshift on the other."
+        },
+        {
+          "id": "de3",
+          "question": "What gives rise to emission spectra and how can they be used to determine astronomical distances?",
+          "hint": "Consider spectral line shifts and Hubble's law."
+        },
+        {
+          "id": "de4",
+          "question": "How can the use of Doppler effect for light be used to calculate speed?",
+          "hint": "Apply the formula \u0394f/f = v/c."
+        }
       ]
     },
     "gravitational-fields": {
       "title": "D.1 Gravitational Fields",
       "content": "<h1>Gravitational Fields</h1>\n\n<h2>Newton's Law</h2>\n<div class=\"equation-block\">\n$$F = \\frac{Gm_1m_2}{r^2}$$\n$$g = \\frac{F}{m} = \\frac{GM}{r^2}$$\n</div>\n\n<h2>Gravitational Potential (HL)</h2>\n<div class=\"equation-block\">\n$$V_g = -\\frac{GM}{r}$$\n$$E_p = -\\frac{GMm}{r}$$\n$$v_{orbital} = \\sqrt{\\frac{GM}{r}}$$\n$$v_{escape} = \\sqrt{\\frac{2GM}{r}}$$\n</div>",
       "questions": [
-        {"id": "gf1", "question": "How does an understanding of gravitational fields allow for humans to explore the solar system?", "hint": "Think about orbital mechanics, escape velocity, and mission planning."},
-        {"id": "gf2", "question": "How is uniform circular motion like—and unlike—real-life orbits?", "hint": "Consider Kepler's laws and elliptical orbits."},
-        {"id": "gf3", "question": "How can air resistance be used to alter the motion of a satellite orbiting Earth?", "hint": "Think about aerobraking and orbital decay."},
-        {"id": "gf4", "question": "How can the motion of electrons in the atom be modelled on planetary motion?", "hint": "Consider the Bohr model and its limitations."}
+        {
+          "id": "gf1",
+          "question": "How does an understanding of gravitational fields allow for humans to explore the solar system?",
+          "hint": "Think about orbital mechanics, escape velocity, and mission planning."
+        },
+        {
+          "id": "gf2",
+          "question": "How is uniform circular motion like\u2014and unlike\u2014real-life orbits?",
+          "hint": "Consider Kepler's laws and elliptical orbits."
+        },
+        {
+          "id": "gf3",
+          "question": "How can air resistance be used to alter the motion of a satellite orbiting Earth?",
+          "hint": "Think about aerobraking and orbital decay."
+        },
+        {
+          "id": "gf4",
+          "question": "How can the motion of electrons in the atom be modelled on planetary motion?",
+          "hint": "Consider the Bohr model and its limitations."
+        }
       ]
     },
     "electric-magnetic-fields": {
       "title": "D.2 Electric and Magnetic Fields",
       "content": "<h1>Electric and Magnetic Fields</h1>\n\n<h2>Coulomb's Law</h2>\n<div class=\"equation-block\">\n$$F = k\\frac{q_1q_2}{r^2}$$\n$$E = \\frac{F}{q} = \\frac{V}{d}$$\n</div>\n\n<h2>Electric Potential (HL)</h2>\n<div class=\"equation-block\">\n$$V_e = \\frac{kQ}{r}$$\n$$E_p = \\frac{kq_1q_2}{r}$$\n</div>",
       "questions": [
-        {"id": "em1", "question": "How are electric and magnetic fields like gravitational fields?", "hint": "Compare inverse-square laws, field lines, potential concepts."},
-        {"id": "em2", "question": "What are the relative strengths of the four fundamental forces?", "hint": "Compare strong, electromagnetic, weak, and gravitational."},
-        {"id": "em3", "question": "How can moving charges in magnetic fields help probe the fundamental nature of matter?", "hint": "Think about particle accelerators and mass spectrometers."},
-        {"id": "em4", "question": "Charge is quantized. Which other physical quantities are quantized?", "hint": "Consider energy levels, angular momentum, photon energy."}
+        {
+          "id": "em1",
+          "question": "How are electric and magnetic fields like gravitational fields?",
+          "hint": "Compare inverse-square laws, field lines, potential concepts."
+        },
+        {
+          "id": "em2",
+          "question": "What are the relative strengths of the four fundamental forces?",
+          "hint": "Compare strong, electromagnetic, weak, and gravitational."
+        },
+        {
+          "id": "em3",
+          "question": "How can moving charges in magnetic fields help probe the fundamental nature of matter?",
+          "hint": "Think about particle accelerators and mass spectrometers."
+        },
+        {
+          "id": "em4",
+          "question": "Charge is quantized. Which other physical quantities are quantized?",
+          "hint": "Consider energy levels, angular momentum, photon energy."
+        }
       ]
     },
     "motion-em-fields": {
       "title": "D.3 Motion in EM Fields",
       "content": "<h1>Motion in Electromagnetic Fields</h1>\n\n<h2>Force on Charged Particle</h2>\n<div class=\"equation-block\">\n$$F = qvB\\sin\\theta$$\n$$r = \\frac{mv}{qB}$$\n</div>\n\n<h2>Force on Wire</h2>\n<div class=\"equation-block\">\n$$F = BIL\\sin\\theta$$\n$$\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$$\n</div>",
       "questions": [
-        {"id": "mo1", "question": "What can be deduced about the nature of a charged particle from observations of it moving in fields?", "hint": "Consider charge-to-mass ratio from circular motion radius."},
-        {"id": "mo2", "question": "What causes circular motion of charged particles in a field?", "hint": "Think about the perpendicular magnetic force."},
-        {"id": "mo3", "question": "How can conservation of energy be applied to motion in electromagnetic fields?", "hint": "Kinetic energy changes in electric fields but not in magnetic."},
-        {"id": "mo4", "question": "How are the concepts of energy, forces and fields used to determine the size of an atom?", "hint": "Consider Rutherford scattering and distance of closest approach."}
+        {
+          "id": "mo1",
+          "question": "What can be deduced about the nature of a charged particle from observations of it moving in fields?",
+          "hint": "Consider charge-to-mass ratio from circular motion radius."
+        },
+        {
+          "id": "mo2",
+          "question": "What causes circular motion of charged particles in a field?",
+          "hint": "Think about the perpendicular magnetic force."
+        },
+        {
+          "id": "mo3",
+          "question": "How can conservation of energy be applied to motion in electromagnetic fields?",
+          "hint": "Kinetic energy changes in electric fields but not in magnetic."
+        },
+        {
+          "id": "mo4",
+          "question": "How are the concepts of energy, forces and fields used to determine the size of an atom?",
+          "hint": "Consider Rutherford scattering and distance of closest approach."
+        }
       ]
     },
     "induction": {
       "title": "D.4 Induction",
       "content": "<h1>Electromagnetic Induction</h1>\n<p class=\"hl-note\">This is Higher Level content.</p>\n\n<h2>Magnetic Flux</h2>\n<div class=\"equation-block\">\n$$\\Phi = BA\\cos\\theta$$\n</div>\n\n<h2>Faraday's Law</h2>\n<div class=\"equation-block\">\n$$\\varepsilon = -N\\frac{\\Delta\\Phi}{\\Delta t}$$\n$$\\varepsilon = BvL$$\n</div>",
       "questions": [
-        {"id": "in1", "question": "What are the effects of relative motion between a conductor and a magnetic field?", "hint": "Consider induced EMF and current."},
-        {"id": "in2", "question": "How did the discovery of electromagnetic induction affect industrialization?", "hint": "Think about generators, motors, and power transmission."},
-        {"id": "in3", "question": "How is the efficiency of electricity generation dependent on the source of energy?", "hint": "Compare thermal plants, renewables, and energy conversions."},
-        {"id": "in4", "question": "Faraday's law includes a rate of change. Which other areas of physics relate to rates of change?", "hint": "Consider velocity, acceleration, power, current."}
+        {
+          "id": "in1",
+          "question": "What are the effects of relative motion between a conductor and a magnetic field?",
+          "hint": "Consider induced EMF and current."
+        },
+        {
+          "id": "in2",
+          "question": "How did the discovery of electromagnetic induction affect industrialization?",
+          "hint": "Think about generators, motors, and power transmission."
+        },
+        {
+          "id": "in3",
+          "question": "How is the efficiency of electricity generation dependent on the source of energy?",
+          "hint": "Compare thermal plants, renewables, and energy conversions."
+        },
+        {
+          "id": "in4",
+          "question": "Faraday's law includes a rate of change. Which other areas of physics relate to rates of change?",
+          "hint": "Consider velocity, acceleration, power, current."
+        }
       ]
     },
     "structure-atom": {
       "title": "E.1 Structure of the Atom",
       "content": "<h1>Structure of the Atom</h1>\n\n<h2>Rutherford Scattering</h2>\n<p>Alpha particles scattered by small, dense, positive nucleus.</p>\n\n<h2>Atomic Transitions</h2>\n<div class=\"equation-block\">\n$$\\Delta E = hf$$\n</div>\n\n<h2>Bohr Model (HL)</h2>\n<div class=\"equation-block\">\n$$E_n = \\frac{-13.6}{n^2} \\text{ eV}$$\n$$mvr = \\frac{nh}{2\\pi}$$\n$$R = R_0 A^{1/3}$$\n</div>",
       "questions": [
-        {"id": "sa1", "question": "What is the role of evidence in the development of models of the atom?", "hint": "Consider how Rutherford's experiment changed the plum pudding model."},
-        {"id": "sa2", "question": "In what ways are previous models of the atom still valid despite recent advances?", "hint": "Think about the usefulness of Bohr model for hydrogen spectra."},
-        {"id": "sa3", "question": "How can emission spectra allow for the properties of stars to be deduced?", "hint": "Consider temperature, composition, and motion from spectral analysis."},
-        {"id": "sa4", "question": "Under what circumstances does the Bohr model fail?", "hint": "Think about multi-electron atoms and fine structure."}
+        {
+          "id": "sa1",
+          "question": "What is the role of evidence in the development of models of the atom?",
+          "hint": "Consider how Rutherford's experiment changed the plum pudding model."
+        },
+        {
+          "id": "sa2",
+          "question": "In what ways are previous models of the atom still valid despite recent advances?",
+          "hint": "Think about the usefulness of Bohr model for hydrogen spectra."
+        },
+        {
+          "id": "sa3",
+          "question": "How can emission spectra allow for the properties of stars to be deduced?",
+          "hint": "Consider temperature, composition, and motion from spectral analysis."
+        },
+        {
+          "id": "sa4",
+          "question": "Under what circumstances does the Bohr model fail?",
+          "hint": "Think about multi-electron atoms and fine structure."
+        }
       ]
     },
     "quantum-physics": {
       "title": "E.2 Quantum Physics",
       "content": "<h1>Quantum Physics</h1>\n<p class=\"hl-note\">This is Higher Level content.</p>\n\n<h2>Photoelectric Effect</h2>\n<div class=\"equation-block\">\n$$E_{max} = hf - \\phi$$\n</div>\n\n<h2>de Broglie Wavelength</h2>\n<div class=\"equation-block\">\n$$\\lambda = \\frac{h}{p}$$\n</div>\n\n<h2>Compton Scattering</h2>\n<div class=\"equation-block\">\n$$\\Delta\\lambda = \\frac{h}{m_e c}(1 - \\cos\\theta)$$\n</div>",
       "questions": [
-        {"id": "qp1", "question": "How can light be used to create an electric current?", "hint": "Describe the photoelectric effect and photons."},
-        {"id": "qp2", "question": "What is meant by wave–particle duality?", "hint": "Consider how light and matter exhibit both wave and particle properties."},
-        {"id": "qp3", "question": "How did the explanation of the photoelectric effect lead to the falsification that light was purely a wave?", "hint": "Think about intensity vs frequency effects."},
-        {"id": "qp4", "question": "Why is Compton scattering more convincing evidence for the particle nature of light than the photoelectric effect?", "hint": "Consider the momentum transfer in collisions."}
+        {
+          "id": "qp1",
+          "question": "How can light be used to create an electric current?",
+          "hint": "Describe the photoelectric effect and photons."
+        },
+        {
+          "id": "qp2",
+          "question": "What is meant by wave\u2013particle duality?",
+          "hint": "Consider how light and matter exhibit both wave and particle properties."
+        },
+        {
+          "id": "qp3",
+          "question": "How did the explanation of the photoelectric effect lead to the falsification that light was purely a wave?",
+          "hint": "Think about intensity vs frequency effects."
+        },
+        {
+          "id": "qp4",
+          "question": "Why is Compton scattering more convincing evidence for the particle nature of light than the photoelectric effect?",
+          "hint": "Consider the momentum transfer in collisions."
+        }
       ]
     },
     "radioactive-decay": {
       "title": "E.3 Radioactive Decay",
-      "content": "<h1>Radioactive Decay</h1>\n\n<h2>Types of Radiation</h2>\n<ul>\n<li><strong>Alpha (α)</strong>: ²₄He - high ionizing, low penetrating</li>\n<li><strong>Beta (β)</strong>: electron/positron + neutrino</li>\n<li><strong>Gamma (γ)</strong>: photon - low ionizing, high penetrating</li>\n</ul>\n\n<h2>Binding Energy</h2>\n<div class=\"equation-block\">\n$$E = mc^2$$\n</div>\n\n<h2>Decay Law (HL)</h2>\n<div class=\"equation-block\">\n$$N = N_0 e^{-\\lambda t}$$\n$$A = \\lambda N$$\n$$T_{1/2} = \\frac{\\ln 2}{\\lambda}$$\n</div>",
+      "content": "<h1>Radioactive Decay</h1>\n\n<h2>Types of Radiation</h2>\n<ul>\n<li><strong>Alpha (\u03b1)</strong>: \u00b2\u2084He - high ionizing, low penetrating</li>\n<li><strong>Beta (\u03b2)</strong>: electron/positron + neutrino</li>\n<li><strong>Gamma (\u03b3)</strong>: photon - low ionizing, high penetrating</li>\n</ul>\n\n<h2>Binding Energy</h2>\n<div class=\"equation-block\">\n$$E = mc^2$$\n</div>\n\n<h2>Decay Law (HL)</h2>\n<div class=\"equation-block\">\n$$N = N_0 e^{-\\lambda t}$$\n$$A = \\lambda N$$\n$$T_{1/2} = \\frac{\\ln 2}{\\lambda}$$\n</div>",
       "questions": [
-        {"id": "rd1", "question": "Why are some isotopes more stable than others?", "hint": "Consider the neutron-to-proton ratio and binding energy."},
-        {"id": "rd2", "question": "How can the random nature of radioactive decay allow for predictions to be made?", "hint": "Think about large numbers and statistical behavior."},
-        {"id": "rd3", "question": "How did conservation lead to experimental evidence of the neutrino?", "hint": "Consider missing energy and momentum in beta decay."},
-        {"id": "rd4", "question": "Which areas of physics involve exponential change?", "hint": "Think about capacitor discharge, cooling curves, population."}
+        {
+          "id": "rd1",
+          "question": "Why are some isotopes more stable than others?",
+          "hint": "Consider the neutron-to-proton ratio and binding energy."
+        },
+        {
+          "id": "rd2",
+          "question": "How can the random nature of radioactive decay allow for predictions to be made?",
+          "hint": "Think about large numbers and statistical behavior."
+        },
+        {
+          "id": "rd3",
+          "question": "How did conservation lead to experimental evidence of the neutrino?",
+          "hint": "Consider missing energy and momentum in beta decay."
+        },
+        {
+          "id": "rd4",
+          "question": "Which areas of physics involve exponential change?",
+          "hint": "Think about capacitor discharge, cooling curves, population."
+        }
       ]
     },
     "fission": {
       "title": "E.4 Fission",
-      "content": "<h1>Nuclear Fission</h1>\n\n<h2>Chain Reactions</h2>\n<p>Neutrons from fission trigger further fissions. Criticality requires at least one neutron per fission causing another.</p>\n\n<h2>Reactor Components</h2>\n<ul>\n<li><strong>Moderator</strong>: Slows neutrons</li>\n<li><strong>Control rods</strong>: Absorb neutrons</li>\n<li><strong>Heat exchanger</strong>: Transfers energy</li>\n<li><strong>Shielding</strong>: Contains radiation</li>\n</ul>",
+      "content": "<h1>Nuclear Fission</h1>\n\n<p>Since right now nuclear energy is on the headlines and used for a lot of reasons in conflicts, this is an important topic. We can connect this to the Universal Atomic union checking if countries are enriching uranium. Countries are free to produce energy but not turn it into an atomic bomb. Let's learn about chain reactions and the enriched uranium process, and why we need regulations around it for the globe.</p>\n\n<h2>The Physics: Why Enrichment Matters</h2>\n<p>From here, we transition into the core physics concepts:</p>\n<ul>\n<li><strong>The Isotope Problem:</strong> Natural uranium mined from the Earth is about 99.3% Uranium-238 ($^{238}\\text{U}$) and only 0.7% Uranium-235 ($^{235}\\text{U}$).</li>\n<li><strong>Inducing Fission:</strong> For a fission reaction to occur, a neutron must be captured by a nucleus. However, it is slow-moving neutrons that are the most effective at inducing fission in $^{235}\\text{U}$. $^{238}\\text{U}$ tends to just absorb fast neutrons without splitting, acting like a wet blanket on the reaction.</li>\n<li><strong>The Chain Reaction:</strong> When $^{235}\\text{U}$ undergoes fission, it releases a large amount of energy and extra neutrons. These newly produced neutrons can then hit other $^{235}\\text{U}$ atoms, causing further fission reactions in a self-sustaining loop known as a chain reaction.</li>\n<li><strong>Fuel Enrichment:</strong> Because neutrons scatter in random directions, if the concentration of $^{235}\\text{U}$ is too low, too many neutrons are absorbed by the $^{238}\\text{U}$ or lost to the environment, and the chain reaction dies out. Therefore, countries must \"enrich\" the uranium\u2014a process of increasing the concentration of the fissile $^{235}\\text{U}$ isotope.</li>\n</ul>\n\n<h2>Solving the Mystery: Subcritical, Critical, and Supercritical</h2>\n<p>This is where the inspector makes their judgment based on the concept of <strong>Critical Mass</strong>\u2014the minimum amount of the fissile isotope needed to sustain a nuclear chain reaction.</p>\n<ul>\n<li><strong>Civilian Power (LEU - Low Enriched Uranium):</strong> To boil water and generate electricity, you need a controlled, steady release of energy. The rate of neutron loss must equal the rate of neutron creation by fission. This requires enriching the uranium to about 3% to 5% $^{235}\\text{U}$. This sustains a critical mass.</li>\n<li><strong>Weapons-Grade (HEU - Highly Enriched Uranium):</strong> To create a devastating explosion, you need a runaway, exponential chain reaction where the rate of neutron loss is strictly less than the rate of neutron creation. This requires enriching the uranium to over 90% $^{235}\\text{U}$. This creates a supercritical mass.</li>\n</ul>\n<p>To help visualize exactly why these specific percentages matter, interact with the simulation below.</p>\n<iframe src=\"data/simulations/fission.html\" width=\"100%\" height=\"600px\" style=\"border:none;\"></iframe>\n\n<h2>Reactor Components</h2>\n<ul>\n<li><strong>Moderator</strong>: Slows neutrons</li>\n<li><strong>Control rods</strong>: Absorb neutrons</li>\n<li><strong>Heat exchanger</strong>: Transfers energy</li>\n<li><strong>Shielding</strong>: Contains radiation</li>\n</ul>",
       "questions": [
-        {"id": "fi1", "question": "In which form is energy stored within the nucleus of the atom?", "hint": "Consider binding energy and mass defect."},
-        {"id": "fi2", "question": "How can the energy released from the nucleus be harnessed?", "hint": "Think about controlled chain reactions and heat transfer."},
-        {"id": "fi3", "question": "How is binding energy used to determine the rate of energy production in a nuclear power plant?", "hint": "Consider mass defect per fission and reaction rate."},
-        {"id": "fi4", "question": "To what extent is there a role for fission in addressing climate change?", "hint": "Consider low carbon emissions vs waste and safety concerns."}
+        {
+          "id": "fi1",
+          "question": "In which form is energy stored within the nucleus of the atom?",
+          "hint": "Consider binding energy and mass defect."
+        },
+        {
+          "id": "fi2",
+          "question": "How can the energy released from the nucleus be harnessed?",
+          "hint": "Think about controlled chain reactions and heat transfer."
+        },
+        {
+          "id": "fi3",
+          "question": "How is binding energy used to determine the rate of energy production in a nuclear power plant?",
+          "hint": "Consider mass defect per fission and reaction rate."
+        },
+        {
+          "id": "fi4",
+          "question": "To what extent is there a role for fission in addressing climate change?",
+          "hint": "Consider low carbon emissions vs waste and safety concerns."
+        }
       ]
     },
     "fusion-stars": {
       "title": "E.5 Fusion and Stars",
       "content": "<h1>Fusion and Stars</h1>\n\n<h2>Stellar Equilibrium</h2>\n<p>Radiation pressure outward balances gravitational force inward.</p>\n\n<h2>HR Diagram</h2>\n<ul>\n<li><strong>Main sequence</strong>: Hydrogen burning</li>\n<li><strong>Red giants</strong>: Evolved stars</li>\n<li><strong>White dwarfs</strong>: Stellar remnants</li>\n</ul>\n\n<h2>Stellar Parallax</h2>\n<div class=\"equation-block\">\n$$d(\\text{pc}) = \\frac{1}{p(\\text{arcsec})}$$\n</div>",
       "questions": [
-        {"id": "fs1", "question": "How are elements created?", "hint": "Consider nucleosynthesis in stars and supernovae."},
-        {"id": "fs2", "question": "What physical processes lead to the evolution of stars?", "hint": "Think about fusion, mass, and the balance between pressure and gravity."},
-        {"id": "fs3", "question": "How is fusion like—and unlike—fission?", "hint": "Compare energy release, conditions required, and products."},
-        {"id": "fs4", "question": "How can the understanding of black-body radiation help determine the properties of stars?", "hint": "Apply Wien's law and Stefan-Boltzmann law to spectra."}
+        {
+          "id": "fs1",
+          "question": "How are elements created?",
+          "hint": "Consider nucleosynthesis in stars and supernovae."
+        },
+        {
+          "id": "fs2",
+          "question": "What physical processes lead to the evolution of stars?",
+          "hint": "Think about fusion, mass, and the balance between pressure and gravity."
+        },
+        {
+          "id": "fs3",
+          "question": "How is fusion like\u2014and unlike\u2014fission?",
+          "hint": "Compare energy release, conditions required, and products."
+        },
+        {
+          "id": "fs4",
+          "question": "How can the understanding of black-body radiation help determine the properties of stars?",
+          "hint": "Apply Wien's law and Stefan-Boltzmann law to spectra."
+        }
       ]
     }
   }
