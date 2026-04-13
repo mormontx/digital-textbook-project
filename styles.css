@@ -32,7 +32,8 @@
     --spacing-xl: 2rem;
     
     /* Typography */
-    --font-main: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-marker: 'Permanent Marker', cursive;
     --font-mono: 'Courier New', Courier, monospace;
     
@@ -51,10 +52,16 @@
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-primary);
-    line-height: 1.6;
+    font-family: var(--font-serif);
+    color: #111111;
+    line-height: 1.8;
     background-color: var(--background);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .sidebar, .topic-title, .callout-title, .question-number {
+    font-family: var(--font-main);
 }
 
 /* ===========================
@@ -348,6 +355,98 @@ body {
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
+
+
+/* Enhanced content-chunk for educational spacing */
+.content-chunk {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8eaed;
+    border-left: 4px solid #d4a5a5;
+    transition: box-shadow 0.2s ease;
+}
+
+.content-chunk:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+}
+
+.content-chunk h2 {
+    margin-top: 0 !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0e0e0;
+    margin-bottom: 1rem !important;
+}
+
+/* Toxic callout - upgraded with proper toxic green frame */
+.callout-toxic {
+    background: #f9fff9;
+    border: 2px solid #39ff14;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    position: relative;
+    color: #111111;
+}
+
+
+
+.callout-toxic .callout-title {
+    color: #1a6e00;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.callout-toxic p {
+    color: #1a3a10;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* TOK callout - philosophical gold / parchment style */
+.callout-tok {
+    background: linear-gradient(135deg, #fffbf0 0%, #fdf3d0 100%);
+    border-left: 4px solid #c9a227;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(201, 162, 39, 0.15);
+}
+
+.callout-tok::before {
+    content: '💭';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.callout-tok .callout-title {
+    color: #8a6a00;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.callout-tok p {
+    color: #5a4400;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.975rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
 
 /* ===========================
    Reflection Questions
