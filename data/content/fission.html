@@ -1,0 +1,89 @@
+<h1>Nuclear Fission</h1>
+
+<div class="content-chunk">
+    <p>Nuclear fission is the process where a heavy, unstable nucleus splits into two lighter nuclei, releasing a massive amount of energy. In order to harvest this energy efficiently for civilian power, we use complex facilities known as nuclear reactors.</p>
+    
+    <figure style="text-align: center; margin: 1.5rem 0;">
+        <img src="images/reactor_core.png" alt="Nuclear Reactor Core" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <figcaption style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; font-style: italic;">The core of a nuclear reactor, where sustained fission acts as a heat source.</figcaption>
+    </figure>
+
+    <p>For a continuous release of energy, fission relies on what we call a <strong>chain reaction</strong>. A chain reaction requires that when one nucleus splits, it releases free neutrons that go on to strike and split other nuclei, propagating the reaction outward.</p>
+
+    <figure style="text-align: center; margin: 1.5rem 0;">
+        <img src="images/chain_reaction.png" alt="Nuclear Chain Reaction" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <figcaption style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; font-style: italic;">A chain reaction: Free neutrons striking nuclei, causing them to split and release further neutrons.</figcaption>
+    </figure>
+
+    <div class="equation-block">
+        $$ ^{235}_{92}\text{U} + ^{1}_{0}\text{n} \rightarrow ^{141}_{56}\text{Ba} + ^{92}_{36}\text{Kr} + 3(^{1}_{0}\text{n}) + \text{Energy} $$
+    </div>
+    <p style="font-size: 0.95rem; color: #555; text-align: center; margin-bottom: 1rem;">Typical U-235 fission producing Barium, Krypton, and three additional neutrons.</p>
+    
+    <div class="callout callout-tok">
+        <div class="callout-title">Theory of Knowledge</div>
+        <p>To what extent does the possession of scientific knowledge obligate scientists to regulate its application?</p>
+    </div>
+</div>
+
+<div class="content-chunk">
+    <h2>The Physics: Why Enrichment Matters</h2>
+    <p>First, we need to understand the raw materials. Natural uranium mined from the Earth is mostly Uranium-238 ($^{238}\text{U}$), making up about 99.3% of the ore. Only a tiny fraction, about 0.7%, is Uranium-235 ($^{235}\text{U}$).</p>
+    <p>For a fission reaction to occur, a moving neutron must be captured by a nucleus. However, it is the slow-moving neutrons that are highly effective at inducing fission in $^{235}\text{U}$.</p>
+
+    <div class="callout callout-toxic">
+        <div class="callout-title">Crucial Difference</div>
+        <p>Why doesn't the $^{238}\text{U}$ help? It tends to just absorb fast neutrons without splitting. This acts like a wet blanket on the reaction and naturally prevents runaway chain reactions in uranium ores!</p>
+    </div>
+</div>
+
+<div class="content-chunk">
+    <h2>Solving the Mystery: Subcritical, Critical, and Supercritical</h2>
+    <p>This is where inspectors make their judgment. Their assessment is based on the concept of <strong>Critical Mass</strong>—the minimum amount of the fissile isotope needed to sustain a nuclear chain reaction.</p>
+    
+    <ul>
+    <li><strong>Subcritical Mass:</strong> If the mass or concentration of fissile uranium is too low, escaping neutrons will be lost or absorbed (like by $^{238}\text{U}$) without triggering new fissions. The chain reaction simply dies out.</li>
+    </ul>
+
+    <figure style="text-align: center; margin: 1.5rem 0;">
+        <img src="images/uranium_nucleus.png" alt="Uranium Nucleus (U-235 and U-238)" style="max-width: 400px; width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <figcaption style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; font-style: italic;">A comparison of uranium isotope nuclei (U-235 on the left, U-238 on the right). Purely structurally, they are dense clusters of protons and neutrons with no electrons.</figcaption>
+    </figure>
+
+    <ul>
+    <li><strong>Critical Mass (LEU - Low Enriched):</strong> To generate electricity safely, you need a controlled, steady release of energy. The rate of neutron loss must exactly equal the rate of neutron creation by fission. This requires enriching the uranium to about 3% to 5% $^{235}\text{U}$, sustaining a <em>critical mass</em>.</li>
+    <li><strong>Supercritical Mass (HEU - Highly Enriched):</strong> To create a devastating explosion, you need a runaway, exponential chain reaction where neutron creation vastly exceeds loss. This requires enriching the uranium to over 90% $^{235}\text{U}$, creating a <em>supercritical mass</em>.</li>
+    </ul>
+
+    <div class="callout callout-tok">
+        <div class="callout-title">Theory of Knowledge</div>
+        <p>When an inspector determines if a mass is critical based on statistical probabilities, how does this probabilistic knowledge compare to certainty in other areas of knowledge?</p>
+    </div>
+    
+    <p>To help visualize exactly why these specific percentages matter, interact with the simulation below.</p>
+    <iframe src="data/simulations/fission.html" width="100%" height="600px" style="border:none;"></iframe>
+</div>
+
+<div class="content-chunk">
+    <h2>Reactor Components</h2>
+    <p>A nuclear reactor is carefully designed to maintain a critical mass safely. It uses several key components:</p>
+    <ul>
+    <li><strong>Moderator</strong>: Slows neutrons down so they can be captured by $^{235}\text{U}$</li>
+    <li><strong>Control rods</strong>: Absorb excess neutrons to regulate or stop the reaction</li>
+    <li><strong>Heat exchanger</strong>: Transfers the generated thermal energy to boil water</li>
+    <li><strong>Shielding</strong>: Contains dangerous radiation within the reactor core</li>
+    </ul>
+</div>
+<div class="content-chunk">
+    <h2>The Chernobyl Disaster</h2>
+    
+    <div class="callout callout-toxic">
+        <div class="callout-title">Catastrophic Failure</div>
+        <p>In 1986, the Chernobyl Nuclear Power Plant experienced a catastrophic meltdown. A combination of flawed reactor design (RBMK type, which had a positive void coefficient) and severe operator errors during a late-night safety test caused a massive power surge. The water coolant flashed into steam, leading to an immense steam explosion that blew the massive lid off the reactor, exposing the extremely radioactive core to the atmosphere.</p>
+    </div>
+
+    <p style="margin-top: 1.5rem;">To fully understand the sequence of events and the physics of what went wrong inside Reactor 4, watch this detailed simulation below:</p>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+        <iframe src="https://www.youtube.com/embed/WMr3-ShzB08" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen></iframe>
+    </div>
+</div>

@@ -121,19 +121,36 @@ function setActiveLink(activeLink) {
 // ===========================
 // Content Loading
 // ===========================
-function loadContent(sectionId) {
-    if (!contentData || !contentData.sections[sectionId]) {
-        const contentArea = document.getElementById('content');
-        contentArea.innerHTML = `
-            <h1>Content Coming Soon</h1>
-            <p>This section is under development. Please check back later.</p>
-        `;
-        return;
+async function loadContent(sectionId) {
+    const contentArea = document.getElementById('content');
+    let loadedContent = null;
+    
+    // Attempt to fetch from standalone HTML file
+    try {
+        const response = await fetch(`data/content/${sectionId}.html`);
+        if (response.ok) {
+            loadedContent = await response.text();
+        } else {
+            console.warn(`Standalone file for ${sectionId} not found, falling back to content.json.`);
+        }
+    } catch (error) {
+        console.error(`Error loading standalone file for ${sectionId}:`, error);
     }
     
-    const section = contentData.sections[sectionId];
-    const contentArea = document.getElementById('content');
-    contentArea.innerHTML = section.content;
+    // Fallback to monolithic content.json data
+    if (!loadedContent) {
+        if (contentData && contentData.sections[sectionId]) {
+            loadedContent = contentData.sections[sectionId].content;
+        } else {
+            contentArea.innerHTML = `
+                <h1>Content Coming Soon</h1>
+                <p>This section is under development. Please check back later.</p>
+            `;
+            return;
+        }
+    }
+    
+    contentArea.innerHTML = loadedContent;
     
     // Update URL hash
     window.location.hash = sectionId;
