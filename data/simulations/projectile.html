@@ -9,22 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0717;
-            --panel-bg: #140d2b;
-            --panel-border: rgba(57, 255, 20, 0.15);
-            --header-gradient: linear-gradient(135deg, #1e0f3b 0%, #0b0717 100%);
-            
-            --neon-green: #39ff14;
-            --neon-green-glow: rgba(57, 255, 20, 0.4);
-            --neon-cyan: #00f0ff;
-            --neon-cyan-glow: rgba(0, 240, 255, 0.4);
-            --neon-pink: #ff007f;
-            --neon-pink-glow: rgba(255, 0, 127, 0.4);
-            
-            --text-primary: #f1ecf9;
-            --text-secondary: #a496c0;
-            --text-dark: #6e5e8e;
-            
+            --bg-color: #f2f2f0;
+            --panel-bg: #ffffff;
+            --panel-border: #c8c8c4;
+            --header-gradient: linear-gradient(135deg, #e8e6e2 0%, #f2f2f0 100%);
+            --neon-green: #4a7c59;
+            --neon-green-glow: rgba(74, 124, 89, 0.25);
+            --neon-cyan: #2a6db5;
+            --neon-cyan-glow: rgba(42, 109, 181, 0.25);
+            --neon-pink: #b0392b;
+            --neon-pink-glow: rgba(176, 57, 43, 0.25);
+            --text-primary: #1e1e1e;
+            --text-secondary: #555555;
+            --text-dark: #999999;
             --font-main: 'Sora', sans-serif;
             --border-radius: 12px;
         }
@@ -38,7 +35,7 @@
         body {
             font-family: var(--font-main);
             color: var(--text-primary);
-            background-color: var(--bg-color);
+            background-color: #f0f0f0;
             margin: 0 auto;
             padding: 1.5rem 1rem;
             max-width: 880px;
@@ -50,7 +47,7 @@
             border: 2px solid var(--panel-border);
             border-radius: var(--border-radius);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 
-                        inset 0 0 20px rgba(57, 255, 20, 0.05);
+                        inset 0 0 20px rgba(74, 124, 89, 0.05);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -71,7 +68,7 @@
             font-weight: 700;
             letter-spacing: -0.02em;
             color: var(--neon-green);
-            text-shadow: 0 0 10px var(--neon-green-glow);
+            text-shadow: none;
         }
 
         .sim-header .tag {
@@ -89,7 +86,7 @@
         .canvas-container {
             position: relative;
             width: 100%;
-            background-color: #05030a;
+            background-color: #f4f4f2;
         }
 
         canvas {
@@ -103,8 +100,8 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: rgba(20, 13, 43, 0.85);
-            border: 1px solid rgba(0, 240, 255, 0.2);
+            background: rgba(255,255,255,0.96);
+            border: 1px solid #c0c0bc;
             border-radius: 8px;
             padding: 0.75rem 1rem;
             font-size: 0.8rem;
@@ -131,7 +128,7 @@
         /* Dashboard & Controls */
         .dashboard {
             padding: 1.5rem;
-            background: #0f0a21;
+            background: #ebebea;
             border-top: 1px solid var(--panel-border);
             display: grid;
             grid-template-columns: 1.2fr 1fr 1fr;
@@ -193,7 +190,7 @@
             width: 100%;
             height: 6px;
             border-radius: 3px;
-            background: #251b47;
+            background: #d4d4d0;
             outline: none;
             transition: background 0.2s;
         }
@@ -227,7 +224,7 @@
         }
 
         .btn-preset {
-            background: #20153f;
+            background: #ebebeb;
             border: 1px solid rgba(164, 150, 192, 0.2);
             color: var(--text-primary);
             padding: 0.4rem 0;
@@ -240,15 +237,15 @@
         }
 
         .btn-preset:hover {
-            background: #2d1d59;
+            background: #d4d4d0;
             border-color: var(--neon-cyan);
         }
 
         .btn-preset.active {
-            background: rgba(0, 240, 255, 0.15);
+            background: rgba(42, 109, 181, 0.15);
             border-color: var(--neon-cyan);
             color: var(--neon-cyan);
-            box-shadow: inset 0 0 6px rgba(0, 240, 255, 0.1);
+            box-shadow: inset 0 0 6px rgba(42, 109, 181, 0.1);
         }
 
         /* Checkbox & Options */
@@ -272,9 +269,9 @@
             appearance: none;
             width: 16px;
             height: 16px;
-            border: 2px solid #3d2f6f;
+            border: 2px solid #aaa;
             border-radius: 4px;
-            background: #140d2b;
+            background: #f8f8f6;
             display: grid;
             place-content: center;
             cursor: pointer;
@@ -326,13 +323,13 @@
 
         .btn-fire {
             background-color: var(--neon-green);
-            color: #030a00;
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(74, 124, 89, 0.4);
         }
 
         .btn-fire:hover {
-            background-color: #55ff3b;
-            box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+            background-color: #5a9a6a;
+            box-shadow: 0 0 25px rgba(74, 124, 89, 0.6);
             transform: translateY(-1px);
         }
 
@@ -341,30 +338,50 @@
         }
 
         .btn-clear {
-            background-color: #20153f;
+            background-color: #e8e8e6;
             color: var(--text-primary);
             border: 1px solid rgba(164, 150, 192, 0.3);
         }
 
         .btn-clear:hover {
-            background-color: #2b1c55;
+            background-color: #d8d8d6;
             border-color: var(--neon-pink);
             color: #fff;
-            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+            box-shadow: 0 0 10px rgba(192, 57, 43, 0.2);
         }
 
         .btn-clear:active {
-            background-color: #17102e;
+            background-color: #ccccca;
         }
 
+        /* Fullscreen button — sits in the header bar */
+        .fs-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--panel-border);
+            padding: 0.3rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: var(--font-main);
+            border-radius: 5px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            transition: background 0.18s, color 0.18s;
+            white-space: nowrap;
+        }
+        .fs-btn:hover {
+            background: var(--neon-green);
+            color: #fff;
+            border-color: var(--neon-green);
+        }
     </style>
 </head>
 <body>
-
     <div class="simulation-container">
         <div class="sim-header">
             <h2>Interactive: Projectile Mechanics</h2>
             <div class="tag">Topic A.1</div>
+            <button class="fs-btn">Full Screen</button>
         </div>
 
         <div class="canvas-container">
@@ -634,7 +651,7 @@
 
         // Draw background, ground line, launcher base, and coordinate grid
         function drawGrid() {
-            ctx.fillStyle = '#05030a';
+            ctx.fillStyle = '#f4f4f2';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
             const params = getSimParams();
@@ -663,7 +680,7 @@
                 const cx = toCanvasX(xPhys);
                 if (cx > canvas.width - marginX / 2) break;
                 
-                ctx.strokeStyle = 'rgba(74, 58, 142, 0.1)';
+                ctx.strokeStyle = 'rgba(0,0,0,0.06)';
                 ctx.beginPath();
                 ctx.moveTo(cx, marginY / 2);
                 ctx.lineTo(cx, canvas.height - marginY);
@@ -680,7 +697,7 @@
                 const cy = toCanvasY(yPhys);
                 if (cy < marginY / 2) break;
                 
-                ctx.strokeStyle = 'rgba(74, 58, 142, 0.1)';
+                ctx.strokeStyle = 'rgba(0,0,0,0.06)';
                 ctx.beginPath();
                 ctx.moveTo(marginX, cy);
                 ctx.lineTo(canvas.width - marginX / 2, cy);
@@ -691,7 +708,7 @@
             }
             
             // Ground level line
-            ctx.strokeStyle = '#2d1f56';
+            ctx.strokeStyle = '#b8b8b4';
             ctx.lineWidth = 3;
             ctx.beginPath();
             ctx.moveTo(marginX - 20, canvas.height - marginY);
@@ -727,7 +744,7 @@
                     ctx.lineTo(toCanvasX(saved.points[i].x), toCanvasY(saved.points[i].y));
                 }
                 ctx.lineWidth = 2;
-                ctx.strokeStyle = saved.isAirRes ? 'rgba(255, 0, 127, 0.35)' : 'rgba(0, 240, 255, 0.35)';
+                ctx.strokeStyle = saved.isAirRes ? 'rgba(192, 57, 43, 0.35)' : 'rgba(42, 109, 181, 0.35)';
                 ctx.setLineDash([4, 4]);
                 ctx.stroke();
                 ctx.setLineDash([]);
@@ -743,7 +760,7 @@
             ctx.stroke();
             
             // Draw Base
-            ctx.fillStyle = '#20153f';
+            ctx.fillStyle = '#ebebeb';
             ctx.strokeStyle = varColorHex('--neon-cyan');
             ctx.lineWidth = 2.5;
             ctx.beginPath();
@@ -913,7 +930,7 @@
                 // 1. Velocity Vector (Green Arrow)
                 const arrowLengthX = p_vx * vectorScale;
                 const arrowLengthY = p_vy * vectorScale;
-                drawArrow(cx, cy, cx + arrowLengthX, cy - arrowLengthY, '#39ff14', 3, "v");
+                drawArrow(cx, cy, cx + arrowLengthX, cy - arrowLengthY, '#4a7c59', 3, "v");
                 
                 // 2. Gravity Force Vector (Red Arrow, g pointing down)
                 const gLength = params.g * 2.5;
@@ -985,5 +1002,31 @@
         updateScale();
         drawGrid();
     </script>
+
+
+
+    <script>
+        (function() {
+            const btn = document.querySelector('.fs-btn');
+            if (!btn) return;
+            function enter() {
+                document.documentElement.requestFullscreen().then(function() {
+                    btn.textContent = 'Exit Full Screen';
+                }).catch(function() {});
+            }
+            function exit() {
+                document.exitFullscreen().then(function() {
+                    btn.textContent = 'Full Screen';
+                }).catch(function() {});
+            }
+            btn.addEventListener('click', function() {
+                if (!document.fullscreenElement) { enter(); } else { exit(); }
+            });
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) btn.textContent = 'Full Screen';
+            });
+        })();
+    </script>
+
 </body>
 </html>
