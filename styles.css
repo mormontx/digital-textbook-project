@@ -32,7 +32,7 @@
     --spacing-xl: 2rem;
     
     /* Typography */
-    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-main: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-marker: 'Permanent Marker', cursive;
     --font-mono: 'Courier New', Courier, monospace;
@@ -2509,4 +2509,37 @@ h1, h2, h3, h4, h5, h6, .sidebar, .topic-title, .callout-title, .question-number
     border-radius: 8px;
     border: 2px solid #c8a2c8;
     box-shadow: 0 0 15px rgba(200, 162, 200, 0.3);
+}
+
+/* Readable and Fun Typography Overrides */
+body, p, li, td {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, .sidebar-header h1, .topic-title {
+    font-family: 'Fredoka', 'Outfit', sans-serif !important;
+    letter-spacing: 0.02em;
+}
+
+/* Diagram Styles — Clean SVG light mode */
+.diagram-figure {
+    text-align: center;
+    margin: 1.5rem 0;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.diagram-img {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+    border-radius: 10px;
+    mix-blend-mode: normal;
+    filter: none;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }

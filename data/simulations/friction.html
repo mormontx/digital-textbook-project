@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Friction Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0717;
+            --panel-bg: #140d2b;
+            --panel-border: rgba(57, 255, 20, 0.15);
+            --header-gradient: linear-gradient(135deg, #1e0f3b 0%, #0b0717 100%);
+            --neon-green: #39ff14;
+            --neon-green-glow: rgba(57, 255, 20, 0.4);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-glow: rgba(0, 240, 255, 0.4);
+            --neon-pink: #ff007f;
+            --neon-pink-glow: rgba(255, 0, 127, 0.4);
+            --neon-orange: #ff9500;
+            --text-primary: #f1ecf9;
+            --text-secondary: #a496c0;
+            --text-dark: #6e5e8e;
+            --font-main: 'Sora', sans-serif;
+            --border-radius: 12px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+            max-width: 880px;
+            overflow-x: hidden;
+        }
+
+        .simulation-container {
+            background: var(--panel-bg);
+            border: 2px solid var(--panel-border);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6),
+                        inset 0 0 20px rgba(57, 255, 20, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .sim-header {
+            background: var(--header-gradient);
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--panel-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sim-header h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--neon-green-glow);
+        }
+
+        .sim-header .tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            background-color: #05030a;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .telemetry-overlay {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(20, 13, 43, 0.85);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 1.5rem;
+            row-gap: 0.35rem;
+            pointer-events: none;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .telemetry-label { color: var(--text-secondary); }
+
+        .telemetry-value {
+            color: var(--neon-cyan);
+            font-family: monospace;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .dashboard {
+            padding: 1.5rem;
+            background: #0f0a21;
+            border-top: 1px solid var(--panel-border);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard { grid-template-columns: 1fr; gap: 1.25rem; }
+        }
+
+        .control-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .control-column-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(164, 150, 192, 0.15);
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .slider-group { display: flex; flex-direction: column; gap: 0.35rem; }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .slider-name { color: var(--text-primary); }
+
+        .slider-val {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .slider-val.cyan { color: var(--neon-cyan); }
+        .slider-val.green { color: var(--neon-green); }
+
+        .slider-input {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #251b47;
+            outline: none;
+            transition: background 0.2s;
+        }
+
+        .slider-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan-glow);
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        .slider-input::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+        .slider-input.green::-webkit-slider-thumb {
+            background: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green-glow);
+        }
+
+        .preset-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        .btn-preset {
+            background: #20153f;
+            border: 1px solid rgba(164, 150, 192, 0.2);
+            color: var(--text-primary);
+            padding: 0.45rem 0;
+            font-size: 0.72rem;
+            font-family: var(--font-main);
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-preset:hover {
+            background: #2d1d59;
+            border-color: var(--neon-cyan);
+        }
+
+        .btn-preset.active {
+            background: rgba(0, 240, 255, 0.15);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            box-shadow: inset 0 0 6px rgba(0, 240, 255, 0.1);
+        }
+
+        .action-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: auto;
+        }
+
+        .btn-action {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            font-family: var(--font-main);
+            font-weight: 700;
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-fire {
+            background-color: var(--neon-green);
+            color: #030a00;
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+        }
+
+        .btn-fire:hover {
+            background-color: #55ff3b;
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .btn-fire:active { transform: translateY(1px); }
+
+        .btn-clear {
+            background-color: #20153f;
+            color: var(--text-primary);
+            border: 1px solid rgba(164, 150, 192, 0.3);
+        }
+
+        .btn-clear:hover {
+            background-color: #2b1c55;
+            border-color: var(--neon-pink);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+
+        .insight-box {
+            margin-top: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(57, 255, 20, 0.06);
+            border-left: 3px solid var(--neon-green);
+            border-radius: 4px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .insight-box strong { color: var(--neon-green); }
+    </style>
+</head>
+<body>
+
+    <div class="simulation-container">
+        <div class="sim-header">
+            <h2>Interactive: Surface Friction</h2>
+            <div class="tag">Topic A.1</div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="simCanvas" width="1600" height="600"></canvas>
+
+            <div class="telemetry-overlay">
+                <span class="telemetry-label">Position (x):</span>
+                <span id="telX" class="telemetry-value">0.00 m</span>
+
+                <span class="telemetry-label">Velocity (v):</span>
+                <span id="telV" class="telemetry-value">5.00 m/s</span>
+
+                <span class="telemetry-label">Acceleration (a):</span>
+                <span id="telA" class="telemetry-value">0.00 m/s2</span>
+
+                <span class="telemetry-label">Elapsed (t):</span>
+                <span id="telT" class="telemetry-value">0.00 s</span>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <!-- Column 1: Push Parameters -->
+            <div class="control-column">
+                <span class="control-column-title">Push Parameters</span>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-name">Initial Velocity (v0)</span>
+                        <span id="velVal" class="slider-val cyan">5.0 m/s</span>
+                    </div>
+                    <input type="range" id="velSlider" class="slider-input" min="1" max="20" step="0.5" value="5">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-name">Object Mass (m)</span>
+                        <span id="massVal" class="slider-val cyan">2.0 kg</span>
+                    </div>
+                    <input type="range" id="massSlider" class="slider-input" min="0.5" max="10" step="0.5" value="2">
+                </div>
+            </div>
+
+            <!-- Column 2: Surface Presets -->
+            <div class="control-column">
+                <span class="control-column-title">Surface Type</span>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-name">Friction Coeff. (mu)</span>
+                        <span id="muVal" class="slider-val green">0.80</span>
+                    </div>
+                    <input type="range" id="muSlider" class="slider-input green" min="0.00" max="1.50" step="0.01" value="0.80">
+                </div>
+
+                <div class="preset-row">
+                    <button class="btn-preset active" id="pGravel" onclick="setPreset(0.80, 'pGravel')">Gravel</button>
+                    <button class="btn-preset" id="pWood" onclick="setPreset(0.30, 'pWood')">Wood</button>
+                    <button class="btn-preset" id="pIce" onclick="setPreset(0.03, 'pIce')">Ice</button>
+                    <button class="btn-preset" id="pSpace" onclick="setPreset(0.00, 'pSpace')">Space</button>
+                </div>
+
+                <div class="insight-box" id="insightBox">
+                    <strong>Physics Insight:</strong> High friction creates a strong retarding force, bringing the object to a stop rapidly.
+                </div>
+            </div>
+
+            <!-- Column 3: Actions -->
+            <div class="control-column">
+                <span class="control-column-title">Simulation Control</span>
+
+                <div class="action-row">
+                    <button id="btnPush" class="btn-action btn-fire">Push Object</button>
+                    <button id="btnReset" class="btn-action btn-clear">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const velSlider = document.getElementById('velSlider');
+        const massSlider = document.getElementById('massSlider');
+        const muSlider = document.getElementById('muSlider');
+
+        const velVal = document.getElementById('velVal');
+        const massVal = document.getElementById('massVal');
+        const muVal = document.getElementById('muVal');
+
+        const telX = document.getElementById('telX');
+        const telV = document.getElementById('telV');
+        const telA = document.getElementById('telA');
+        const telT = document.getElementById('telT');
+
+        const insightBox = document.getElementById('insightBox');
+
+        const btnPush = document.getElementById('btnPush');
+        const btnReset = document.getElementById('btnReset');
+
+        // Physics state
+        let pos = 0, vel = 0, acc = 0, elapsedTime = 0;
+        let isMoving = false;
+        let trail = [];
+        let completedTrails = [];
+        let rafId = null;
+        let lastTimestamp = 0;
+
+        // World constants
+        const g = 9.81;
+        const marginLeft = 80;
+        const groundY = 420; // canvas Y for ground line
+        const scale = 55;   // pixels per metre
+
+        const insights = {
+            high:   '<strong>Physics Insight:</strong> High friction creates a strong retarding force, bringing the object to a stop rapidly.',
+            medium: '<strong>Physics Insight:</strong> Moderate friction lets the object slide a fair distance before the retarding force halts it.',
+            low:    '<strong>Physics Insight:</strong> Very low friction means almost no opposing force -- the object barely decelerates.',
+            zero:   '<strong>Physics Insight:</strong> With zero friction (F_net = 0), the object never decelerates. Newton\'s First Law: an object in motion stays in motion at constant velocity unless acted upon by an external force.'
+        };
+
+        function getParams() {
+            return {
+                v0:   parseFloat(velSlider.value),
+                mass: parseFloat(massSlider.value),
+                mu:   parseFloat(muSlider.value)
+            };
+        }
+
+        function syncSliders() {
+            velVal.innerText  = parseFloat(velSlider.value).toFixed(1) + ' m/s';
+            massVal.innerText = parseFloat(massSlider.value).toFixed(1) + ' kg';
+            muVal.innerText   = parseFloat(muSlider.value).toFixed(2);
+
+            const mu = parseFloat(muSlider.value);
+            if (mu === 0)       insightBox.innerHTML = insights.zero;
+            else if (mu < 0.10) insightBox.innerHTML = insights.low;
+            else if (mu < 0.50) insightBox.innerHTML = insights.medium;
+            else                insightBox.innerHTML = insights.high;
+        }
+
+        function setPreset(mu, id) {
+            muSlider.value = mu;
+            document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            syncSliders();
+            if (!isMoving) drawScene();
+        }
+
+        [velSlider, massSlider, muSlider].forEach(s => {
+            s.addEventListener('input', () => {
+                document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active'));
+                syncSliders();
+                if (!isMoving) drawScene();
+            });
+        });
+
+        btnPush.addEventListener('click', pushObject);
+        btnReset.addEventListener('click', resetSim);
+
+        // ---- Drawing ----
+        function toX(physX) { return marginLeft + physX * scale; }
+
+        function drawScene() {
+            const W = canvas.width, H = canvas.height;
+            ctx.fillStyle = '#05030a';
+            ctx.fillRect(0, 0, W, H);
+
+            // Grid lines
+            ctx.strokeStyle = 'rgba(74, 58, 142, 0.1)';
+            ctx.lineWidth = 1;
+            ctx.font = '500 16px Sora, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.fillStyle = '#6e5e8e';
+            for (let m = 0; m <= 26; m += 2) {
+                const cx = toX(m);
+                if (cx > W - 20) break;
+                ctx.beginPath(); ctx.moveTo(cx, 40); ctx.lineTo(cx, groundY); ctx.stroke();
+                ctx.fillText(m + 'm', cx, groundY + 14);
+            }
+
+            // Ground line
+            ctx.strokeStyle = '#2d1f56';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(marginLeft - 20, groundY);
+            ctx.lineTo(W - 20, groundY);
+            ctx.stroke();
+
+            // Surface texture hints
+            const mu = parseFloat(muSlider.value);
+            if (mu >= 0.50) {
+                // Gravel dots
+                ctx.fillStyle = 'rgba(100, 80, 120, 0.25)';
+                for (let i = 0; i < 80; i++) {
+                    const dx = marginLeft + (i * 41 + 7) % (W - marginLeft - 40);
+                    const dy = groundY + 6 + (i * 17 + 3) % 30;
+                    ctx.beginPath(); ctx.arc(dx, dy, 1.5 + i % 2, 0, Math.PI * 2); ctx.fill();
+                }
+            } else if (mu >= 0.10) {
+                // Wood grain
+                ctx.strokeStyle = 'rgba(100, 80, 60, 0.12)';
+                ctx.lineWidth = 1;
+                for (let y = groundY + 8; y < groundY + 40; y += 7) {
+                    ctx.beginPath();
+                    ctx.moveTo(marginLeft, y);
+                    ctx.bezierCurveTo(W * 0.3, y + 2, W * 0.6, y - 1, W - 40, y + 1);
+                    ctx.stroke();
+                }
+            } else if (mu > 0) {
+                // Ice scratches
+                ctx.strokeStyle = 'rgba(0, 240, 255, 0.06)';
+                ctx.lineWidth = 0.5;
+                for (let i = 0; i < 20; i++) {
+                    const sx = marginLeft + (i * 83) % (W - marginLeft - 60);
+                    ctx.beginPath(); ctx.moveTo(sx, groundY + 3); ctx.lineTo(sx + 40, groundY + 25); ctx.stroke();
+                }
+            } else {
+                // Space: stars
+                ctx.fillStyle = 'rgba(255,255,255,0.35)';
+                for (let i = 0; i < 60; i++) {
+                    ctx.beginPath();
+                    ctx.arc((i * 53 + 17) % W, (i * 29 + 11) % (groundY - 20), i % 4 === 0 ? 1.5 : 0.8, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            // Draw completed trails
+            completedTrails.forEach(tr => drawTrail(tr, 0.25));
+
+            // Draw current trail
+            if (trail.length > 1) drawTrail(trail, 0.7);
+
+            // Draw box
+            drawBox(toX(pos), groundY);
+
+            // Force arrows if moving
+            if (isMoving && vel > 0.01) {
+                const boxCX = toX(pos);
+                const boxCY = groundY - 30;
+
+                // Velocity arrow (cyan, right)
+                const vLen = Math.min(120, vel * 18);
+                drawArrow(boxCX + 28, boxCY, boxCX + 28 + vLen, boxCY, '#00f0ff', 2.5);
+                ctx.fillStyle = '#00f0ff';
+                ctx.font = '500 14px Sora, sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText('v = ' + vel.toFixed(1) + ' m/s', boxCX + 34, boxCY - 10);
+
+                // Friction arrow (pink, left)
+                if (mu > 0) {
+                    const fForce = mu * parseFloat(massSlider.value) * g;
+                    const fLen = Math.min(90, fForce * 8);
+                    drawArrow(boxCX - 28, boxCY + 10, boxCX - 28 - fLen, boxCY + 10, '#ff007f', 2.5);
+                    ctx.fillStyle = '#ff007f';
+                    ctx.textAlign = 'right';
+                    ctx.fillText('f = ' + fForce.toFixed(1) + ' N', boxCX - 34, boxCY + 6);
+                }
+            }
+
+            // Stopped label
+            if (!isMoving && pos > 0.05 && vel <= 0.01) {
+                ctx.fillStyle = '#a496c0';
+                ctx.font = '500 14px Sora, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('Stopped at ' + pos.toFixed(2) + ' m', toX(pos), groundY - 75);
+            }
+
+            updateTelemetry();
+        }
+
+        function drawBox(cx, gY) {
+            const w = 50, h = 40;
+            const x = cx - w / 2, y = gY - h;
+
+            // Glow
+            ctx.shadowColor = 'rgba(0, 240, 255, 0.15)';
+            ctx.shadowBlur = 12;
+            ctx.fillStyle = '#1a1440';
+            ctx.strokeStyle = 'rgba(0, 240, 255, 0.4)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.roundRect(x, y, w, h, 4);
+            ctx.fill();
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Cross
+            ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(x, y); ctx.lineTo(x + w, y + h);
+            ctx.moveTo(x + w, y); ctx.lineTo(x, y + h);
+            ctx.stroke();
+
+            // Label
+            ctx.fillStyle = 'rgba(0, 240, 255, 0.6)';
+            ctx.font = '600 12px Sora';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('m', cx, gY - h / 2);
+        }
+
+        function drawArrow(x1, y1, x2, y2, color, width) {
+            const dx = x2 - x1, dy = y2 - y1;
+            const len = Math.sqrt(dx * dx + dy * dy);
+            if (len < 3) return;
+            const ux = dx / len, uy = dy / len;
+            const headLen = 10;
+
+            ctx.strokeStyle = color;
+            ctx.lineWidth = width;
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2 - ux * headLen * 0.5, y2 - uy * headLen * 0.5);
+            ctx.stroke();
+
+            // Triangle head
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.moveTo(x2, y2);
+            ctx.lineTo(x2 - ux * headLen - uy * 5, y2 - uy * headLen + ux * 5);
+            ctx.lineTo(x2 - ux * headLen + uy * 5, y2 - uy * headLen - ux * 5);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function drawTrail(points, alpha) {
+            if (points.length < 2) return;
+            ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+            ctx.lineWidth = 2;
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.moveTo(toX(points[0].x), groundY - 20);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(toX(points[i].x), groundY - 20);
+            }
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+
+        function updateTelemetry() {
+            telX.innerText = pos.toFixed(2) + ' m';
+            telV.innerText = Math.max(0, vel).toFixed(2) + ' m/s';
+            telA.innerText = acc.toFixed(2) + ' m/s2';
+            telT.innerText = elapsedTime.toFixed(2) + ' s';
+        }
+
+        // ---- Physics ----
+        function pushObject() {
+            const p = getParams();
+            pos = 0;
+            vel = p.v0;
+            acc = -(p.mu * g);
+            elapsedTime = 0;
+            isMoving = true;
+            trail = [{ x: 0 }];
+            lastTimestamp = 0;
+
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(simLoop);
+        }
+
+        function resetSim() {
+            if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+            pos = 0; vel = 0; acc = 0; elapsedTime = 0;
+            isMoving = false;
+            trail = [];
+            drawScene();
+        }
+
+        function simLoop(ts) {
+            if (!lastTimestamp) lastTimestamp = ts;
+            let dt = (ts - lastTimestamp) / 1000;
+            lastTimestamp = ts;
+            if (dt > 0.05) dt = 0.05;
+
+            if (isMoving) {
+                const p = getParams();
+                acc = -(p.mu * g);
+
+                vel += acc * dt;
+                if (vel <= 0) {
+                    vel = 0;
+                    isMoving = false;
+                    // Save trail
+                    if (trail.length > 1) completedTrails.push([...trail]);
+                }
+                pos += vel * dt;
+                elapsedTime += dt;
+
+                // Wrap position for space mode (infinite)
+                const maxCanvas = (canvas.width - marginLeft - 40) / scale;
+                if (pos > maxCanvas && parseFloat(muSlider.value) === 0) {
+                    // let it keep going, but wrap drawing
+                }
+
+                trail.push({ x: pos });
+            }
+
+            drawScene();
+
+            if (isMoving) {
+                rafId = requestAnimationFrame(simLoop);
+            } else {
+                rafId = null;
+            }
+        }
+
+        // Init
+        syncSliders();
+        drawScene();
+    </script>
+
+</body>
+</html>

@@ -1,128 +1,278 @@
-<h1>Kinematics</h1>
-<p>Kinematics is the study of motion without considering the forces that cause it. We describe motion using quantities like <span class="key-term">displacement</span>, <span class="key-term">velocity</span>, and <span class="key-term">acceleration</span>.</p>
+<style>
+/* Custom Interactive Styling for Kinematics Lesson */
+.lesson-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f0;
+    border: 1px solid #c8d8c8;
+    border-radius: 14px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 2.2rem;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+.progress-step {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+    padding: 0.45rem 0.65rem;
+    border-radius: 8px;
+    background: #fff;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.progress-step.active {
+    background: #e0ede0;
+    color: #4a7c59;
+    border: 1px solid #7aaa8a;
+    box-shadow: 0 1px 5px rgba(74, 124, 89, 0.15);
+}
 
-<h2>Scalars and Vectors</h2>
-<p>Physical quantities can be classified as <span class="key-term">scalars</span> (magnitude only) or <span class="key-term">vectors</span> (magnitude and direction).</p>
-<div class="callout callout-example">
-<div class="callout-title">Examples</div>
-<p><strong>Scalars:</strong> distance, speed, time, mass, energy</p>
-<p><strong>Vectors:</strong> displacement, velocity, acceleration, force</p>
+.step-solver-card {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    padding: 1.6rem;
+    margin: 1.8rem 0;
+}
+
+.solver-step-tab {
+    background: #ffffff;
+    border: 1px solid #d0dcd0;
+    padding: 0.85rem 1.1rem;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.solver-step-tab:hover {
+    border-color: #4a7c59;
+    background: #e8f0e8;
+}
+
+.solver-step-content {
+    display: none;
+    padding: 1.1rem;
+    background: #f9fafb;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    border-left: 4px solid #4a7c59;
+}
+</style>
+
+<h1>Kinematics: Describing Motion</h1>
+
+<!-- Visual Journey Header -->
+<div class="lesson-progress-bar">
+    <div class="progress-step active">1. Position</div>
+    <div class="progress-step active">2. Displacement</div>
+    <div class="progress-step active">3. Velocity</div>
+    <div class="progress-step active">4. Acceleration</div>
+    <div class="progress-step active">5. Friction Sim</div>
+    <div class="progress-step active">6. Friction</div>
+    <div class="progress-step active">7. Forces</div>
+    <div class="progress-step active">8. SUVAT</div>
 </div>
 
-<h2>Position, Displacement and Distance</h2>
-<p>The <strong>position</strong> of an object tells us where it is located in space. <strong>Displacement</strong> is the change in position—a vector from initial to final position. <strong>Distance</strong> is the total path length traveled (scalar).</p>
-
-<div class="equation-block">
-$$\vec{\Delta x} = \vec{x}_f - \vec{x}_i$$
-</div>
-
-<h2>Velocity and Speed</h2>
-<p><span class="key-term">Velocity</span> is the rate of change of displacement (vector). <span class="key-term">Speed</span> is the rate of change of distance (scalar).</p>
-
-<div class="equation-block">
-$$\vec{v} = \frac{d\vec{x}}{dt}$$
-</div>
-
-<p><strong>Average velocity:</strong></p>
-<div class="equation-block">
-$$\vec{v}_{avg} = \frac{\Delta \vec{x}}{\Delta t}$$
-</div>
-
-<p><strong>Instantaneous velocity</strong> is the velocity at a specific moment—the limit of average velocity as Δt approaches zero.</p>
-
-<h2>Acceleration</h2>
-<p><span class="key-term">Acceleration</span> is the rate of change of velocity:</p>
-
-<div class="equation-block">
-$$\vec{a} = \frac{d\vec{v}}{dt} = \frac{d^2\vec{x}}{dt^2}$$
-</div>
-
-<h2>Equations of Motion (SUVAT)</h2>
-<p>For <strong>uniformly accelerated motion</strong> (constant acceleration):</p>
-
-<div class="equation-block">
-$$s = \frac{u + v}{2} \cdot t$$
-$$v = u + at$$
-$$s = ut + \frac{1}{2}at^2$$
-$$v^2 = u^2 + 2as$$
-</div>
-
-<h2>Projectile Motion</h2>
 <div class="content-chunk">
-    <p>A <span class="key-term">projectile</span> is any object thrown, launched, or dropped into the air that moves under the influence of gravity alone (neglecting air resistance in first-approximation models). The path followed by a projectile is called its <strong>trajectory</strong>, which forms a parabola.</p>
+    <p><strong>Kinematics</strong> is the branch of physics that describes <em>how</em> objects move without considering the forces that cause the motion. To build an intuitive, visual understanding of motion, let's step out onto the pavement with <strong>skateboards</strong> and <strong>boxs</strong> to explore physical concepts step by step.</p>
+</div>
+
+<!-- STEP 1 -->
+<h2>Step 1: Frame of Reference and Position</h2>
+<div class="content-chunk">
+    <p>Before we can describe movement, we need to answer a fundamental question: <em>"Where is the skater located?"</em></p>
+    <p>An object's <span class="key-term">position</span> ($x$) is its location relative to a chosen reference point called the <strong>origin</strong> ($x = 0$). Together with a coordinate axis (e.g., positive to the right $+x$, negative to the left $-x$), this forms a <strong>frame of reference</strong>.</p>
 
     <div class="callout callout-example">
-        <div class="callout-title">The Principle of Independence</div>
-        <p>The fundamental secret of projectile motion is that <strong>horizontal motion and vertical motion are completely independent</strong> of one another. The constant force of gravity pulls only downward, affecting only the vertical velocity ($a_y = -g$). Meanwhile, there is no horizontal force acting on the projectile, meaning its horizontal velocity component remains constant throughout the flight ($a_x = 0$).</p>
+        <div class="callout-title"> Real-Life Example: Gym Scooter Board</div>
+        <p>Imagine an indoor gymnasium floor with a long measuring tape taped down. If you sit on a box at the start line mark, that start line is your origin ($x = 0\text{ m}$).</p>
+        <ul>
+            <li>Rolling $5\text{ meters}$ to the right puts your position at $x = +5.0\text{ m}$.</li>
+            <li>If a classmate rolls $3\text{ meters}$ to the left, their position is $x = -3.0\text{ m}$.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- STEP 2 -->
+<h2>Step 2: Distance vs. Displacement</h2>
+<div class="content-chunk">
+    <p>In everyday conversation, "distance" and "displacement" are often confused. In physics, they represent two fundamentally different quantities:</p>
+    <ul>
+        <li><span class="key-term">Scalar</span> quantities have magnitude (size) only. Example: distance, speed, time.</li>
+        <li><span class="key-term">Vector</span> quantities have both magnitude AND direction. Example: displacement, velocity, acceleration.</li>
+    </ul>
+
+    <p><strong>Distance ($d$)</strong> is the total path length traveled by an object (scalar).</p>
+    <p><strong>Displacement ($\Delta \vec{x}$)</strong> is the change in position—a straight-line vector pointing directly from the initial position ($\vec{x}_i$) to the final position ($\vec{x}_f$).</p>
+
+    <div class="equation-block">
+        $$\Delta \vec{x} = \vec{x}_f - \vec{x}_i$$
     </div>
 
-    <figure style="text-align: center; margin: 2rem 0;">
-        <img src="images/projectile_trajectory.png" alt="Physics component breakdown of a projectile's trajectory" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); border: 1px solid rgba(57, 255, 20, 0.155);">
-        <figcaption style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; font-style: italic;">
-            Figure 1.2: Velocity components ($u_x$ and $v_y$) along a parabolic trajectory. Notice how the horizontal component stays constant, while gravity ($g$) continuously alters the vertical component.
+    <!-- Visual Diagram 1 (Blended Background) -->
+    <div class="diagram-figure" style="background: transparent; border: 1px solid #e0e0e0; border-radius: 10px; padding: 0.5rem; margin: 1.5rem 0;">
+        <img src="images/skate_distance_displacement.svg" alt="Physics diagram showing Distance vs Displacement for a skateboarder" class="diagram-img">
+        <figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; font-style: italic; text-align: center;">
+            Figure 1.1: Visualizing 1D Motion. Total path length (distance = 14m) vs net position change vector (displacement = +6m East).
         </figcaption>
-    </figure>
-</div>
-
-<div class="content-chunk">
-    <h3>Mathematical Analysis</h3>
-    <p>Let a projectile be launched with an initial velocity $u$ at an angle $\theta$ relative to the horizontal. We resolve the initial velocity vector into two orthogonal components:</p>
-    <div class="equation-block">
-        $$u_x = u \cos\theta$$
-        $$u_y = u \sin\theta$$
-    </div>
-
-    <h4>1. Horizontal Components (Constant Velocity)</h4>
-    <p>Since horizontal acceleration $a_x = 0$:</p>
-    <div class="equation-block">
-        $$v_x(t) = u \cos\theta$$
-        $$x(t) = (u \cos\theta) \cdot t$$
-    </div>
-
-    <h4>2. Vertical Components (Constant Acceleration)</h4>
-    <p>With constant vertical acceleration under gravity ($a_y = -g$ pointing downwards):</p>
-    <div class="equation-block">
-        $$v_y(t) = u \sin\theta - g \cdot t$$
-        $$y(t) = (u \sin\theta) \cdot t - \frac{1}{2}g \cdot t^2$$
-        $$v_y^2 = (u \sin\theta)^2 - 2g \cdot y$$
     </div>
 </div>
 
+<!-- STEP 3 -->
+<h2>Step 3: Speed vs. Velocity</h2>
 <div class="content-chunk">
-    <h3>Key Derivations</h3>
-    
-    <p><strong>A. Time of Flight ($T_{\text{flight}}$):</strong><br>
-    The total time the projectile takes to return to the launch height (where $y = 0$):</p>
+    <p>How fast is the skater moving?</p>
+    <p><strong>Speed ($v$)</strong> is the rate at which distance is covered (scalar):</p>
     <div class="equation-block">
-        $$0 = (u \sin\theta) T - \frac{1}{2}g T^2 \implies T_{\text{flight}} = \frac{2 u \sin\theta}{g}$$
+        $$\text{Speed } v = \frac{\text{Distance}}{\Delta t}$$
     </div>
 
-    <p><strong>B. Maximum Altitude ($H_{\text{max}}$):</strong><br>
-    At the highest point, the vertical velocity becomes zero ($v_y = 0$):</p>
+    <p><strong>Velocity ($\vec{v}$)</strong> is the rate of change of displacement over time (vector). Direction matters!</p>
     <div class="equation-block">
-        $$0 = (u \sin\theta)^2 - 2g H_{\text{max}} \implies H_{\text{max}} = \frac{u^2 \sin^2\theta}{2g}$$
+        $$\text{Average Velocity } \vec{v}_{\text{avg}} = \frac{\Delta \vec{x}}{\Delta t} = \frac{\vec{x}_f - \vec{x}_i}{t_f - t_i}$$
     </div>
 
-    <p><strong>C. Horizontal Range ($R$):</strong><br>
-    The total horizontal distance traveled during the time of flight:</p>
+    <div class="callout callout-info">
+        <div class="callout-title"> Visualizing Direction</div>
+        <p>If two boxers are both moving at $4.0\text{ m/s}$, but one travels East ($+x$) and the other travels West ($-x$), they have the exact same <strong>speed</strong> ($4.0\text{ m/s}$), but <strong>opposite velocities</strong> ($+4.0\text{ m/s}$ vs $-4.0\text{ m/s}$).</p>
+    </div>
+</div>
+
+<!-- STEP 4 -->
+<h2>Step 4: Acceleration & Deceleration</h2>
+<div class="content-chunk">
+    <p>When you sit on a box, your speed rarely stays constant. What happens when your velocity changes?</p>
+    <p><span class="key-term">Acceleration</span> ($\vec{a}$) is the rate of change of velocity with respect to time:</p>
+
     <div class="equation-block">
-        $$R = (u \cos\theta) \cdot T_{\text{flight}} = (u \cos\theta) \cdot \text{ }\left(\frac{2 u \sin\theta}{g}\right) = \frac{u^2 (2 \sin\theta \cos\theta)}{g} \implies R = \frac{u^2 \sin(2\theta)}{g}$$
+        $$\vec{a} = \frac{\Delta \vec{v}}{\Delta t} = \frac{\vec{v} - \vec{u}}{t} = \frac{d\vec{v}}{dt}$$
+    </div>
+
+    <ul>
+        <li><strong>Speeding up:</strong> Pushing off with your foot increases your velocity ($a > 0$ in direction of motion).</li>
+        <li><strong>Slowing down (Deceleration):</strong> Coasting across asphalt causes your velocity to decrease. When acceleration points opposite to motion, it is called <strong>deceleration</strong> ($a < 0$).</li>
+    </ul>
+</div>
+
+<!-- STEP 5: SURFACE FRICTION SIMULATOR -->
+<h2>Step 5: Interactive Simulation — Surface Friction</h2>
+<div class="content-chunk">
+    <p>Select a surface, adjust the initial velocity and mass, then click <strong>Push Object</strong> to see how friction brings the box to a stop — or keeps it moving forever.</p>
+    <iframe src="data/simulations/friction.html" width="100%" height="560px" style="border:none; border-radius: 12px; margin-top: 1.5rem;"></iframe>
+
+    <div class="callout callout-tok" style="margin-top: 1.5rem;">
+        <div class="callout-title">Philosophical Breakthrough: Galileo &amp; Newton vs. Aristotle</div>
+        <p>For over 2,000 years, Aristotle taught that <em>objects naturally want to come to rest</em> and require a continuous push to stay in motion.</p>
+        <p>Galileo and Newton proved the opposite: <strong>Motion does NOT stop by itself!</strong> An object in motion will naturally continue moving at a constant velocity forever. It only stops if an external resistive force (like friction) forces it to stop.</p>
+    </div>
+</div>
+
+<!-- STEP 6 -->
+<h2>Step 6: Friction — The Invisible Resistance</h2>
+<div class="content-chunk">
+    <p>Why does a skateboard roll to a stop when coasting on a sidewalk? The answer is <span class="key-term">Friction</span> ($F_f$).</p>
+
+    <!-- Visual Diagram 2 (Blended Background) -->
+    <div class="diagram-figure" style="background: transparent; border: 1px solid #e0e0e0; border-radius: 10px; padding: 0.5rem; margin: 1.5rem 0;">
+        <img src="images/skate_friction_forces.svg" alt="Physics breakdown diagram of friction forces acting on a coasting skateboarder" class="diagram-img">
+        <figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; font-style: italic; text-align: center;">
+            Figure 1.2: Free-Body Breakdown of a Coasting Skateboarder. Three backward resistive forces combine to create a net backward retarding force, causing deceleration.
+        </figcaption>
+    </div>
+
+    <p>When coasting, three primary resistive forces act against your motion:</p>
+    <ol>
+        <li><strong>Bearing Friction:</strong> Internal rubbing inside the wheel ball-bearings.</li>
+        <li><strong>Rolling Resistance:</strong> Microscopic squishing of polyurethane wheels against the asphalt.</li>
+        <li><strong>Air Resistance (Drag):</strong> Air molecules pushing against the rider's body.</li>
+    </ol>
+</div>
+
+<!-- STEP 7 -->
+<h2>Step 7: Connecting Kinematics to Dynamics — Balanced vs. Unbalanced Forces</h2>
+<div class="content-chunk">
+    <p>Kinematics <em>describes</em> motion. Dynamics <em>explains</em> what causes motion to change: <strong>Forces</strong>.</p>
+
+    <!-- Visual Diagram 3 (Blended Background) -->
+    <div class="diagram-figure" style="background: transparent; border: 1px solid #e0e0e0; border-radius: 10px; padding: 0.5rem; margin: 1.5rem 0;">
+        <img src="images/skate_balanced_forces.svg" alt="Comparison diagram of Balanced vs Unbalanced Forces while skating" class="diagram-img">
+        <figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; font-style: italic; text-align: center;">
+            Figure 1.3: Balanced Forces (Zero Acceleration) vs. Unbalanced Forces (Forward Acceleration).
+        </figcaption>
     </div>
 
     <div class="callout callout-example">
-        <div class="callout-title">Range Insights</div>
-        <p>1. <strong>Maximum Range</strong> occurs when $\sin(2\theta)$ is maximized. This happens at $2\theta = 90^\circ$, which implies <strong>$\theta = 45^\circ$</strong>.</p>
-        <p>2. <strong>Complementary Angles</strong> (angles adding up to $90^\circ$, like $30^\circ$ and $60^\circ$) yield the exact same horizontal range since $\sin(2(90^\circ-\theta)) = \sin(180^\circ - 2\theta) = \sin(2\theta)$.</p>
+        <div class="callout-title"> Balanced Forces ($\sum \vec{F} = 0 \implies a = 0$)</div>
+        <p>Standing still on a skateboard or coasting at constant velocity on smooth ice. Downward gravity is perfectly balanced by upward normal force ($N = mg$). Net force is zero, so velocity does not change!</p>
     </div>
 
-    <div class="callout callout-important">
-        <div class="callout-title">Effect of Fluid Resistance</div>
-        <p>Reduces range, max height, and time of flight. Trajectory becomes asymmetric; terminal speed is reached.</p>
+    <div class="callout callout-example">
+        <div class="callout-title"> Unbalanced Forces ($\sum \vec{F} \neq 0 \implies a = \frac{F_{\text{net}}}{m}$)</div>
+        <p>Pushing off forcefully with your foot ($F_{\text{push}} > F_f$). The forward net force creates positive acceleration. When you lift your foot, friction becomes the net force ($F_{\text{net}} = -F_f$), causing deceleration!</p>
     </div>
 </div>
 
+<!-- STEP 8 -->
+<h2>Step 8: SUVAT Equations & Step-by-Step Solver</h2>
 <div class="content-chunk">
-<h2>Interactive: Projectile Motion Simulator</h2>
-<p>To explore how changing initial speed, projection angle, local gravity, and fluid resistance affects the flight path, interact with the simulation below.</p>
-<iframe src="data/simulations/projectile.html" width="100%" height="630px" style="border:none; border-radius: 12px; margin-top: 1.5rem;"></iframe>
+    <p>For motion with <strong>constant acceleration</strong>, we use the 5 <strong>SUVAT</strong> variables:</p>
+    <ul>
+        <li>$s$ = displacement ($\text{m}$)</li>
+        <li>$u$ = initial velocity ($\text{m/s}$)</li>
+        <li>$v$ = final velocity ($\text{m/s}$)</li>
+        <li>$a$ = constant acceleration ($\text{m/s}^2$)</li>
+        <li>$t$ = time interval ($\text{s}$)</li>
+    </ul>
+
+    <div class="equation-block">
+        $$v = u + at, \quad s = \left(\frac{u+v}{2}\right)t, \quad s = ut + \frac{1}{2}at^2, \quad v^2 = u^2 + 2as$$
+    </div>
+
+    <!-- Interactive Step-by-Step Problem Solver -->
+    <div class="step-solver-card">
+        <h3 style="color: #374151; margin-top: 0;"> Interactive Problem Walkthrough</h3>
+        <p><strong>Problem:</strong> A skateboarder coasting at $u = 6.0\text{ m/s}$ encounters friction causing deceleration at $a = -0.80\text{ m/s}^2$. How far ($s$) will they roll before coming to a stop ($v = 0$)?</p>
+
+        <div class="solver-step-tab" onclick="window.toggleSolverStep('step1')">
+            <strong>Step 1: Identify Known Variables</strong> (Click to reveal)
+        </div>
+        <div class="solver-step-content" id="solver-step1">
+            <p>Initial velocity $u = 6.0\text{ m/s}$<br>
+            Final velocity $v = 0.0\text{ m/s}$ (complete stop)<br>
+            Acceleration $a = -0.80\text{ m/s}^2$ (deceleration)<br>
+            Target variable: Displacement $s = ?$</p>
+        </div>
+
+        <div class="solver-step-tab" onclick="window.toggleSolverStep('step2')">
+            <strong>Step 2: Select the Right SUVAT Equation</strong> (Click to reveal)
+        </div>
+        <div class="solver-step-content" id="solver-step2">
+            <p>We need an equation linking $u, v, a,$ and $s$ without needing time $t$:</p>
+            <div class="equation-block">$$v^2 = u^2 + 2as$$</div>
+        </div>
+
+        <div class="solver-step-tab" onclick="window.toggleSolverStep('step3')">
+            <strong>Step 3: Solve Step-by-Step</strong> (Click to reveal)
+        </div>
+        <div class="solver-step-content" id="solver-step3">
+            <div class="equation-block">
+                $$0^2 = (6.0)^2 + 2(-0.80)s$$
+                $$0 = 36 - 1.60 s \implies 1.60 s = 36 \implies s = \frac{36}{1.60} = 22.5\text{ m}$$
+            </div>
+            <p style="color: #2d6a3f; font-weight: 600;">Answer: The skateboarder rolls 22.5 meters before coming to a complete stop.</p>
+        </div>
+    </div>
+</div>
+
+<!-- STEP 9 -->
+<h2>Step 9: Projectile Motion Simulator</h2>
+<div class="content-chunk">
+    <p>Adjust launch parameters below to launch a skateboard off a jump ramp and observe parabolic flight!</p>
+    <iframe src="data/simulations/projectile.html" width="100%" height="630px" style="border:none; border-radius: 12px; margin-top: 1.5rem;"></iframe>
 </div>

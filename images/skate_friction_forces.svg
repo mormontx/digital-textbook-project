@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 340" font-family="system-ui, sans-serif">
+  <rect width="460" height="340" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="230" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Free-Body Diagram: Coasting Object</text>
+  <text x="230" y="42" text-anchor="middle" font-size="11" fill="#888">All forces acting on a box sliding to a stop</text>
+
+  <!-- Box -->
+  <rect x="180" y="140" width="100" height="70" rx="4" fill="#e8e4dc" stroke="#999" stroke-width="1.5"/>
+  <text x="230" y="180" text-anchor="middle" font-size="12" font-weight="600" fill="#666">m</text>
+
+  <!-- Ground -->
+  <line x1="60" y1="214" x2="400" y2="214" stroke="#aaa" stroke-width="1.5"/>
+  <!-- Hatching below ground -->
+  <g stroke="#ccc" stroke-width="0.8">
+    <line x1="70"  y1="214" x2="60"  y2="224"/>
+    <line x1="90"  y1="214" x2="80"  y2="224"/>
+    <line x1="110" y1="214" x2="100" y2="224"/>
+    <line x1="130" y1="214" x2="120" y2="224"/>
+    <line x1="150" y1="214" x2="140" y2="224"/>
+    <line x1="170" y1="214" x2="160" y2="224"/>
+    <line x1="190" y1="214" x2="180" y2="224"/>
+    <line x1="210" y1="214" x2="200" y2="224"/>
+    <line x1="230" y1="214" x2="220" y2="224"/>
+    <line x1="250" y1="214" x2="240" y2="224"/>
+    <line x1="270" y1="214" x2="260" y2="224"/>
+    <line x1="290" y1="214" x2="280" y2="224"/>
+    <line x1="310" y1="214" x2="300" y2="224"/>
+    <line x1="330" y1="214" x2="320" y2="224"/>
+    <line x1="350" y1="214" x2="340" y2="224"/>
+    <line x1="370" y1="214" x2="360" y2="224"/>
+    <line x1="390" y1="214" x2="380" y2="224"/>
+  </g>
+
+  <!-- Normal force N (up) -->
+  <line x1="230" y1="136" x2="230" y2="76" stroke="#5a7a5a" stroke-width="2"/>
+  <polygon points="225,80 230,66 235,80" fill="#5a7a5a"/>
+  <text x="242" y="82" font-size="12" font-weight="600" fill="#5a7a5a">N</text>
+
+  <!-- Weight W (down) -->
+  <line x1="230" y1="218" x2="230" y2="278" stroke="#666" stroke-width="2"/>
+  <polygon points="225,274 230,288 235,274" fill="#666"/>
+  <text x="242" y="280" font-size="12" font-weight="600" fill="#666">W = mg</text>
+
+  <!-- Friction f (left) — the only horizontal force -->
+  <line x1="176" y1="175" x2="90" y2="175" stroke="#a04040" stroke-width="2"/>
+  <polygon points="94,170 80,175 94,180" fill="#a04040"/>
+  <text x="78" y="170" text-anchor="end" font-size="12" font-weight="600" fill="#a04040">f</text>
+
+  <!-- Velocity arrow (right, dashed — not a force, just showing motion direction) -->
+  <line x1="284" y1="175" x2="370" y2="175" stroke="#3a6a9a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="366,170 380,175 366,180" fill="#3a6a9a"/>
+  <text x="372" y="168" font-size="10" fill="#3a6a9a">v (motion)</text>
+
+  <!-- Labels below -->
+  <rect x="60" y="300" width="340" height="30" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="230" y="320" text-anchor="middle" font-size="11" fill="#555">Friction opposes the direction of motion, causing deceleration: a = -f / m</text>
+</svg>

@@ -152,6 +152,28 @@ async function loadContent(sectionId) {
     
     contentArea.innerHTML = loadedContent;
     
+    // Cancel any running animation frame from a previous simulation
+    if (window.__simRAFId) {
+        cancelAnimationFrame(window.__simRAFId);
+        window.__simRAFId = null;
+    }
+    
+    // Initialize section-specific simulations after DOM is ready
+    setTimeout(() => {
+        // Kinematics scooter simulation
+        if (sectionId === 'kinematics' && typeof window.initScooterSim === 'function') {
+            window.initScooterSim();
+        }
+        // Re-evaluate any remaining inline scripts from other sections
+        const scripts = contentArea.querySelectorAll('script');
+        scripts.forEach(oldScript => {
+            const newScript = document.createElement('script');
+            Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+            newScript.appendChild(document.createTextNode(oldScript.textContent));
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
+    }, 200);
+    
     // Update URL hash
     window.location.hash = sectionId;
     

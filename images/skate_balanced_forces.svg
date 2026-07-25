@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="system-ui, sans-serif">
+  <rect width="700" height="320" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="350" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Balanced vs. Unbalanced Forces</text>
+
+  <!-- Divider -->
+  <line x1="350" y1="40" x2="350" y2="310" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ===== LEFT: BALANCED ===== -->
+  <text x="175" y="54" text-anchor="middle" font-size="13" font-weight="600" fill="#5a7a5a">Balanced</text>
+  <text x="175" y="68" text-anchor="middle" font-size="10" fill="#888">F_net = 0, a = 0</text>
+
+  <!-- Box -->
+  <rect x="140" y="130" width="70" height="50" rx="3" fill="#e8e4dc" stroke="#999" stroke-width="1.5"/>
+  <text x="175" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
+
+  <!-- Ground -->
+  <line x1="60" y1="183" x2="290" y2="183" stroke="#aaa" stroke-width="1.5"/>
+  <g stroke="#ccc" stroke-width="0.7">
+    <line x1="70"  y1="183" x2="62"  y2="191"/>
+    <line x1="90"  y1="183" x2="82"  y2="191"/>
+    <line x1="110" y1="183" x2="102" y2="191"/>
+    <line x1="130" y1="183" x2="122" y2="191"/>
+    <line x1="150" y1="183" x2="142" y2="191"/>
+    <line x1="170" y1="183" x2="162" y2="191"/>
+    <line x1="190" y1="183" x2="182" y2="191"/>
+    <line x1="210" y1="183" x2="202" y2="191"/>
+    <line x1="230" y1="183" x2="222" y2="191"/>
+    <line x1="250" y1="183" x2="242" y2="191"/>
+    <line x1="270" y1="183" x2="262" y2="191"/>
+  </g>
+
+  <!-- N up (same length as W) -->
+  <line x1="175" y1="126" x2="175" y2="84" stroke="#5a7a5a" stroke-width="2"/>
+  <polygon points="170,88 175,74 180,88" fill="#5a7a5a"/>
+  <text x="186" y="92" font-size="11" font-weight="600" fill="#5a7a5a">N</text>
+
+  <!-- W down (same length as N) -->
+  <line x1="175" y1="187" x2="175" y2="229" stroke="#666" stroke-width="2"/>
+  <polygon points="170,225 175,239 180,225" fill="#666"/>
+  <text x="186" y="234" font-size="11" font-weight="600" fill="#666">W</text>
+
+  <!-- f left (same length as F_push) -->
+  <line x1="136" y1="155" x2="96" y2="155" stroke="#a04040" stroke-width="2"/>
+  <polygon points="100,150 86,155 100,160" fill="#a04040"/>
+  <text x="80" y="152" text-anchor="end" font-size="11" font-weight="600" fill="#a04040">f</text>
+
+  <!-- F_push right (same length as f) -->
+  <line x1="214" y1="155" x2="254" y2="155" stroke="#3a6a9a" stroke-width="2"/>
+  <polygon points="250,150 264,155 250,160" fill="#3a6a9a"/>
+  <text x="270" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
+
+  <!-- Result -->
+  <rect x="75" y="255" width="200" height="48" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="175" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#5a7a5a">Result: a = 0</text>
+  <text x="175" y="292" text-anchor="middle" font-size="10" fill="#666">Constant velocity (or at rest)</text>
+
+  <!-- ===== RIGHT: UNBALANCED ===== -->
+  <text x="525" y="54" text-anchor="middle" font-size="13" font-weight="600" fill="#a04040">Unbalanced</text>
+  <text x="525" y="68" text-anchor="middle" font-size="10" fill="#888">F_net &gt; 0, a &gt; 0</text>
+
+  <!-- Box -->
+  <rect x="490" y="130" width="70" height="50" rx="3" fill="#e8e4dc" stroke="#999" stroke-width="1.5"/>
+  <text x="525" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
+
+  <!-- Ground -->
+  <line x1="410" y1="183" x2="640" y2="183" stroke="#aaa" stroke-width="1.5"/>
+  <g stroke="#ccc" stroke-width="0.7">
+    <line x1="420" y1="183" x2="412" y2="191"/>
+    <line x1="440" y1="183" x2="432" y2="191"/>
+    <line x1="460" y1="183" x2="452" y2="191"/>
+    <line x1="480" y1="183" x2="472" y2="191"/>
+    <line x1="500" y1="183" x2="492" y2="191"/>
+    <line x1="520" y1="183" x2="512" y2="191"/>
+    <line x1="540" y1="183" x2="532" y2="191"/>
+    <line x1="560" y1="183" x2="552" y2="191"/>
+    <line x1="580" y1="183" x2="572" y2="191"/>
+    <line x1="600" y1="183" x2="592" y2="191"/>
+    <line x1="620" y1="183" x2="612" y2="191"/>
+  </g>
+
+  <!-- N up -->
+  <line x1="525" y1="126" x2="525" y2="84" stroke="#5a7a5a" stroke-width="2"/>
+  <polygon points="520,88 525,74 530,88" fill="#5a7a5a"/>
+  <text x="536" y="92" font-size="11" font-weight="600" fill="#5a7a5a">N</text>
+
+  <!-- W down -->
+  <line x1="525" y1="187" x2="525" y2="229" stroke="#666" stroke-width="2"/>
+  <polygon points="520,225 525,239 530,225" fill="#666"/>
+  <text x="536" y="234" font-size="11" font-weight="600" fill="#666">W</text>
+
+  <!-- f left (SHORT) -->
+  <line x1="486" y1="155" x2="456" y2="155" stroke="#a04040" stroke-width="2"/>
+  <polygon points="460,150 446,155 460,160" fill="#a04040"/>
+  <text x="440" y="152" text-anchor="end" font-size="11" font-weight="600" fill="#a04040">f</text>
+
+  <!-- F_push right (LONG — bigger than friction) -->
+  <line x1="564" y1="155" x2="630" y2="155" stroke="#3a6a9a" stroke-width="2.5"/>
+  <polygon points="626,149 642,155 626,161" fill="#3a6a9a"/>
+  <text x="648" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
+
+  <!-- Result -->
+  <rect x="425" y="255" width="200" height="48" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="525" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#a04040">Result: a = F_net / m</text>
+  <text x="525" y="292" text-anchor="middle" font-size="10" fill="#666">Object accelerates to the right</text>
+</svg>
