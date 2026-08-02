@@ -95,12 +95,14 @@ h1, h2, h3, h4, h5, h6, .sidebar, .topic-title, .callout-title, .question-number
 }
 
 .sidebar-header h1 {
+    color: #ffffff !important;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
 }
 
 .sidebar-header .subtitle {
+    color: #ffffff !important;
     font-size: 0.875rem;
     opacity: 0.9;
 }

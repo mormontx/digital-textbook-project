@@ -1,44 +1,28 @@
 
 <style>
 .solution-toggle-btn {
-    background: linear-gradient(145deg, #39ff14, #2eb80f);
-    color: #000;
-    border: 3px solid #1a6608;
-    box-shadow: 0 0 15px #39ff14, inset 0 0 8px rgba(0,0,0,0.5);
-    border-radius: 50px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 12px 24px;
+    background: #f8fafc;
+    color: #334155;
+    border: 2px solid #39ff14; box-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    text-shadow: 0px 1px 2px rgba(255,255,255,0.5);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    animation: pulse-radioactive 2s infinite;
-}
-.solution-toggle-btn::before {
-    content: '☢️';
-    font-size: 1.4em;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 .solution-toggle-btn:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 0 25px #39ff14, 0 5px 15px rgba(57,255,20,0.4), inset 0 0 10px rgba(0,0,0,0.5);
-    background: linear-gradient(145deg, #4dff2b, #39ff14);
+    background: #f1f5f9;
+    border-color: #2eb80f; box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    color: #0f172a;
 }
 .solution-toggle-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 10px #39ff14, inset 0 0 15px rgba(0,0,0,0.7);
-}
-@keyframes pulse-radioactive {
-    0% { box-shadow: 0 0 10px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
-    50% { box-shadow: 0 0 20px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
-    100% { box-shadow: 0 0 10px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
+    background: #e2e8f0;
+    box-shadow: none;
 }
 </style>
 <style>
@@ -726,7 +710,122 @@ li {
     <li>The direction corresponds to the orientation of that push or pull (e.g., pushing a book directly away from someone).</li>
 </ul>
 
-<p>The standard SI unit for measuring force is the Newton ($\text{N}$). As a visual reference, holding a small apple in your hand exerts roughly one Newton of downward force; a larger piece of fruit might exert closer to three Newtons. In the United States, force is commonly measured in pounds (specifically, pound-force), where one pound-force equals approximately $4.5\text{ Newtons}$.</p>
+
+<div class="bite-size-breakdown" style="display: flex; gap: 1.5rem; margin: 2.5rem 0; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px; background: #fff; border: 2px dashed #ddd; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <svg viewBox="0 0 150 150" width="100" height="100" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto; display: block;">
+  <defs>
+    <filter id="charcoal-bite" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="0.4" result="blurred" />
+      <feMerge>
+        <feMergeNode in="blurred" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#charcoal-bite)" stroke="#2c2c2c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M 75 35 Q 90 20 100 40 Q 110 65 95 80 Q 75 95 55 80 Q 40 65 50 40 Q 60 20 75 35 Z" stroke-width="3" opacity="0.8"/>
+    <path d="M 75 35 Q 90 20 100 40 Q 110 65 95 80 Q 75 95 55 80 Q 40 65 50 40 Q 60 20 75 35 Z" stroke-width="1.7999999999999998" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 75 35 Q 90 20 100 40 Q 110 65 95 80 Q 75 95 55 80 Q 40 65 50 40 Q 60 20 75 35 Z" stroke-width="1.2000000000000002" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 75 35 Q 70 20 80 15" stroke-width="2" opacity="0.8"/>
+    <path d="M 75 35 Q 70 20 80 15" stroke-width="1.2" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 75 35 Q 70 20 80 15" stroke-width="0.8" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 80 15 Q 95 10 95 25 Q 80 30 80 15 Z" stroke-width="1.5" opacity="0.8"/>
+    <path d="M 80 15 Q 95 10 95 25 Q 80 30 80 15 Z" stroke-width="0.8999999999999999" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 80 15 Q 95 10 95 25 Q 80 30 80 15 Z" stroke-width="0.6000000000000001" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 85 45 Q 95 55 90 65" stroke-width="1" opacity="0.8"/>
+    <path d="M 85 45 Q 95 55 90 65" stroke-width="0.6" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 85 45 Q 95 55 90 65" stroke-width="0.4" transform="translate(-1, 1)" opacity="0.7"/>
+    
+  </g>
+</svg>
+
+
+        <h4 style="margin: 1.5rem 0 0.5rem; font-size: 1.2rem; color: #111;">1 Newton ($\text{N}$)</h4>
+        <p style="font-size: 0.95rem; color: #555; margin: 0; line-height: 1.5;">Roughly the downward force of holding a small apple in your hand.</p>
+    </div>
+    
+    <div style="flex: 1; min-width: 200px; background: #fff; border: 2px dashed #ddd; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <svg viewBox="0 0 150 150" width="100" height="100" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto; display: block;">
+  <defs>
+    <filter id="charcoal-bite" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="0.4" result="blurred" />
+      <feMerge>
+        <feMergeNode in="blurred" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#charcoal-bite)" stroke="#2c2c2c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+    <circle cx="75" cy="65" r="40" stroke-width="3" opacity="0.8"/>
+    <circle cx="75" cy="65" r="39" stroke-width="1.7999999999999998" transform="translate(1, 0)" opacity="0.6"/>
+    <circle cx="75" cy="65" r="41" stroke-width="1.2000000000000002" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 75 25 Q 70 20 72 15" stroke-width="2" opacity="0.8"/>
+    <path d="M 75 25 Q 70 20 72 15" stroke-width="1.2" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 75 25 Q 70 20 72 15" stroke-width="0.8" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 60 40 L 62 42 M 90 50 L 92 52 M 50 70 L 52 72 M 100 80 L 102 82 M 70 95 L 72 97" stroke-width="2" opacity="0.8"/>
+    <path d="M 60 40 L 62 42 M 90 50 L 92 52 M 50 70 L 52 72 M 100 80 L 102 82 M 70 95 L 72 97" stroke-width="1.2" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 60 40 L 62 42 M 90 50 L 92 52 M 50 70 L 52 72 M 100 80 L 102 82 M 70 95 L 72 97" stroke-width="0.8" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 65 45 L 66 46 M 85 40 L 86 41 M 55 60 L 56 61 M 95 70 L 96 71" stroke-width="1" opacity="0.8"/>
+    <path d="M 65 45 L 66 46 M 85 40 L 86 41 M 55 60 L 56 61 M 95 70 L 96 71" stroke-width="0.6" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 65 45 L 66 46 M 85 40 L 86 41 M 55 60 L 56 61 M 95 70 L 96 71" stroke-width="0.4" transform="translate(-1, 1)" opacity="0.7"/>
+    
+  </g>
+</svg>
+
+
+        <h4 style="margin: 1.5rem 0 0.5rem; font-size: 1.2rem; color: #111;">~3 Newtons</h4>
+        <p style="font-size: 0.95rem; color: #555; margin: 0; line-height: 1.5;">The force exerted by holding a larger piece of fruit, like a grapefruit.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px; background: #fff; border: 2px dashed #ddd; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <svg viewBox="0 0 150 150" width="100" height="100" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto; display: block;">
+  <defs>
+    <filter id="charcoal-bite" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="0.4" result="blurred" />
+      <feMerge>
+        <feMergeNode in="blurred" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#charcoal-bite)" stroke="#2c2c2c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M 50 100 L 100 100 L 90 40 L 60 40 Z" stroke-width="3" opacity="0.8"/>
+    <path d="M 50 100 L 100 100 L 90 40 L 60 40 Z" stroke-width="1.7999999999999998" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 50 100 L 100 100 L 90 40 L 60 40 Z" stroke-width="1.2000000000000002" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 65 40 L 65 25 Q 75 15 85 25 L 85 40" stroke-width="3" opacity="0.8"/>
+    <path d="M 65 40 L 65 25 Q 75 15 85 25 L 85 40" stroke-width="1.7999999999999998" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 65 40 L 65 25 Q 75 15 85 25 L 85 40" stroke-width="1.2000000000000002" transform="translate(-1, 1)" opacity="0.7"/>
+    
+    <path d="M 75 60 L 75 80 M 70 65 L 75 60" stroke-width="2" opacity="0.8"/>
+    <path d="M 75 60 L 75 80 M 70 65 L 75 60" stroke-width="1.2" transform="translate(1, -1)" opacity="0.6"/>
+    <path d="M 75 60 L 75 80 M 70 65 L 75 60" stroke-width="0.8" transform="translate(-1, 1)" opacity="0.7"/>
+    
+  </g>
+</svg>
+
+
+        <h4 style="margin: 1.5rem 0 0.5rem; font-size: 1.2rem; color: #111;">4.5 Newtons</h4>
+        <p style="font-size: 0.95rem; color: #555; margin: 0; line-height: 1.5;">Approximately equal to <strong>1 pound-force</strong> (the common unit in the US).</p>
+    </div>
+</div>
+
 
 <p>With these physical definitions in place, Newton's first law of motion can be rephrased with much greater precision:</p>
 
