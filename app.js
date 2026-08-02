@@ -188,8 +188,11 @@ async function loadContent(sectionId) {
     // Load questions for this section
     renderQuestions(sectionId);
     
-    // Add equation click handlers
-    setTimeout(addEquationClickHandlers, 600);
+    // Add click handlers
+    setTimeout(() => {
+        addEquationClickHandlers();
+        addGlossaryClickHandlers();
+    }, 600);
 }
 
 // ===========================
@@ -712,6 +715,27 @@ function updateProgressDots(currentIndex) {
         }
         if (i === currentIndex) {
             dot.classList.add('current');
+        }
+    });
+}
+
+function addGlossaryClickHandlers() {
+    const terms = document.querySelectorAll('.glossary-term');
+    terms.forEach(term => {
+        term.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = term.classList.contains('active');
+            terms.forEach(t => t.classList.remove('active'));
+            if (!isActive) {
+                term.classList.add('active');
+            }
+        });
+    });
+    
+    // Close on clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.glossary-term')) {
+            document.querySelectorAll('.glossary-term').forEach(t => t.classList.remove('active'));
         }
     });
 }

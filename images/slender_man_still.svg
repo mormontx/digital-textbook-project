@@ -1,0 +1,24 @@
+<svg width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#fafafa"/>
+  <g filter="url(#sketch)" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <ellipse cx="100" cy="50" rx="14" ry="20" fill="#fcfcfc" stroke-width="2"/>
+    <!-- Tie -->
+    <path d="M 100 70 L 98 110 L 100 120 L 102 110 Z" fill="#111" stroke-width="1"/>
+
+    <!-- Body -->
+    <path d="M 85 75 L 115 75 L 105 160 L 95 160 Z" fill="#333" stroke-width="2"/>
+    <!-- Legs -->
+    <path d="M 95 160 L 90 260 L 80 260" stroke-width="4"/> 
+    <path d="M 105 160 L 110 260 L 120 260" stroke-width="4"/> 
+    <!-- Arms -->
+    <path d="M 85 75 L 75 150" stroke-width="4"/> 
+    <path d="M 115 75 L 125 150" stroke-width="4"/> 
+  </g>
+</svg>

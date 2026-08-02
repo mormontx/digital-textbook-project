@@ -1,3 +1,46 @@
+
+<style>
+.solution-toggle-btn {
+    background: linear-gradient(145deg, #39ff14, #2eb80f);
+    color: #000;
+    border: 3px solid #1a6608;
+    box-shadow: 0 0 15px #39ff14, inset 0 0 8px rgba(0,0,0,0.5);
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0px 1px 2px rgba(255,255,255,0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    animation: pulse-radioactive 2s infinite;
+}
+.solution-toggle-btn::before {
+    content: '☢️';
+    font-size: 1.4em;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+.solution-toggle-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 25px #39ff14, 0 5px 15px rgba(57,255,20,0.4), inset 0 0 10px rgba(0,0,0,0.5);
+    background: linear-gradient(145deg, #4dff2b, #39ff14);
+}
+.solution-toggle-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px #39ff14, inset 0 0 15px rgba(0,0,0,0.7);
+}
+@keyframes pulse-radioactive {
+    0% { box-shadow: 0 0 10px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0 0 20px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
+    100% { box-shadow: 0 0 10px #39ff14, inset 0 0 8px rgba(0,0,0,0.5); }
+}
+</style>
 <style>
 /* Kognity Style Overrides */
 .lesson-progress-bar {
@@ -55,8 +98,8 @@ h3 {
 p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #111827;
-    font-weight: 300;
+    color: #4b5563;
+    font-weight: normal;
     margin-bottom: 1.2rem;
 }
 ul, ol {
@@ -66,8 +109,8 @@ ul, ol {
 li {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #111827;
-    font-weight: 300;
+    color: #4b5563;
+    font-weight: normal;
     margin-bottom: 0.5rem;
 }
 
@@ -170,8 +213,8 @@ li {
     padding: 1rem;
     text-align: left;
     border: 1px solid #d1d5db;
-    color: #111827;
-    font-weight: 300;
+    color: #4b5563;
+    font-weight: normal;
 }
 
 /* Worked Example */
@@ -224,8 +267,8 @@ li {
     padding: 1.2rem 1rem;
     border: 1px solid #d1d5db;
     vertical-align: top;
-    color: #111827;
-    font-weight: 300;
+    color: #4b5563;
+    font-weight: normal;
 }
 
 .mcq-box {
@@ -248,7 +291,7 @@ li {
     transition: background 0.2s;
     font-size: 1.05rem;
     color: #374151;
-    font-weight: 300;
+    font-weight: normal;
 }
 .mcq-option:hover {
     background: #f3f4f6;
@@ -263,7 +306,180 @@ li {
     border-color: #fca5a5;
     color: #991b1b;
 }
+
+/* Position Animations */
+@keyframes pin-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes tape-expand {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+@keyframes compass-spin {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    70% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes pulse-red {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(239,68,68,0.4)); }
+    50% { filter: drop-shadow(0 0 10px rgba(239,68,68,0.8)); }
+}
+@keyframes fly-dart {
+    0% { transform: translateX(0) translateY(0); opacity: 1; }
+    90% { transform: translateX(60px) translateY(-20px); opacity: 0; }
+    100% { transform: translateX(0) translateY(0); opacity: 0; }
+}
+
+/* Card Grids */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.anim-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.anim-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.anim-icon-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Specific Anim Classes */
+.anim-pin { animation: pin-bounce 2s infinite ease-in-out; }
+.anim-tape-container { width: 80px; height: 10px; background: #e5e7eb; border-radius: 5px; position: relative; overflow: hidden;}
+.anim-tape-fill { position: absolute; left: 0; top: 0; height: 100%; background: #f59e0b; animation: tape-expand 2s infinite cubic-bezier(0.4, 0, 0.2, 1); }
+.anim-compass { animation: compass-spin 3s infinite ease-in-out; transform-origin: center; }
+.anim-thermometer { animation: pulse-red 2s infinite; color: #ef4444; }
+.anim-dart { animation: fly-dart 2s infinite ease-in; color: #3b82f6; }
+
+/* Pirate Analogy Cards */
+/* Splash Pirate Cards */
+.pirate-card {
+    background: #eaffd9; /* light toxic green */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    padding: 2rem 1.5rem;
+    box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.2), 0 4px 15px rgba(0,0,0,0.05);
+    animation: blob-morph 8s ease-in-out infinite alternate;
+    position: relative;
+    border: none;
+    text-align: center;
+}
+.pirate-card h4 { color: #166534; margin-top: 0; margin-bottom: 0.5rem;}
+.pirate-card p { font-style: italic; color: #14532d; font-size: 0.95rem; margin: 0; font-weight: 400 !important;}
+
+@keyframes blob-morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+}
+
+/* Chalkboard GIF Simulation */
+.chalkboard-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.chalkboard-img {
+    width: 100%;
+    display: block;
+}
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.chalkboard-text {
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    width: 60%;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5), 0 0 4px rgba(255,255,255,0.3);
+    transform: rotate(-2deg); 
+    line-height: 1.3;
+}
+.reveal-text {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: wipe-reveal 4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+}
+@keyframes wipe-reveal {
+    0%, 10% { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+    90%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+}
+
+
+/* Radioactive Highlight */
+.toxic-highlight {
+    position: relative;
+    display: inline;
+    background-image: linear-gradient(120deg, #39ff14 0%, #a8ff78 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #064e3b;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px 8px 3px 6px; 
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.8);
+    text-shadow: none;
+}
+
+/* Slender Man Grid */
+.slender-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.slender-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.slender-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.slender-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0;
+}
+
 </style>
+
 
 <h1>Mechanics: Kinematics & Changes</h1>
 
@@ -278,27 +494,143 @@ li {
 </div>
 
 <p>When considering position, velocity, and time, which concept should be established first?</p>
-<p>How can one explain the seamless, fluid movement of an ice or roller skater who is coasting along? A straightforward response is to say that a coasting skater travels at a uniform velocity. The word <span class="glossary-term">velocity<span class="glossary-tooltip"><span class="glossary-tooltip-title">Velocity</span>A change in position over time. It is a vector quantity having both speed and direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> is a distinct technical term, and it requires a clear definition. Shortly, Newton’s first law can be restated using more exact, elevated terminology. However, doing so requires first introducing three fundamental physical quantities connected with motion: position, velocity, and force.</p>
+
+<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <img src="images/skater_coasting.jpg" alt="Skater coasting smoothly" style="width: 120px; border-radius: 8px;">
+    <div>
+        <h3 style="margin-top: 0; color: #4f46e5;">The Seamless Coast</h3>
+        <p style="margin-bottom: 0;">How can one explain the seamless, fluid movement of an ice or roller skater who is coasting along without any apparent effort?</p>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <img src="images/skater_uniform_velocity.jpg" alt="Skater uniform velocity" style="width: 120px; border-radius: 8px;">
+    <div>
+        <h3 style="margin-top: 0; color: #4f46e5;">Uniform Velocity</h3>
+        <p style="margin-bottom: 0;">A straightforward response is to say that a coasting skater travels at a uniform velocity. The word <span class="glossary-term">velocity<span class="glossary-tooltip"><span class="glossary-tooltip-title">Velocity</span>A change in position over time. It is a vector quantity having both speed and direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> is a distinct technical term, and it requires a clear definition.</p>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <img src="images/physics_quantities_icons.jpg" alt="Physics quantities" style="width: 120px; border-radius: 8px;">
+    <div>
+        <h3 style="margin-top: 0; color: #4f46e5;">The Core Quantities</h3>
+        <p style="margin-bottom: 0;">Shortly, Newton’s first law can be restated using more exact, elevated terminology. However, doing so requires first introducing three fundamental physical quantities connected with motion: position, velocity, and force.</p>
+    </div>
+</div>
+
+
+
+
+<div style="text-align: center; margin: 2rem 0;">
+    <svg viewBox="0 0 400 200" width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="rat-charcoal" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+            </filter>
+        </defs>
+        <rect width="100%" height="100%" fill="#fcfcfc" />
+        <g filter="url(#rat-charcoal)" stroke="#222" stroke-linecap="round" fill="none">
+            <!-- Rat 1 (Left) -->
+            <path d="M 50 150 Q 80 80 120 100 Q 150 150 120 180 Z" stroke-width="3" fill="#fff"/>
+            <circle cx="100" cy="110" r="3" fill="#222"/>
+            <path d="M 120 100 L 140 90 M 125 105 L 145 100 M 120 110 L 140 115" stroke-width="1.5"/> <!-- Whiskers -->
+            
+            <!-- Rat 2 (Middle, pondering) -->
+            <path d="M 160 160 Q 200 60 230 110 Q 250 160 210 180 Z" stroke-width="3" fill="#fff"/>
+            <circle cx="210" cy="100" r="3" fill="#222"/>
+            <path d="M 230 110 L 250 100 M 235 115 L 255 110 M 230 120 L 250 125" stroke-width="1.5"/> <!-- Whiskers -->
+            <!-- Glasses -->
+            <circle cx="210" cy="100" r="8" stroke-width="2"/>
+            <line x1="218" y1="100" x2="230" y2="105" stroke-width="2"/>
+            
+            <!-- Rat 3 (Right) -->
+            <path d="M 270 180 Q 300 90 350 110 Q 380 160 340 190 Z" stroke-width="3" fill="#fff"/>
+            <circle cx="320" cy="120" r="3" fill="#222"/>
+            <path d="M 350 110 L 370 100 M 355 115 L 375 110 M 350 120 L 370 125" stroke-width="1.5"/> <!-- Whiskers -->
+            
+            <!-- Philosophical chalkboard in background -->
+            <rect x="80" y="20" width="240" height="50" stroke-width="2"/>
+            <path d="M 100 40 Q 150 30 200 50 Q 250 30 300 40" stroke-width="2" opacity="0.6"/>
+            
+            <!-- Texture shading -->
+            <path d="M 70 160 L 80 170 M 90 165 L 100 175 M 180 165 L 190 175 M 290 175 L 300 185" stroke-width="2" opacity="0.5"/>
+        </g>
+    </svg>
+    <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; color: #666; margin-top: 0.5rem;">"The rats pondered the fundamental quantities of the universe."</p>
+</div>
+
+
 
 <h2>Position</h2>
-<p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body’s precise location in space. For instance, a speaker might state that their position is approximately two meters in front of a specific jar. Defining a position accurately always demands three distinct pieces of information:</p>
+<p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body’s precise location in space. Defining a position accurately always demands three distinct pieces of information:</p>
 
-<ul>
-    <li>Reference point: A baseline starting location to work from (such as the jar).</li>
-    <li>Distance: The physical separation from that baseline (such as roughly six and a half feet, or two meters).</li>
-    <li>Direction: The line of orientation relative to that baseline (such as "in front of").</li>
-</ul>
+<div class="grid-3">
+    <!-- Card 1: Reference Point -->
+    <div class="anim-card">
+        <div class="anim-icon-container">
+            <img src="images/reference_point_sketch.jpg" alt="Reference point sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+        </div>
+        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">1. Reference Point</h3>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">A baseline starting location to work from.</p>
+    </div>
 
-<p>If any single one of these three elements—reference point, distance, or direction—is missing, determining the object’s actual position becomes impossible:</p>
-<ul>
-    <li>Missing the reference point: If the reference point (the bottle) is removed while stating an offset of six feet, the actual location remains unknown.</li>
-    <li>Missing the distance: If the direction is known ("in front of") but the separation is omitted, the location could be nearby or far away without any way to specify.</li>
-    <li>Missing the direction: If the distance is set at six and a half feet (two meters) but no direction is given, the location could sit anywhere along a full circle at that radius around the point.</li>
-</ul>
+    <!-- Card 2: Distance -->
+    <div class="anim-card">
+        <div class="anim-icon-container">
+            <img src="images/distance_tape_sketch.jpg" alt="Distance tape sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+        </div>
+        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">2. Distance</h3>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">The physical separation from the baseline.</p>
+    </div>
+
+    <!-- Card 3: Direction -->
+    <div class="anim-card">
+        <div class="anim-icon-container">
+            <img src="images/direction_compass_sketch.jpg" alt="Compass sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+        </div>
+        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">3. Direction</h3>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">The line of orientation relative to the baseline.</p>
+    </div>
+</div>
+
+<p>If any single one of these elements is missing, determining the object’s actual position becomes impossible. Imagine trying to find buried treasure:</p>
+
+<div class="grid-3">
+    <div class="pirate-card">
+        <h4>🏴‍☠️ Missing Reference Point</h4>
+        <p>"Walk 10 paces North... but from where?" Without a starting 'X', you are lost.</p>
+    </div>
+    <div class="pirate-card">
+        <h4>🏴‍☠️ Missing Distance</h4>
+        <p>"Walk North from the palm tree... but how far?" You could walk forever!</p>
+    </div>
+    <div class="pirate-card">
+        <h4>🏴‍☠️ Missing Direction</h4>
+        <p>"Walk 10 paces from the tree..." You'd have to search a massive circle around the tree.</p>
+    </div>
+</div>
 
 <p>Consequently, a complete position is defined as a specific distance combined with a specific direction measured from an established reference point. The net change in an object's position from its starting point is known as <span class="glossary-term">displacement<span class="glossary-tooltip"><span class="glossary-tooltip-title">Displacement</span>A change in position. It is a vector quantity pointing from the initial to the final position.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span>.</p>
 
-<p>Physical properties that feature both a numerical amount and a direction belong to a category known as <span class="glossary-term">vector quantities<span class="glossary-tooltip"><span class="glossary-tooltip-title">Vector Quantities</span>Physical properties that feature both a numerical amount (magnitude) and a direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span>. Many familiar physical quantities possess only an amount (<span class="glossary-term">scalar values<span class="glossary-tooltip"><span class="glossary-tooltip-title">Scalar Values</span>Physical quantities that possess only an amount (magnitude), without direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span>), such as room temperature, the total duration of a concert, or the screen size of a laptop. However, numerous crucial physical concepts incorporate both magnitude and spatial orientation; omitting the directional element of a vector quantity leaves the definition incomplete.</p>
+<h3>Scalar vs Vector Quantities</h3>
+<div class="grid-2">
+    <div class="anim-card" style="display: flex; align-items: center; text-align: left; gap: 1rem;">
+        <img src="images/scalar_thermometer_sketch.jpg" alt="Thermometer sketch" style="width: 56px; object-fit: contain; mix-blend-mode: multiply;">
+        <div>
+            <h4 style="margin: 0; color: #111827;">Scalar Values</h4>
+            <p style="font-size: 0.9rem; margin: 0.25rem 0 0 0; color: #6b7280; font-weight: 400 !important;">Possess only an amount (magnitude). Example: Room temperature or time.</p>
+        </div>
+    </div>
+    <div class="anim-card" style="display: flex; align-items: center; text-align: left; gap: 1rem;">
+        <img src="images/vector_dart_sketch.jpg" alt="Dart sketch" style="width: 56px; object-fit: contain; mix-blend-mode: multiply;">
+        <div>
+            <h4 style="margin: 0; color: #111827;">Vector Quantities</h4>
+            <p style="font-size: 0.9rem; margin: 0.25rem 0 0 0; color: #6b7280; font-weight: 400 !important;">Feature both an amount AND a direction. Example: Position or Force.</p>
+        </div>
+    </div>
+</div>
 
 <p>Distance—and thus position—is expressed through linear units. In scientific contexts, the International System of Units (SI) relies on the meter as its standard unit of length. Because standard SI units like the meter may feel less intuitive to general audiences in the United States, everyday units can also be applied for clarity, such as the foot or the mile.</p>
 
@@ -339,7 +671,29 @@ li {
     <li>The direction of velocity represents the heading of movement.</li>
 </ul>
 
-<p>For example, a person standing still has a velocity of zero. If that person starts moving toward an observer's left at roughly half a foot per second, they possess a specific leftward velocity. If they then walk toward the right at that same half-a-foot-per-second speed, their velocity has changed—even though their speed remains identical—because the heading is now reversed. Leaving out either the speed or the travel direction results in an incomplete description of velocity.</p>
+
+<div class="slender-grid">
+    <div class="slender-card">
+        
+<img src="images/stickman_still.svg" alt="Standing still" style="display: block; margin: 0 auto;">
+
+        <p><strong>Velocity = 0</strong><br>Standing still has a velocity of zero.</p>
+    </div>
+    <div class="slender-card">
+        
+<img src="images/stickman_left.svg" alt="Moving left" style="display: block; margin: 0 auto;">
+
+        <p><strong>Leftward Velocity</strong><br>Moving left gives a specific leftward velocity.</p>
+    </div>
+    <div class="slender-card">
+        
+<img src="images/stickman_right.svg" alt="Moving right" style="display: block; margin: 0 auto;">
+
+        <p><strong>Rightward Velocity</strong><br>Walking right at the same speed changes the velocity, because the heading is reversed!</p>
+    </div>
+</div>
+<p><span class="toxic-highlight">Leaving out either the speed or the travel direction results in an incomplete description of velocity.</span></p>
+
 
 <p>In terms of measurement, velocity is expressed as distance divided by time:</p>
 
@@ -382,7 +736,7 @@ li {
 <p>Combining a fixed direction with a fixed speed yields a constant velocity.</p>
 
 <p>Thus, the refined formulation of Newton's First Law of Motion states:</p>
-<div class="equation-block" style="background: #f9fafb; border-left: 4px solid #4f46e5; padding: 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; color: #111827;">
+<div class="equation-block" style="background: #f9fafb; border-left: 4px solid #39ff14; padding: 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; color: #111827;">
     An object that experiences no net external forces moves at a constant velocity.
 </div>
 
@@ -408,171 +762,81 @@ li {
 <p>Select a surface, adjust the initial velocity and mass, then click Push Object to see how friction brings the box to a stop — or keeps it moving forever.</p>
 <iframe src="data/simulations/friction.html" width="100%" height="560px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block;"></iframe>
 
-<h2>Acceleration</h2>
-<p>How does a skater initiate movement, bring themselves to a stop, or change direction? They do so because an applied force acts upon them, bringing about <span class="glossary-term">acceleration<span class="glossary-tooltip"><span class="glossary-tooltip-title">Acceleration</span>The rate at which an object's velocity changes over time.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span>.</p>
-
-<p>Acceleration is another fundamental vector quantity that describes how an object's velocity evolves over time. Unlike simple speed, acceleration can be subtle and difficult to spot at a glance; it requires careful observation. Because it is a vector, acceleration possesses both a magnitude (how rapidly velocity is altering) and a direction (where that change is oriented).</p>
-
-<h3>Visualizing Acceleration</h3>
-<p>Consider a person standing completely motionless at zero velocity:</p>
-<ul>
-    <li>As long as they remain stationary, their velocity stays zero over time, meaning their acceleration is zero.</li>
-    <li>If they begin gaining speed toward the right, moving faster and faster from a slow start, their velocity is continuously changing toward the right. This changing rate of motion is the acceleration itself.</li>
-    <li>If they instead burst rapidly toward the left, they undergo a sharp acceleration directed to the left.</li>
-</ul>
-
-<p>When acceleration acts in the exact same direction as the current velocity, the overall speed increases over time. This is precisely how a skater starts moving from rest: starting at zero velocity, they select a direction, accelerate along that line, and continually build up speed.</p>
-
-<p>Units for measuring acceleration reflect a change in velocity over time:</p>
-<div class="kognity-table-wrapper">
-    <div class="kognity-table-caption">Table 3. Units of acceleration</div>
-    <table class="kognity-table">
-        <tr>
-            <th>System</th>
-            <th>Unit</th>
-            <th>Symbol</th>
-        </tr>
-        <tr>
-            <td>SI (Metric)</td>
-            <td>Meters per second squared</td>
-            <td>$\text{m s}^{-2}$ or $\text{m/s}^2$</td>
-        </tr>
-        <tr>
-            <td>U.S. Customary</td>
-            <td>Feet per second squared</td>
-            <td>$\text{ft/s}^2$</td>
-        </tr>
-    </table>
-</div>
-
-<h3>Speeding Up, Stopping, and Turning</h3>
-<p>The relative orientation between an object's current velocity vector and its acceleration vector dictates how its movement evolves:</p>
-<ul>
-    <li>Accelerating parallel to velocity (Speeding Up): When acceleration points in the same direction as the existing path of motion, the object gains speed.</li>
-    <li>Accelerating opposite to velocity (Deceleration): When acceleration points in the direction directly opposite to the current motion, the object slows down. 
-    <br><br>Example: If an object moves toward the right while accelerating toward the left, its rightward speed continually drops until it comes to a brief, momentary standstill. If the leftward acceleration persists beyond that stop, the object reverses course and begins picking up speed toward the left.</li>
-</ul>
-
-<p>The term <span class="glossary-term">deceleration<span class="glossary-tooltip"><span class="glossary-tooltip-title">Deceleration</span>A specific case of acceleration where the force and acceleration vectors oppose the motion vector, causing the object to slow down.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> is simply a specific case of acceleration where the force and acceleration vectors oppose the motion vector.</p>
-
-<!-- Visual Diagram 2 -->
-<div class="diagram-figure" style="background: transparent; border: 1px solid #e5e7eb; border-radius: 12px; padding: 0.5rem; margin: 2rem 0;">
-    <img src="images/skate_friction_forces.svg" alt="Physics breakdown diagram of friction forces acting on a coasting skateboarder" class="diagram-img" style="width: 100%; border-radius: 8px;">
-    <figcaption style="font-size: 0.9rem; color: #6b7280; margin-top: 0.75rem; font-style: italic; text-align: center;">
-        Figure 1.3: Deceleration. Friction opposes the direction of motion, creating an acceleration vector directed against the velocity.
-    </figcaption>
-</div>
-
-<ul>
-    <li>Accelerating sideways to velocity (Changing Direction): Rather than pushing along or directly against the line of travel, acceleration can also be applied laterally to the side of the current path, bending the trajectory without necessarily changing the overall speed.</li>
-</ul>
-
-
-<h2>Equations of motion</h2>
-<p>We can use equations to determine the motion of uniformly accelerated objects. These equations are often known as the 'suvat' equations.</p>
-<p>First, we need to define some quantities. Table 4 shows each quantity, its symbol and its unit.</p>
-
-<div class="kognity-table-wrapper">
-    <div class="kognity-table-caption">Table 4. Quantities in suvat equations.</div>
-    <table class="kognity-table">
-        <tr>
-            <th>Quantity</th>
-            <th>Symbol</th>
-            <th>Unit</th>
-        </tr>
-        <tr>
-            <td>Displacement</td>
-            <td>$s$</td>
-            <td>m</td>
-        </tr>
-        <tr>
-            <td>Initial velocity</td>
-            <td>$u$</td>
-            <td>$\text{m s}^{-1}$</td>
-        </tr>
-        <tr>
-            <td>Final velocity</td>
-            <td>$v$</td>
-            <td>$\text{m s}^{-1}$</td>
-        </tr>
-        <tr>
-            <td>Acceleration</td>
-            <td>$a$</td>
-            <td>$\text{m s}^{-2}$</td>
-        </tr>
-        <tr>
-            <td>Time</td>
-            <td>$t$</td>
-            <td>s</td>
-        </tr>
-    </table>
-</div>
-
-<p>The core kinematic equations are:</p>
-<div class="equation-block" style="margin-bottom: 2rem;">
-    $$v = u + at, \quad s = \left(\frac{u+v}{2}\right)t, \quad s = ut + \frac{1}{2}at^2, \quad v^2 = u^2 + 2as$$
-</div>
-
-<div class="worked-example-header">Worked example 1</div>
-<p>A skateboarder coasting at $6.0\text{ m s}^{-1}$ encounters friction causing deceleration at $-0.80\text{ m s}^{-2}$. Calculate how far they will roll before coming to a stop.</p>
-
-<button class="solution-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle><line x1="3" y1="3" x2="21" y2="21"></line></svg>
-    Solution
-</button>
-<div class="solution-container">
-    <table class="solution-table">
-        <tr>
-            <th>Solution steps</th>
-            <th>Calculations</th>
-        </tr>
-        <tr>
-            <td><strong>Step 1:</strong> Write out the values given in the question and convert the values to the units required for the equation.</td>
-            <td>
-                $u = 6.0\text{ m s}^{-1}$<br>
-                $v = 0.0\text{ m s}^{-1}$<br>
-                $a = -0.80\text{ m s}^{-2}$<br>
-                $s =\ ?$
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Step 2:</strong> Write out the equation.</td>
-            <td>$v^2 = u^2 + 2as$</td>
-        </tr>
-        <tr>
-            <td><strong>Step 3:</strong> Substitute the values given.</td>
-            <td>
-                $0^2 = 6.0^2 + 2(-0.80)s$<br>
-                $0 = 36 - 1.60s$<br>
-                $1.60s = 36$
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Step 4:</strong> State the answer with appropriate units and the number of significant figures used in rounding.</td>
-            <td>$s = \frac{36}{1.60} = 22.5\text{ m}$ (3 s.f.)</td>
-        </tr>
-    </table>
-</div>
-
 <h2>Projectile Motion Simulator</h2>
-<p>Adjust launch parameters below to launch a skateboard off a jump ramp and observe parabolic flight!</p>
-<iframe src="data/simulations/projectile.html" width="100%" height="630px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block;"></iframe>
 
-<script>
-    // Glossary tooltip toggle logic
-    document.addEventListener('click', function(e) {
-        const isTerm = e.target.closest('.glossary-term');
-        const allTerms = document.querySelectorAll('.glossary-term');
-        
-        allTerms.forEach(term => {
-            if (term !== isTerm) {
-                term.classList.remove('active');
-            }
-        });
-        
-        if (isTerm) {
-            // Prevent the click from propagating so we don't immediately close it
-            isTerm.classList.toggle('active');
-        }
-    });
-</script>
+<p>Adjust launch parameters below to launch a skateboard off a jump ramp and observe parabolic flight!</p>
+<iframe src="data/simulations/projectile.html" width="100%" height="630px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block;">
+</iframe>
+
+
+<div class="worked-example-header" style="margin-top: 3rem;">Worked example 4: Projectile Motion (Simple)</div>
+<div class="worked-example-container">
+    <div class="worked-example-problem">
+        <strong>Problem:</strong> A skateboarder rolls off a horizontal ramp at a speed of $5.0\text{ m/s}$. The ramp is $1.2\text{ m}$ above the ground. How long does it take for the skateboarder to hit the ground? (Use $g = 9.8\text{ m/s}^2$)
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'; this.textContent = this.textContent === 'Show Solution' ? 'Hide Solution' : 'Show Solution'">Show Solution</button>
+        <div class="solution-content" style="display: none;">
+            <p><strong>Knowns:</strong><br>
+            Initial vertical velocity, $u_y = 0\text{ m/s}$ (horizontal launch)<br>
+            Vertical displacement, $s_y = -1.2\text{ m}$ (downward)<br>
+            Acceleration, $a_y = -9.8\text{ m/s}^2$
+            </p>
+            <p><strong>Equation:</strong> Use $s_y = u_y t + \frac{1}{2}a_y t^2$</p>
+            <p><strong>Calculation:</strong><br>
+            $-1.2 = 0 + \frac{1}{2}(-9.8)t^2$<br>
+            $t = \sqrt{\frac{1.2}{4.9}} \approx 0.49\text{ s}$
+            </p>
+            <p><strong>Answer:</strong> The skateboarder is in the air for $0.49\text{ s}$.</p>
+        </div>
+    </div>
+</div>
+
+<div class="worked-example-header" style="margin-top: 2rem;">Worked example 5: Projectile Motion (Medium)</div>
+<div class="worked-example-container">
+    <div class="worked-example-problem">
+        <strong>Problem:</strong> Using the time of flight from the previous example ($0.49\text{ s}$), how far horizontally does the skateboarder travel before landing?
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'; this.textContent = this.textContent === 'Show Solution' ? 'Hide Solution' : 'Show Solution'">Show Solution</button>
+        <div class="solution-content" style="display: none;">
+            <p><strong>Knowns:</strong><br>
+            Horizontal velocity, $u_x = 5.0\text{ m/s}$ (constant)<br>
+            Time, $t = 0.49\text{ s}$
+            </p>
+            <p><strong>Equation:</strong> Use $s_x = u_x t$ (since horizontal acceleration $a_x = 0$)</p>
+            <p><strong>Calculation:</strong><br>
+            $s_x = (5.0)(0.49)$<br>
+            $s_x = 2.45\text{ m}$
+            </p>
+            <p><strong>Answer:</strong> The horizontal range is $2.45\text{ m}$.</p>
+        </div>
+    </div>
+</div>
+
+<div class="worked-example-header" style="margin-top: 2rem;">Worked example 6: Projectile Motion (Difficult)</div>
+<div class="worked-example-container">
+    <div class="worked-example-problem">
+        <strong>Problem:</strong> A skater launches off a jump at an angle of $30^{\circ}$ above the horizontal with a speed of $10.0\text{ m/s}$. Calculate the maximum height they reach above the launch point.
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'; this.textContent = this.textContent === 'Show Solution' ? 'Hide Solution' : 'Show Solution'">Show Solution</button>
+        <div class="solution-content" style="display: none;">
+            <p><strong>Step 1: Find initial vertical velocity.</strong><br>
+            $u_y = u \sin(\theta) = 10.0 \sin(30^{\circ}) = 5.0\text{ m/s}$
+            </p>
+            <p><strong>Step 2: Use kinematic equation for max height.</strong><br>
+            At max height, final vertical velocity $v_y = 0$.<br>
+            Use $v_y^2 = u_y^2 + 2a_y s_y$
+            </p>
+            <p><strong>Step 3: Calculate.</strong><br>
+            $0 = (5.0)^2 + 2(-9.8)s_y$<br>
+            $0 = 25 - 19.6 s_y$<br>
+            $s_y = \frac{25}{19.6} \approx 1.28\text{ m}$
+            </p>
+            <p><strong>Answer:</strong> The maximum height reached is $1.28\text{ m}$.</p>
+        </div>
+    </div>
+</div>
+
+
