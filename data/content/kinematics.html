@@ -345,6 +345,11 @@ li {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
+.green-framed-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: #16a34a !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3) !important;
+}
 .anim-icon-container {
     height: 80px;
     display: flex;
@@ -507,75 +512,72 @@ li {
 
 
 <div style="text-align: center; margin: 2rem 0;">
-    <svg viewBox="0 0 400 200" width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <filter id="rat-charcoal" x="-10%" y="-10%" width="120%" height="120%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="3" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-            </filter>
-        </defs>
-        <rect width="100%" height="100%" fill="#fcfcfc" />
-        <g filter="url(#rat-charcoal)" stroke="#222" stroke-linecap="round" fill="none">
-            <!-- Rat 1 (Left) -->
-            <path d="M 50 150 Q 80 80 120 100 Q 150 150 120 180 Z" stroke-width="3" fill="#fff"/>
-            <circle cx="100" cy="110" r="3" fill="#222"/>
-            <path d="M 120 100 L 140 90 M 125 105 L 145 100 M 120 110 L 140 115" stroke-width="1.5"/> <!-- Whiskers -->
-            
-            <!-- Rat 2 (Middle, pondering) -->
-            <path d="M 160 160 Q 200 60 230 110 Q 250 160 210 180 Z" stroke-width="3" fill="#fff"/>
-            <circle cx="210" cy="100" r="3" fill="#222"/>
-            <path d="M 230 110 L 250 100 M 235 115 L 255 110 M 230 120 L 250 125" stroke-width="1.5"/> <!-- Whiskers -->
-            <!-- Glasses -->
-            <circle cx="210" cy="100" r="8" stroke-width="2"/>
-            <line x1="218" y1="100" x2="230" y2="105" stroke-width="2"/>
-            
-            <!-- Rat 3 (Right) -->
-            <path d="M 270 180 Q 300 90 350 110 Q 380 160 340 190 Z" stroke-width="3" fill="#fff"/>
-            <circle cx="320" cy="120" r="3" fill="#222"/>
-            <path d="M 350 110 L 370 100 M 355 115 L 375 110 M 350 120 L 370 125" stroke-width="1.5"/> <!-- Whiskers -->
-            
-            <!-- Philosophical chalkboard in background -->
-            <rect x="80" y="20" width="240" height="50" stroke-width="2"/>
-            <path d="M 100 40 Q 150 30 200 50 Q 250 30 300 40" stroke-width="2" opacity="0.6"/>
-            
-            <!-- Texture shading -->
-            <path d="M 70 160 L 80 170 M 90 165 L 100 175 M 180 165 L 190 175 M 290 175 L 300 185" stroke-width="2" opacity="0.5"/>
-        </g>
-    </svg>
-    <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; color: #666; margin-top: 0.5rem;">"The rats pondered the fundamental quantities of the universe."</p>
+    <img src="images/rats_physics.jpg" alt="Rats learning physics" style="width: 100%; max-width: 650px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+    <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.4rem; color: #4b5563; margin-top: 1rem;">"The rats pondered the fundamental quantities of the universe."</p>
 </div>
+
+<!-- Rats Riddle -->
+<div class="worked-example-box" style="background: #fdfae5; border: 2.5px solid #eab308; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 15px rgba(234, 179, 8, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #fef08a; color: #854d0e; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Philosophical Riddle</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">The Master Variable</h3>
+        </div>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.5rem; font-weight: 500;">
+        Challenge: Can you define all of those core quantities (Position, Velocity, Acceleration, and Force) in terms of just <em>one</em> fundamental variable? What would that variable be, and how would you use it to define all of them?
+    </p>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #a16207; border: 2px solid #eab308; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === &apos;block&apos; ? &apos;none&apos; : &apos;block&apos;); this.textContent = (this.textContent.trim() === &apos;Reveal Answer&apos; ? &apos;Hide Answer&apos; : &apos;Reveal Answer&apos;); if (window.MathJax) { MathJax.typesetPromise(); }">Reveal Answer</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #fde047; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #a16207; font-size: 1.15rem;">The Answer: Time ($t$)</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                The master variable that weaves all motion together is <strong>Time</strong>. Without time, the universe is just a frozen snapshot. By tracking how things change as time ticks forward, we can define everything else:
+            </p>
+            <ul style="margin-bottom: 0; color: #475569; line-height: 1.7;">
+                <li><strong>Position ($s$):</strong> Where an object is located at a specific moment in <em>time</em>.</li>
+                <li><strong>Velocity ($v$):</strong> The rate at which position changes over <em>time</em> ($v = rac{\Delta s}{\Delta t}$).</li>
+                <li><strong>Acceleration ($a$):</strong> The rate at which velocity changes over <em>time</em> ($a = rac{\Delta v}{\Delta t}$).</li>
+                <li><strong>Force ($F$):</strong> A mass multiplied by its acceleration, which is fundamentally tied to how its velocity shifts over <em>time</em>.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 
 
 <h2>Position</h2>
 <p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body’s precise location in space. Defining a position accurately always demands three distinct pieces of information:</p>
 
-<div class="grid-3">
+<div class="grid-3" style="gap: 2rem; margin: 2.5rem 0;">
     <!-- Card 1: Reference Point -->
-    <div class="anim-card">
-        <div class="anim-icon-container">
-            <img src="images/reference_point_sketch.jpg" alt="Reference point sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
+            <img src="images/karakalem_ref.jpg" alt="Reference point karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
-        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">1. Reference Point</h3>
-        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">A baseline starting location to work from.</p>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">1. Reference Point</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">A baseline starting location to work from.</p>
     </div>
 
     <!-- Card 2: Distance -->
-    <div class="anim-card">
-        <div class="anim-icon-container">
-            <img src="images/distance_tape_sketch.jpg" alt="Distance tape sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
+            <img src="images/karakalem_dist.jpg" alt="Distance karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
-        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">2. Distance</h3>
-        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">The physical separation from the baseline.</p>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">2. Distance</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The physical separation from the baseline.</p>
     </div>
 
     <!-- Card 3: Direction -->
-    <div class="anim-card">
-        <div class="anim-icon-container">
-            <img src="images/direction_compass_sketch.jpg" alt="Compass sketch" style="height: 100%; object-fit: contain; mix-blend-mode: multiply;">
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
+            <img src="images/karakalem_dir.jpg" alt="Direction West and East signpost karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
-        <h3 style="margin: 0; font-size: 1.1rem; color: #111827;">3. Direction</h3>
-        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #6b7280; font-weight: 400 !important;">The line of orientation relative to the baseline.</p>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">3. Direction</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The line of orientation relative to the baseline.</p>
     </div>
 </div>
 
@@ -645,6 +647,69 @@ li {
     <figcaption style="font-size: 0.9rem; color: #6b7280; margin-top: 0.75rem; font-style: italic; text-align: center;">
         Figure 1.1: Visualizing 1D Motion. Distance is the total scalar path length, while displacement is the vector change in position.
     </figcaption>
+</div>
+
+<!-- Worked Example 1.1: Mouse in the House -->
+<div class="worked-example-box" style="background: #f8fafc; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example 1.1</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">The Mouse's Search for Food</h3>
+        </div>
+        <img src="images/karakalem_mouse.jpg" alt="Mouse in house karakalem sketch" style="width: 140px; height: 140px; object-fit: contain; border-radius: 12px; mix-blend-mode: multiply; border: 1.5px solid #22c55e; background: #fff; padding: 6px;">
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A hungry little mouse leaves its hole in the corner of a kitchen wall (at origin $O: x = 0\text{ m}, y = 0\text{ m}$) and follows a multi-directional route across the kitchen floor searching for food:
+    </p>
+
+    <ul style="margin-left: 1.2rem; margin-bottom: 1.5rem; color: #475569; font-size: 1rem; line-height: 1.8;">
+        <li><strong>Leg 1:</strong> Scampers <strong>$8\text{ meters}$ East</strong> toward the refrigerator.</li>
+        <li><strong>Leg 2:</strong> Turns and runs <strong>$6\text{ meters}$ North</strong> along the baseboard.</li>
+        <li><strong>Leg 3:</strong> Darts <strong>$5\text{ meters}$ West</strong> to avoid a sudden noise.</li>
+        <li><strong>Leg 4:</strong> Finally moves <strong>$2\text{ meters}$ South</strong> directly to a piece of cheese on the floor.</li>
+    </ul>
+
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Calculate:</strong><br>
+            (a) The total <strong>distance</strong> traveled by the mouse.<br>
+            (b) The magnitude and direction of the mouse’s net <strong>displacement</strong> from its starting hole to the cheese.
+        </p>
+    </div>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (a): Total Distance (Scalar Sum)</p>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                Distance is a scalar quantity measuring total path length covered regardless of direction:
+                $$\text{Distance } d = d_1 + d_2 + d_3 + d_4 = 8\text{ m} + 6\text{ m} + 5\text{ m} + 2\text{ m} = \mathbf{21\text{ meters}}$$
+            </p>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (b): Net Displacement (Vector Change in Position)</p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                1. Calculate net change in horizontal direction ($x$-axis, East positive):
+                $$\Delta x = +8\text{ m (East)} - 5\text{ m (West)} = +\mathbf{3\text{ meters (East)}}$$
+            </p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                2. Calculate net change in vertical direction ($y$-axis, North positive):
+                $$\Delta y = +6\text{ m (North)} - 2\text{ m (South)} = +\mathbf{4\text{ meters (North)}}$$
+            </p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                3. Calculate the magnitude of net displacement using the Pythagorean theorem:
+                $$|\Delta \vec{r}| = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = \mathbf{5\text{ meters}}$$
+            </p>
+            <p style="margin-bottom: 0; color: #475569;">
+                4. Determine direction angle $\theta$ North of East:
+                $$\theta = \tan^{-1}\left(\frac{\Delta y}{\Delta x}\right) = \tan^{-1}\left(\frac{4}{3}\right) \approx \mathbf{53.1^\circ \text{ North of East}}$$
+                <br><br>
+                <em>Summary:</em> While the mouse ran a total <strong>distance of $21\text{ m}$</strong>, its straight-line <strong>displacement is $5\text{ m}$ at $53.1^\circ$ North of East</strong>.
+            </p>
+        </div>
+    </div>
 </div>
 
 <h2>Velocity</h2>
@@ -861,7 +926,159 @@ li {
 <p>Select a surface, adjust the initial velocity and mass, then click Push Object to see how friction brings the box to a stop — or keeps it moving forever.</p>
 <iframe src="data/simulations/friction.html" width="100%" height="560px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block;"></iframe>
 
+
+<h2>Motion Graphs</h2>
+<p>Graphical representations provide a powerful visual tool for analyzing an object&apos;s motion over time. There are three primary types of motion graphs you must be familiar with:</p>
+
+<div class="grid-3" style="gap: 2rem; margin: 2.5rem 0;">
+    <!-- Card 1: Position-Time -->
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Displacement-Time (s-t)</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The slope (gradient) of this graph represents the <strong>velocity</strong> of the object. A horizontal line means the object is stationary.</p>
+    </div>
+
+    <!-- Card 2: Velocity-Time -->
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Velocity-Time (v-t)</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The slope represents <strong>acceleration</strong>. The area under the curve represents the total <strong>displacement</strong>.</p>
+    </div>
+
+    <!-- Card 3: Acceleration-Time -->
+    <div class="anim-card green-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); background: #ffffff; transition: all 0.3s ease;">
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Acceleration-Time (a-t)</h3>
+        <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">A horizontal line indicates constant acceleration. The area under the curve represents the change in <strong>velocity</strong>.</p>
+    </div>
+</div>
+
+<h3>Interactive Simulation — Motion Graphs</h3>
+<p>Experiment with the parameters below to see how displacement, velocity, and acceleration graphs relate to one another in real-time.</p>
+<iframe scrolling="no" title="Motion Graphs Simulator" src="https://www.geogebra.org/material/iframe/id/pdNj3DgD/width/800/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="100%" height="600px" style="border:0px; border-radius: 12px; margin-top: 1.5rem; display:block;"> </iframe>
+
+<!-- Worked Example 1.2: Motion Graphs -->
+<div class="worked-example-box" style="background: #f8fafc; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 3.5rem 0 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example 1.2</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Interpreting a Journey Graph</h3>
+        </div>
+        <img src="images/karakalem_graph_car.jpg" alt="Car on a graph sketch" style="width: 140px; height: 140px; object-fit: cover; border-radius: 12px; mix-blend-mode: multiply; border: 1.5px solid #22c55e; background: #fff; padding: 6px;">
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A car&apos;s motion is recorded on a <strong>velocity-time graph</strong> for a $10$-second interval. It starts from rest, accelerates uniformly to $20\text{ m/s}$ over the first $4\text{ s}$, travels at a constant velocity for $3\text{ s}$, and then uniformly brakes to a halt over the final $3\text{ s}$.
+    </p>
+
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong><br>
+            (a) The acceleration of the car during the first $4\text{ s}$.<br>
+            (b) The total distance traveled by the car over the $10\text{ s}$ journey.
+        </p>
+    </div>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === &apos;block&apos; ? &apos;none&apos; : &apos;block&apos;); this.textContent = (this.textContent.trim() === &apos;Show Solution&apos; ? &apos;Hide Solution&apos; : &apos;Show Solution&apos;); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (a): Acceleration from $t=0$ to $t=4\text{ s}$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                The acceleration is given by the slope (gradient) of the velocity-time graph:
+                $$a = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{t_f - t_i} = \frac{20 - 0}{4 - 0} = \mathbf{5\text{ m/s}^2}$$
+            </p>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (b): Total Distance</p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                The total distance traveled is equal to the area under the velocity-time graph, which forms a trapezium (or can be split into a triangle, rectangle, and triangle).
+            </p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                Using the area of a trapezium formula: $Area = \frac{1}{2}(a + b)h$
+                where $a$ is the top parallel side (the constant velocity duration, $3\text{ s}$), $b$ is the bottom parallel side (the total duration, $10\text{ s}$), and $h$ is the height (max velocity, $20\text{ m/s}$).
+            </p>
+            <p style="margin-bottom: 0; color: #475569;">
+                $$\text{Distance} = \frac{1}{2}(3 + 10) \times 20 = \frac{1}{2}(13) \times 20 = 13 \times 10 = \mathbf{130\text{ meters}}$$
+                <br>
+                <em>Summary:</em> The car accelerates at $5\text{ m/s}^2$ initially and covers a total distance of $130\text{ m}$ during the trip.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<h2>Introduction to Projectile Motion</h2>
+<p>Projectile motion occurs when an object is launched into the air and is subject only to the acceleration of gravity. The key to understanding projectile motion is recognizing that the <strong>vertical and horizontal components of velocity are completely independent from each other</strong>.</p>
+
+<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <img src="images/karakalem_projectile_components.jpg" alt="Projectile velocity components sketch" style="width: 250px; border-radius: 8px; mix-blend-mode: multiply;">
+    <div>
+        <h3 style="margin-top: 0; color: #4f46e5;">Breaking Down Velocity</h3>
+        <p style="margin-bottom: 0.5rem;">When an object is launched at an angle, its initial resultant velocity ($v$) must be split into two separate parts:</p>
+        <ul style="margin-bottom: 0;">
+            <li><strong>Horizontal Velocity ($v_x$):</strong> Moves the object forward. Since gravity only acts downwards, $v_x$ remains <strong>constant</strong> throughout the flight (ignoring air resistance).</li>
+            <li><strong>Vertical Velocity ($v_y$):</strong> Moves the object up and down. This component is affected by gravity, acting as <strong>free fall</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+<p>Using basic trigonometry (sine and cosine), we can calculate these components from the launch speed $v$ and launch angle $\theta$:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+    <span style="display: inline-block; background: #f3f4f6; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; margin: 0 10px;">$v_x = v \cdot \cos(\theta)$</span>
+    <span style="display: inline-block; background: #f3f4f6; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; margin: 0 10px;">$v_y = v \cdot \sin(\theta)$</span>
+</div>
+
+<h3>Interactive Simulation — Vector Components</h3>
+<p>Experiment with the magnitude and angle below to see how the sine and cosine components change.</p>
+<iframe src="data/simulations/vector_components.html" width="100%" height="500px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"> </iframe>
+
+
+<!-- Worked Example 1.3: Projectile Intro (From Worksheet) -->
+<div class="worked-example-box" style="background: #f8fafc; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 3.5rem 0 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example 1.3</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Modeling Projectile Motion</h3>
+        </div>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        An object is dropped at a height from the hand of a person who is moving horizontally to the left. To understand the initial velocity of the object, we look at the displacement of the object horizontally and vertically.
+    </p>
+
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Calculate:</strong><br>
+            Using the principle that horizontal and vertical parts are split, determine the equations for:<br>
+            (a) The vertical displacement (Height).<br>
+            (b) The horizontal displacement (Range).
+        </p>
+    </div>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === &apos;block&apos; ? &apos;none&apos; : &apos;block&apos;); this.textContent = (this.textContent.trim() === &apos;Show Solution&apos; ? &apos;Hide Solution&apos; : &apos;Show Solution&apos;); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (a): Vertical Displacement (Height)</p>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                We can treat the vertical part as a free fall. The initial vertical velocity is $u_y = 0$.<br>
+                Using the equation of motion $s = ut + \frac{1}{2}at^2$:<br>
+                $$s_y = 0 \cdot t + \frac{1}{2}at^2 \implies \mathbf{s_y = \frac{1}{2}at^2}$$
+                <em>(Where $a$ is the downward acceleration due to gravity, $g$).</em>
+            </p>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (b): Horizontal Displacement (Range)</p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                The horizontal velocity $u_x$ is constant because there is no acceleration in the horizontal direction.<br>
+                Using the equation for constant velocity $s = ut$:<br>
+                $$\mathbf{s_x = u_xt}$$
+            </p>
+        </div>
+    </div>
+</div>
+
 <h2>Projectile Motion Simulator</h2>
+
+
 
 <p>Adjust launch parameters below to launch a skateboard off a jump ramp and observe parabolic flight!</p>
 <iframe src="data/simulations/projectile.html" width="100%" height="630px" allowfullscreen style="border:none; border-radius: 12px; margin-top: 1.5rem; display:block;">
