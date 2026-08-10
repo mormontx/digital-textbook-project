@@ -24,6 +24,22 @@
     background: #e2e8f0;
     box-shadow: none;
 }
+
+/* EXPERIMENTAL VISUAL OVERRIDE */
+* {
+    border-color: #22c55e !important;
+}
+img, .anim-card, .worked-example-box, iframe, .solution-content, .diagram-figure {
+    border-color: #22c55e !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4) !important;
+    background-color: #e5e7eb !important;
+}
+img {
+    filter: grayscale(100%) brightness(0.95) !important;
+    border-radius: 12px !important;
+    padding: 6px !important;
+}
+
 </style>
 <style>
 /* Kognity Style Overrides */
@@ -347,8 +363,8 @@ li {
 }
 .purple-framed-card:hover {
     transform: translateY(-4px) !important;
-    border-color: #9333ea !important;
-    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3) !important;
+    border-color: #22c55e !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5) !important;
 }
 .anim-icon-container {
     height: 80px;
@@ -467,6 +483,22 @@ li {
     margin: 0;
 }
 
+
+/* EXPERIMENTAL VISUAL OVERRIDE */
+* {
+    border-color: #22c55e !important;
+}
+img, .anim-card, .worked-example-box, iframe, .solution-content, .diagram-figure {
+    border-color: #22c55e !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4) !important;
+    background-color: #e5e7eb !important;
+}
+img {
+    filter: grayscale(100%) brightness(0.95) !important;
+    border-radius: 12px !important;
+    padding: 6px !important;
+}
+
 </style>
 
 
@@ -516,7 +548,7 @@ li {
 </div>
 
 <!-- Rats Riddle -->
-<div class="worked-example-box" style="background: #faf5ff; border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15);">
+<div class="worked-example-box" style="background: #faf5ff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
         <div>
             <span style="display: inline-block; background: #e9d5ff; color: #6b21a8; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Philosophical Riddle</span>
@@ -553,7 +585,7 @@ li {
 
 <div class="grid-3" style="gap: 2rem; margin: 2.5rem 0;">
     <!-- Card 1: Reference Point -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
             <img src="images/karakalem_ref.jpg" alt="Reference point karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
@@ -562,7 +594,7 @@ li {
     </div>
 
     <!-- Card 2: Distance -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
             <img src="images/karakalem_dist.jpg" alt="Distance karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
@@ -571,7 +603,7 @@ li {
     </div>
 
     <!-- Card 3: Direction -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <div class="anim-icon-container" style="height: 230px; margin-bottom: 1.25rem;">
             <img src="images/karakalem_dir.jpg" alt="Direction West and East signpost karakalem diagram" style="height: 100%; width: 100%; object-fit: contain; border-radius: 10px; mix-blend-mode: multiply;">
         </div>
@@ -931,19 +963,19 @@ li {
 
 <div class="grid-3" style="gap: 2rem; margin: 2.5rem 0;">
     <!-- Card 1: Position-Time -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Displacement-Time (s-t)</h3>
         <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The slope (gradient) of this graph represents the <strong>velocity</strong> of the object. A horizontal line means the object is stationary.</p>
     </div>
 
     <!-- Card 2: Velocity-Time -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Velocity-Time (v-t)</h3>
         <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">The slope represents <strong>acceleration</strong>. The area under the curve represents the total <strong>displacement</strong>.</p>
     </div>
 
     <!-- Card 3: Acceleration-Time -->
-    <div class="anim-card purple-framed-card" style="border: 2.5px solid #a855f7; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15); background: #faf5ff; transition: all 0.3s ease;">
+    <div class="anim-card purple-framed-card" style="border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #faf5ff; transition: all 0.3s ease;">
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Acceleration-Time (a-t)</h3>
         <p style="font-size: 1rem; margin-top: 0.75rem; color: #4b5563; font-weight: 400 !important; line-height: 1.5;">A horizontal line indicates constant acceleration. The area under the curve represents the change in <strong>velocity</strong>.</p>
     </div>
