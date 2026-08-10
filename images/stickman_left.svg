@@ -10,7 +10,7 @@
       </feMerge>
     </filter>
   </defs>
-  <rect width="100%" height="100%" fill="#fbfbfb" />
+  
   <g filter="url(#charcoal)" stroke="#2c2c2c" fill="none" stroke-linecap="round" stroke-linejoin="round">
 
     <circle cx="100" cy="60" r="25" stroke-width="4" opacity="0.8"/>

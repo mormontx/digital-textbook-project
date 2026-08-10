@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="system-ui, sans-serif">
-  <rect width="700" height="320" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  
 
   <!-- Title -->
   <text x="350" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Balanced vs. Unbalanced Forces</text>
@@ -12,7 +12,7 @@
   <text x="175" y="68" text-anchor="middle" font-size="10" fill="#888">F_net = 0, a = 0</text>
 
   <!-- Box -->
-  <rect x="140" y="130" width="70" height="50" rx="3" fill="#e8e4dc" stroke="#999" stroke-width="1.5"/>
+  <rect x="140" y="130" width="70" height="50" rx="3" fill="#ffffff" stroke="#999" stroke-width="1.5"/>
   <text x="175" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
 
   <!-- Ground -->
@@ -52,7 +52,7 @@
   <text x="270" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
 
   <!-- Result -->
-  <rect x="75" y="255" width="200" height="48" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <rect x="75" y="255" width="200" height="48" rx="5" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
   <text x="175" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#5a7a5a">Result: a = 0</text>
   <text x="175" y="292" text-anchor="middle" font-size="10" fill="#666">Constant velocity (or at rest)</text>
 
@@ -61,7 +61,7 @@
   <text x="525" y="68" text-anchor="middle" font-size="10" fill="#888">F_net &gt; 0, a &gt; 0</text>
 
   <!-- Box -->
-  <rect x="490" y="130" width="70" height="50" rx="3" fill="#e8e4dc" stroke="#999" stroke-width="1.5"/>
+  <rect x="490" y="130" width="70" height="50" rx="3" fill="#ffffff" stroke="#999" stroke-width="1.5"/>
   <text x="525" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
 
   <!-- Ground -->
@@ -101,7 +101,7 @@
   <text x="648" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
 
   <!-- Result -->
-  <rect x="425" y="255" width="200" height="48" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <rect x="425" y="255" width="200" height="48" rx="5" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
   <text x="525" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#a04040">Result: a = F_net / m</text>
   <text x="525" y="292" text-anchor="middle" font-size="10" fill="#666">Object accelerates to the right</text>
 </svg>
