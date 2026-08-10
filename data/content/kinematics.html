@@ -164,7 +164,7 @@ li {
     border-color: #e5e7eb transparent transparent transparent;
     z-index: -1;
 }
-.glossary-term.active .glossary-tooltip {
+.glossary-term:hover .glossary-tooltip, .glossary-term:active .glossary-tooltip, .glossary-term.active .glossary-tooltip {
     display: block;
 }
 .glossary-tooltip-title {
@@ -514,29 +514,75 @@ img {
     <div class="progress-step active">6. Projectile Sim</div>
 </div>
 
+<!-- Philosophy of Motion Intro -->
+<div class="worked-example-box" style="background: #e5e7eb; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2.5rem; margin: 3.5rem 0 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+    <h2 style="margin-top: 0; color: #111827; font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem;">The Philosophy of Motion</h2>
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <img src="images/drifting_spaceship.jpg" alt="Spacecraft drifting like a vertigo pilot" style="width: 100%; max-width: 650px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); filter: none !important;">
+    </div>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">What exactly is motion? At its core, motion is simply a change in position over time. But does it ever truly stop?</p>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">If you look closely at the universe, absolute rest might be an illusion. A book sitting "at rest" on a desk is on a planet spinning at 1,000 mph, orbiting a star at 67,000 mph, in a galaxy hurtling through the cosmos. Everything is in motion relative to something else.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem;">
+        <div style="background: #faf5ff; padding: 1.5rem; border-radius: 12px; border: 1.5px solid #22c55e;">
+            <h4 style="margin-top: 0; color: #a855f7; font-size: 1.25rem;">Aristotle's View</h4>
+            <p style="font-size: 1rem; margin-bottom: 0; color: #4b5563; line-height: 1.6;">For centuries, the ancient Greek philosopher Aristotle taught that the natural state of an object is to be <strong>at rest</strong>. He believed that if you want something to move, you must continuously push it. If you stop pushing, it naturally returns to rest.</p>
+        </div>
+        <div style="background: #faf5ff; padding: 1.5rem; border-radius: 12px; border: 1.5px solid #22c55e;">
+            <h4 style="margin-top: 0; color: #a855f7; font-size: 1.25rem;">Modern Physics View</h4>
+            <p style="font-size: 1rem; margin-bottom: 0; color: #4b5563; line-height: 1.6;">Galileo and Newton revolutionized physics by flipping this idea upside down. They realized an object's natural state isn't just rest—it's <strong>maintaining its current state of motion</strong> (inertia). If an object is moving, it will keep moving forever unless an outside force stops it.</p>
+        </div>
+    </div>
+</div>
+
+
 <p>When considering position, velocity, and time, which concept should be established first?</p>
 
-<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <img src="images/skater_coasting.jpg" alt="Skater coasting smoothly" style="width: 120px; border-radius: 8px;">
-    <div>
-        <h3 style="margin-top: 0; color: #4f46e5;">The Seamless Coast</h3>
-        <p style="margin-bottom: 0;">How can one explain the seamless, fluid movement of an ice or roller skater who is coasting along without any apparent effort?</p>
+<div class="anim-card purple-framed-card" style="margin: 2rem 0; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #e5e7eb; transition: all 0.3s ease;">
+    <div style="display: flex; align-items: flex-start; gap: 2rem;">
+        <img src="images/skater_coasting.jpg" alt="Skater coasting smoothly" style="width: 140px; border-radius: 8px; filter: grayscale(100%) brightness(0.95); margin-top: 0.5rem;">
+        <div style="flex: 1;">
+            <h3 style="margin-top: 0; color: #111827; font-size: 1.5rem;">The Seamless Coast</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #374151; margin-bottom: 1.5rem;">How can one explain the seamless, fluid movement of an ice or roller skater who is coasting along without any apparent effort?</p>
+            <button class="solution-toggle-btn" style="background: #ffffff; color: #111827; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent === 'Expand Explanation' ? 'Collapse Explanation' : 'Expand Explanation');">Expand Explanation</button>
+            <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #22c55e; border-radius: 12px; padding: 1.5rem;">
+                <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;">When a skater glides seamlessly, they are demonstrating inertia in action. Without the harsh drag of rough surfaces, they continue to move effortlessly forward.</p>
+                <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;"><strong>Real-life Example:</strong> Contrast sliding a hockey puck on rough concrete (where it stops immediately) versus an air hockey table. On the air hockey table, the puck glides indefinitely until it hits a wall.</p>
+                <p style="margin-bottom: 0; font-size: 1.1rem; padding-top: 0.5rem;"><strong>Condition for Coasting:</strong> <span class="toxic-highlight">Net Force = 0 (Negligible Friction)</span></p>
+            </div>
+        </div>
     </div>
 </div>
 
-<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <img src="images/skater_uniform_velocity.jpg" alt="Skater uniform velocity" style="width: 120px; border-radius: 8px;">
-    <div>
-        <h3 style="margin-top: 0; color: #4f46e5;">Uniform Velocity</h3>
-        <p style="margin-bottom: 0;">A straightforward response is to say that a coasting skater travels at a uniform velocity. The word <span class="glossary-term">velocity<span class="glossary-tooltip"><span class="glossary-tooltip-title">Velocity</span>A change in position over time. It is a vector quantity having both speed and direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> is a distinct technical term, and it requires a clear definition.</p>
+<div class="anim-card purple-framed-card" style="margin: 2rem 0; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #e5e7eb; transition: all 0.3s ease;">
+    <div style="display: flex; align-items: flex-start; gap: 2rem;">
+        <img src="images/skater_uniform_velocity.jpg" alt="Skater uniform velocity" style="width: 140px; border-radius: 8px; filter: grayscale(100%) brightness(0.95); margin-top: 0.5rem;">
+        <div style="flex: 1;">
+            <h3 style="margin-top: 0; color: #111827; font-size: 1.5rem;">Constant (Uniform) Velocity</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #374151; margin-bottom: 1.5rem;">A straightforward response is to say that a coasting skater travels at a uniform velocity. The word <span class="glossary-term">velocity<span class="glossary-tooltip"><span class="glossary-tooltip-title">Velocity</span>A change in position over time. It is a vector quantity having both speed and direction.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> is a distinct technical term, and it requires a clear definition.</p>
+            <button class="solution-toggle-btn" style="background: #ffffff; color: #111827; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent === 'Expand Explanation' ? 'Collapse Explanation' : 'Expand Explanation');">Expand Explanation</button>
+            <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #22c55e; border-radius: 12px; padding: 1.5rem;">
+                <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;">For a velocity to be truly uniform, it must remain entirely unchanged over time. This means the object cannot speed up, slow down, or turn.</p>
+                <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;"><strong>Real-life Example:</strong> A spacecraft drifting in deep space, far away from the gravitational pull of planets or stars, moves in a perfectly straight line at a constant speed indefinitely.</p>
+                <p style="margin-bottom: 0; font-size: 1.1rem; padding-top: 0.5rem;"><strong>Condition for Uniform Velocity:</strong> <span class="toxic-highlight">Zero Acceleration & Unchanging Direction</span></p>
+            </div>
+        </div>
     </div>
 </div>
 
-<div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <img src="images/physics_quantities_icons.jpg" alt="Physics quantities" style="width: 120px; border-radius: 8px;">
-    <div>
-        <h3 style="margin-top: 0; color: #4f46e5;">The Core Quantities</h3>
-        <p style="margin-bottom: 0;">Shortly, Newton’s first law can be restated using more exact, elevated terminology. However, doing so requires first introducing three fundamental physical quantities connected with motion: position, velocity, and force.</p>
+<div class="anim-card purple-framed-card" style="margin: 2rem 0; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); background: #e5e7eb; transition: all 0.3s ease;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+        <img src="images/school_of_athens.jpg" alt="The School of Athens by Raphael" style="width: 100%; max-width: 700px; border-radius: 8px; filter: none !important; border: 2px solid #a855f7;">
+    </div>
+    <div style="flex: 1;">
+        <h3 style="margin-top: 0; color: #111827; font-size: 1.5rem;">The Birth of Empiricism</h3>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #374151; margin-bottom: 1.5rem;">In Raphael's famous fresco <em>The School of Athens</em>, we see Plato pointing upwards to the heavens (representing pure, untouchable ideals and mathematics), while his student Aristotle points forward to the physical earth (representing observation and tangible reality).</p>
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #111827; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent === 'Expand Explanation' ? 'Collapse Explanation' : 'Expand Explanation');">Expand Explanation</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #22c55e; border-radius: 12px; padding: 1.5rem;">
+            <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;">For centuries, science was dominated by Plato's idea that we can understand the universe purely through logic and thought experiments, without ever getting our hands dirty.</p>
+            <p style="font-size: 1rem; line-height: 1.6; color: #4b5563;"><strong>The Experimental Revolution:</strong> Modern physics rejected this. Galileo and later Newton realized that logic is not enough—we must <strong>test our ideas</strong> against reality. If an elegant mathematical theory doesn't match the physical results of an experiment, the theory is wrong. This relentless focus on testing and measuring led to the <strong>empirical evidence view</strong> that defines modern science today.</p>
+            <p style="margin-bottom: 0; font-size: 1.1rem; padding-top: 0.5rem;"><strong>The Big Question:</strong> <span class="toxic-highlight">How do we measure motion to test our theories?</span> We must define exact physical quantities: position, velocity, and acceleration.</p>
+        </div>
     </div>
 </div>
 
@@ -557,7 +603,7 @@ img {
     </div>
 
     <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.5rem; font-weight: 500;">
-        Challenge: Can you define all of those core quantities (Position, Velocity, Acceleration, and Force) in terms of just <em>one</em> fundamental variable? What would that variable be, and how would you use it to define all of them?
+        Challenge: Can you define all of those core quantities (Position, Velocity, and Acceleration) in terms of just <em>one</em> fundamental variable? What would that variable be, and how would you use it to define all of them?
     </p>
 
     <div class="worked-example-solution">
