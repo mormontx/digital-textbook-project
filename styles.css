@@ -32,8 +32,8 @@
     --spacing-xl: 2rem;
     
     /* Typography */
-    --font-main: 'Crimson Pro', 'EB Garamond', 'Times New Roman', serif;
-    --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-main: 'Times New Roman', Times, serif;
+    --font-serif: 'Times New Roman', Times, serif;
     --font-marker: 'Permanent Marker', cursive;
     --font-mono: 'Courier New', Courier, monospace;
     
