@@ -2515,13 +2515,13 @@ h1, h2, h3, h4, h5, h6, .sidebar, .topic-title, .callout-title, .question-number
 
 /* Readable and Fun Typography Overrides */
 body, p, li, td {
-    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+    font-family: 'Times New Roman', Times, serif !important; /* ORIGINAL: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important; */
     line-height: 1.65;
     letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4, h5, h6, .sidebar-header h1, .topic-title {
-    font-family: 'Fredoka', 'Outfit', sans-serif !important;
+    font-family: 'Times New Roman', Times, serif !important; /* ORIGINAL: 'Fredoka', 'Outfit', sans-serif !important; */
     letter-spacing: 0.02em;
 }
 
