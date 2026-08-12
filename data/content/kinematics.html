@@ -822,27 +822,250 @@ img.color-exception {
 </ul>
 
 
-<div class="slender-grid">
-    <div class="slender-card">
-        
-<img src="images/stickman_still.svg" alt="Standing still" style="display: block; margin: 0 auto;">
+<p><span class="toxic-highlight">Leaving out either the speed or the travel direction results in an incomplete description of velocity.</span></p>
 
-        <p><strong>Velocity = 0</strong><br>Standing still has a velocity of zero.</p>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: Same Speed, Different Velocity — Circular Track -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h3 style="margin-top: 2.5rem; color: #4f46e5;">1. Same Speed, Different Velocity — The Circular Track</h3>
+<p>Imagine a runner sprinting around a 400 m oval track at a constant speed of $8\text{ m/s}$. At every point on the track, the runner's <strong>speed</strong> (the magnitude of velocity) is identical. Yet the runner's <strong>velocity</strong> is constantly changing, because the <em>direction</em> of motion is always shifting as they follow the curve.</p>
+
+<div style="text-align: center; margin: 1.5rem 0;">
+    <img src="images/circular_track_velocity.jpg" alt="Circular track showing same speed but different velocity vectors at four positions" class="color-exception" style="width: 100%; max-width: 550px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); display: block; margin: 0 auto;">
+</div>
+
+<p>This is why circular motion always involves <strong>acceleration</strong>, even when the speed never changes. The velocity vector is tangent to the circle at every point, and since the tangent direction keeps rotating, the velocity keeps changing.</p>
+
+<!-- Worked Example 1.1 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 1.1</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Quarter-Lap Velocity Change</h3>
     </div>
-    <div class="slender-card">
-        
-<img src="images/stickman_left.svg" alt="Moving left" style="display: block; margin: 0 auto;">
-
-        <p><strong>Leftward Velocity</strong><br>Moving left gives a specific leftward velocity.</p>
-    </div>
-    <div class="slender-card">
-        
-<img src="images/stickman_right.svg" alt="Moving right" style="display: block; margin: 0 auto;">
-
-        <p><strong>Rightward Velocity</strong><br>Walking right at the same speed changes the velocity, because the heading is reversed!</p>
+    <p>A runner moves at a constant speed of $8\text{ m/s}$ around a circular track. At point A (top of the track), the velocity is $8\text{ m/s}$ due East. At point B (right side), the velocity is $8\text{ m/s}$ due South. Find the magnitude of the <strong>change in velocity</strong> between A and B.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>At A: $\vec{v}_A = 8\hat{x}\text{ m/s}$ (East)</p>
+        <p>At B: $\vec{v}_B = -8\hat{y}\text{ m/s}$ (South)</p>
+        <p>The change in velocity:</p>
+        $$\Delta\vec{v} = \vec{v}_B - \vec{v}_A = (-8\hat{y}) - (8\hat{x}) = -8\hat{x} - 8\hat{y}$$
+        $$|\Delta\vec{v}| = \sqrt{(-8)^2 + (-8)^2} = \sqrt{128} = \mathbf{11.3\text{ m/s}}$$
+        <p><em>Even though the speed stayed at $8\text{ m/s}$, the velocity changed by $11.3\text{ m/s}$!</em></p>
     </div>
 </div>
-<p><span class="toxic-highlight">Leaving out either the speed or the travel direction results in an incomplete description of velocity.</span></p>
+
+<!-- Worked Example 1.2 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 1.2</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Half-Lap Velocity Change</h3>
+    </div>
+    <p>The same runner completes half a lap. At the starting point, velocity is $8\text{ m/s}$ due East. At the opposite side, velocity is $8\text{ m/s}$ due West. Find $|\Delta\vec{v}|$.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>$\vec{v}_1 = +8\text{ m/s}$, $\vec{v}_2 = -8\text{ m/s}$ (directly opposite)</p>
+        $$|\Delta\vec{v}| = |(-8) - (+8)| = |-16| = \mathbf{16\text{ m/s}}$$
+        <p><em>The velocity changed by twice the speed — the maximum possible change in one dimension.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 1.3 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 1.3</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Centripetal Acceleration on the Track</h3>
+    </div>
+    <p>A cyclist rides at a constant speed of $12\text{ m/s}$ around a circular velodrome with radius $r = 25\text{ m}$. Calculate the centripetal acceleration.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>Using the centripetal acceleration formula:</p>
+        $$a_c = \frac{v^2}{r} = \frac{(12)^2}{25} = \frac{144}{25} = \mathbf{5.76\text{ m/s}^2}$$
+        <p><em>Despite maintaining constant speed, the cyclist accelerates at $5.76\text{ m/s}^2$ directed toward the center of the track.</em></p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: The Runner's Paradox                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h3 style="margin-top: 3rem; color: #4f46e5;">2. The Runner's Paradox — Speed ≠ Velocity</h3>
+<p>Here is a counterintuitive truth that catches many students off guard: a runner can have a high average <strong>speed</strong> but zero average <strong>velocity</strong>. How? Because velocity depends on <em>displacement</em> (the straight-line distance from start to finish), not the total distance traveled.</p>
+
+<div style="text-align: center; margin: 1.5rem 0;">
+    <img src="images/runners_paradox.jpg" alt="The Runner's Paradox: completing a lap vs running in a straight line" class="color-exception" style="width: 100%; max-width: 600px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); display: block; margin: 0 auto;">
+</div>
+
+<p>A runner who completes a full lap around a 400 m track returns to the exact starting point. Their total <em>distance</em> is 400 m, but their <em>displacement</em> is zero — so their average velocity is zero!</p>
+
+$$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad \text{Average Velocity} = \frac{\text{Displacement}}{\text{Total Time}}$$
+
+<!-- Worked Example 2.1 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 2.1</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">The Complete Lap</h3>
+    </div>
+    <p>A sprinter runs one complete lap around a 400 m track in $50\text{ s}$. Calculate (a) average speed and (b) average velocity.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>(a) Average speed:</p>
+        $$\bar{s} = \frac{d}{t} = \frac{400}{50} = \mathbf{8\text{ m/s}}$$
+        <p>(b) Average velocity:</p>
+        $$\bar{v} = \frac{\Delta x}{t} = \frac{0}{50} = \mathbf{0\text{ m/s}}$$
+        <p><em>The runner is fast (speed = 8 m/s), but their average velocity is zero because they ended up right where they started.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 2.2 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 2.2</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">The Half-Lap</h3>
+    </div>
+    <p>The same sprinter now runs exactly <strong>half</strong> a lap (200 m along the track) in $25\text{ s}$. The track has a diameter of approximately $127\text{ m}$. Calculate (a) average speed and (b) average velocity.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>(a) Average speed:</p>
+        $$\bar{s} = \frac{200}{25} = \mathbf{8\text{ m/s}}$$
+        <p>(b) Average velocity: The displacement is the straight-line distance across the track (the diameter):</p>
+        $$\bar{v} = \frac{127}{25} = \mathbf{5.08\text{ m/s}}$$
+        <p><em>Now the average velocity is non-zero, because the runner didn't return to the start.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 2.3 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 2.3</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Back-and-Forth Walk</h3>
+    </div>
+    <p>A student walks $80\text{ m}$ North in $40\text{ s}$, then immediately turns around and walks $30\text{ m}$ South in $20\text{ s}$. Find (a) average speed and (b) average velocity.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>(a) Average speed:</p>
+        $$\bar{s} = \frac{80 + 30}{40 + 20} = \frac{110}{60} = \mathbf{1.83\text{ m/s}}$$
+        <p>(b) Average velocity (taking North as positive):</p>
+        $$\bar{v} = \frac{80 - 30}{60} = \frac{50}{60} = \mathbf{0.83\text{ m/s [North]}}$$
+        <p><em>The average speed is more than double the average velocity, because the student backtracked.</em></p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: Highway Velocities — Signed Numbers            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h3 style="margin-top: 3rem; color: #4f46e5;">3. Highway Velocities — The Sign Convention</h3>
+<p>In one dimension, we use <strong>positive</strong> and <strong>negative</strong> signs to encode direction. If we define "East" (or "right") as positive, then a car driving West has a <em>negative</em> velocity — even though it may be traveling at the same speed as a car heading East.</p>
+
+<div style="text-align: center; margin: 1.5rem 0;">
+    <img src="images/highway_velocities.jpg" alt="Highway diagram showing same speed but opposite velocities with sign convention" class="color-exception" style="width: 100%; max-width: 600px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); display: block; margin: 0 auto;">
+</div>
+
+<p>This sign convention is not arbitrary — it is essential for correctly applying kinematic equations. A negative velocity simply means motion in the negative direction of your chosen coordinate axis.</p>
+
+<!-- Worked Example 3.1 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.1</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Relative Velocity — Head-On</h3>
+    </div>
+    <p>Car A travels East at $+80\text{ km/h}$. Car B travels West at $-80\text{ km/h}$. What is the velocity of Car B <strong>relative to Car A</strong>?</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        $$v_{B \text{ rel } A} = v_B - v_A = (-80) - (+80) = \mathbf{-160\text{ km/h}}$$
+        <p><em>From Car A's perspective, Car B approaches at 160 km/h. This is why head-on collisions are so devastating.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 3.2 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.2</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Relative Velocity — Same Direction</h3>
+    </div>
+    <p>Car A travels East at $+80\text{ km/h}$. Car C also travels East, but at $+100\text{ km/h}$. What is the velocity of Car C relative to Car A?</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        $$v_{C \text{ rel } A} = v_C - v_A = (+100) - (+80) = \mathbf{+20\text{ km/h}}$$
+        <p><em>Car C slowly overtakes Car A at just 20 km/h. From Car A's perspective, Car C is barely moving ahead.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 3.3 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.3</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Displacement with Negative Velocity</h3>
+    </div>
+    <p>A train departs a station heading West with a velocity of $-25\text{ m/s}$ (taking East as positive). It travels for $120\text{ s}$. What is the train's displacement?</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        $$\Delta x = v \cdot t = (-25)(120) = \mathbf{-3000\text{ m}}$$
+        <p>The negative sign tells us the train is now $3000\text{ m}$ (or $3\text{ km}$) to the <strong>West</strong> of the station.</p>
+        <p><em>Without the sign convention, we would lose the directional information entirely.</em></p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 4: ISS Orbit — Constant Speed, Changing Velocity  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h3 style="margin-top: 3rem; color: #4f46e5;">4. The ISS in Orbit — Constant Speed, Perpetual Acceleration</h3>
+<p>The International Space Station orbits Earth at a nearly constant speed of $28{,}000\text{ km/h}$ ($7{,}780\text{ m/s}$). Yet, remarkably, it is <strong>always accelerating</strong>. How is this possible? Because its velocity <em>direction</em> is continuously changing as it follows its curved orbital path. The ISS is in constant free fall toward Earth, but its enormous tangential speed means it keeps "missing" the surface.</p>
+
+<div style="text-align: center; margin: 1.5rem 0;">
+    <img src="images/iss_orbit_velocity.jpg" alt="ISS orbit showing constant speed but continuously changing velocity direction" class="color-exception" style="width: 100%; max-width: 550px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); display: block; margin: 0 auto;">
+</div>
+
+<p>This acceleration is directed <strong>toward Earth's center</strong> (centripetal) and is provided entirely by gravity. It is the same $g$ that pulls an apple from a tree — just weakened slightly at orbital altitude.</p>
+
+<!-- Worked Example 4.1 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.1</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Orbital Period of the ISS</h3>
+    </div>
+    <p>The ISS orbits at an altitude of approximately $408\text{ km}$ above Earth's surface. Earth's radius is $6{,}371\text{ km}$. Given the ISS's speed of $7{,}780\text{ m/s}$, calculate the time for one complete orbit.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>Orbital radius: $r = 6{,}371 + 408 = 6{,}779\text{ km} = 6.779 \times 10^6\text{ m}$</p>
+        <p>Circumference of orbit:</p>
+        $$C = 2\pi r = 2\pi(6.779 \times 10^6) = 4.259 \times 10^7\text{ m}$$
+        <p>Orbital period:</p>
+        $$T = \frac{C}{v} = \frac{4.259 \times 10^7}{7{,}780} = 5{,}474\text{ s} = \mathbf{91.2\text{ minutes}}$$
+        <p><em>The ISS completes a full orbit in about 90 minutes — seeing 16 sunrises every day!</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 4.2 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.2</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Centripetal Acceleration of the ISS</h3>
+    </div>
+    <p>Using the values from Worked Example 4.1, calculate the centripetal acceleration of the ISS. Compare it to $g = 9.81\text{ m/s}^2$.</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        $$a_c = \frac{v^2}{r} = \frac{(7{,}780)^2}{6.779 \times 10^6} = \frac{6.053 \times 10^7}{6.779 \times 10^6} = \mathbf{8.93\text{ m/s}^2}$$
+        <p>Comparing to surface gravity:</p>
+        $$\frac{a_c}{g} = \frac{8.93}{9.81} = 0.91$$
+        <p><em>The gravitational pull at the ISS altitude is still 91% of what we feel on Earth's surface! Astronauts feel "weightless" not because gravity disappears, but because they are in continuous free fall.</em></p>
+    </div>
+</div>
+
+<!-- Worked Example 4.3 -->
+<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.3</span>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Velocity Change Over a Quarter Orbit</h3>
+    </div>
+    <p>The ISS moves at $7{,}780\text{ m/s}$. Calculate the magnitude of the change in velocity over a quarter of its orbit (from heading East to heading South).</p>
+    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+        <p><strong>Solution:</strong></p>
+        <p>At position 1: $\vec{v}_1 = 7{,}780\hat{x}\text{ m/s}$ (East)</p>
+        <p>At position 2: $\vec{v}_2 = -7{,}780\hat{y}\text{ m/s}$ (South)</p>
+        $$|\Delta\vec{v}| = \sqrt{(7{,}780)^2 + (7{,}780)^2} = 7{,}780\sqrt{2} = \mathbf{11{,}003\text{ m/s}}$$
+        <p>Converting: $11{,}003\text{ m/s} = 39{,}611\text{ km/h}$</p>
+        <p><em>In just ~23 minutes (quarter orbit), the ISS's velocity changes by over 39,000 km/h — faster than most bullets — even though its speed never changed at all.</em></p>
+    </div>
+</div>
 
 
 <p>In terms of measurement, velocity is expressed as distance divided by time:</p>
