@@ -963,70 +963,9 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- SECTION 3: Highway Velocities — Signed Numbers            -->
+<!-- SECTION 3: ISS Orbit — Constant Speed, Changing Velocity  -->
 <!-- ═══════════════════════════════════════════════════════════ -->
-<h3 style="margin-top: 3rem; color: #4f46e5;">3. Highway Velocities — The Sign Convention</h3>
-<p>In one dimension, we use <strong>positive</strong> and <strong>negative</strong> signs to encode direction. If we define "East" (or "right") as positive, then a car driving West has a <em>negative</em> velocity — even though it may be traveling at the same speed as a car heading East.</p>
-
-<div style="text-align: center; margin: 1.5rem 0;">
-    <img src="images/highway_velocities.jpg" alt="Highway diagram showing same speed but opposite velocities with sign convention" class="color-exception" style="width: 100%; max-width: 600px; border-radius: 12px; border: 3px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); display: block; margin: 0 auto;">
-</div>
-
-<p>This sign convention is not arbitrary — it is essential for correctly applying kinematic equations. A negative velocity simply means motion in the negative direction of your chosen coordinate axis.</p>
-
-<!-- Worked Example 3.1 -->
-<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.1</span>
-        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Relative Velocity — Head-On</h3>
-    </div>
-    <p>Car A travels East at $+80\text{ km/h}$. Car B travels West at $-80\text{ km/h}$. What is the velocity of Car B <strong>relative to Car A</strong>?</p>
-    <div style="margin-top: 1rem;">
-        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
-        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f9fafb; padding: 1.5rem; border-radius: 12px;">
-        $$v_{B \text{ rel } A} = v_B - v_A = (-80) - (+80) = \mathbf{-160\text{ km/h}}$$
-        <p><em>From Car A's perspective, Car B approaches at 160 km/h. This is why head-on collisions are so devastating.</em></p>
-    </div>
-    </div>
-</div>
-
-<!-- Worked Example 3.2 -->
-<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.2</span>
-        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Relative Velocity — Same Direction</h3>
-    </div>
-    <p>Car A travels East at $+80\text{ km/h}$. Car C also travels East, but at $+100\text{ km/h}$. What is the velocity of Car C relative to Car A?</p>
-    <div style="margin-top: 1rem;">
-        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
-        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f9fafb; padding: 1.5rem; border-radius: 12px;">
-        $$v_{C \text{ rel } A} = v_C - v_A = (+100) - (+80) = \mathbf{+20\text{ km/h}}$$
-        <p><em>Car C slowly overtakes Car A at just 20 km/h. From Car A's perspective, Car C is barely moving ahead.</em></p>
-    </div>
-    </div>
-</div>
-
-<!-- Worked Example 3.3 -->
-<div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.3</span>
-        <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Displacement with Negative Velocity</h3>
-    </div>
-    <p>A train departs a station heading West with a velocity of $-25\text{ m/s}$ (taking East as positive). It travels for $120\text{ s}$. What is the train's displacement?</p>
-    <div style="margin-top: 1rem;">
-        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
-        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f9fafb; padding: 1.5rem; border-radius: 12px;">
-        $$\Delta x = v \cdot t = (-25)(120) = \mathbf{-3000\text{ m}}$$
-        <p>The negative sign tells us the train is now $3000\text{ m}$ (or $3\text{ km}$) to the <strong>West</strong> of the station.</p>
-        <p><em>Without the sign convention, we would lose the directional information entirely.</em></p>
-    </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- SECTION 4: ISS Orbit — Constant Speed, Changing Velocity  -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<h3 style="margin-top: 3rem; color: #4f46e5;">4. The ISS in Orbit — Constant Speed, Perpetual Acceleration</h3>
+<h3 style="margin-top: 3rem; color: #4f46e5;">3. The ISS in Orbit — Constant Speed, Perpetual Acceleration</h3>
 <p>The International Space Station orbits Earth at a nearly constant speed of $28{,}000\text{ km/h}$ ($7{,}780\text{ m/s}$). Yet, remarkably, it is <strong>always accelerating</strong>. How is this possible? Because its velocity <em>direction</em> is continuously changing as it follows its curved orbital path. The ISS is in constant free fall toward Earth, but its enormous tangential speed means it keeps "missing" the surface.</p>
 
 <div style="text-align: center; margin: 1.5rem 0;">
@@ -1035,10 +974,10 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
 
 <p>This acceleration is directed <strong>toward Earth's center</strong> (centripetal) and is provided entirely by gravity. It is the same $g$ that pulls an apple from a tree — just weakened slightly at orbital altitude.</p>
 
-<!-- Worked Example 4.1 -->
+<!-- Worked Example 3.1 -->
 <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.1</span>
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.1</span>
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Orbital Period of the ISS</h3>
     </div>
     <p>The ISS orbits at an altitude of approximately $408\text{ km}$ above Earth's surface. Earth's radius is $6{,}371\text{ km}$. Given the ISS's speed of $7{,}780\text{ m/s}$, calculate the time for one complete orbit.</p>
@@ -1055,13 +994,13 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     </div>
 </div>
 
-<!-- Worked Example 4.2 -->
+<!-- Worked Example 3.2 -->
 <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.2</span>
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.2</span>
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Centripetal Acceleration of the ISS</h3>
     </div>
-    <p>Using the values from Worked Example 4.1, calculate the centripetal acceleration of the ISS. Compare it to $g = 9.81\text{ m/s}^2$.</p>
+    <p>Using the values from Worked Example 3.1, calculate the centripetal acceleration of the ISS. Compare it to $g = 9.81\text{ m/s}^2$.</p>
     <div style="margin-top: 1rem;">
         <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
         <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f9fafb; padding: 1.5rem; border-radius: 12px;">
@@ -1073,10 +1012,10 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     </div>
 </div>
 
-<!-- Worked Example 4.3 -->
+<!-- Worked Example 3.3 -->
 <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
     <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 4.3</span>
+        <span style="background: #22c55e; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Worked Example 3.3</span>
         <h3 style="margin: 0; font-size: 1.25rem; color: #111827; font-weight: 700;">Velocity Change Over a Quarter Orbit</h3>
     </div>
     <p>The ISS moves at $7{,}780\text{ m/s}$. Calculate the magnitude of the change in velocity over a quarter of its orbit (from heading East to heading South).</p>
