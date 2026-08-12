@@ -1216,35 +1216,38 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     
     <p>Near the surface of the Earth, this constant acceleration due to gravity is approximately $g = 9.81\text{ ms}^{-2}$ (often rounded to $9.8$ or $10$ in simple problems). This means that for every second an object falls, its velocity increases by $9.81\text{ ms}^{-1}$.</p>
     
-    <div style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-        <h3 style="margin-top: 0; color: #1e40af;">The Modern Extreme: Felix Baumgartner</h3>
-        <p style="margin-bottom: 0;">In 2012, Felix Baumgartner jumped from a helium balloon in the stratosphere, $39\text{ km}$ above New Mexico. In the incredibly thin air at that altitude, air resistance was almost non-existent. For the first part of his descent, he experienced near-true free fall, accelerating at $g$ until he broke the sound barrier, reaching a top speed of over $1,350\text{ km h}^{-1}$ before the thicker lower atmosphere slowed him down!</p>
+    <div style="display: flex; gap: 2rem; align-items: center; background: #f8fafc; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="margin-top: 0; color: #1e40af;">The Modern Extreme: Felix Baumgartner</h3>
+            <p style="margin-bottom: 0;">In 2012, Felix Baumgartner jumped from a helium balloon in the stratosphere, $39\text{ km}$ above New Mexico. In the incredibly thin air at that altitude, air resistance was almost non-existent. For the first part of his descent, he experienced near-true free fall, accelerating at $g$ until he broke the sound barrier, reaching a top speed of over $1,350\text{ km h}^{-1}$ before the thicker lower atmosphere slowed him down!</p>
+        </div>
+        <div style="flex: 0 0 250px;">
+            <img src="images/stratos_jump.jpg" class="color-exception" alt="Felix Baumgartner Stratos Jump" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        </div>
     </div>
 
     <!-- Philosophical Inquiry / Riddle Box -->
-    <div class="philosophical-inquiry-box" style="background: #111827; color: #e5e7eb; border-radius: 16px; padding: 2.5rem; margin: 4rem 0; box-shadow: 0 10px 25px rgba(0,0,0,0.25); position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);"></div>
-        
+    <div class="philosophical-inquiry-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2.5rem; margin: 4rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4); position: relative; overflow: hidden;">
         <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px;">
-                <span style="display: inline-block; background: rgba(139, 92, 246, 0.2); color: #c4b5fd; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; border: 1px solid rgba(139, 92, 246, 0.4);">Creative Problem Solving</span>
-                <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem; color: #f9fafb; font-weight: 700;">The River Cliff</h3>
-                <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">A girl chewing gum is standing on the edge of a high cliff, overlooking a river far below. She wants to measure the exact height of the cliff, but she has no measuring tapes, rulers, lasers, or string.</p>
-                <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;"><strong>Without any tools, how could she creatively estimate the height of the cliff?</strong></p>
+                <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">Creative Problem Solving</span>
+                <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem; color: #111827; font-weight: 700;">The River Cliff</h3>
+                <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; color: #374151;">A girl chewing gum is standing on the edge of a high cliff, overlooking a river far below. She wants to measure the exact height of the cliff, but she has no measuring tapes, rulers, lasers, or string.</p>
+                <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; color: #374151;"><strong>Without any tools, how could she creatively estimate the height of the cliff?</strong></p>
                 
-                <button class="toggle-button" onclick="toggleSolution(this)" style="background: transparent; border: 2px solid #8b5cf6; color: #c4b5fd; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Show Solution</button>
+                <button class="toggle-button" onclick="toggleSolution(this)" style="background: transparent; border: 2px solid #22c55e; color: #15803d; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Show Solution</button>
                 
-                <div class="solution-content" style="display: none; margin-top: 1.5rem; background: rgba(31, 41, 55, 0.8); padding: 1.5rem; border-radius: 12px; border-left: 3px solid #8b5cf6;">
-                    <p style="margin-top: 0; line-height: 1.7;"><strong>The Setup:</strong> She can spit her piece of gum off the cliff edge and count the seconds until she sees the tiny splash in the river below.</p>
-                    <p style="line-height: 1.7;"><strong>The Math:</strong> Assuming she counts exactly $6\text{ seconds}$ for the gum to hit the water, she can use the kinematic equation for displacement starting from rest ($u = 0$):</p>
-                    <p style="text-align: center; font-size: 1.2rem; margin: 1.5rem 0;">$h = \frac{1}{2}gt^2$</p>
-                    <p style="line-height: 1.7;">$h = 0.5 \times 9.81 \times (6)^2 = 0.5 \times 9.81 \times 36 \approx 176.6\text{ m}$</p>
-                    <p style="line-height: 1.7; margin-bottom: 0;"><strong>The Hidden Assumption:</strong> What did she assume to make this work? She assumed that <em>air friction on the gum was negligible</em>, treating it as if it were in true free fall in a vacuum. For a dense piece of gum over a short time, it's a reasonably good approximation!</p>
+                <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f9fafb; padding: 1.5rem; border-radius: 12px; border-left: 3px solid #22c55e;">
+                    <p style="margin-top: 0; line-height: 1.7; color: #334155;"><strong>The Setup:</strong> She can spit her piece of gum off the cliff edge and count the seconds until she sees the tiny splash in the river below.</p>
+                    <p style="line-height: 1.7; color: #334155;"><strong>The Math:</strong> Assuming she counts exactly $6\text{ seconds}$ for the gum to hit the water, she can use the kinematic equation for displacement starting from rest ($u = 0$):</p>
+                    <p style="text-align: center; font-size: 1.2rem; margin: 1.5rem 0; color: #111827;">$h = \frac{1}{2}gt^2$</p>
+                    <p style="line-height: 1.7; color: #334155;">$h = 0.5 \times 9.81 \times (6)^2 = 0.5 \times 9.81 \times 36 \approx 176.6\text{ m}$</p>
+                    <p style="line-height: 1.7; margin-bottom: 0; color: #334155;"><strong>The Hidden Assumption:</strong> What did she assume to make this work? She assumed that <em>air friction on the gum was negligible</em>, treating it as if it were in true free fall in a vacuum. For a dense piece of gum over a short time, it's a reasonably good approximation!</p>
                 </div>
             </div>
             
             <div style="flex: 0 0 350px;">
-                <img src="images/karakalem_cliff_gum.jpg" class="color-exception" alt="Girl chewing gum on a cliff" style="width: 100%; height: auto; border-radius: 12px; border: 2px solid #374151; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+                <img src="images/karakalem_cliff_gum.jpg" class="color-exception" alt="Girl chewing gum on a cliff" style="width: 100%; height: auto; border-radius: 12px; border: 2.5px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
             </div>
         </div>
     </div>
