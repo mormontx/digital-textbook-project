@@ -1305,7 +1305,289 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     </div>
 </div>
 
+
+<!-- ============================================== -->
+<!-- ADVANCED FLUID DYNAMICS SECTION START          -->
+<!-- ============================================== -->
+
+<h2>Fluid Dynamics: Forces in Motion</h2>
+<p>While basic kinematics often ignores air resistance, real-world objects move through fluids (like air and water). This leads us to three critical concepts that affect an object's acceleration: Drag Force, Stokes' Law, and Buoyancy.</p>
+
+<h3 style="margin-top: 2.5rem; color: #4f46e5;">1. Drag Force and Terminal Velocity</h3>
+<p>When an object falls through a fluid, it experiences a drag force ($F_D$) opposing its motion. At high speeds (like a skydiver), this drag is proportional to the square of the velocity ($F_D \propto v^2$). When the upward drag force equals the downward weight of the object ($F_D = mg$), the net force becomes zero, and the object stops accelerating. It has reached its <strong>terminal velocity</strong>.</p>
+
+<!-- Drag Example 1 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Calculating Drag at Terminal Velocity</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A skydiver with a mass of $85\text{ kg}$ is falling at a constant terminal velocity. Assume $g = 9.81\text{ ms}^{-2}$.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The exact magnitude of the drag force acting on the skydiver.
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">At terminal velocity, the net force is zero because acceleration is zero. Therefore, the upward drag force ($F_D$) must perfectly balance the downward force of gravity ($W = mg$).</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$F_D = W = mg$</p>
+            <p style="margin-bottom: 0; color: #475569;">$F_D = 85 \times 9.81 = \mathbf{833.85\text{ N}}$</p>
+        </div>
+    </div>
+</div>
+
+<!-- Drag Example 2 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Initial Acceleration with Drag</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A $2.0\text{ kg}$ object is dropped from a helicopter. At a certain instant, its velocity is such that the drag force is $5.0\text{ N}$.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The object's acceleration at that instant (assume $g = 9.8\text{ ms}^{-2}$).
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">Use Newton's Second Law: $F_{net} = ma$. The net force is the weight pointing down minus the drag pointing up.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$mg - F_D = ma$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$(2.0)(9.8) - 5.0 = 2.0a$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$19.6 - 5.0 = 2.0a \implies 14.6 = 2.0a$</p>
+            <p style="margin-bottom: 0; color: #475569;">$a = \frac{14.6}{2.0} = \mathbf{7.3\text{ ms}^{-2}}$ (downwards)</p>
+        </div>
+    </div>
+</div>
+
+<!-- Drag Example 3 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Drag Force Proportionality</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A skydiver experiences a drag force of $200\text{ N}$ when falling at $25\text{ m/s}$. Assuming drag is proportional to velocity squared ($F_D = kv^2$), what will the drag force be when they reach $50\text{ m/s}$?
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The new drag force at double the velocity.
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">Since $F_D \propto v^2$, if the velocity doubles (from 25 to 50), the drag force will increase by a factor of $2^2 = 4$.</p>
+            <p style="margin-bottom: 0; color: #475569;">$F_{D,new} = 4 \times 200 = \mathbf{800\text{ N}}$</p>
+        </div>
+    </div>
+</div>
+
+<h3 style="margin-top: 3.5rem; color: #4f46e5;">2. Stokes' Law</h3>
+<p>For very small, slow-moving objects (like microscopic particles, dust, or mist droplets) falling through a highly viscous fluid, the drag force is proportional to velocity ($F_D \propto v$), rather than $v^2$. This is described by <strong>Stokes' Law</strong>:</p>
+<p style="text-align: center; font-size: 1.4rem; font-weight: 600; padding: 1rem; background: #f8fafc; border-radius: 8px; margin: 2rem auto; width: fit-content; border: 1px solid #e2e8f0;">$F_d = 6\pi \eta r v$</p>
+<p>where $\eta$ is the dynamic viscosity of the fluid, $r$ is the radius of the spherical object, and $v$ is its velocity.</p>
+
+<div style="text-align: center; margin: 2.5rem 0;">
+    <img src="images/karakalem_stokes_law.jpg" class="color-exception" alt="Stokes Law Viscous Fluid Diagram" style="width: 100%; max-width: 500px; border-radius: 8px; border: 2.5px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+    <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.1rem; color: #666; margin-top: 0.5rem;">A sphere falling through a highly viscous fluid exhibits laminar flow.</p>
+</div>
+
+<!-- Stokes Example 1 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Calculating Viscous Drag</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A microscopic steel ball of radius $1.0 \times 10^{-3}\text{ m}$ falls through oil with a viscosity $\eta = 0.5\text{ Pa}\cdot\text{s}$ at a velocity of $0.02\text{ m/s}$.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The viscous drag force acting on the ball according to Stokes' Law.
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">Using Stokes' Law: $F_d = 6\pi \eta r v$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$F_d = 6 \times \pi \times (0.5) \times (1.0 \times 10^{-3}) \times (0.02)$</p>
+            <p style="margin-bottom: 0; color: #475569;">$F_d \approx \mathbf{1.88 \times 10^{-4}\text{ N}}$</p>
+        </div>
+    </div>
+</div>
+
+<!-- Stokes Example 2 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Finding Terminal Velocity in Oil</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A dust particle of mass $m = 3.0 \times 10^{-9}\text{ kg}$ reaches terminal velocity falling through a fluid. The fluid's viscosity is $\eta = 1.2\text{ Pa}\cdot\text{s}$, and the particle radius is $2.0 \times 10^{-4}\text{ m}$. Assume buoyant force is negligible.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The terminal velocity ($v_t$) of the particle ($g=9.81\text{ ms}^{-2}$).
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">At terminal velocity, the drag force equals the weight of the particle: $F_d = mg$.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$6\pi \eta r v_t = mg$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$v_t = \frac{mg}{6\pi \eta r}$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$v_t = \frac{3.0 \times 10^{-9} \times 9.81}{6 \pi (1.2) (2.0 \times 10^{-4})}$</p>
+            <p style="margin-bottom: 0; color: #475569;">$v_t \approx \mathbf{6.5 \times 10^{-6}\text{ m/s}}$</p>
+        </div>
+    </div>
+</div>
+
+<!-- Stokes Example 3 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Viscosity Dependence</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        Two identical spheres fall through two different fluids, A and B. Fluid B has twice the dynamic viscosity of Fluid A ($\eta_B = 2\eta_A$).
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The ratio of their terminal velocities ($v_{t,A} / v_{t,B}$), assuming buoyancy is negligible in both.
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">From $v_t = \frac{mg}{6\pi \eta r}$, we can see that terminal velocity is inversely proportional to viscosity ($v_t \propto 1/\eta$).</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$\frac{v_{t,A}}{v_{t,B}} = \frac{\eta_B}{\eta_A}$</p>
+            <p style="margin-bottom: 0; color: #475569;">Since $\eta_B = 2\eta_A$, the ratio is $\frac{2\eta_A}{\eta_A} = \mathbf{2}$. Sphere A falls twice as fast.</p>
+        </div>
+    </div>
+</div>
+
+<h3 style="margin-top: 3.5rem; color: #4f46e5;">3. Buoyancy and Archimedes' Principle</h3>
+<p>Any object wholly or partially immersed in a fluid is buoyed up by a force equal to the weight of the fluid displaced by the object. This is known as <strong>Archimedes' Principle</strong>. The buoyant force ($F_B$ or upthrust) is calculated as:</p>
+<p style="text-align: center; font-size: 1.4rem; font-weight: 600; padding: 1rem; background: #f8fafc; border-radius: 8px; margin: 2rem auto; width: fit-content; border: 1px solid #e2e8f0;">$F_B = \rho_f V g$</p>
+<p>where $\rho_f$ is the density of the fluid and $V$ is the submerged volume of the object.</p>
+
+<div style="text-align: center; margin: 2.5rem 0;">
+    <img src="images/karakalem_buoyancy_colored.jpg" class="color-exception" alt="Buoyancy Colored Diagram" style="width: 100%; max-width: 500px; border-radius: 8px; border: 2.5px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+    <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.1rem; color: #666; margin-top: 0.5rem;">Forces on a submerged object: Buoyancy (Up), Drag (Up during fall), Weight (Down).</p>
+</div>
+
+<!-- Buoyancy Example 1 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Calculating Buoyant Force</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A solid block of volume $0.5\text{ m}^3$ is completely submerged in water. The density of water is $\rho = 1000\text{ kg/m}^3$.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The buoyant force acting on the block (assume $g=9.81\text{ ms}^{-2}$).
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">Using Archimedes' Principle: $F_B = \rho_f V g$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$F_B = 1000 \times 0.5 \times 9.81$</p>
+            <p style="margin-bottom: 0; color: #475569;">$F_B = \mathbf{4905\text{ N}}$</p>
+        </div>
+    </div>
+</div>
+
+<!-- Buoyancy Example 2 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Will it Float or Sink?</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A piece of metal with a volume of $0.02\text{ m}^3$ has a mass of $150\text{ kg}$. It is placed in water ($\rho = 1000\text{ kg/m}^3$).
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> If the metal sinks or floats, by comparing weight and maximum buoyant force.
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">First, calculate the weight of the metal: $W = mg = 150 \times 9.81 = 1471.5\text{ N}$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">Next, calculate the maximum possible buoyant force (if fully submerged): $F_B = \rho_f V g = 1000 \times 0.02 \times 9.81 = 196.2\text{ N}$</p>
+            <p style="margin-bottom: 0; color: #475569;">Since $W > F_B$ ($1471.5\text{ N} > 196.2\text{ N}$), the metal will **sink**.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Buoyancy Example 3 -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Apparent Weight in Fluid</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        An anchor weighs $1000\text{ N}$ in air. When completely submerged in water, it displaces $0.03\text{ m}^3$ of water.
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The apparent weight of the anchor when submerged in water (assume $\rho = 1000\text{ kg/m}^3, g=10\text{ ms}^{-2}$ for simplicity).
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">First, calculate the buoyant force: $F_B = \rho V g = 1000 \times 0.03 \times 10 = 300\text{ N}$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">The apparent weight is the actual weight minus the buoyant force (upthrust).</p>
+            <p style="margin-bottom: 0; color: #475569;">$W_{apparent} = W - F_B = 1000 - 300 = \mathbf{700\text{ N}}$</p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================== -->
+<!-- ADVANCED FLUID DYNAMICS SECTION END            -->
+<!-- ============================================== -->
+
 <h2>Motion Graphs</h2>
+
 <p>Graphical representations provide a powerful visual tool for analyzing an object&apos;s motion over time. There are three primary types of motion graphs you must be familiar with:</p>
 
 <div class="grid-3" style="gap: 2rem; margin: 2.5rem 0;">
