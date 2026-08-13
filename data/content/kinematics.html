@@ -538,7 +538,7 @@ img.color-exception {
         <img src="images/voyager_probe_deep_space.jpg" alt="Voyager 1 deep space probe" class="color-exception" style="width: 100%; max-width: 600px; border-radius: 12px; display: block; margin: 0 auto; border: 1px solid #e5e7eb;">
     </div>
     
-    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">Even in the deepest abysses of space, true rest remains out of reach. When NASA’s <strong>Voyager 1</strong> probe flew past Jupiter, it executed a <strong class="glossary-term" style="cursor: help; color: #111827;">gravitational slingshot<span class="glossary-tooltip"><span class="glossary-tooltip-title">Gravitational Slingshot</span>A maneuver in space flight where the gravity of a planet is used to alter the path and speed of a spacecraft.</span></strong>. By diving deep into Jupiter’s gravity well, Voyager stole a tiny fraction of Jupiter’s orbital energy, accelerating the probe to over <strong>38,000 mph</strong> relative to the Sun while imperceptibly slowing Jupiter in its orbit. The probe didn't generate motion out of nowhere; it traded momentum in an intricate, multi-body kinetic dance.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">Even in the deepest abysses of space, true rest remains out of reach. When NASA’s <strong>Voyager 1</strong> probe flew past Jupiter, it executed a <strong class="glossary-term" style="cursor: help; color: #7e22ce;">gravitational slingshot<span class="glossary-tooltip"><span class="glossary-tooltip-title">Gravitational Slingshot</span>A maneuver in space flight where the gravity of a planet is used to alter the path and speed of a spacecraft.</span></strong>. By diving deep into Jupiter’s gravity well, Voyager stole a tiny fraction of Jupiter’s orbital energy, accelerating the probe to over <strong>38,000 mph</strong> relative to the Sun while imperceptibly slowing Jupiter in its orbit. The probe didn't generate motion out of nowhere; it traded momentum in an intricate, multi-body kinetic dance.</p>
     
     <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">From a book resting on a desk to Voyager 1 traversing interstellar dark, every object in the universe is locked in continuous, compounding motion. Nothing is truly fixed, nothing is static, and "standing still" is always a matter of perspective.</p>
 </div>
@@ -1407,6 +1407,20 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     <img src="images/karakalem_stokes_law.jpg" class="color-exception" alt="Stokes Law Viscous Fluid Diagram" style="width: 100%; max-width: 500px; border-radius: 8px; border: 2.5px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
     <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.1rem; color: #666; margin-top: 0.5rem;">A sphere falling through a highly viscous fluid exhibits laminar flow.</p>
 </div>
+
+<div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin: 2.5rem 0;">
+    <h4 style="margin-top: 0; color: #1e293b; font-size: 1.2rem;">Deriving Viscosity ($\eta$) from Stokes' Law</h4>
+    <p style="color: #334155; line-height: 1.7; margin-bottom: 1rem;">When the falling sphere reaches terminal velocity ($v_t$), the net force acting on it is zero. The downward force (Weight) is perfectly balanced by the upward forces (Buoyancy and Drag):</p>
+    <p style="text-align: center; font-weight: 600; color: #0f172a; margin-bottom: 1rem;">$\text{Weight} = \text{Buoyancy} + \text{Drag}$</p>
+    <p style="text-align: center; margin-bottom: 1rem;">$\frac{4}{3} \pi r^3 \rho_s g = \frac{4}{3} \pi r^3 \rho_f g + 6 \pi \eta r v_t$</p>
+    <p style="color: #334155; line-height: 1.7; margin-bottom: 1rem;">Where $\rho_s$ is the density of the sphere and $\rho_f$ is the density of the fluid. We can rearrange this to solve for the drag force:</p>
+    <p style="text-align: center; margin-bottom: 1rem;">$6 \pi \eta r v_t = \frac{4}{3} \pi r^3 g (\rho_s - \rho_f)$</p>
+    <p style="color: #334155; line-height: 1.7; margin-bottom: 1.5rem;">Finally, isolating the dynamic viscosity ($\eta$) gives us the formula used in experimental falling-sphere viscometers:</p>
+    <div style="text-align: center; padding: 1.5rem; background: #ffffff; border: 2.5px solid #8b5cf6; border-radius: 12px; box-shadow: 0 4px 10px rgba(139, 92, 246, 0.15);">
+        <p style="font-size: 1.5rem; font-weight: 700; color: #4c1d95; margin: 0;">$\eta = \frac{2 r^2 g (\rho_s - \rho_f)}{9 v_t}$</p>
+    </div>
+</div>
+
 
 <!-- Stokes Example 1 -->
 <div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
