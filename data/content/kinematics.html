@@ -538,7 +538,7 @@ img.color-exception {
         <img src="images/voyager_probe_deep_space.jpg" alt="Voyager 1 deep space probe" class="color-exception" style="width: 100%; max-width: 600px; border-radius: 12px; display: block; margin: 0 auto; border: 1px solid #e5e7eb;">
     </div>
     
-    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">Even in the deepest abysses of space, true rest remains out of reach. When NASA’s <strong>Voyager 1</strong> probe flew past Jupiter, it executed a gravitational slingshot. By diving deep into Jupiter’s gravity well, Voyager stole a tiny fraction of Jupiter’s orbital energy, accelerating the probe to over <strong>38,000 mph</strong> relative to the Sun while imperceptibly slowing Jupiter in its orbit. The probe didn't generate motion out of nowhere; it traded momentum in an intricate, multi-body kinetic dance.</p>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">Even in the deepest abysses of space, true rest remains out of reach. When NASA’s <strong>Voyager 1</strong> probe flew past Jupiter, it executed a <strong class="glossary-term" style="cursor: help; color: #111827;">gravitational slingshot<span class="glossary-tooltip"><span class="glossary-tooltip-title">Gravitational Slingshot</span>A maneuver in space flight where the gravity of a planet is used to alter the path and speed of a spacecraft.</span></strong>. By diving deep into Jupiter’s gravity well, Voyager stole a tiny fraction of Jupiter’s orbital energy, accelerating the probe to over <strong>38,000 mph</strong> relative to the Sun while imperceptibly slowing Jupiter in its orbit. The probe didn't generate motion out of nowhere; it traded momentum in an intricate, multi-body kinetic dance.</p>
     
     <p style="font-size: 1.1rem; line-height: 1.7; color: #374151;">From a book resting on a desk to Voyager 1 traversing interstellar dark, every object in the universe is locked in continuous, compounding motion. Nothing is truly fixed, nothing is static, and "standing still" is always a matter of perspective.</p>
 </div>
@@ -707,27 +707,37 @@ img.color-exception {
     </p>
 </div>
 
-<p>Distance—and thus position—is expressed through linear units. In scientific contexts, the International System of Units (SI) relies on the meter as its standard unit of length. Because standard SI units like the meter may feel less intuitive to general audiences in the United States, everyday units can also be applied for clarity, such as the foot or the mile.</p>
+<p>Distance—and thus position—is expressed through linear units like the meter ($m$). But there is a crucial difference between how we measure the <em>path</em> taken versus the <em>overall change</em> in position:</p>
+<ul style="margin-bottom: 2rem; color: #374151; line-height: 1.7;">
+    <li><strong>Distance (Scalar):</strong> The total length of the path traveled, regardless of direction. (e.g., "I walked $5\text{ miles}$ today").</li>
+    <li><strong>Displacement (Vector):</strong> The straight-line distance and direction from the starting point to the ending point. (e.g., "I am $1\text{ mile}$ North of where I started").</li>
+</ul>
 
-<div class="kognity-table-wrapper">
-    <div class="kognity-table-caption">Table 1. Units of distance and position</div>
-    <table class="kognity-table">
-        <tr>
-            <th>System</th>
-            <th>Unit</th>
-            <th>Symbol</th>
-        </tr>
-        <tr>
-            <td>SI (Metric)</td>
-            <td>Meter</td>
-            <td>m</td>
-        </tr>
-        <tr>
-            <td>U.S. Customary</td>
-            <td>Foot / Mile</td>
-            <td>ft / mi</td>
-        </tr>
-    </table>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+    <h4 style="margin-top: 0; color: #1e293b;">Commonly Confused Quantities</h4>
+    <p style="margin-bottom: 1rem; color: #475569; font-size: 0.95rem;">It's easy to mix up scalar and vector quantities in physics. Here are some of the most frequently confused pairs and individual terms:</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div>
+            <strong style="color: #111827;">Scalars (Magnitude Only)</strong>
+            <ul style="margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                <li><strong>Distance</strong> ($d$)</li>
+                <li><strong>Speed</strong> ($s$)</li>
+                <li><strong>Mass</strong> ($m$ - often confused with weight)</li>
+                <li><strong>Time</strong> ($t$)</li>
+                <li><strong>Energy / Work</strong> ($E, W$ - can be negative, but have no spatial direction)</li>
+            </ul>
+        </div>
+        <div>
+            <strong style="color: #111827;">Vectors (Magnitude + Direction)</strong>
+            <ul style="margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                <li><strong>Displacement</strong> ($\vec{s}$ or $\Delta\vec{x}$)</li>
+                <li><strong>Velocity</strong> ($\vec{v}$)</li>
+                <li><strong>Weight</strong> ($\vec{W}$ - a force directed downwards)</li>
+                <li><strong>Acceleration</strong> ($\vec{a}$)</li>
+                <li><strong>Force</strong> ($\vec{F}$)</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <!-- Visual Diagram 1 -->
