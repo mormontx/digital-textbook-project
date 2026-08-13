@@ -1264,6 +1264,18 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
         <p style="margin-bottom: 0; font-size: 1.05rem; color: #111827; line-height: 1.6;">
             Look closely at the two graphs above. Why does the standard skydiver reach a steady "terminal velocity" almost immediately and stay there until opening their parachute, whereas Felix's speed peaks dramatically at Mach 1.25 and then continuously <em>decreases</em> long before he even pulls his ripcord? What environmental factor is changing during Felix's extreme descent that we normally ignore in low-altitude physics problems?
         </p>
+        
+        <div style="margin-top: 1.5rem;">
+            <button class="solution-toggle-btn" style="background: transparent; border: 2px solid #22c55e; color: #15803d; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Analysis' ? 'Hide Analysis' : 'Show Analysis'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Analysis</button>
+            <div class="solution-content" style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed #bbf7d0;">
+                <ul style="color: #374151; font-size: 1.05rem; line-height: 1.7; margin: 0; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.75rem;"><strong>Air Density Variation:</strong> In typical low-altitude problems, we assume air density ($\rho$) is constant. However, Felix jumped from the stratosphere ($39\text{ km}$ up), where the air is incredibly thin (about 0.001 times sea-level density).</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Lack of Initial Drag:</strong> Because there is virtually no air resistance at that height, Felix initially accelerates at almost $9.8\text{ ms}^{-2}$ for an extended period, allowing him to break the speed of sound and reach Mach 1.25.</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Increasing Braking Force:</strong> As he falls into the lower atmosphere, the air becomes exponentially thicker. Since the drag force increases both with density and the <em>square of his velocity</em> ($F_D \propto \rho v^2$), the drag force quickly becomes <em>greater</em> than his weight ($F_D > mg$).</li>
+                    <li><strong>Net Upward Force:</strong> Because the upward drag force becomes stronger than the downward pull of gravity, he experiences a net <em>deceleration</em>, slowing him down continuously from $377\text{ m/s}$ to a normal low-altitude terminal velocity of around $55\text{ m/s}$ before he even deploys his parachute!</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Philosophical Inquiry / Riddle Box -->
