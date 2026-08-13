@@ -1515,6 +1515,39 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.1rem; color: #666; margin-top: 0.5rem;">Forces on a submerged object: Buoyancy (Up), Drag (Up during fall), Weight (Down).</p>
 </div>
 
+<div class="toxic-hover-box" style="border: 3px solid #22c55e; border-radius: 12px; box-shadow: 0 0 25px rgba(34, 197, 94, 0.4); padding: 2rem; background: #ffffff; margin: 2.5rem 0 3rem 0; text-align: left;">
+    <h3 style="margin-top: 0; color: #111827; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Deriving Archimedes' Principle</h3>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151; margin-bottom: 1.5rem;">Why does an object experience an upward buoyant force? It all comes down to fluid pressure increasing with depth.</p>
+    
+    <button class="solution-toggle-btn" style="background: #ffffff; color: #15803d; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Click to See in Detail' ? 'Hide Details' : 'Click to See in Detail'); if (window.MathJax) { MathJax.typesetPromise(); }">Click to See in Detail</button>
+    
+    <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem;">
+        <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem; margin-bottom: 1rem;">Step-by-Step Derivation</h4>
+        
+        <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem; line-height: 1.6;"><strong>Step 1: Pressure Difference</strong><br>
+        Imagine a solid cylinder of height $h$ and face area $A$ fully submerged in a fluid of density $\rho_f$. The top face is at depth $h_1$ and the bottom face is at depth $h_2$. The pressure on the bottom face ($P_2$) is greater than the pressure on the top face ($P_1$) because it is deeper in the fluid.</p>
+        
+        <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem; line-height: 1.6;"><strong>Step 2: Force on the Faces</strong><br>
+        Since Force = Pressure $\times$ Area ($F = PA$), the downward force on the top face is $F_1 = P_1 A$ and the upward force on the bottom face is $F_2 = P_2 A$. The horizontal forces on the sides cancel each other out.</p>
+        
+        <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem; line-height: 1.6;"><strong>Step 3: Net Upward Force (Buoyancy)</strong><br>
+        The buoyant force ($F_B$) is the net upward force: 
+        $$F_B = F_2 - F_1 = P_2 A - P_1 A = (P_2 - P_1)A$$
+        </p>
+        
+        <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem; line-height: 1.6;"><strong>Step 4: Hydrostatic Pressure Equation</strong><br>
+        We know that fluid pressure at a depth $d$ is given by $P = \rho_f g d$. Therefore, the pressure difference is $\Delta P = \rho_f g (h_2 - h_1)$. Since $h_2 - h_1 = h$ (the height of the cylinder):
+        $$F_B = (\rho_f g h) A$$
+        </p>
+        
+        <p style="margin-bottom: 0; color: #475569; font-size: 1.05rem; line-height: 1.6;"><strong>Step 5: Final Result</strong><br>
+        Since the volume of the cylinder is $V = A \times h$, we can substitute $V$ into the equation:
+        $$F_B = \rho_f V g$$
+        Because $\rho_f V$ is the mass of the displaced fluid, this proves Archimedes' Principle: the buoyant force equals the weight of the fluid displaced by the object!
+        </p>
+    </div>
+</div>
+
 <!-- Buoyancy Example 1 -->
 <div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
