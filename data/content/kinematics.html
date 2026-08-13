@@ -1103,16 +1103,20 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
         <div style="padding: 1.5rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <strong style="color: #334155;">Acceleration</strong><br><br>
+            <span style="font-size: 1.2rem; color: #0f172a;">$a = \frac{v - v_0}{t}$</span>
+        </div>
+        <div style="padding: 1.5rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
             <strong style="color: #334155;">Velocity-Time</strong><br><br>
             <span style="font-size: 1.2rem; color: #0f172a;">$v = v_0 + at$</span>
         </div>
         <div style="padding: 1.5rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
-            <strong style="color: #334155;">Position-Time</strong><br><br>
-            <span style="font-size: 1.2rem; color: #0f172a;">$x = x_0 + v_0 t + \frac{1}{2}at^2$</span>
+            <strong style="color: #334155;">Displacement-Time</strong><br><br>
+            <span style="font-size: 1.2rem; color: #0f172a;">$s = v_0 t + \frac{1}{2}at^2$</span>
         </div>
         <div style="padding: 1.5rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
-            <strong style="color: #334155;">Velocity-Position</strong><br><br>
-            <span style="font-size: 1.2rem; color: #0f172a;">$v^2 = v_0^2 + 2a(x - x_0)$</span>
+            <strong style="color: #334155;">Velocity-Displacement</strong><br><br>
+            <span style="font-size: 1.2rem; color: #0f172a;">$v^2 = v_0^2 + 2as$</span>
         </div>
     </div>
     
@@ -1120,26 +1124,32 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
         <button style="float: right; background: none; border: none; font-size: 2rem; cursor: pointer; color: #94a3b8; line-height: 1;" onclick="event.stopPropagation(); this.closest('.kinematics-box').classList.remove('expanded');">&times;</button>
         <h4 style="color: #15803d; font-size: 1.25rem; margin-top: 0;">Derivations</h4>
         
-        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>1. Velocity-Time Equation:</strong><br>
-        Start with the definition of constant acceleration: $a = \frac{\Delta v}{\Delta t} = \frac{v - v_0}{t - 0}$.<br>
-        Rearranging gives: $at = v - v_0$, which leads to <strong>$v = v_0 + at$</strong>.</p>
+        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>1. Acceleration Equation:</strong><br>
+        This is the fundamental definition of constant acceleration ($a$). Acceleration is the change in velocity ($\Delta v$) over the change in time ($\Delta t$). Assuming we start at $t=0$, we have <strong>$a = \frac{v - v_0}{t}$</strong>.</p>
+        
+        <hr style="border-top: 1px dashed #cbd5e1; margin: 1.5rem 0;">
+
+        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>2. Velocity-Time Equation:</strong><br>
+        Start with the acceleration equation: $a = \frac{v - v_0}{t}$.<br>
+        Multiply both sides by time $t$: $at = v - v_0$.<br>
+        Rearranging gives us the final velocity: <strong>$v = v_0 + at$</strong>.</p>
         
         <hr style="border-top: 1px dashed #cbd5e1; margin: 1.5rem 0;">
         
-        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>2. Position-Time Equation:</strong><br>
-        Displacement is the area under the velocity-time graph, or $\Delta x = \bar{v}t$, where average velocity $\bar{v} = \frac{v_0 + v}{2}$.<br>
-        Substitute $v = v_0 + at$: $\bar{v} = \frac{v_0 + (v_0 + at)}{2} = v_0 + \frac{1}{2}at$.<br>
-        So, $\Delta x = (v_0 + \frac{1}{2}at)t = v_0 t + \frac{1}{2}at^2$.<br>
-        Since $\Delta x = x - x_0$, we get <strong>$x = x_0 + v_0 t + \frac{1}{2}at^2$</strong>.</p>
+        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>3. Displacement-Time Equation:</strong><br>
+        Displacement ($s$) is the area under the velocity-time graph, which equals average velocity times time: $s = \bar{v}t$, where $\bar{v} = \frac{v_0 + v}{2}$.<br>
+        Substitute $v = v_0 + at$ into the average velocity: $\bar{v} = \frac{v_0 + (v_0 + at)}{2} = v_0 + \frac{1}{2}at$.<br>
+        Multiply by time $t$ to find displacement: $s = (v_0 + \frac{1}{2}at)t$.<br>
+        Expanding this gives <strong>$s = v_0 t + \frac{1}{2}at^2$</strong>.</p>
         
         <hr style="border-top: 1px dashed #cbd5e1; margin: 1.5rem 0;">
         
-        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>3. Velocity-Position Equation:</strong><br>
-        Start again with $\Delta x = \frac{v_0 + v}{2} t$.<br>
-        From the first equation, time is $t = \frac{v - v_0}{a}$.<br>
-        Substitute $t$ into the displacement equation: $\Delta x = \left(\frac{v + v_0}{2}\right) \left(\frac{v - v_0}{a}\right)$.<br>
-        This simplifies to $\Delta x = \frac{v^2 - v_0^2}{2a}$.<br>
-        Rearranging gives: $2a\Delta x = v^2 - v_0^2$, which leads to <strong>$v^2 = v_0^2 + 2a(x - x_0)$</strong>.</p>
+        <p style="color: #334155; line-height: 1.7; font-size: 1.05rem;"><strong>4. Velocity-Displacement Equation:</strong><br>
+        Start again with $s = \frac{v_0 + v}{2} t$.<br>
+        From the acceleration equation, isolate time: $t = \frac{v - v_0}{a}$.<br>
+        Substitute $t$ into the displacement equation: $s = \left(\frac{v + v_0}{2}\right) \left(\frac{v - v_0}{a}\right)$.<br>
+        Multiply the fractions: $s = \frac{v^2 - v_0^2}{2a}$.<br>
+        Rearrange to solve for $v^2$: $2as = v^2 - v_0^2$, which leads to <strong>$v^2 = v_0^2 + 2as$</strong>.</p>
     </div>
 </div>
 
