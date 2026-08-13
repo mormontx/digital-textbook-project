@@ -1257,7 +1257,7 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     </div>
 
     <div style="text-align: center; margin: 2rem 0;">
-        <img src="images/felix_jump.gif" alt="Felix Baumgartner Falling GIF" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); width: 100%; max-width: 700px; height: auto;">
+        <img src="images/felix_jump.gif" class="color-exception" alt="Felix Baumgartner Falling GIF" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); width: 100%; max-width: 700px; height: auto;">
     </div>
     <div class="toxic-hover-box" style="border: 3px solid #22c55e; border-radius: 12px; box-shadow: 0 0 25px rgba(34, 197, 94, 0.4); padding: 2rem; background: #ffffff; margin: 2.5rem 0 4rem 0; text-align: left;">
         <h3 style="margin-top: 0; color: #166534; font-size: 1.3rem;">Compare the Graphs</h3>
@@ -1383,7 +1383,88 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
 </div>
 
 
+
+<!-- Worked Example: Position to Velocity -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 3.5rem 0 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Velocity from a Position-Time Graph</h3>
+        </div>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A cyclist travels along a straight path. According to her <strong>position-time graph</strong>, she moves from $x = 10\text{ m}$ to $x = 40\text{ m}$ between $t = 2\text{ s}$ and $t = 8\text{ s}$. 
+    </p>
+
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> Her average velocity during this $6$-second interval.
+        </p>
+    </div>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+
+            <p style="margin-bottom: 1rem; color: #475569;">
+                The velocity on a position-time graph is equal to the <strong>gradient (slope)</strong> of the line connecting the two points.
+            </p>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                $$v = \frac{\Delta x}{\Delta t} = \frac{x_f - x_i}{t_f - t_i}$$
+            </p>
+            <p style="margin-bottom: 0; color: #475569;">
+                $$v = \frac{40 - 10}{8 - 2} = \frac{30}{6} = \mathbf{5\text{ ms}^{-1}}$$
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Worked Example: Negative Acceleration -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 3.5rem 0 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Deceleration and Reversing Direction</h3>
+        </div>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A train is traveling at $30\text{ ms}^{-1}$ when the driver applies the brakes, causing a uniform deceleration of $-3\text{ ms}^{-2}$. It eventually comes to a complete stop.
+    </p>
+
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> How long it takes for the train to stop, and how far it travels while braking.
+        </p>
+    </div>
+
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (a): Time to Stop</p>
+            <p style="margin-bottom: 1rem; color: #475569;">
+                Using the kinematic equation $v = u + at$:
+                $$0 = 30 + (-3)t$$
+                $$3t = 30 \implies t = \mathbf{10\text{ s}}$$
+            </p>
+
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 0.5rem;">Part (b): Stopping Distance</p>
+            <p style="margin-bottom: 0.5rem; color: #475569;">
+                We can find the distance by calculating the area under the velocity-time graph (which forms a triangle with base $10\text{ s}$ and height $30\text{ ms}^{-1}$):
+            </p>
+            <p style="margin-bottom: 0; color: #475569;">
+                $$\text{Area} = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 10 \times 30 = \mathbf{150\text{ m}}$$
+            </p>
+        </div>
+    </div>
+</div>
+
 <h2>Introduction to Projectile Motion</h2>
+
 <p>Projectile motion occurs when an object is launched into the air and is subject only to the acceleration of gravity. The key to understanding projectile motion is recognizing that the <strong>vertical and horizontal components of velocity are completely independent from each other</strong>.</p>
 
 <div style="display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
