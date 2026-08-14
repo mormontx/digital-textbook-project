@@ -2,20 +2,49 @@
     "questions": {
         "kinematics": [
             {
-                "text": "Why do we need the concept of speed? Where does it come from?",
-                "hint": "Think about what question speed answers. How else could you describe an object's motion?"
+                "text": "If you are on a train moving 100 km/h and toss a ball straight up, why does it fall right back into your hand instead of flying backwards?",
+                "hint": "Think about the ball's horizontal speed relative to the train and relative to the ground. (Concept: Relative Motion)",
+                "targetId": "concept-relative"
             },
             {
-                "text": "What's the difference between speed and velocity? Why does direction matter?",
-                "hint": "Consider two cars traveling at 60 mph - one north, one south. Are they moving the same way?"
+                "text": "Can an object have a constant speed but a changing velocity? What about a constant velocity but changing speed?",
+                "hint": "Remember that velocity is a vector. If direction changes, velocity changes, even if speed is constant. Can the reverse happen? (Concept: Scalars vs Vectors)",
+                "targetId": "concept-scalars-vectors"
             },
             {
-                "text": "Why is acceleration the 'rate of change of velocity'? What does this mean intuitively?",
-                "hint": "Think about what changes when you press the gas pedal or brake pedal in a car."
+                "text": "If a runner sprints around a circular track at exactly 8 m/s, why do we say they are constantly accelerating?",
+                "hint": "Acceleration is any change in velocity. How does the runner's direction of travel change as they follow the curve? (Concept: Circular Velocity)",
+                "targetId": "concept-circular"
             },
             {
-                "text": "If I drop two objects simultaneously from the same height, why do they hit the ground at the same time regardless of mass (ignoring air resistance)?",
-                "hint": "Consider Newton's second law and how gravity affects different masses."
+                "text": "How can a sprinter have a high average speed but an average velocity of exactly zero after finishing a race?",
+                "hint": "Compare the definitions of distance and displacement. What is the displacement if you finish exactly where you started? (Concept: Average Velocity)",
+                "targetId": "concept-paradox"
+            },
+            {
+                "text": "The ISS moves at a constant speed of 28,000 km/h, but it's always accelerating towards Earth. Why doesn't it crash?",
+                "hint": "Think about the curvature of the Earth. It falls towards the Earth, but it moves sideways so fast that the Earth curves away beneath it. (Concept: ISS Orbit)",
+                "targetId": "concept-iss"
+            },
+            {
+                "text": "If an object moving at a constant velocity experiences no net force, what keeps it moving?",
+                "hint": "This is Newton's First Law. Motion is the natural state of an object; it doesn't require a continuous force to sustain it, only to change it. (Concept: Newton's First Law)",
+                "targetId": "concept-newton1"
+            },
+            {
+                "text": "When Felix Baumgartner jumped from the stratosphere, why did his speed decrease as he fell lower, even before he opened his parachute?",
+                "hint": "Consider how the density of the atmosphere changes with altitude and how that affects air resistance. (Concept: Free Fall)",
+                "targetId": "concept-freefall"
+            },
+            {
+                "text": "Why do heavy steel ships float, but a small pebble sinks instantly?",
+                "hint": "Think about Archimedes' Principle. It's not about the total weight, but the weight compared to the volume of water displaced. (Concept: Buoyancy)",
+                "targetId": "concept-buoyancy"
+            },
+            {
+                "text": "If you shoot a bullet horizontally and drop a bullet from the exact same height simultaneously, which hits the ground first?",
+                "hint": "Analyze the vertical and horizontal components of motion separately. Does horizontal speed affect vertical acceleration? (Concept: Projectile Motion)",
+                "targetId": "concept-projectile"
             }
         ],
         "forces-momentum": [

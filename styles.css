@@ -696,6 +696,19 @@ h1, h2, h3, h4, h5, h6, .sidebar, .topic-title, .callout-title, .question-number
     border-radius: 8px;
     border-left: 3px solid #39ff14;
     box-shadow: 0 2px 8px rgba(57, 255, 20, 0.1);
+    transition: all 0.4s ease;
+}
+
+.question-item.active {
+    background: rgba(57, 255, 20, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+    border-left-width: 5px;
+}
+
+.question-item.dim {
+    opacity: 0.4;
+    transform: scale(0.98);
 }
 
 .question-number {

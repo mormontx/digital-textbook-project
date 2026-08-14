@@ -210,7 +210,7 @@ function renderQuestions(sectionId) {
     let html = '';
     questions.forEach((q, index) => {
         html += `
-            <div class="question-item">
+            <div class="question-item" data-target="${q.targetId || ''}">
                 <div class="question-number">Question ${index + 1}</div>
                 <div class="question-text">${q.text}</div>
                 ${q.hint ? `<div class="question-hint">${q.hint}</div>` : ''}
@@ -219,6 +219,13 @@ function renderQuestions(sectionId) {
     });
     
     questionsPanel.innerHTML = html;
+    
+    // Add ScrollSpy to automatically align questions when scrolled
+    setTimeout(() => {
+        if (typeof initQuestionScrollSpy === 'function') {
+            initQuestionScrollSpy(sectionId);
+        }
+    }, 100);
 }
 
 function initQuestionsPanel() {
@@ -1124,4 +1131,80 @@ function gradeAnswer(questionId) {
 // Override initMonsterMode to use Question Bank
 async function initMonsterMode() {
     await initQuestionBankMode();
+}
+
+
+// ===========================
+// Question Panel ScrollSpy
+// ===========================
+let questionObserver = null;
+
+function initQuestionScrollSpy(sectionId) {
+    if (questionObserver) {
+        questionObserver.disconnect();
+    }
+    
+    const items = document.querySelectorAll('.question-item[data-target]');
+    if (!items.length) return;
+    
+    const questionsPanel = document.getElementById('questions');
+    const contentArea = document.querySelector('.content-area');
+    
+    if (!questionsPanel || !contentArea) return;
+    
+    const observerOptions = {
+        root: contentArea,
+        rootMargin: '-10% 0px -70% 0px', // Trigger when heading enters top 30% of screen
+        threshold: 0
+    };
+    
+    questionObserver = new IntersectionObserver((entries) => {
+        // Find the most recently intersecting target
+        let activeTargetId = null;
+        
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                activeTargetId = entry.target.id;
+            }
+        });
+        
+        if (activeTargetId) {
+            const questionItems = document.querySelectorAll('.question-item');
+            const targetItem = document.querySelector(`.question-item[data-target="${activeTargetId}"]`);
+            
+            if (targetItem && !targetItem.classList.contains('active')) {
+                questionItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.classList.add('dim');
+                });
+                
+                targetItem.classList.remove('dim');
+                targetItem.classList.add('active');
+                
+                // Smooth scroll the panel to the active item if panel is expanded
+                const panelContainer = document.getElementById('questions-panel');
+                if (panelContainer && panelContainer.classList.contains('expanded')) {
+                    const itemOffset = targetItem.offsetTop;
+                    const panelHeight = questionsPanel.clientHeight;
+                    const itemHeight = targetItem.clientHeight;
+                    
+                    questionsPanel.scrollTo({
+                        top: itemOffset - (panelHeight / 2) + (itemHeight / 2),
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+    }, observerOptions);
+    
+    // Observe all targets in the main content
+    items.forEach(item => {
+        const targetId = item.getAttribute('data-target');
+        if (targetId) {
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                questionObserver.observe(targetEl);
+            }
+        }
+    });
 }
