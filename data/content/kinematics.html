@@ -2008,6 +2008,70 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
     </div>
 </div>
 
+<!-- Buoyancy Example 4: Ship in Different Waters -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Worked Example</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Maximum Cargo Load in Salt vs. Fresh Water</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A cargo ship has a total hull volume of $12,000\text{ m}^3$ that can be safely submerged without water spilling onto the deck. The empty ship itself has a mass of $2.5 \times 10^6\text{ kg}$. It needs to transport cargo across an ocean ($\rho_{\text{saltwater}} = 1025\text{ kg/m}^3$) and then up a freshwater river ($\rho_{\text{freshwater}} = 1000\text{ kg/m}^3$).
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> The maximum additional mass of cargo the ship can carry to safely navigate <em>both</em> the ocean and the river (assume $g=9.81\text{ ms}^{-2}$).
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">To float safely, the total buoyant force must equal the total weight: $F_B = W_{\text{total}}$.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">The maximum buoyant force happens when the hull is fully submerged to its safe limit: $F_{B,\text{max}} = \rho_{\text{fluid}} V_{\text{hull}} g$. Because fresh water is less dense, it provides less buoyant force. To ensure safety in <em>both</em> bodies of water, we must design for the limiting case (fresh water).</p>
+            <p style="margin-bottom: 1rem; color: #475569;">$F_{B,\text{fresh}} = 1000 \times 12000 \times 9.81 = 117,720,000\text{ N}$</p>
+            <p style="margin-bottom: 1rem; color: #475569;">The maximum total mass the freshwater can support is $m_{\text{total}} = F_{B,\text{fresh}} / g = (117,720,000) / 9.81 = 12,000,000\text{ kg}$.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">Subtract the ship's empty mass to find the maximum cargo mass:</p>
+            <p style="margin-bottom: 0; color: #475569;">$m_{\text{cargo}} = 12,000,000\text{ kg} - 2,500,000\text{ kg} = \mathbf{9,500,000\text{ kg}}$ (or 9,500 tonnes).</p>
+            <p style="margin-top: 1rem; margin-bottom: 0; color: #475569; font-style: italic;">Note: In the ocean, the ship would not need to submerge fully to support this same mass, meaning it rides higher in salt water!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Buoyancy Example 5: Floating in Different Liquids -->
+<div class="worked-example-box" style="background: #ffffff; border: 2.5px solid #22c55e; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem;">
+        <div>
+            <span style="display: inline-block; background: #dcfce7; color: #15803d; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Concept Question</span>
+            <h3 style="margin: 0; font-size: 1.35rem; color: #111827; font-weight: 700;">Submerged Volume Fractions</h3>
+        </div>
+    </div>
+    <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.25rem;">
+        A solid wooden block with density $\rho_{\text{wood}} = 600\text{ kg/m}^3$ is placed successively in three different open containers containing: (1) Water ($\rho = 1000\text{ kg/m}^3$), (2) Oil ($\rho = 800\text{ kg/m}^3$), and (3) Glycerin ($\rho = 1260\text{ kg/m}^3$).
+    </p>
+    <div style="background: #ffffff; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-weight: 600; color: #0f172a; font-size: 1.05rem;">
+            <strong>Determine:</strong> What percentage of the block's volume will be submerged below the surface in each liquid?
+        </p>
+    </div>
+    <div class="worked-example-solution">
+        <button class="solution-toggle-btn" style="background: #ffffff; color: #166534; border: 2px solid #22c55e; font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); this.textContent = (this.textContent.trim() === 'Show Solution' ? 'Hide Solution' : 'Show Solution'); if (window.MathJax) { MathJax.typesetPromise(); }">Show Solution</button>
+        <div class="solution-content" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 1px solid #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h4 style="margin-top: 0; color: #166534; font-size: 1.15rem;">Solution Step-by-Step</h4>
+            <p style="margin-bottom: 1rem; color: #475569;">For any floating object, the buoyant force equals the object's weight: $F_B = W_{\text{obj}}$.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">Using Archimedes' Principle, $\rho_{\text{liquid}} V_{\text{submerged}} g = \rho_{\text{obj}} V_{\text{total}} g$.</p>
+            <p style="margin-bottom: 1rem; color: #475569;">Canceling $g$ on both sides and rearranging, the fraction of volume submerged is the ratio of the densities: $\frac{V_{\text{sub}}}{V_{\text{tot}}} = \frac{\rho_{\text{obj}}}{\rho_{\text{liquid}}}$.</p>
+            <ul style="margin-bottom: 1rem; color: #475569; line-height: 1.6; padding-left: 1.5rem;">
+                <li><strong>In Water:</strong> $\frac{600}{1000} = 0.60$ $\rightarrow$ <strong>60%</strong> submerged</li>
+                <li><strong>In Oil:</strong> $\frac{600}{800} = 0.75$ $\rightarrow$ <strong>75%</strong> submerged</li>
+                <li><strong>In Glycerin:</strong> $\frac{600}{1260} \approx 0.476$ $\rightarrow$ <strong>~47.6%</strong> submerged</li>
+            </ul>
+            <p style="margin-bottom: 0; color: #475569;">The denser the liquid, the greater the buoyant force per unit volume displaced, meaning the object rides higher and has a smaller submerged fraction.</p>
+        </div>
+    </div>
+</div>
+
 <!-- ============================================== -->
 <!-- ADVANCED FLUID DYNAMICS SECTION END            -->
 <!-- ============================================== -->
