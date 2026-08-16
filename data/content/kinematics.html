@@ -2605,3 +2605,80 @@ $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} \qquad 
 </div>
 
 
+
+<!-- Kinematics Equations Summary Frame -->
+<div class="toxic-hover-box" style="border: 3px solid #22c55e; border-radius: 12px; box-shadow: 0 0 25px rgba(34, 197, 94, 0.4); padding: 2rem; background: #ffffff; margin: 3rem 0; text-align: left; transition: all 0.3s ease;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1rem;">
+        <div>
+            <span style="display: inline-block; background: #22c55e; color: #ffffff; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Section Summary</span>
+            <h3 style="margin: 0; font-size: 1.5rem; color: #111827; font-weight: 700;">Master Equation Sheet: Kinematics</h3>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #374151; margin-bottom: 1.5rem;">
+        Below are all the core equations introduced in this chapter. Click to expand and see the derivation and conceptual explanation for each one!
+    </p>
+
+    <!-- Equation 1: Velocity & Acceleration -->
+    <div style="margin-bottom: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+        <button style="width: 100%; text-align: left; background: #f8fafc; border: none; padding: 1rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: #166534; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); if (window.MathJax) { MathJax.typesetPromise(); }">
+            <span>Basic Definitions: Velocity & Acceleration</span>
+            <span style="color: #22c55e; font-weight: 800; font-size: 1.25rem;">+</span>
+        </button>
+        <div style="display: none; padding: 1.5rem; background: #ffffff; border-top: 1px solid #e2e8f0;">
+            <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem;"><strong>Average Velocity:</strong> $v = \frac{\Delta s}{\Delta t}$</p>
+            <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem;"><strong>Average Acceleration:</strong> $a = \frac{\Delta v}{\Delta t}$</p>
+            <p style="margin-bottom: 0; color: #334155; line-height: 1.6;"><strong>Explanation:</strong> These are the foundational definitions of kinematics. Velocity is the rate of change of displacement with respect to time, telling us how fast and in what direction an object is moving. Acceleration is the rate of change of velocity, telling us how quickly the object is speeding up, slowing down, or changing direction.</p>
+        </div>
+    </div>
+
+    <!-- Equation 2: SUVAT -->
+    <div style="margin-bottom: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+        <button style="width: 100%; text-align: left; background: #f8fafc; border: none; padding: 1rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: #166534; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); if (window.MathJax) { MathJax.typesetPromise(); }">
+            <span>The SUVAT Equations (Constant Acceleration)</span>
+            <span style="color: #22c55e; font-weight: 800; font-size: 1.25rem;">+</span>
+        </button>
+        <div style="display: none; padding: 1.5rem; background: #ffffff; border-top: 1px solid #e2e8f0;">
+            <ul style="color: #475569; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                <li>$v = u + at$ (Velocity-Time)</li>
+                <li>$s = ut + \frac{1}{2}at^2$ (Displacement-Time)</li>
+                <li>$v^2 = u^2 + 2as$ (Velocity-Displacement)</li>
+                <li>$s = \frac{1}{2}(u + v)t$ (Average Velocity)</li>
+            </ul>
+            <p style="color: #334155; line-height: 1.6; margin-bottom: 0.5rem;"><strong>Derivations:</strong></p>
+            <ul style="color: #334155; line-height: 1.6; margin-bottom: 0;">
+                <li><strong>$v = u + at$:</strong> Directly from the definition of acceleration ($a = \frac{v-u}{t}$). Multiplying by $t$ gives $at = v - u$, rearranging gives $v = u + at$.</li>
+                <li><strong>$s = \frac{1}{2}(u + v)t$:</strong> Since acceleration is constant, average velocity is simply $\frac{u+v}{2}$. Displacement is average velocity multiplied by time.</li>
+                <li><strong>$s = ut + \frac{1}{2}at^2$:</strong> Substitute $v = u + at$ into the average velocity equation: $s = \frac{1}{2}(u + u + at)t = \frac{1}{2}(2u + at)t = ut + \frac{1}{2}at^2$.</li>
+                <li><strong>$v^2 = u^2 + 2as$:</strong> Isolate $t$ in the first equation ($t = \frac{v-u}{a}$) and substitute it into the average velocity equation. This yields $s = \frac{1}{2}(u+v)(\frac{v-u}{a}) = \frac{v^2 - u^2}{2a}$. Rearranging gives $v^2 = u^2 + 2as$.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Equation 3: Stokes Law & Terminal Velocity -->
+    <div style="margin-bottom: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+        <button style="width: 100%; text-align: left; background: #f8fafc; border: none; padding: 1rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: #166534; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); if (window.MathJax) { MathJax.typesetPromise(); }">
+            <span>Stokes' Law & Terminal Velocity</span>
+            <span style="color: #22c55e; font-weight: 800; font-size: 1.25rem;">+</span>
+        </button>
+        <div style="display: none; padding: 1.5rem; background: #ffffff; border-top: 1px solid #e2e8f0;">
+            <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem;"><strong>Stokes' Law:</strong> $F_d = 6\pi \eta r v$</p>
+            <p style="color: #334155; line-height: 1.6; margin-bottom: 1rem;"><strong>Explanation:</strong> This describes the viscous drag force ($F_d$) on a small sphere of radius $r$ moving at velocity $v$ through a fluid with dynamic viscosity $\eta$. It shows that drag increases linearly with speed for smooth, slow flows (laminar flow).</p>
+            
+            <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem;"><strong>Terminal Velocity:</strong> $v_t = \frac{mg}{6\pi \eta r}$</p>
+            <p style="margin-bottom: 0; color: #334155; line-height: 1.6;"><strong>Derivation:</strong> An object reaches terminal velocity when the downward force of gravity ($W = mg$) is perfectly balanced by the upward drag force ($F_d$). Setting $mg = 6\pi \eta r v_t$ and solving for $v_t$ gives the maximum constant speed a falling sphere can reach.</p>
+        </div>
+    </div>
+
+    <!-- Equation 4: Archimedes' Principle -->
+    <div style="border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+        <button style="width: 100%; text-align: left; background: #f8fafc; border: none; padding: 1rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: #166534; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); if (window.MathJax) { MathJax.typesetPromise(); }">
+            <span>Archimedes' Principle (Buoyancy)</span>
+            <span style="color: #22c55e; font-weight: 800; font-size: 1.25rem;">+</span>
+        </button>
+        <div style="display: none; padding: 1.5rem; background: #ffffff; border-top: 1px solid #e2e8f0;">
+            <p style="margin-bottom: 1rem; color: #475569; font-size: 1.05rem;"><strong>Buoyant Force:</strong> $F_B = \rho_f V g$</p>
+            <p style="margin-bottom: 0; color: #334155; line-height: 1.6;"><strong>Derivation & Explanation:</strong> Because fluid pressure increases with depth ($P = \rho g h$), the pressure pushing up on the bottom of a submerged object is greater than the pressure pushing down on the top. The net upward force equals the pressure difference times the area ($F_B = \Delta P \times A = \rho g \Delta h \times A$). Since Volume $V = A \times \Delta h$, we get $F_B = \rho_f V g$. This mathematically states that the buoyant force equals the weight of the fluid displaced by the object!</p>
+        </div>
+    </div>
+</div>
