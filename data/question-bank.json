@@ -478,7 +478,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?\n\nA) I and II ✓\nB) II only\nC) I and III\nD) II and III",
+      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?\n\nA) I and II\nB) II only\nC) I and III\nD) II and III",
       "markscheme_answer": "A) I and II. Uniform acceleration means constant acceleration (I). On a straight road, distance equals displacement, so average speed equals average velocity (II). Statement III is incorrect.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -492,7 +492,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?\n\nA) 3u/g ✓\nB) 2u/g\nC) u/g\nD) 4u/g",
+      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?\n\nA) 3u/g\nB) 2u/g\nC) u/g\nD) 4u/g",
       "markscheme_answer": "A) 3u/g. Time up: t₁ = u/g (v = u - gt, where v = 0). Time down: t₂ = 2u/g (v = gt, final speed = 2u). Total = u/g + 2u/g = 3u/g",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -506,7 +506,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?\n\nA) Distance: 2000 m, Displacement: 0 m ✓\nB) Distance: 0 m, Displacement: 2000 m\nC) Distance: 2000 m, Displacement: 2000 m\nD) Distance: 0 m, Displacement: 0 m",
+      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?\n\nA) Distance: 2000 m, Displacement: 0 m\nB) Distance: 0 m, Displacement: 2000 m\nC) Distance: 2000 m, Displacement: 2000 m\nD) Distance: 0 m, Displacement: 0 m",
       "markscheme_answer": "A) Distance: 2000 m, Displacement: 0 m. Total distance = 900 + 1100 = 2000 m. Displacement is zero since she returns to her starting point.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -520,7 +520,7 @@
     },
     {
       "level": "SL",
-      "question_text": "Which correctly lists scalar and vector quantities?\n\nA) Scalar: Distance and speed, Vector: Displacement and velocity ✓\nB) Scalar: Displacement and velocity, Vector: Distance and speed\nC) Scalar: Distance and velocity, Vector: Displacement and speed\nD) Scalar: Displacement and speed, Vector: Distance and velocity",
+      "question_text": "Which correctly lists scalar and vector quantities?\n\nA) Scalar: Distance and speed, Vector: Displacement and velocity\nB) Scalar: Displacement and velocity, Vector: Distance and speed\nC) Scalar: Distance and velocity, Vector: Displacement and speed\nD) Scalar: Displacement and speed, Vector: Distance and velocity",
       "markscheme_answer": "A) Scalar: Distance and speed (no direction), Vector: Displacement and velocity (have direction).",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -534,7 +534,7 @@
     },
     {
       "level": "SL",
-      "question_text": "An acceleration–time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?\n\nA) I and II ✓\nB) I only\nC) II only\nD) None",
+      "question_text": "An acceleration–time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?\n\nA) I and II\nB) I only\nC) II only\nD) None",
       "markscheme_answer": "A) I and II. In both intervals acceleration is positive, so velocity increases. In I it increases uniformly, in II it increases non-uniformly.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -549,7 +549,7 @@
     },
     {
       "level": "SL",
-      "question_text": "Which graph represents an object that does not move in any direction?\n\nA) A horizontal line on a position-time graph ✓\nB) A diagonal line on a position-time graph\nC) A horizontal line on a velocity-time graph\nD) A diagonal line on an acceleration-time graph",
+      "question_text": "Which graph represents an object that does not move in any direction?\n\nA) A horizontal line on a position-time graph\nB) A diagonal line on a position-time graph\nC) A horizontal line on a velocity-time graph\nD) A diagonal line on an acceleration-time graph",
       "markscheme_answer": "A) A horizontal line on a position-time graph. When position doesn't change with time, the object is stationary. Note: zero acceleration doesn't mean no movement - it could be constant velocity.",
       "paper": "Paper 1",
       "topic": "kinematics",
