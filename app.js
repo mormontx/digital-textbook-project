@@ -1073,6 +1073,9 @@ function renderQBQuestions() {
         return;
     }
     
+    // Randomize and select a subset (pool of 10) for a dynamic quiz feel
+    questions = questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    
     let html = '';
     questions.forEach((q, idx) => {
         const levelClass = q.level === 'HL' ? 'hl' : 'sl';
@@ -1092,7 +1095,14 @@ function renderQBQuestions() {
                 ${q.image ? `<div class="qb-question-image"><img src="${q.image}" alt="Question diagram"></div>` : ""}
                 <div class="qb-question-text">${q.question_text}</div>
                 <div class="qb-answer-area">
-                    <textarea class="qb-answer-textarea" placeholder="Write your answer here..."></textarea>
+                    ${q.type === 'numerical' 
+                        ? `<div style="display: flex; align-items: center; gap: 10px;">
+                               <input type="number" step="any" id="input-${q.id}" class="qb-numerical-input" placeholder="Enter number..." style="padding: 10px; border-radius: 6px; border: 1px solid #4c1d95; background: #2e1065; color: #fff; width: 200px; font-size: 1rem;">
+                               <span style="color: #d8b4fe; font-size: 1.1rem;">${q.unit || ''}</span>
+                           </div>
+                           <div id="feedback-${q.id}" style="margin-top: 10px; font-size: 1rem;"></div>`
+                        : `<textarea class="qb-answer-textarea" id="input-${q.id}" placeholder="Write your answer here..."></textarea>`
+                    }
                 </div>
                 <div class="qb-card-actions">
                     <button class="qb-btn qb-btn-markscheme" onclick="toggleMarkscheme('${q.id}')">Markscheme</button>
@@ -1124,8 +1134,44 @@ function toggleMarkscheme(questionId) {
 }
 
 function gradeAnswer(questionId) {
-    // For now, just reveal the markscheme and mark as completed
-    toggleMarkscheme(questionId);
+    const q = questionBankData.questions.find(x => x.id === questionId);
+    if (!q) return;
+
+    if (q.type === 'numerical') {
+        const inputEl = document.getElementById(`input-${questionId}`);
+        const feedbackEl = document.getElementById(`feedback-${questionId}`);
+        
+        if (!inputEl || inputEl.value.trim() === '') {
+            feedbackEl.innerHTML = '<span style="color: #ef4444;">Please enter a numerical answer.</span>';
+            return;
+        }
+        
+        const userAnswer = parseFloat(inputEl.value);
+        if (isNaN(userAnswer)) {
+            feedbackEl.innerHTML = '<span style="color: #ef4444;">Please enter a valid number.</span>';
+            return;
+        }
+        
+        const correctAnswer = q.answer;
+        const tolerance = q.tolerance || 0.05;
+        const diff = Math.abs(userAnswer - correctAnswer);
+        
+        if (diff <= tolerance) {
+            feedbackEl.innerHTML = `<span style="color: #22c55e; font-weight: bold;">Correct!</span>`;
+            inputEl.style.border = '2px solid #22c55e';
+            inputEl.style.background = 'rgba(34, 197, 94, 0.1)';
+        } else {
+            feedbackEl.innerHTML = '<span style="color: #ef4444; font-weight: bold;">Incorrect.</span> See Markscheme.';
+            inputEl.style.border = '2px solid #ef4444';
+            inputEl.style.background = 'rgba(239, 68, 68, 0.1)';
+        }
+    }
+    
+    // Reveal the markscheme and mark as completed
+    const markscheme = document.getElementById(`markscheme-${questionId}`);
+    if (markscheme && !markscheme.classList.contains('visible')) {
+        toggleMarkscheme(questionId);
+    }
 }
 
 // Override initMonsterMode to use Question Bank

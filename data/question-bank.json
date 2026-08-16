@@ -15,8 +15,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A ball is dropped from rest and falls for 3 s. How far does it fall? (g = 10 m/s²)",
-      "markscheme_answer": "s = ½gt² = ½ × 10 × 9 = 45 m",
+      "question_text": "A ball is dropped from rest and falls for 3 s. How far does it fall? (g = 10 m/s\u00b2)",
+      "markscheme_answer": "s = \u00bdgt\u00b2 = \u00bd \u00d7 10 \u00d7 9 = 45 m",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -28,8 +28,8 @@
     },
     {
       "level": "SL",
-      "question_text": "The diagram shows the velocity–time graph of a car.\n\n\nWhat is the average velocity of the car?\n\n",
-      "markscheme_answer": "v² = u² + 2as → 625 = 25 + 2a(60) → a = 600/120 = 5 m/s²",
+      "question_text": "The diagram shows the velocity\u2013time graph of a car.\n\n\nWhat is the average velocity of the car?\n\n",
+      "markscheme_answer": "v\u00b2 = u\u00b2 + 2as \u2192 625 = 25 + 2a(60) \u2192 a = 600/120 = 5 m/s\u00b2",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -37,13 +37,13 @@
         "Calculator Allowed"
       ],
       "id": "kin-003",
-      "image": "images/questions/image-31-03-2026-at-5.45 pm.jpeg",
+      "image": "images/questions/image-31-03-2026-at-5.45\u202fpm.jpeg",
       "difficulty": "intermediate"
     },
     {
       "level": "HL",
-      "question_text": "A projectile is launched at 30° above horizontal with initial speed 20 m/s. Find the maximum height reached. (g = 10 m/s²)",
-      "markscheme_answer": "v_y = 20 sin(30°) = 10 m/s. At max height, v = 0: h = v²/(2g) = 100/20 = 5 m",
+      "question_text": "A projectile is launched at 30\u00b0 above horizontal with initial speed 20 m/s. Find the maximum height reached. (g = 10 m/s\u00b2)",
+      "markscheme_answer": "v_y = 20 sin(30\u00b0) = 10 m/s. At max height, v = 0: h = v\u00b2/(2g) = 100/20 = 5 m",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -55,8 +55,8 @@
     },
     {
       "level": "HL",
-      "question_text": "Two balls are thrown simultaneously: Ball A is thrown upward at 15 m/s from ground level, Ball B is dropped from 25 m height. When and where do they meet? (g = 10 m/s²)",
-      "markscheme_answer": "Position A: y_A = 15t - 5t². Position B: y_B = 25 - 5t². When they meet: 15t - 5t² = 25 - 5t² → 15t = 25 → t = 5/3 s. Height: y = 15(5/3) - 5(25/9) = 25 - 125/9 = 100/9 ≈ 11.1 m",
+      "question_text": "Two balls are thrown simultaneously: Ball A is thrown upward at 15 m/s from ground level, Ball B is dropped from 25 m height. When and where do they meet? (g = 10 m/s\u00b2)",
+      "markscheme_answer": "Position A: y_A = 15t - 5t\u00b2. Position B: y_B = 25 - 5t\u00b2. When they meet: 15t - 5t\u00b2 = 25 - 5t\u00b2 \u2192 15t = 25 \u2192 t = 5/3 s. Height: y = 15(5/3) - 5(25/9) = 25 - 125/9 = 100/9 \u2248 11.1 m",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -69,7 +69,7 @@
     {
       "level": "SL",
       "question_text": "A 2 kg object experiences a net force of 10 N. What is its acceleration?",
-      "markscheme_answer": "a = F/m = 10/2 = 5 m/s²",
+      "markscheme_answer": "a = F/m = 10/2 = 5 m/s\u00b2",
       "paper": "Paper 1",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -81,8 +81,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A 5 kg box rests on a horizontal surface. The coefficient of static friction is 0.4. What is the maximum horizontal force that can be applied before the box moves? (g = 10 m/s²)",
-      "markscheme_answer": "F_max = μN = μmg = 0.4 × 5 × 10 = 20 N",
+      "question_text": "A 5 kg box rests on a horizontal surface. The coefficient of static friction is 0.4. What is the maximum horizontal force that can be applied before the box moves? (g = 10 m/s\u00b2)",
+      "markscheme_answer": "F_max = \u03bcN = \u03bcmg = 0.4 \u00d7 5 \u00d7 10 = 20 N",
       "paper": "Paper 1",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -95,7 +95,7 @@
     {
       "level": "SL",
       "question_text": "A 3 kg object moving at 4 m/s collides with a stationary 1 kg object. They stick together. Find their common velocity after collision.",
-      "markscheme_answer": "Conservation of momentum: m₁v₁ + m₂v₂ = (m₁+m₂)v. 3×4 + 0 = 4v → v = 3 m/s",
+      "markscheme_answer": "Conservation of momentum: m\u2081v\u2081 + m\u2082v\u2082 = (m\u2081+m\u2082)v. 3\u00d74 + 0 = 4v \u2192 v = 3 m/s",
       "paper": "Paper 2",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -107,8 +107,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A 2 kg block on a 30° incline is connected by a massless rope over a pulley to a hanging 3 kg mass. Find the acceleration of the system. (μ = 0.2, g = 10 m/s²)",
-      "markscheme_answer": "For hanging mass: 30 - T = 3a. For block: T - 2g(sin30° + μcos30°) = 2a. T - 10 - 0.2×2×10×0.866 = 2a. T - 13.46 = 2a. Solving: a = (30 - 13.46)/5 = 3.3 m/s²",
+      "question_text": "A 2 kg block on a 30\u00b0 incline is connected by a massless rope over a pulley to a hanging 3 kg mass. Find the acceleration of the system. (\u03bc = 0.2, g = 10 m/s\u00b2)",
+      "markscheme_answer": "For hanging mass: 30 - T = 3a. For block: T - 2g(sin30\u00b0 + \u03bccos30\u00b0) = 2a. T - 10 - 0.2\u00d72\u00d710\u00d70.866 = 2a. T - 13.46 = 2a. Solving: a = (30 - 13.46)/5 = 3.3 m/s\u00b2",
       "paper": "Paper 2",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -120,8 +120,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A rocket of initial mass 1000 kg ejects gas at 500 m/s relative to the rocket at a rate of 5 kg/s. What is the initial acceleration of the rocket if it launches vertically? (g = 10 m/s²)",
-      "markscheme_answer": "Thrust = v_exhaust × dm/dt = 500 × 5 = 2500 N. Weight = 1000 × 10 = 10000 N. Net force = 2500 - 10000 = -7500 N (cannot lift off initially). If thrust exceeds weight: a = (F - mg)/m",
+      "question_text": "A rocket of initial mass 1000 kg ejects gas at 500 m/s relative to the rocket at a rate of 5 kg/s. What is the initial acceleration of the rocket if it launches vertically? (g = 10 m/s\u00b2)",
+      "markscheme_answer": "Thrust = v_exhaust \u00d7 dm/dt = 500 \u00d7 5 = 2500 N. Weight = 1000 \u00d7 10 = 10000 N. Net force = 2500 - 10000 = -7500 N (cannot lift off initially). If thrust exceeds weight: a = (F - mg)/m",
       "paper": "Paper 2",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -134,7 +134,7 @@
     {
       "level": "SL",
       "question_text": "A 10 N force moves an object 5 m in the direction of the force. Calculate the work done.",
-      "markscheme_answer": "W = Fd = 10 × 5 = 50 J",
+      "markscheme_answer": "W = Fd = 10 \u00d7 5 = 50 J",
       "paper": "Paper 1",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -146,8 +146,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A 2 kg ball is dropped from 20 m. What is its speed just before hitting the ground? (g = 10 m/s²)",
-      "markscheme_answer": "mgh = ½mv² → v = √(2gh) = √(2×10×20) = 20 m/s",
+      "question_text": "A 2 kg ball is dropped from 20 m. What is its speed just before hitting the ground? (g = 10 m/s\u00b2)",
+      "markscheme_answer": "mgh = \u00bdmv\u00b2 \u2192 v = \u221a(2gh) = \u221a(2\u00d710\u00d720) = 20 m/s",
       "paper": "Paper 1",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -160,7 +160,7 @@
     {
       "level": "SL",
       "question_text": "A 1500 kg car accelerates from rest to 20 m/s in 10 s. Calculate the average power developed.",
-      "markscheme_answer": "KE = ½mv² = ½×1500×400 = 300,000 J. Power = Work/time = 300,000/10 = 30,000 W = 30 kW",
+      "markscheme_answer": "KE = \u00bdmv\u00b2 = \u00bd\u00d71500\u00d7400 = 300,000 J. Power = Work/time = 300,000/10 = 30,000 W = 30 kW",
       "paper": "Paper 2",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -173,7 +173,7 @@
     {
       "level": "HL",
       "question_text": "A spring with k = 200 N/m is compressed 0.3 m. A 0.5 kg ball is placed against it and released. The ball then slides up a frictionless ramp. What maximum height does it reach?",
-      "markscheme_answer": "Spring PE = ½kx² = ½×200×0.09 = 9 J. At max height: mgh = 9 → h = 9/(0.5×10) = 1.8 m",
+      "markscheme_answer": "Spring PE = \u00bdkx\u00b2 = \u00bd\u00d7200\u00d70.09 = 9 J. At max height: mgh = 9 \u2192 h = 9/(0.5\u00d710) = 1.8 m",
       "paper": "Paper 2",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -186,7 +186,7 @@
     {
       "level": "HL",
       "question_text": "A roller coaster car of mass 500 kg starts from rest at height 40 m. It loses 20% of its energy to friction by the time it reaches a loop of radius 10 m. Find the normal force on the car at the top of the loop.",
-      "markscheme_answer": "Initial PE = mgh = 500×10×40 = 200,000 J. After friction: 0.8×200,000 = 160,000 J. At top of loop (h=20m): PE = 100,000 J, KE = 60,000 J. v² = 2×60,000/500 = 240. At top: N + mg = mv²/r → N = m(v²/r - g) = 500(240/10 - 10) = 500×14 = 7000 N",
+      "markscheme_answer": "Initial PE = mgh = 500\u00d710\u00d740 = 200,000 J. After friction: 0.8\u00d7200,000 = 160,000 J. At top of loop (h=20m): PE = 100,000 J, KE = 60,000 J. v\u00b2 = 2\u00d760,000/500 = 240. At top: N + mg = mv\u00b2/r \u2192 N = m(v\u00b2/r - g) = 500(240/10 - 10) = 500\u00d714 = 7000 N",
       "paper": "Paper 2",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -211,8 +211,8 @@
     },
     {
       "level": "SL",
-      "question_text": "How much heat is needed to raise the temperature of 2 kg of water by 10°C? (c = 4200 J/kg·K)",
-      "markscheme_answer": "Q = mcΔT = 2 × 4200 × 10 = 84,000 J = 84 kJ",
+      "question_text": "How much heat is needed to raise the temperature of 2 kg of water by 10\u00b0C? (c = 4200 J/kg\u00b7K)",
+      "markscheme_answer": "Q = mc\u0394T = 2 \u00d7 4200 \u00d7 10 = 84,000 J = 84 kJ",
       "paper": "Paper 1",
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
@@ -224,8 +224,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A 0.5 kg block of copper at 100°C is placed in 2 kg of water at 20°C. Find the final equilibrium temperature. (c_copper = 400 J/kg·K, c_water = 4200 J/kg·K)",
-      "markscheme_answer": "Heat lost = Heat gained: 0.5×400×(100-T) = 2×4200×(T-20). 200(100-T) = 8400(T-20). 20000 - 200T = 8400T - 168000. 188000 = 8600T. T ≈ 21.9°C",
+      "question_text": "A 0.5 kg block of copper at 100\u00b0C is placed in 2 kg of water at 20\u00b0C. Find the final equilibrium temperature. (c_copper = 400 J/kg\u00b7K, c_water = 4200 J/kg\u00b7K)",
+      "markscheme_answer": "Heat lost = Heat gained: 0.5\u00d7400\u00d7(100-T) = 2\u00d74200\u00d7(T-20). 200(100-T) = 8400(T-20). 20000 - 200T = 8400T - 168000. 188000 = 8600T. T \u2248 21.9\u00b0C",
       "paper": "Paper 2",
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
@@ -237,8 +237,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A metal rod of length 1 m and cross-sectional area 0.01 m² connects two reservoirs at 100°C and 0°C. If k = 50 W/m·K, calculate the rate of heat transfer.",
-      "markscheme_answer": "P = kAΔT/L = 50 × 0.01 × 100 / 1 = 50 W",
+      "question_text": "A metal rod of length 1 m and cross-sectional area 0.01 m\u00b2 connects two reservoirs at 100\u00b0C and 0\u00b0C. If k = 50 W/m\u00b7K, calculate the rate of heat transfer.",
+      "markscheme_answer": "P = kA\u0394T/L = 50 \u00d7 0.01 \u00d7 100 / 1 = 50 W",
       "paper": "Paper 2",
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
@@ -250,8 +250,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A black body sphere of radius 0.1 m and emissivity 0.9 is at 500 K in surroundings at 300 K. Calculate the net power radiated. (σ = 5.67×10⁻⁸ W/m²·K⁴)",
-      "markscheme_answer": "A = 4πr² = 4π(0.01) = 0.126 m². P_net = εσA(T⁴ - T_s⁴) = 0.9 × 5.67×10⁻⁸ × 0.126 × (500⁴ - 300⁴) = 0.9 × 5.67×10⁻⁸ × 0.126 × (6.25×10¹⁰ - 8.1×10⁹) = 346 W",
+      "question_text": "A black body sphere of radius 0.1 m and emissivity 0.9 is at 500 K in surroundings at 300 K. Calculate the net power radiated. (\u03c3 = 5.67\u00d710\u207b\u2078 W/m\u00b2\u00b7K\u2074)",
+      "markscheme_answer": "A = 4\u03c0r\u00b2 = 4\u03c0(0.01) = 0.126 m\u00b2. P_net = \u03b5\u03c3A(T\u2074 - T_s\u2074) = 0.9 \u00d7 5.67\u00d710\u207b\u2078 \u00d7 0.126 \u00d7 (500\u2074 - 300\u2074) = 0.9 \u00d7 5.67\u00d710\u207b\u2078 \u00d7 0.126 \u00d7 (6.25\u00d710\u00b9\u2070 - 8.1\u00d710\u2079) = 346 W",
       "paper": "Paper 2",
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
@@ -263,8 +263,8 @@
     },
     {
       "level": "SL",
-      "question_text": "What is the relationship between wave speed (v), frequency (f), and wavelength (λ)?",
-      "markscheme_answer": "v = fλ",
+      "question_text": "What is the relationship between wave speed (v), frequency (f), and wavelength (\u03bb)?",
+      "markscheme_answer": "v = f\u03bb",
       "paper": "Paper 1",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -277,7 +277,7 @@
     {
       "level": "SL",
       "question_text": "A wave has frequency 500 Hz and wavelength 0.68 m. Calculate the wave speed.",
-      "markscheme_answer": "v = fλ = 500 × 0.68 = 340 m/s",
+      "markscheme_answer": "v = f\u03bb = 500 \u00d7 0.68 = 340 m/s",
       "paper": "Paper 1",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -290,7 +290,7 @@
     {
       "level": "SL",
       "question_text": "A transverse wave on a string has amplitude 5 cm and period 0.2 s. The string is 4 m long with 3 complete wavelengths. Find the wave speed.",
-      "markscheme_answer": "λ = 4/3 m. f = 1/T = 1/0.2 = 5 Hz. v = fλ = 5 × 4/3 = 20/3 ≈ 6.67 m/s",
+      "markscheme_answer": "\u03bb = 4/3 m. f = 1/T = 1/0.2 = 5 Hz. v = f\u03bb = 5 \u00d7 4/3 = 20/3 \u2248 6.67 m/s",
       "paper": "Paper 2",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -303,7 +303,7 @@
     {
       "level": "HL",
       "question_text": "Two coherent sources emit waves of wavelength 2 cm. A point P is 30 cm from one source and 34 cm from the other. Is there constructive or destructive interference at P?",
-      "markscheme_answer": "Path difference = 34 - 30 = 4 cm = 2λ. Since path difference = nλ (n = 2), there is constructive interference.",
+      "markscheme_answer": "Path difference = 34 - 30 = 4 cm = 2\u03bb. Since path difference = n\u03bb (n = 2), there is constructive interference.",
       "paper": "Paper 2",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -316,7 +316,7 @@
     {
       "level": "HL",
       "question_text": "Light of wavelength 600 nm passes through a double slit with separation 0.1 mm. The screen is 2 m away. Calculate the distance between the central maximum and the third bright fringe.",
-      "markscheme_answer": "y = mλD/d = 3 × 600×10⁻⁹ × 2 / (0.1×10⁻³) = 3 × 1.2×10⁻⁵ / 10⁻⁴ = 0.036 m = 36 mm",
+      "markscheme_answer": "y = m\u03bbD/d = 3 \u00d7 600\u00d710\u207b\u2079 \u00d7 2 / (0.1\u00d710\u207b\u00b3) = 3 \u00d7 1.2\u00d710\u207b\u2075 / 10\u207b\u2074 = 0.036 m = 36 mm",
       "paper": "Paper 2",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -342,7 +342,7 @@
     {
       "level": "SL",
       "question_text": "A string fixed at both ends has length 1.2 m. What is the wavelength of the third harmonic?",
-      "markscheme_answer": "For nth harmonic: L = nλ/2. For n=3: λ = 2L/3 = 2.4/3 = 0.8 m",
+      "markscheme_answer": "For nth harmonic: L = n\u03bb/2. For n=3: \u03bb = 2L/3 = 2.4/3 = 0.8 m",
       "paper": "Paper 1",
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
@@ -355,7 +355,7 @@
     {
       "level": "SL",
       "question_text": "A pipe open at both ends has length 0.85 m. The speed of sound is 340 m/s. What is the fundamental frequency?",
-      "markscheme_answer": "For open pipe: f₁ = v/(2L) = 340/(2×0.85) = 200 Hz",
+      "markscheme_answer": "For open pipe: f\u2081 = v/(2L) = 340/(2\u00d70.85) = 200 Hz",
       "paper": "Paper 2",
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
@@ -368,7 +368,7 @@
     {
       "level": "HL",
       "question_text": "A pipe closed at one end resonates at 170 Hz in its fundamental mode. What is the frequency of the next resonant mode? (Speed of sound = 340 m/s)",
-      "markscheme_answer": "Closed pipe: only odd harmonics. Next mode is 3rd harmonic: f₃ = 3f₁ = 3 × 170 = 510 Hz",
+      "markscheme_answer": "Closed pipe: only odd harmonics. Next mode is 3rd harmonic: f\u2083 = 3f\u2081 = 3 \u00d7 170 = 510 Hz",
       "paper": "Paper 2",
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
@@ -381,7 +381,7 @@
     {
       "level": "HL",
       "question_text": "Two tuning forks of frequencies 256 Hz and 260 Hz produce beats. A string resonates with the beat frequency. If the string has mass per unit length 0.01 kg/m and length 0.4 m, what tension produces resonance in the fundamental mode?",
-      "markscheme_answer": "Beat frequency = |260-256| = 4 Hz. For fundamental: f = (1/2L)√(T/μ). 4 = (1/0.8)√(T/0.01). 3.2 = √(T/0.01). T = 0.01 × 10.24 = 0.1024 N",
+      "markscheme_answer": "Beat frequency = |260-256| = 4 Hz. For fundamental: f = (1/2L)\u221a(T/\u03bc). 4 = (1/0.8)\u221a(T/0.01). 3.2 = \u221a(T/0.01). T = 0.01 \u00d7 10.24 = 0.1024 N",
       "paper": "Paper 2",
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
@@ -406,7 +406,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A 12 V battery is connected to a 4 Ω resistor. Calculate the current flowing.",
+      "question_text": "A 12 V battery is connected to a 4 \u03a9 resistor. Calculate the current flowing.",
       "markscheme_answer": "I = V/R = 12/4 = 3 A",
       "paper": "Paper 1",
       "topic": "current-circuits",
@@ -419,8 +419,8 @@
     },
     {
       "level": "SL",
-      "question_text": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. Find the equivalent resistance.",
-      "markscheme_answer": "1/R = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. R = 1 Ω",
+      "question_text": "Three resistors of 2 \u03a9, 3 \u03a9, and 6 \u03a9 are connected in parallel. Find the equivalent resistance.",
+      "markscheme_answer": "1/R = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. R = 1 \u03a9",
       "paper": "Paper 2",
       "topic": "current-circuits",
       "subtopic": "B.5 Circuits",
@@ -432,8 +432,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A cell of emf 6 V and internal resistance 0.5 Ω is connected to an external resistance of 2.5 Ω. Find the terminal voltage and power dissipated in the external resistor.",
-      "markscheme_answer": "I = E/(R+r) = 6/3 = 2 A. Terminal voltage V = E - Ir = 6 - 1 = 5 V. Power = I²R = 4 × 2.5 = 10 W",
+      "question_text": "A cell of emf 6 V and internal resistance 0.5 \u03a9 is connected to an external resistance of 2.5 \u03a9. Find the terminal voltage and power dissipated in the external resistor.",
+      "markscheme_answer": "I = E/(R+r) = 6/3 = 2 A. Terminal voltage V = E - Ir = 6 - 1 = 5 V. Power = I\u00b2R = 4 \u00d7 2.5 = 10 W",
       "paper": "Paper 2",
       "topic": "current-circuits",
       "subtopic": "B.5 Circuits",
@@ -445,8 +445,8 @@
     },
     {
       "level": "HL",
-      "question_text": "In a Wheatstone bridge, R₁ = 100 Ω, R₂ = 200 Ω, R₃ = 150 Ω. What value of R₄ balances the bridge? If the galvanometer has resistance 50 Ω and the bridge is supplied by 6 V, find the galvanometer current when R₄ = 250 Ω.",
-      "markscheme_answer": "For balance: R₁/R₂ = R₃/R₄ → 100/200 = 150/R₄ → R₄ = 300 Ω. When R₄ = 250 Ω, bridge is unbalanced. Use Thevenin equivalent or mesh analysis to find galvanometer current.",
+      "question_text": "In a Wheatstone bridge, R\u2081 = 100 \u03a9, R\u2082 = 200 \u03a9, R\u2083 = 150 \u03a9. What value of R\u2084 balances the bridge? If the galvanometer has resistance 50 \u03a9 and the bridge is supplied by 6 V, find the galvanometer current when R\u2084 = 250 \u03a9.",
+      "markscheme_answer": "For balance: R\u2081/R\u2082 = R\u2083/R\u2084 \u2192 100/200 = 150/R\u2084 \u2192 R\u2084 = 300 \u03a9. When R\u2084 = 250 \u03a9, bridge is unbalanced. Use Thevenin equivalent or mesh analysis to find galvanometer current.",
       "paper": "Paper 2",
       "topic": "current-circuits",
       "subtopic": "B.5 Circuits",
@@ -458,7 +458,7 @@
     },
     {
       "level": "SL",
-      "question_text": "The position–time diagrams of two objects, X and Y, are shown in the same graph. Which of the following is correct about the motion of X and Y?\n\nA) X and Y move with equal speed ✓\nB) X and Y move with equal velocity\nC) X and Y have equal displacement\nD) X and Y move in the same direction",
+      "question_text": "The position\u2013time diagrams of two objects, X and Y, are shown in the same graph. Which of the following is correct about the motion of X and Y?\n\nA) X and Y move with equal speed \u2713\nB) X and Y move with equal velocity\nC) X and Y have equal displacement\nD) X and Y move in the same direction",
       "markscheme_answer": "A) X and Y move with equal speed. Speed is the rate of change of distance. The magnitude of speed is scalar, so the negative sign on X's velocity does not affect its magnitude. Both have equal speed but opposite velocities.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -473,7 +473,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?\n\nA) I and II ✓\nB) II only\nC) I and III\nD) II and III",
+      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?\n\nA) I and II \u2713\nB) II only\nC) I and III\nD) II and III",
       "markscheme_answer": "A) I and II. Uniform acceleration means constant acceleration (I). On a straight road, distance equals displacement, so average speed equals average velocity (II). Statement III is incorrect.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -487,8 +487,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?\n\nA) 3u/g ✓\nB) 2u/g\nC) u/g\nD) 4u/g",
-      "markscheme_answer": "A) 3u/g. Time up: t₁ = u/g (v = u - gt, where v = 0). Time down: t₂ = 2u/g (v = gt, final speed = 2u). Total = u/g + 2u/g = 3u/g",
+      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?\n\nA) 3u/g \u2713\nB) 2u/g\nC) u/g\nD) 4u/g",
+      "markscheme_answer": "A) 3u/g. Time up: t\u2081 = u/g (v = u - gt, where v = 0). Time down: t\u2082 = 2u/g (v = gt, final speed = 2u). Total = u/g + 2u/g = 3u/g",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -501,7 +501,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?\n\nA) Distance: 2000 m, Displacement: 0 m ✓\nB) Distance: 0 m, Displacement: 2000 m\nC) Distance: 2000 m, Displacement: 2000 m\nD) Distance: 0 m, Displacement: 0 m",
+      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?\n\nA) Distance: 2000 m, Displacement: 0 m \u2713\nB) Distance: 0 m, Displacement: 2000 m\nC) Distance: 2000 m, Displacement: 2000 m\nD) Distance: 0 m, Displacement: 0 m",
       "markscheme_answer": "A) Distance: 2000 m, Displacement: 0 m. Total distance = 900 + 1100 = 2000 m. Displacement is zero since she returns to her starting point.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -515,7 +515,7 @@
     },
     {
       "level": "SL",
-      "question_text": "Which correctly lists scalar and vector quantities?\n\nA) Scalar: Distance and speed, Vector: Displacement and velocity ✓\nB) Scalar: Displacement and velocity, Vector: Distance and speed\nC) Scalar: Distance and velocity, Vector: Displacement and speed\nD) Scalar: Displacement and speed, Vector: Distance and velocity",
+      "question_text": "Which correctly lists scalar and vector quantities?\n\nA) Scalar: Distance and speed, Vector: Displacement and velocity \u2713\nB) Scalar: Displacement and velocity, Vector: Distance and speed\nC) Scalar: Distance and velocity, Vector: Displacement and speed\nD) Scalar: Displacement and speed, Vector: Distance and velocity",
       "markscheme_answer": "A) Scalar: Distance and speed (no direction), Vector: Displacement and velocity (have direction).",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -529,7 +529,7 @@
     },
     {
       "level": "SL",
-      "question_text": "An acceleration–time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?\n\nA) I and II ✓\nB) I only\nC) II only\nD) None",
+      "question_text": "An acceleration\u2013time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?\n\nA) I and II \u2713\nB) I only\nC) II only\nD) None",
       "markscheme_answer": "A) I and II. In both intervals acceleration is positive, so velocity increases. In I it increases uniformly, in II it increases non-uniformly.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -544,7 +544,7 @@
     },
     {
       "level": "SL",
-      "question_text": "Which graph represents an object that does not move in any direction?\n\nA) A horizontal line on a position-time graph ✓\nB) A diagonal line on a position-time graph\nC) A horizontal line on a velocity-time graph\nD) A diagonal line on an acceleration-time graph",
+      "question_text": "Which graph represents an object that does not move in any direction?\n\nA) A horizontal line on a position-time graph \u2713\nB) A diagonal line on a position-time graph\nC) A horizontal line on a velocity-time graph\nD) A diagonal line on an acceleration-time graph",
       "markscheme_answer": "A) A horizontal line on a position-time graph. When position doesn't change with time, the object is stationary. Note: zero acceleration doesn't mean no movement - it could be constant velocity.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -615,7 +615,7 @@
     {
       "level": "SL",
       "question_text": "A race car accelerates from rest to 55 m/s in 5.0 s. Calculate the acceleration.",
-      "markscheme_answer": "a = Δv/Δt = (55 - 0)/5.0 = 11 m/s²",
+      "markscheme_answer": "a = \u0394v/\u0394t = (55 - 0)/5.0 = 11 m/s\u00b2",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -628,8 +628,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A race car starts from rest with acceleration 8.0 m/s². What distance is covered after 4.0 s?",
-      "markscheme_answer": "s = ut + ½at² = 0 + ½ × 8.0 × 16 = 64 m",
+      "question_text": "A race car starts from rest with acceleration 8.0 m/s\u00b2. What distance is covered after 4.0 s?",
+      "markscheme_answer": "s = ut + \u00bdat\u00b2 = 0 + \u00bd \u00d7 8.0 \u00d7 16 = 64 m",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -642,8 +642,8 @@
     },
     {
       "level": "SL",
-      "question_text": "Speed increases from 10.5 km/h to 99.8 km/h in 2.41 s. Calculate acceleration in m/s².",
-      "markscheme_answer": "Convert: 10.5 km/h = 2.92 m/s, 99.8 km/h = 27.7 m/s. a = (27.7 - 2.92)/2.41 = 10.3 m/s²",
+      "question_text": "Speed increases from 10.5 km/h to 99.8 km/h in 2.41 s. Calculate acceleration in m/s\u00b2.",
+      "markscheme_answer": "Convert: 10.5 km/h = 2.92 m/s, 99.8 km/h = 27.7 m/s. a = (27.7 - 2.92)/2.41 = 10.3 m/s\u00b2",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -656,8 +656,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A ball is thrown at 20 m/s at 60° to the ground. What is its velocity at maximum height? (g = 9.8 m/s²)",
-      "markscheme_answer": "At max height, vy = 0. Only horizontal component remains: vx = 20 × cos(60°) = 10 m/s",
+      "question_text": "A ball is thrown at 20 m/s at 60\u00b0 to the ground. What is its velocity at maximum height? (g = 9.8 m/s\u00b2)",
+      "markscheme_answer": "At max height, vy = 0. Only horizontal component remains: vx = 20 \u00d7 cos(60\u00b0) = 10 m/s",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -670,8 +670,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A ball is thrown at 23.1 m/s at 30° to the ground. At point P (15.0 m horizontal distance), find the angle between velocity and horizontal. (g = 9.8 m/s²)",
-      "markscheme_answer": "vx = 23.1 × cos(30°) = 20.0 m/s. Time to P: t = 15.0/20.0 = 0.75 s. vy at P: vy = 11.55 - 9.8 × 0.75 = 4.20 m/s. Angle = tan⁻¹(4.20/20.0) = 11.9°",
+      "question_text": "A ball is thrown at 23.1 m/s at 30\u00b0 to the ground. At point P (15.0 m horizontal distance), find the angle between velocity and horizontal. (g = 9.8 m/s\u00b2)",
+      "markscheme_answer": "vx = 23.1 \u00d7 cos(30\u00b0) = 20.0 m/s. Time to P: t = 15.0/20.0 = 0.75 s. vy at P: vy = 11.55 - 9.8 \u00d7 0.75 = 4.20 m/s. Angle = tan\u207b\u00b9(4.20/20.0) = 11.9\u00b0",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -681,6 +681,209 @@
       ],
       "id": "kin-calc-005",
       "difficulty": "monster"
+    },
+    {
+      "id": "kin-num-001",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "Calculate the average speed (in m/s) of a cyclist who completes a 120 km race in 3 hours, 45 minutes, and 20 seconds.",
+      "answer": 8.88,
+      "unit": "m/s",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance $d = 120,000 \\text{ m}$.<br>Time $t = (3 \\times 3600) + (45 \\times 60) + 20 = 10800 + 2700 + 20 = 13520 \\text{ s}$.<br>Average speed $v = \\frac{120,000}{13520} \\approx 8.88 \\text{ m s}^{-1}$."
+    },
+    {
+      "id": "kin-num-002",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "A spaceship travels a distance of 450,000 km from Earth to the Moon in 72 hours, 10 minutes. What is its average speed in m/s?",
+      "answer": 1732,
+      "unit": "m/s",
+      "tolerance": 5,
+      "markscheme_answer": "Distance $d = 4.5 \\times 10^8 \\text{ m}$.<br>Time $t = (72 \\times 3600) + (10 \\times 60) = 259800 \\text{ s}$.<br>Average speed $v = \\frac{4.5 \\times 10^8}{259800} \\approx 1732 \\text{ m s}^{-1}$."
+    },
+    {
+      "id": "kin-num-003",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical",
+        "Gravity"
+      ],
+      "type": "numerical",
+      "question_text": "A rock dropped from a bridge takes 1.45 s to hit the water below. Calculate the height of the bridge in meters. (Assume g = 9.81 m/s\u00b2 and ignore air resistance)",
+      "answer": 10.3,
+      "unit": "m",
+      "tolerance": 0.2,
+      "markscheme_answer": "Initial velocity $u = 0$.<br>Time $t = 1.45 \\text{ s}$. Acceleration $a = 9.81 \\text{ m s}^{-2}$.<br>Height $s = 0 + \\frac{1}{2}(9.81)(1.45)^2 \\approx 10.3 \\text{ m}$."
+    },
+    {
+      "id": "kin-num-004",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical",
+        "Gravity"
+      ],
+      "type": "numerical",
+      "question_text": "A small ball is dropped from a cliff of height 45.0 m. How long does it take to reach the ground in seconds? (Use g = 9.81 m/s\u00b2)",
+      "answer": 3.03,
+      "unit": "s",
+      "tolerance": 0.05,
+      "markscheme_answer": "Displacement $s = 45.0 \\text{ m}$. Initial velocity $u = 0$.<br>Acceleration $a = 9.81 \\text{ m s}^{-2}$.<br>$s = \\frac{1}{2}at^2 \\implies 45.0 = \\frac{1}{2}(9.81)t^2$.<br>$t = \\sqrt{\\frac{90.0}{9.81}} \\approx 3.03 \\text{ s}$."
+    },
+    {
+      "id": "kin-num-005",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical",
+        "Gravity"
+      ],
+      "type": "numerical",
+      "question_text": "A drone drops a package from a height of 120 m. What is the package's instantaneous velocity magnitude just before it hits the ground? (Use g = 9.81 m/s\u00b2)",
+      "answer": 48.5,
+      "unit": "m/s",
+      "tolerance": 0.5,
+      "markscheme_answer": "Initial velocity $u = 0$.<br>Acceleration $a = 9.81 \\text{ m s}^{-2}$.<br>Displacement $s = 120 \\text{ m}$.<br>$v^2 = 0^2 + 2(9.81)(120) = 2354.4$.<br>Therefore, $v = \\sqrt{2354.4} \\approx 48.5 \\text{ m s}^{-1}$."
+    },
+    {
+      "id": "kin-num-006",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "A cart rolling down an inclined plane passes point A with a velocity of 2.5 m/s. A short time later, it passes point B with a velocity of 6.1 m/s. If the distance between A and B is 8.0 m, calculate the acceleration of the cart.",
+      "answer": 1.93,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.05,
+      "markscheme_answer": "Initial velocity $u = 2.5 \\text{ m s}^{-1}$.<br>Final velocity $v = 6.1 \\text{ m s}^{-1}$.<br>Distance $s = 8.0 \\text{ m}$.<br>Using $v^2 = u^2 + 2as$, we have $6.1^2 = 2.5^2 + 2(a)(8.0)$.<br>$37.21 = 6.25 + 16a \\implies 30.96 = 16a \\implies a \\approx 1.935 \\text{ m s}^{-2}$."
+    },
+    {
+      "id": "kin-num-007",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "A ball rolling down a slope passes a point P with a velocity of 1.2 m/s. It passes point Q with a velocity of 2.6 m/s. If it took 1.4 s to go from P to Q, determine the distance PQ.",
+      "answer": 2.66,
+      "unit": "m",
+      "tolerance": 0.05,
+      "markscheme_answer": "With constant acceleration, average velocity $v_{avg} = \\frac{u+v}{2} = \\frac{1.2 + 2.6}{2} = 1.9 \\text{ m s}^{-1}$.<br>The distance is $s = v_{avg} \\times t = 1.9 \\times 1.4 = 2.66 \\text{ m}$."
+    },
+    {
+      "id": "kin-num-008",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "advanced",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "An aircraft accelerates from rest along a runway and takes off with a velocity of 75.0 m/s. Its acceleration during this time is 3.20 m/s\u00b2. Calculate the distance along the runway that the aircraft needs to travel before take-off.",
+      "answer": 879,
+      "unit": "m",
+      "tolerance": 5,
+      "markscheme_answer": "Initial velocity $u = 0$.<br>Final velocity $v = 75.0 \\text{ m s}^{-1}$.<br>Acceleration $a = 3.20 \\text{ m s}^{-2}$.<br>$75.0^2 = 0 + 2(3.20)s \\implies 5625 = 6.4s \\implies s \\approx 878.9 \\text{ m}$."
+    },
+    {
+      "id": "kin-num-009",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "advanced",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical"
+      ],
+      "type": "numerical",
+      "question_text": "An ocean-going cruiser can decelerate no quicker than 0.0032 m/s\u00b2. Determine the minimum distance (in meters) needed to stop if the ship is travelling at 5.14 m/s (10 knots).",
+      "answer": 4131,
+      "unit": "m",
+      "tolerance": 10,
+      "markscheme_answer": "Initial velocity $u = 5.14 \\text{ m s}^{-1}$.<br>Final velocity $v = 0$.<br>Acceleration $a = -0.0032 \\text{ m s}^{-2}$.<br>$0 = 5.14^2 + 2(-0.0032)s \\implies 26.4196 = 0.0064s \\implies s \\approx 4128 \\text{ m}$."
+    },
+    {
+      "id": "kin-num-010",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "advanced",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical",
+        "Gravity"
+      ],
+      "type": "numerical",
+      "question_text": "A stone is thrown vertically upwards with an initial velocity of 6.2 m/s from a balcony 8.5 m above the ground. With what speed would it hit the ground? (Use g = 9.81 m/s\u00b2)",
+      "answer": 14.3,
+      "unit": "m/s",
+      "tolerance": 0.2,
+      "markscheme_answer": "Let upwards be positive.<br>$u = +6.2 \\text{ m s}^{-1}$. $a = -9.81 \\text{ m s}^{-2}$.<br>The final displacement is $s = -8.5 \\text{ m}$ (since it hits the ground below the starting point).<br>$v^2 = 6.2^2 + 2(-9.81)(-8.5) = 38.44 + 166.77 = 205.21$.<br>$v = \\sqrt{205.21} \\approx 14.3 \\text{ m s}^{-1}$. Note the speed is the magnitude."
+    },
+    {
+      "id": "kin-num-011",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "advanced",
+      "tags": [
+        "Calculator Allowed",
+        "Numerical",
+        "Gravity"
+      ],
+      "type": "numerical",
+      "question_text": "A small rock is thrown vertically upwards with an initial velocity of 22 m/s. Calculate the *later* time (in seconds) when its velocity magnitude is exactly 10 m/s. (Use g = 9.81 m/s\u00b2)",
+      "answer": 3.26,
+      "unit": "s",
+      "tolerance": 0.05,
+      "markscheme_answer": "The *later* time means it is coming back down.<br>On the way down, the velocity is $v = -10 \\text{ m s}^{-1}$.<br>Using $v = u + at$, we have $-10 = 22 - 9.81t \\implies 9.81t = 32 \\implies t \\approx 3.26 \\text{ s}$."
     }
   ]
 }
