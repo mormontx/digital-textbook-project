@@ -1019,7 +1019,7 @@
       ],
       "type": "numerical",
       "image": "assets/images/monster_graphs/kin-graph-f276616b.svg",
-      "question_text": "Determine the object's deceleration (magnitude of negative acceleration) between $t = 7$ s and $t = 10$ s.",
+      "question_text": "Determine the object's deceleration (magnitude of negative acceleration) between t = 7 s and t = 10 s.",
       "answer": 8.0,
       "unit": "m/s\u00b2",
       "tolerance": 0.1,
@@ -1385,7 +1385,7 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A stunt plane is flying horizontally at 45.0 m/s at an altitude of 180 m above flat ground. A sack of flour is released to strike a target on the ground. How large must the horizontal distance $x$ (in meters) from the plane to the target be at the instant of release? (Use g = 9.81 m/s\u00b2)",
+      "question_text": "A stunt plane is flying horizontally at 45.0 m/s at an altitude of 180 m above flat ground. A sack of flour is released to strike a target on the ground. How large must the horizontal distance x (in meters) from the plane to the target be at the instant of release? (Use g = 9.81 m/s\u00b2)",
       "answer": 273,
       "unit": "m",
       "tolerance": 2.0,

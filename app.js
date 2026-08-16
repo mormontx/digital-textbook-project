@@ -1073,8 +1073,34 @@ function renderQBQuestions() {
         return;
     }
     
-    // Randomize and select a subset (pool of 10) for a dynamic quiz feel
-    questions = questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    // Filter into categories for balanced selection
+    const graphQuestions = questions.filter(q => q.tags && q.tags.includes('Graphical'));
+    const hardQuestions = questions.filter(q => q.id.startsWith('kin-hard') && !(q.tags && q.tags.includes('Graphical')));
+    const regularQuestions = questions.filter(q => !(q.tags && q.tags.includes('Graphical')) && !q.id.startsWith('kin-hard'));
+
+    // Shuffle categories
+    graphQuestions.sort(() => 0.5 - Math.random());
+    hardQuestions.sort(() => 0.5 - Math.random());
+    regularQuestions.sort(() => 0.5 - Math.random());
+
+    // Select the required amounts
+    let selectedQuestions = [];
+    if (graphQuestions.length > 0) selectedQuestions.push(graphQuestions.pop());
+    if (hardQuestions.length > 0) selectedQuestions.push(hardQuestions.pop());
+    
+    // Fill the rest up to 10
+    while (selectedQuestions.length < 10 && regularQuestions.length > 0) {
+        selectedQuestions.push(regularQuestions.pop());
+    }
+    
+    // If still less than 10, fill with leftovers
+    const leftovers = [...graphQuestions, ...hardQuestions].sort(() => 0.5 - Math.random());
+    while (selectedQuestions.length < 10 && leftovers.length > 0) {
+        selectedQuestions.push(leftovers.pop());
+    }
+
+    // Final shuffle so the graph/hard aren't always questions 1 and 2
+    questions = selectedQuestions.sort(() => 0.5 - Math.random());
     
     let html = '';
     questions.forEach((q, idx) => {
