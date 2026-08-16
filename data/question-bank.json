@@ -265,12 +265,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "84.0",
-        "42",
-        "420.0",
-        "21.0"
+        "Conduction",
+        "Convection",
+        "Radiation",
+        "Insulation"
       ],
-      "answer": 1
+      "answer": 2
     },
     {
       "level": "SL",
@@ -348,10 +348,10 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "420.0",
-        "42",
-        "84.0",
-        "21.0"
+        "v = f/λ",
+        "v = fλ",
+        "v = λ/f",
+        "f = vλ"
       ],
       "answer": 1
     },
@@ -431,12 +431,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "21.0",
-        "420.0",
-        "42",
-        "84.0"
+        "Antinodes",
+        "Crests",
+        "Troughs",
+        "Nodes"
       ],
-      "answer": 2
+      "answer": 3
     },
     {
       "level": "SL",
@@ -514,12 +514,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "42",
-        "420.0",
-        "21.0",
-        "84.0"
+        "P = VI",
+        "V = IR",
+        "I = V/R²",
+        "R = V²I"
       ],
-      "answer": 0
+      "answer": 1
     },
     {
       "level": "SL",
@@ -756,12 +756,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "21.0",
-        "84.0",
-        "420.0",
-        "42"
+        "distance",
+        "acceleration",
+        "displacement",
+        "velocity"
       ],
-      "answer": 3
+      "answer": 2
     },
     {
       "level": "SL",
@@ -779,12 +779,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "84.0",
-        "420.0",
-        "21.0",
-        "42"
+        "increasing",
+        "decreasing",
+        "constant",
+        "exponential"
       ],
-      "answer": 3
+      "answer": 2
     },
     {
       "level": "SL",
@@ -802,12 +802,12 @@
       "difficulty": "beginner",
       "type": "mcq",
       "options": [
-        "21.0",
-        "84.0",
-        "420.0",
-        "42"
+        "maximum",
+        "initial",
+        "terminal",
+        "average"
       ],
-      "answer": 3
+      "answer": 2
     },
     {
       "level": "SL",
@@ -825,12 +825,12 @@
       "difficulty": "baby",
       "type": "mcq",
       "options": [
-        "21.0",
-        "420.0",
-        "42",
-        "84.0"
+        "constant",
+        "zero",
+        "maximum",
+        "negative"
       ],
-      "answer": 2
+      "answer": 1
     },
     {
       "level": "SL",

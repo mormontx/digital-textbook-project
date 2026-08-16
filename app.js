@@ -945,6 +945,14 @@ async function initQuestionBankMode() {
         await loadQuestionBankData();
     }
     
+    // Auto-select topic based on current page hash
+    let hash = window.location.hash.substring(1);
+    if (hash && navigationData && navigationData.coreThemes.some(t => t.id === hash || t.topics.some(topic => topic.id === hash))) {
+        currentTopicFilter = hash;
+    } else {
+        currentTopicFilter = 'all';
+    }
+    
     renderQBSidebar();
     setupQBFilters();
     renderQBQuestions();
