@@ -8,10 +8,19 @@
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "kin-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "5.0",
+        "10.0",
+        "10",
+        "20.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -21,10 +30,19 @@
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "kin-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "45",
+        "90.0",
+        "450.0",
+        "45.0"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
@@ -74,10 +92,19 @@
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "for-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "10.0",
+        "5",
+        "5.0",
+        "2.5"
+      ],
+      "answer": 1
     },
     {
       "level": "SL",
@@ -87,10 +114,19 @@
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "for-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "10.0",
+        "200.0",
+        "20",
+        "20.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -139,10 +175,19 @@
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "wep-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "50.0",
+        "500.0",
+        "25.0",
+        "50"
+      ],
+      "answer": 3
     },
     {
       "level": "SL",
@@ -152,10 +197,19 @@
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "wep-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "200.0",
+        "10.0",
+        "20",
+        "20.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -204,10 +258,19 @@
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "tet-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "84.0",
+        "42",
+        "420.0",
+        "21.0"
+      ],
+      "answer": 1
     },
     {
       "level": "SL",
@@ -217,10 +280,19 @@
       "topic": "thermal-energy-transfers",
       "subtopic": "B.1 Thermal Energy",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "tet-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "84.0",
+        "84",
+        "168.0",
+        "840.0"
+      ],
+      "answer": 1
     },
     {
       "level": "SL",
@@ -269,10 +341,19 @@
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "wm-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "420.0",
+        "42",
+        "84.0",
+        "21.0"
+      ],
+      "answer": 1
     },
     {
       "level": "SL",
@@ -282,10 +363,19 @@
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "wm-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "3400.0",
+        "170.0",
+        "340",
+        "340.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -334,10 +424,19 @@
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "swr-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "21.0",
+        "420.0",
+        "42",
+        "84.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -347,10 +446,19 @@
       "topic": "standing-waves-resonance",
       "subtopic": "C.4 Standing Waves",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "swr-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "1.6",
+        "0.8",
+        "8.0",
+        "0.4"
+      ],
+      "answer": 1
     },
     {
       "level": "SL",
@@ -399,10 +507,19 @@
       "topic": "current-circuits",
       "subtopic": "B.5 Circuits",
       "tags": [
-        "No Calculator"
+        "No Calculator",
+        "MCQ"
       ],
       "id": "cc-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "42",
+        "420.0",
+        "21.0",
+        "84.0"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
@@ -412,10 +529,19 @@
       "topic": "current-circuits",
       "subtopic": "B.5 Circuits",
       "tags": [
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "cc-002",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "3.0",
+        "1.5",
+        "3",
+        "30.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -466,19 +592,24 @@
       "tags": [
         "Numerical",
         "Projectile",
-        "Calculator Allowed"
+        "Calculator Allowed",
+        "MCQ"
       ],
       "id": "kin-mcq-001",
       "image": "assets/images/monster_graphs/projectile_p.svg",
       "difficulty": "beginner",
-      "type": "numerical",
-      "answer": 12.7,
-      "unit": "m",
-      "tolerance": 0.2
+      "type": "mcq",
+      "answer": 0,
+      "options": [
+        "12.7 m",
+        "25.4 m",
+        "6.35 m",
+        "127.0 m"
+      ]
     },
     {
       "level": "SL",
-      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?\n\nA) I and II\nB) II only\nC) I and III\nD) II and III",
+      "question_text": "A car accelerates uniformly on a straight road with a positive velocity. Three statements are given:\n\nI. The acceleration is constant.\nII. The magnitude of the car's average speed is equal to that of its average velocity.\nIII. The magnitude of the distance travelled by the car is longer than its displacement.\n\nWhich statements are correct?",
       "markscheme_answer": "A) I and II. Uniform acceleration means constant acceleration (I). On a straight road, distance equals displacement, so average speed equals average velocity (II). Statement III is incorrect.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -488,11 +619,19 @@
         "Uniform Acceleration"
       ],
       "id": "kin-mcq-002",
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "options": [
+        "I and II",
+        "II only",
+        "I and III",
+        "II and III"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
-      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?\n\nA) 3u/g\nB) 2u/g\nC) u/g\nD) 4u/g",
+      "question_text": "A rock is thrown vertically upwards from a cliff edge with initial speed u. It hits the ground with speed 2u. What is the total flight time?",
       "markscheme_answer": "A) 3u/g. Time up: t₁ = u/g (v = u - gt, where v = 0). Time down: t₂ = 2u/g (v = gt, final speed = 2u). Total = u/g + 2u/g = 3u/g",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -502,11 +641,19 @@
         "Vertical Motion"
       ],
       "id": "kin-mcq-003",
-      "difficulty": "advanced"
+      "difficulty": "advanced",
+      "type": "mcq",
+      "options": [
+        "3u/g",
+        "2u/g",
+        "u/g",
+        "4u/g"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
-      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?\n\nA) Distance: 2000 m, Displacement: 0 m\nB) Distance: 0 m, Displacement: 2000 m\nC) Distance: 2000 m, Displacement: 2000 m\nD) Distance: 0 m, Displacement: 0 m",
+      "question_text": "A student walks 900 m to school and 1100 m back home via a different route. What is the total distance and displacement?",
       "markscheme_answer": "A) Distance: 2000 m, Displacement: 0 m. Total distance = 900 + 1100 = 2000 m. Displacement is zero since she returns to her starting point.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -516,11 +663,19 @@
         "Distance vs Displacement"
       ],
       "id": "kin-mcq-004",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "Distance: 2000 m, Displacement: 0 m",
+        "Distance: 0 m, Displacement: 2000 m",
+        "Distance: 2000 m, Displacement: 2000 m",
+        "Distance: 0 m, Displacement: 0 m"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
-      "question_text": "Which correctly lists scalar and vector quantities?\n\nA) Scalar: Distance and speed, Vector: Displacement and velocity\nB) Scalar: Displacement and velocity, Vector: Distance and speed\nC) Scalar: Distance and velocity, Vector: Displacement and speed\nD) Scalar: Displacement and speed, Vector: Distance and velocity",
+      "question_text": "Which correctly lists scalar and vector quantities?",
       "markscheme_answer": "A) Scalar: Distance and speed (no direction), Vector: Displacement and velocity (have direction).",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -530,11 +685,19 @@
         "Scalar vs Vector"
       ],
       "id": "kin-mcq-005",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "Scalar: Distance and speed, Vector: Displacement and velocity",
+        "Scalar: Displacement and velocity, Vector: Distance and speed",
+        "Scalar: Distance and velocity, Vector: Displacement and speed",
+        "Scalar: Displacement and speed, Vector: Distance and velocity"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
-      "question_text": "An acceleration–time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?\n\nA) I and II\nB) I only\nC) II only\nD) None",
+      "question_text": "An acceleration–time graph shows positive constant acceleration in interval I, then decreasing but positive acceleration in interval II. During which interval(s) does velocity increase?",
       "markscheme_answer": "A) I and II. In both intervals acceleration is positive, so velocity increases. In I it increases uniformly, in II it increases non-uniformly.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -545,11 +708,19 @@
       ],
       "id": "kin-mcq-006",
       "image": "images/questions/image2.png",
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "options": [
+        "I and II",
+        "I only",
+        "II only",
+        "None"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
-      "question_text": "Which graph represents an object that does not move in any direction?\n\nA) A horizontal line on a position-time graph\nB) A diagonal line on a position-time graph\nC) A horizontal line on a velocity-time graph\nD) A diagonal line on an acceleration-time graph",
+      "question_text": "Which graph represents an object that does not move in any direction?",
       "markscheme_answer": "A) A horizontal line on a position-time graph. When position doesn't change with time, the object is stationary. Note: zero acceleration doesn't mean no movement - it could be constant velocity.",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -559,7 +730,15 @@
         "Position-Time Graph"
       ],
       "id": "kin-mcq-007",
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "options": [
+        "A horizontal line on a position-time graph",
+        "A diagonal line on a position-time graph",
+        "A horizontal line on a velocity-time graph",
+        "A diagonal line on an acceleration-time graph"
+      ],
+      "answer": 0
     },
     {
       "level": "SL",
@@ -570,10 +749,19 @@
       "subtopic": "A.1 Kinematics",
       "tags": [
         "Fill-in-blank",
-        "Displacement"
+        "Displacement",
+        "MCQ"
       ],
       "id": "kin-fill-001",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "21.0",
+        "84.0",
+        "420.0",
+        "42"
+      ],
+      "answer": 3
     },
     {
       "level": "SL",
@@ -584,10 +772,19 @@
       "subtopic": "A.1 Kinematics",
       "tags": [
         "Fill-in-blank",
-        "Acceleration"
+        "Acceleration",
+        "MCQ"
       ],
       "id": "kin-fill-002",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "84.0",
+        "420.0",
+        "21.0",
+        "42"
+      ],
+      "answer": 3
     },
     {
       "level": "SL",
@@ -598,10 +795,19 @@
       "subtopic": "A.1 Kinematics",
       "tags": [
         "Fill-in-blank",
-        "Terminal Velocity"
+        "Terminal Velocity",
+        "MCQ"
       ],
       "id": "kin-fill-003",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "21.0",
+        "84.0",
+        "420.0",
+        "42"
+      ],
+      "answer": 3
     },
     {
       "level": "SL",
@@ -612,10 +818,19 @@
       "subtopic": "A.1 Kinematics",
       "tags": [
         "Fill-in-blank",
-        "Constant Velocity"
+        "Constant Velocity",
+        "MCQ"
       ],
       "id": "kin-fill-004",
-      "difficulty": "baby"
+      "difficulty": "baby",
+      "type": "mcq",
+      "options": [
+        "21.0",
+        "420.0",
+        "42",
+        "84.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",
@@ -626,10 +841,19 @@
       "subtopic": "A.1 Kinematics",
       "tags": [
         "Calculation",
-        "Acceleration"
+        "Acceleration",
+        "MCQ"
       ],
       "id": "kin-calc-001",
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "type": "mcq",
+      "options": [
+        "5.5",
+        "11.0",
+        "11",
+        "110.0"
+      ],
+      "answer": 2
     },
     {
       "level": "SL",

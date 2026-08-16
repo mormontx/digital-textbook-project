@@ -1127,6 +1127,16 @@ function renderQBQuestions() {
                                <span style="color: #d8b4fe; font-size: 1.1rem;">${q.unit || ''}</span>
                            </div>
                            <div id="feedback-${q.id}" style="margin-top: 10px; font-size: 1rem;"></div>`
+                        : q.type === 'mcq' && q.options
+                        ? `<div class="qb-mcq-options" style="display: flex; flex-direction: column; gap: 10px;">
+                               ${q.options.map((opt, i) => `
+                                   <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px; border-radius: 6px; background: rgba(76, 29, 149, 0.2); border: 1px solid rgba(76, 29, 149, 0.5);">
+                                       <input type="radio" name="mcq-${q.id}" value="${i}" style="accent-color: #39ff14; width: 1.2rem; height: 1.2rem;">
+                                       <span style="color: #ede9fe; font-size: 1rem;">${String.fromCharCode(65 + i)}) ${opt}</span>
+                                   </label>
+                               `).join('')}
+                           </div>
+                           <div id="feedback-${q.id}" style="margin-top: 10px; font-size: 1rem;"></div>`
                         : `<textarea class="qb-answer-textarea" id="input-${q.id}" placeholder="Write your answer here..."></textarea>`
                     }
                 </div>
@@ -1190,6 +1200,27 @@ function gradeAnswer(questionId) {
             feedbackEl.innerHTML = '<span style="color: #ef4444; font-weight: bold;">Incorrect.</span> See Markscheme.';
             inputEl.style.border = '2px solid #ef4444';
             inputEl.style.background = 'rgba(239, 68, 68, 0.1)';
+        }
+    } else if (q.type === 'mcq') {
+        const feedbackEl = document.getElementById(`feedback-${questionId}`);
+        const selected = document.querySelector(`input[name="mcq-${questionId}"]:checked`);
+        
+        if (!selected) {
+            feedbackEl.innerHTML = '<span style="color: #ef4444;">Please select an option.</span>';
+            return;
+        }
+        
+        const userIdx = parseInt(selected.value);
+        const correctIdx = q.answer;
+        
+        if (userIdx === correctIdx) {
+            feedbackEl.innerHTML = `<span style="color: #22c55e; font-weight: bold;">Correct!</span>`;
+            selected.parentElement.style.border = '2px solid #22c55e';
+            selected.parentElement.style.background = 'rgba(34, 197, 94, 0.1)';
+        } else {
+            feedbackEl.innerHTML = '<span style="color: #ef4444; font-weight: bold;">Incorrect.</span> See Markscheme.';
+            selected.parentElement.style.border = '2px solid #ef4444';
+            selected.parentElement.style.background = 'rgba(239, 68, 68, 0.1)';
         }
     }
     
