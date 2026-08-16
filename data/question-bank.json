@@ -3,7 +3,7 @@
     {
       "level": "SL",
       "question_text": "A car travels 100 m in 10 s at constant speed. What is its speed?",
-      "markscheme_answer": "Speed = distance / time = 100 m / 10 s = 10 m s^-1",
+      "markscheme_answer": "Speed = distance / time = 100 m / 10 s = 10 ms<sup>-1</sup>",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -15,7 +15,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A ball is dropped from rest and falls for 3 s. How far does it fall? (g = 10 m s^-2)",
+      "question_text": "A ball is dropped from rest and falls for 3 s. How far does it fall? (g = 10 ms<sup>-2</sup>)",
       "markscheme_answer": "s = ½gt² = ½ × 10 × 9 = 45 m",
       "paper": "Paper 1",
       "topic": "kinematics",
@@ -29,7 +29,7 @@
     {
       "level": "SL",
       "question_text": "The diagram shows the velocity–time graph of a car.\n\n\nWhat is the average velocity of the car?\n\n",
-      "markscheme_answer": "v² = u² + 2as → 625 = 25 + 2a(60) → a = 600/120 = 5 m s^-2",
+      "markscheme_answer": "v² = u² + 2as → 625 = 25 + 2a(60) → a = 600/120 = 5 ms<sup>-2</sup>",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -42,8 +42,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A projectile is launched at 30° above horizontal with initial speed 20 m s^-1. Find the maximum height reached. (g = 10 m s^-2)",
-      "markscheme_answer": "v_y = 20 sin(30°) = 10 m s^-1. At max height, v = 0: h = v²/(2g) = 100/20 = 5 m",
+      "question_text": "A projectile is launched at 30° above horizontal with initial speed 20 ms<sup>-1</sup>. Find the maximum height reached. (g = 10 ms<sup>-2</sup>)",
+      "markscheme_answer": "v_y = 20 sin(30°) = 10 ms<sup>-1</sup>. At max height, v = 0: h = v²/(2g) = 100/20 = 5 m",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -55,7 +55,7 @@
     },
     {
       "level": "HL",
-      "question_text": "Two balls are thrown simultaneously: Ball A is thrown upward at 15 m s^-1 from ground level, Ball B is dropped from 25 m height. When and where do they meet? (g = 10 m s^-2)",
+      "question_text": "Two balls are thrown simultaneously: Ball A is thrown upward at 15 ms<sup>-1</sup> from ground level, Ball B is dropped from 25 m height. When and where do they meet? (g = 10 ms<sup>-2</sup>)",
       "markscheme_answer": "Position A: y_A = 15t - 5t². Position B: y_B = 25 - 5t². When they meet: 15t - 5t² = 25 - 5t² → 15t = 25 → t = 5/3 s. Height: y = 15(5/3) - 5(25/9) = 25 - 125/9 = 100/9 ≈ 11.1 m",
       "paper": "Paper 2",
       "topic": "kinematics",
@@ -69,7 +69,7 @@
     {
       "level": "SL",
       "question_text": "A 2 kg object experiences a net force of 10 N. What is its acceleration?",
-      "markscheme_answer": "a = F/m = 10/2 = 5 m s^-2",
+      "markscheme_answer": "a = F/m = 10/2 = 5 ms<sup>-2</sup>",
       "paper": "Paper 1",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -81,7 +81,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A 5 kg box rests on a horizontal surface. The coefficient of static friction is 0.4. What is the maximum horizontal force that can be applied before the box moves? (g = 10 m s^-2)",
+      "question_text": "A 5 kg box rests on a horizontal surface. The coefficient of static friction is 0.4. What is the maximum horizontal force that can be applied before the box moves? (g = 10 ms<sup>-2</sup>)",
       "markscheme_answer": "F_max = μN = μmg = 0.4 × 5 × 10 = 20 N",
       "paper": "Paper 1",
       "topic": "forces-momentum",
@@ -94,8 +94,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A 3 kg object moving at 4 m s^-1 collides with a stationary 1 kg object. They stick together. Find their common velocity after collision.",
-      "markscheme_answer": "Conservation of momentum: m₁v₁ + m₂v₂ = (m₁+m₂)v. 3×4 + 0 = 4v → v = 3 m s^-1",
+      "question_text": "A 3 kg object moving at 4 ms<sup>-1</sup> collides with a stationary 1 kg object. They stick together. Find their common velocity after collision.",
+      "markscheme_answer": "Conservation of momentum: m₁v₁ + m₂v₂ = (m₁+m₂)v. 3×4 + 0 = 4v → v = 3 ms<sup>-1</sup>",
       "paper": "Paper 2",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -107,8 +107,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A 2 kg block on a 30° incline is connected by a massless rope over a pulley to a hanging 3 kg mass. Find the acceleration of the system. (μ = 0.2, g = 10 m s^-2)",
-      "markscheme_answer": "For hanging mass: 30 - T = 3a. For block: T - 2g(sin30° + μcos30°) = 2a. T - 10 - 0.2×2×10×0.866 = 2a. T - 13.46 = 2a. Solving: a = (30 - 13.46)/5 = 3.3 m s^-2",
+      "question_text": "A 2 kg block on a 30° incline is connected by a massless rope over a pulley to a hanging 3 kg mass. Find the acceleration of the system. (μ = 0.2, g = 10 ms<sup>-2</sup>)",
+      "markscheme_answer": "For hanging mass: 30 - T = 3a. For block: T - 2g(sin30° + μcos30°) = 2a. T - 10 - 0.2×2×10×0.866 = 2a. T - 13.46 = 2a. Solving: a = (30 - 13.46)/5 = 3.3 ms<sup>-2</sup>",
       "paper": "Paper 2",
       "topic": "forces-momentum",
       "subtopic": "A.2 Forces",
@@ -120,7 +120,7 @@
     },
     {
       "level": "HL",
-      "question_text": "A rocket of initial mass 1000 kg ejects gas at 500 m s^-1 relative to the rocket at a rate of 5 kg/s. What is the initial acceleration of the rocket if it launches vertically? (g = 10 m s^-2)",
+      "question_text": "A rocket of initial mass 1000 kg ejects gas at 500 ms<sup>-1</sup> relative to the rocket at a rate of 5 kg/s. What is the initial acceleration of the rocket if it launches vertically? (g = 10 ms<sup>-2</sup>)",
       "markscheme_answer": "Thrust = v_exhaust × dm/dt = 500 × 5 = 2500 N. Weight = 1000 × 10 = 10000 N. Net force = 2500 - 10000 = -7500 N (cannot lift off initially). If thrust exceeds weight: a = (F - mg)/m",
       "paper": "Paper 2",
       "topic": "forces-momentum",
@@ -146,8 +146,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A 2 kg ball is dropped from 20 m. What is its speed just before hitting the ground? (g = 10 m s^-2)",
-      "markscheme_answer": "mgh = ½mv² → v = √(2gh) = √(2×10×20) = 20 m s^-1",
+      "question_text": "A 2 kg ball is dropped from 20 m. What is its speed just before hitting the ground? (g = 10 ms<sup>-2</sup>)",
+      "markscheme_answer": "mgh = ½mv² → v = √(2gh) = √(2×10×20) = 20 ms<sup>-1</sup>",
       "paper": "Paper 1",
       "topic": "work-energy-power",
       "subtopic": "A.3 Work, Energy, Power",
@@ -159,7 +159,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A 1500 kg car accelerates from rest to 20 m s^-1 in 10 s. Calculate the average power developed.",
+      "question_text": "A 1500 kg car accelerates from rest to 20 ms<sup>-1</sup> in 10 s. Calculate the average power developed.",
       "markscheme_answer": "KE = ½mv² = ½×1500×400 = 300,000 J. Power = Work/time = 300,000/10 = 30,000 W = 30 kW",
       "paper": "Paper 2",
       "topic": "work-energy-power",
@@ -277,7 +277,7 @@
     {
       "level": "SL",
       "question_text": "A wave has frequency 500 Hz and wavelength 0.68 m. Calculate the wave speed.",
-      "markscheme_answer": "v = fλ = 500 × 0.68 = 340 m s^-1",
+      "markscheme_answer": "v = fλ = 500 × 0.68 = 340 ms<sup>-1</sup>",
       "paper": "Paper 1",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -290,7 +290,7 @@
     {
       "level": "SL",
       "question_text": "A transverse wave on a string has amplitude 5 cm and period 0.2 s. The string is 4 m long with 3 complete wavelengths. Find the wave speed.",
-      "markscheme_answer": "λ = 4/3 m. f = 1/T = 1/0.2 = 5 Hz. v = fλ = 5 × 4/3 = 20/3 ≈ 6.67 m s^-1",
+      "markscheme_answer": "λ = 4/3 m. f = 1/T = 1/0.2 = 5 Hz. v = fλ = 5 × 4/3 = 20/3 ≈ 6.67 ms<sup>-1</sup>",
       "paper": "Paper 2",
       "topic": "wave-model",
       "subtopic": "C.2 Wave Model",
@@ -354,7 +354,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A pipe open at both ends has length 0.85 m. The speed of sound is 340 m s^-1. What is the fundamental frequency?",
+      "question_text": "A pipe open at both ends has length 0.85 m. The speed of sound is 340 ms<sup>-1</sup>. What is the fundamental frequency?",
       "markscheme_answer": "For open pipe: f₁ = v/(2L) = 340/(2×0.85) = 200 Hz",
       "paper": "Paper 2",
       "topic": "standing-waves-resonance",
@@ -367,7 +367,7 @@
     },
     {
       "level": "HL",
-      "question_text": "A pipe closed at one end resonates at 170 Hz in its fundamental mode. What is the frequency of the next resonant mode? (Speed of sound = 340 m s^-1)",
+      "question_text": "A pipe closed at one end resonates at 170 Hz in its fundamental mode. What is the frequency of the next resonant mode? (Speed of sound = 340 ms<sup>-1</sup>)",
       "markscheme_answer": "Closed pipe: only odd harmonics. Next mode is 3rd harmonic: f₃ = 3f₁ = 3 × 170 = 510 Hz",
       "paper": "Paper 2",
       "topic": "standing-waves-resonance",
@@ -458,18 +458,23 @@
     },
     {
       "level": "SL",
-      "question_text": "The position–time diagrams of two objects, X and Y, are shown in the same graph. Which of the following is correct about the motion of X and Y?\n\nA) X and Y move with equal speed ✓\nB) X and Y move with equal velocity\nC) X and Y have equal displacement\nD) X and Y move in the same direction",
-      "markscheme_answer": "A) X and Y move with equal speed. Speed is the rate of change of distance. The magnitude of speed is scalar, so the negative sign on X's velocity does not affect its magnitude. Both have equal speed but opposite velocities.",
+      "question_text": "A projectile is launched from the ground with an initial speed of 28.5 ms<sup>-1</sup> at an angle of 40° to the horizontal. Calculate the height of the projectile at point P (in meters) when it has traveled a horizontal distance of 20.0 m. (Use g = 9.81 ms<sup>-2</sup>)",
+      "markscheme_answer": "Horizontal velocity: $u_x = 28.5 \\cos(40^\\circ) = 21.83 \\text{ ms}^{-1}$.<br>Vertical velocity: $u_y = 28.5 \\sin(40^\\circ) = 18.32 \\text{ ms}^{-1}$.<br>Time to reach 20.0 m: $t = \\frac{20.0}{21.83} = 0.916 \\text{ s}$.<br>Height at P: $y = u_y t - \\frac{1}{2}gt^2 = 18.32(0.916) - 4.905(0.916)^2 = 16.78 - 4.12 = 12.66 \\approx 12.7 \\text{ m}$.",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
       "tags": [
-        "MCQ",
-        "Position-Time Graph"
+        "Numerical",
+        "Projectile",
+        "Calculator Allowed"
       ],
       "id": "kin-mcq-001",
-      "image": "images/questions/image1.png",
-      "difficulty": "beginner"
+      "image": "assets/images/monster_graphs/projectile_p.svg",
+      "difficulty": "beginner",
+      "type": "numerical",
+      "answer": 12.7,
+      "unit": "m",
+      "tolerance": 0.2
     },
     {
       "level": "SL",
@@ -614,8 +619,8 @@
     },
     {
       "level": "SL",
-      "question_text": "A race car accelerates from rest to 55 m s^-1 in 5.0 s. Calculate the acceleration.",
-      "markscheme_answer": "a = Δv/Δt = (55 - 0)/5.0 = 11 m s^-2",
+      "question_text": "A race car accelerates from rest to 55 ms<sup>-1</sup> in 5.0 s. Calculate the acceleration.",
+      "markscheme_answer": "a = Δv/Δt = (55 - 0)/5.0 = 11 ms<sup>-2</sup>",
       "paper": "Paper 1",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -628,7 +633,7 @@
     },
     {
       "level": "SL",
-      "question_text": "A race car starts from rest with acceleration 8.0 m s^-2. What distance is covered after 4.0 s?",
+      "question_text": "A race car starts from rest with acceleration 8.0 ms<sup>-2</sup>. What distance is covered after 4.0 s?",
       "markscheme_answer": "s = ut + ½at² = 0 + ½ × 8.0 × 16 = 64 m",
       "paper": "Paper 2",
       "topic": "kinematics",
@@ -642,8 +647,8 @@
     },
     {
       "level": "SL",
-      "question_text": "Speed increases from 10.5 km h^-1 to 99.8 km h^-1 in 2.41 s. Calculate acceleration in m s^-2.",
-      "markscheme_answer": "Convert: 10.5 km h^-1 = 2.92 m s^-1, 99.8 km h^-1 = 27.7 m s^-1. a = (27.7 - 2.92)/2.41 = 10.3 m s^-2",
+      "question_text": "Speed increases from 10.5 kmh<sup>-1</sup> to 99.8 kmh<sup>-1</sup> in 2.41 s. Calculate acceleration in ms<sup>-2</sup>.",
+      "markscheme_answer": "Convert: 10.5 kmh<sup>-1</sup> = 2.92 ms<sup>-1</sup>, 99.8 kmh<sup>-1</sup> = 27.7 ms<sup>-1</sup>. a = (27.7 - 2.92)/2.41 = 10.3 ms<sup>-2</sup>",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -656,8 +661,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A ball is thrown at 20 m s^-1 at 60° to the ground. What is its velocity at maximum height? (g = 9.8 m s^-2)",
-      "markscheme_answer": "At max height, vy = 0. Only horizontal component remains: vx = 20 × cos(60°) = 10 m s^-1",
+      "question_text": "A ball is thrown at 20 ms<sup>-1</sup> at 60° to the ground. What is its velocity at maximum height? (g = 9.8 ms<sup>-2</sup>)",
+      "markscheme_answer": "At max height, vy = 0. Only horizontal component remains: vx = 20 × cos(60°) = 10 ms<sup>-1</sup>",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -670,8 +675,8 @@
     },
     {
       "level": "HL",
-      "question_text": "A ball is thrown at 23.1 m s^-1 at 30° to the ground. At point P (15.0 m horizontal distance), find the angle between velocity and horizontal. (g = 9.8 m s^-2)",
-      "markscheme_answer": "vx = 23.1 × cos(30°) = 20.0 m s^-1. Time to P: t = 15.0/20.0 = 0.75 s. vy at P: vy = 11.55 - 9.8 × 0.75 = 4.20 m s^-1. Angle = tan⁻¹(4.20/20.0) = 11.9°",
+      "question_text": "A ball is thrown at 23.1 ms<sup>-1</sup> at 30° to the ground. At point P (15.0 m horizontal distance), find the angle between velocity and horizontal. (g = 9.8 ms<sup>-2</sup>)",
+      "markscheme_answer": "vx = 23.1 × cos(30°) = 20.0 ms<sup>-1</sup>. Time to P: t = 15.0/20.0 = 0.75 s. vy at P: vy = 11.55 - 9.8 × 0.75 = 4.20 ms<sup>-1</sup>. Angle = tan⁻¹(4.20/20.0) = 11.9°",
       "paper": "Paper 2",
       "topic": "kinematics",
       "subtopic": "A.1 Kinematics",
@@ -694,9 +699,9 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "Calculate the average speed (in m s^-1) of a cyclist who completes a 120 km race in 3 hours, 45 minutes, and 20 seconds.",
+      "question_text": "Calculate the average speed (in ms<sup>-1</sup>) of a cyclist who completes a 120 km race in 3 hours, 45 minutes, and 20 seconds.",
       "answer": 8.88,
-      "unit": "m s^-1",
+      "unit": "ms<sup>-1</sup>",
       "tolerance": 0.1,
       "markscheme_answer": "Distance $d = 120,000 \\text{ m}$.<br>Time $t = (3 \\times 3600) + (45 \\times 60) + 20 = 10800 + 2700 + 20 = 13520 \\text{ s}$.<br>Average speed $v = \\frac{120,000}{13520} \\approx 8.88 \\text{ m s}^{-1}$."
     },
@@ -712,9 +717,9 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A spaceship travels a distance of 450,000 km from Earth to the Moon in 72 hours, 10 minutes. What is its average speed in m s^-1?",
+      "question_text": "A spaceship travels a distance of 450,000 km from Earth to the Moon in 72 hours, 10 minutes. What is its average speed in ms<sup>-1</sup>?",
       "answer": 1732,
-      "unit": "m s^-1",
+      "unit": "ms<sup>-1</sup>",
       "tolerance": 5,
       "markscheme_answer": "Distance $d = 4.5 \\times 10^8 \\text{ m}$.<br>Time $t = (72 \\times 3600) + (10 \\times 60) = 259800 \\text{ s}$.<br>Average speed $v = \\frac{4.5 \\times 10^8}{259800} \\approx 1732 \\text{ m s}^{-1}$."
     },
@@ -731,7 +736,7 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A rock dropped from a bridge takes 1.45 s to hit the water below. Calculate the height of the bridge in meters. (Assume g = 9.81 m s^-2 and ignore air resistance)",
+      "question_text": "A rock dropped from a bridge takes 1.45 s to hit the water below. Calculate the height of the bridge in meters. (Assume g = 9.81 ms<sup>-2</sup> and ignore air resistance)",
       "answer": 10.3,
       "unit": "m",
       "tolerance": 0.2,
@@ -750,7 +755,7 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A small ball is dropped from a cliff of height 45.0 m. How long does it take to reach the ground in seconds? (Use g = 9.81 m s^-2)",
+      "question_text": "A small ball is dropped from a cliff of height 45.0 m. How long does it take to reach the ground in seconds? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 3.03,
       "unit": "s",
       "tolerance": 0.05,
@@ -769,9 +774,9 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A drone drops a package from a height of 120 m. What is the package's instantaneous velocity magnitude just before it hits the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A drone drops a package from a height of 120 m. What is the package's instantaneous velocity magnitude just before it hits the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 48.5,
-      "unit": "m s^-1",
+      "unit": "ms<sup>-1</sup>",
       "tolerance": 0.5,
       "markscheme_answer": "Initial velocity $u = 0$.<br>Acceleration $a = 9.81 \\text{ m s}^{-2}$.<br>Displacement $s = 120 \\text{ m}$.<br>$v^2 = 0^2 + 2(9.81)(120) = 2354.4$.<br>Therefore, $v = \\sqrt{2354.4} \\approx 48.5 \\text{ m s}^{-1}$."
     },
@@ -787,9 +792,9 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A cart rolling down an inclined plane passes point A with a velocity of 2.5 m s^-1. A short time later, it passes point B with a velocity of 6.1 m s^-1. If the distance between A and B is 8.0 m, calculate the acceleration of the cart.",
+      "question_text": "A cart rolling down an inclined plane passes point A with a velocity of 2.5 ms<sup>-1</sup>. A short time later, it passes point B with a velocity of 6.1 ms<sup>-1</sup>. If the distance between A and B is 8.0 m, calculate the acceleration of the cart.",
       "answer": 1.93,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.05,
       "markscheme_answer": "Initial velocity $u = 2.5 \\text{ m s}^{-1}$.<br>Final velocity $v = 6.1 \\text{ m s}^{-1}$.<br>Distance $s = 8.0 \\text{ m}$.<br>Using $v^2 = u^2 + 2as$, we have $6.1^2 = 2.5^2 + 2(a)(8.0)$.<br>$37.21 = 6.25 + 16a \\implies 30.96 = 16a \\implies a \\approx 1.935 \\text{ m s}^{-2}$."
     },
@@ -805,7 +810,7 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A ball rolling down a slope passes a point P with a velocity of 1.2 m s^-1. It passes point Q with a velocity of 2.6 m s^-1. If it took 1.4 s to go from P to Q, determine the distance PQ.",
+      "question_text": "A ball rolling down a slope passes a point P with a velocity of 1.2 ms<sup>-1</sup>. It passes point Q with a velocity of 2.6 ms<sup>-1</sup>. If it took 1.4 s to go from P to Q, determine the distance PQ.",
       "answer": 2.66,
       "unit": "m",
       "tolerance": 0.05,
@@ -823,7 +828,7 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "An aircraft accelerates from rest along a runway and takes off with a velocity of 75.0 m s^-1. Its acceleration during this time is 3.20 m s^-2. Calculate the distance along the runway that the aircraft needs to travel before take-off.",
+      "question_text": "An aircraft accelerates from rest along a runway and takes off with a velocity of 75.0 ms<sup>-1</sup>. Its acceleration during this time is 3.20 ms<sup>-2</sup>. Calculate the distance along the runway that the aircraft needs to travel before take-off.",
       "answer": 879,
       "unit": "m",
       "tolerance": 5,
@@ -841,7 +846,7 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "An ocean-going cruiser can decelerate no quicker than 0.0032 m s^-2. Determine the minimum distance (in meters) needed to stop if the ship is travelling at 5.14 m s^-1 (10 knots).",
+      "question_text": "An ocean-going cruiser can decelerate no quicker than 0.0032 ms<sup>-2</sup>. Determine the minimum distance (in meters) needed to stop if the ship is travelling at 5.14 ms<sup>-1</sup> (10 knots).",
       "answer": 4131,
       "unit": "m",
       "tolerance": 10,
@@ -860,9 +865,9 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A stone is thrown vertically upwards with an initial velocity of 6.2 m s^-1 from a balcony 8.5 m above the ground. With what speed would it hit the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A stone is thrown vertically upwards with an initial velocity of 6.2 ms<sup>-1</sup> from a balcony 8.5 m above the ground. With what speed would it hit the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 14.3,
-      "unit": "m s^-1",
+      "unit": "ms<sup>-1</sup>",
       "tolerance": 0.2,
       "markscheme_answer": "Let upwards be positive.<br>$u = +6.2 \\text{ m s}^{-1}$. $a = -9.81 \\text{ m s}^{-2}$.<br>The final displacement is $s = -8.5 \\text{ m}$ (since it hits the ground below the starting point).<br>$v^2 = 6.2^2 + 2(-9.81)(-8.5) = 38.44 + 166.77 = 205.21$.<br>$v = \\sqrt{205.21} \\approx 14.3 \\text{ m s}^{-1}$. Note the speed is the magnitude."
     },
@@ -879,7 +884,7 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A small rock is thrown vertically upwards with an initial velocity of 22 m s^-1. Calculate the *later* time (in seconds) when its velocity magnitude is exactly 10 m s^-1. (Use g = 9.81 m s^-2)",
+      "question_text": "A small rock is thrown vertically upwards with an initial velocity of 22 ms<sup>-1</sup>. Calculate the *later* time (in seconds) when its velocity magnitude is exactly 10 ms<sup>-1</sup>. (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 3.26,
       "unit": "s",
       "tolerance": 0.05,
@@ -921,9 +926,9 @@
       "image": "assets/images/monster_graphs/kin-graph-4090c59c.svg",
       "question_text": "The velocity-time graph below shows the motion of an object over 17 seconds. Determine the object's acceleration during the first 6 seconds.",
       "answer": 2.5,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{15 - 0}{6 - 0} = 2.5$ m s^-2."
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{15 - 0}{6 - 0} = 2.5$ ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-65203209",
@@ -1001,9 +1006,9 @@
       "image": "assets/images/monster_graphs/kin-graph-3ea2844b.svg",
       "question_text": "The velocity-time graph below shows the motion of an object over 10 seconds. Determine the object's acceleration during the first 2 seconds.",
       "answer": 12.0,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{24 - 0}{2 - 0} = 12.0$ m s^-2."
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{24 - 0}{2 - 0} = 12.0$ ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-f276616b",
@@ -1021,9 +1026,9 @@
       "image": "assets/images/monster_graphs/kin-graph-f276616b.svg",
       "question_text": "Determine the object's deceleration (magnitude of negative acceleration) between t = 7 s and t = 10 s.",
       "answer": 8.0,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Deceleration is the magnitude of the negative slope.<br>a = $\\frac{0 - 24}{10 - 7} = -8.0$ m s^-2.<br>Magnitude = 8.0 m s^-2."
+      "markscheme_answer": "Deceleration is the magnitude of the negative slope.<br>a = $\\frac{0 - 24}{10 - 7} = -8.0$ ms<sup>-2</sup>.<br>Magnitude = 8.0 ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-eaeff02a",
@@ -1061,9 +1066,9 @@
       "image": "assets/images/monster_graphs/kin-graph-6150cf82.svg",
       "question_text": "The velocity-time graph below shows the motion of an object over 10 seconds. Determine the object's acceleration during the first 5 seconds.",
       "answer": 4.0,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{20 - 0}{5 - 0} = 4.0$ m s^-2."
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{20 - 0}{5 - 0} = 4.0$ ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-1b69735d",
@@ -1101,9 +1106,9 @@
       "image": "assets/images/monster_graphs/kin-graph-62a544bc.svg",
       "question_text": "The velocity-time graph below shows the motion of an object over 15 seconds. Determine the object's acceleration during the first 3 seconds.",
       "answer": 4.0,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{12 - 0}{3 - 0} = 4.0$ m s^-2."
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{12 - 0}{3 - 0} = 4.0$ ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-3abee2b0",
@@ -1161,9 +1166,9 @@
       "image": "assets/images/monster_graphs/kin-graph-e1cd6a12.svg",
       "question_text": "The velocity-time graph below shows the motion of an object over 12 seconds. Determine the object's acceleration during the first 2 seconds.",
       "answer": 8.0,
-      "unit": "m s^-2",
+      "unit": "ms<sup>-2</sup>",
       "tolerance": 0.1,
-      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{16 - 0}{2 - 0} = 8.0$ m s^-2."
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{16 - 0}{2 - 0} = 8.0$ ms<sup>-2</sup>."
     },
     {
       "id": "kin-graph-5fa640b8",
@@ -1197,11 +1202,11 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A skier starts from rest and slides 12.0 m down a slope in 4.0 s with constant acceleration. In what total time (in seconds) after starting will the skier acquire a speed of 18 m s^-1?",
+      "question_text": "A skier starts from rest and slides 12.0 m down a slope in 4.0 s with constant acceleration. In what total time (in seconds) after starting will the skier acquire a speed of 18 ms<sup>-1</sup>?",
       "answer": 12.0,
       "unit": "s",
       "tolerance": 0.2,
-      "markscheme_answer": "First find acceleration: $s = u t + \\frac{1}{2} a t^2 \\implies 12.0 = 0 + \\frac{1}{2} a (4.0)^2$<br>$12.0 = 8.0 a \\implies a = 1.5 \\text{ m s^-1}^2$<br>Now find time to reach 18 m s^-1: $v = u + at \\implies 18 = 0 + 1.5 t \\implies t = 12 \\text{ s}$."
+      "markscheme_answer": "First find acceleration: $s = u t + \\frac{1}{2} a t^2 \\implies 12.0 = 0 + \\frac{1}{2} a (4.0)^2$<br>$12.0 = 8.0 a \\implies a = 1.5 \\text{ ms<sup>-1</sup>}^2$<br>Now find time to reach 18 ms<sup>-1</sup>: $v = u + at \\implies 18 = 0 + 1.5 t \\implies t = 12 \\text{ s}$."
     },
     {
       "id": "kin-hard-7607dcf4",
@@ -1215,11 +1220,11 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A car moving at 35.0 m s^-1 slows uniformly to a speed of 15.0 m s^-1 in a time of 5.0 s. Determine the distance it moves exactly during the third second of this braking period (from t=2.0 s to t=3.0 s).",
+      "question_text": "A car moving at 35.0 ms<sup>-1</sup> slows uniformly to a speed of 15.0 ms<sup>-1</sup> in a time of 5.0 s. Determine the distance it moves exactly during the third second of this braking period (from t=2.0 s to t=3.0 s).",
       "answer": 25.0,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "First find acceleration: $a = \\frac{v-u}{t} = \\frac{15.0 - 35.0}{5.0} = -4.0 \\text{ m s^-1}^2$<br>Distance at $t=3$: $s_3 = (35)(3) + 0.5(-4)(3)^2 = 105 - 18 = 87 \\text{ m}$<br>Distance at $t=2$: $s_2 = (35)(2) + 0.5(-4)(2)^2 = 70 - 8 = 62 \\text{ m}$<br>Distance in 3rd second = $s_3 - s_2 = 87 - 62 = 25 \\text{ m}$."
+      "markscheme_answer": "First find acceleration: $a = \\frac{v-u}{t} = \\frac{15.0 - 35.0}{5.0} = -4.0 \\text{ ms<sup>-1</sup>}^2$<br>Distance at $t=3$: $s_3 = (35)(3) + 0.5(-4)(3)^2 = 105 - 18 = 87 \\text{ m}$<br>Distance at $t=2$: $s_2 = (35)(2) + 0.5(-4)(2)^2 = 70 - 8 = 62 \\text{ m}$<br>Distance in 3rd second = $s_3 - s_2 = 87 - 62 = 25 \\text{ m}$."
     },
     {
       "id": "kin-hard-4300d2e0",
@@ -1234,11 +1239,11 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A stone is thrown straight upward with a speed of 24.0 m s^-1. It is caught on its way down at a point 8.0 m above where it was thrown. How long did the entire trip take in seconds? (Use g = 9.81 m s^-2)",
+      "question_text": "A stone is thrown straight upward with a speed of 24.0 ms<sup>-1</sup>. It is caught on its way down at a point 8.0 m above where it was thrown. How long did the entire trip take in seconds? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 4.53,
       "unit": "s",
       "tolerance": 0.05,
-      "markscheme_answer": "Taking up as positive: $u = 24.0 \\text{ m s^-1}$, $a = -9.81 \\text{ m s^-1}^2$, $s = +8.0 \\text{ m}$.<br>Using $s = ut + \\frac{1}{2}at^2$:<br>$8.0 = 24.0t - 4.905t^2$<br>$4.905t^2 - 24.0t + 8.0 = 0$<br>Using quadratic formula: $t = \\frac{24.0 \\pm \\sqrt{(-24.0)^2 - 4(4.905)(8.0)}}{2(4.905)} = \\frac{24.0 \\pm \\sqrt{576 - 156.96}}{9.81} = \\frac{24.0 \\pm 20.47}{9.81}$<br>The two times are $0.36 \\text{ s}$ (on the way up) and $4.53 \\text{ s}$ (on the way down). The answer is $4.53 \\text{ s}$."
+      "markscheme_answer": "Taking up as positive: $u = 24.0 \\text{ ms<sup>-1</sup>}$, $a = -9.81 \\text{ ms<sup>-1</sup>}^2$, $s = +8.0 \\text{ m}$.<br>Using $s = ut + \\frac{1}{2}at^2$:<br>$8.0 = 24.0t - 4.905t^2$<br>$4.905t^2 - 24.0t + 8.0 = 0$<br>Using quadratic formula: $t = \\frac{24.0 \\pm \\sqrt{(-24.0)^2 - 4(4.905)(8.0)}}{2(4.905)} = \\frac{24.0 \\pm \\sqrt{576 - 156.96}}{9.81} = \\frac{24.0 \\pm 20.47}{9.81}$<br>The two times are $0.36 \\text{ s}$ (on the way up) and $4.53 \\text{ s}$ (on the way down). The answer is $4.53 \\text{ s}$."
     },
     {
       "id": "kin-hard-f66c7c6c",
@@ -1253,7 +1258,7 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A baseball is thrown straight upward on the Moon with an initial speed of 30 m s^-1. The acceleration due to gravity on the Moon is 1.62 m s^-2 downward. At what time (in seconds) is the ball at a height of 150 m while descending?",
+      "question_text": "A baseball is thrown straight upward on the Moon with an initial speed of 30 ms<sup>-1</sup>. The acceleration due to gravity on the Moon is 1.62 ms<sup>-2</sup> downward. At what time (in seconds) is the ball at a height of 150 m while descending?",
       "answer": 30.9,
       "unit": "s",
       "tolerance": 0.5,
@@ -1272,11 +1277,11 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A ballast bag is dropped from a hot-air balloon that is 250 m above the ground and rising steadily at 15.0 m s^-1. What is the maximum height (in meters) reached by the bag above the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A ballast bag is dropped from a hot-air balloon that is 250 m above the ground and rising steadily at 15.0 ms<sup>-1</sup>. What is the maximum height (in meters) reached by the bag above the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 261.5,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "When dropped, the bag retains the balloon's upward velocity: $u = +15.0 \\text{ m s^-1}$.<br>At max height relative to release point, $v = 0$.<br>$v^2 = u^2 + 2as \\implies 0 = 15.0^2 + 2(-9.81)s$<br>$s = \\frac{225}{19.62} \\approx 11.47 \\text{ m}$ above release.<br>Total height from ground = $250 + 11.47 = 261.47 \\text{ m}$."
+      "markscheme_answer": "When dropped, the bag retains the balloon's upward velocity: $u = +15.0 \\text{ ms<sup>-1</sup>}$.<br>At max height relative to release point, $v = 0$.<br>$v^2 = u^2 + 2as \\implies 0 = 15.0^2 + 2(-9.81)s$<br>$s = \\frac{225}{19.62} \\approx 11.47 \\text{ m}$ above release.<br>Total height from ground = $250 + 11.47 = 261.47 \\text{ m}$."
     },
     {
       "id": "kin-hard-7c6774e0",
@@ -1291,11 +1296,11 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A bag is dropped from a balloon that is 150 m above the ground and rising at 8.0 m s^-1. How many seconds does it take for the bag to hit the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A bag is dropped from a balloon that is 150 m above the ground and rising at 8.0 ms<sup>-1</sup>. How many seconds does it take for the bag to hit the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 6.4,
       "unit": "s",
       "tolerance": 0.1,
-      "markscheme_answer": "Taking up as positive and release point as $y=0$.<br>$u = 8.0 \\text{ m s^-1}$, $s = -150 \\text{ m}$, $a = -9.81 \\text{ m s^-1}^2$.<br>$s = ut + \\frac{1}{2}at^2 \\implies -150 = 8.0t - 4.905t^2$<br>$4.905t^2 - 8.0t - 150 = 0$<br>$t = \\frac{8.0 \\pm \\sqrt{(-8.0)^2 - 4(4.905)(-150)}}{9.81} = \\frac{8.0 \\pm \\sqrt{64 + 2943}}{9.81} = \\frac{8.0 \\pm 54.836}{9.81}$<br>Choosing the positive root: $t \\approx 6.40 \\text{ s}$."
+      "markscheme_answer": "Taking up as positive and release point as $y=0$.<br>$u = 8.0 \\text{ ms<sup>-1</sup>}$, $s = -150 \\text{ m}$, $a = -9.81 \\text{ ms<sup>-1</sup>}^2$.<br>$s = ut + \\frac{1}{2}at^2 \\implies -150 = 8.0t - 4.905t^2$<br>$4.905t^2 - 8.0t - 150 = 0$<br>$t = \\frac{8.0 \\pm \\sqrt{(-8.0)^2 - 4(4.905)(-150)}}{9.81} = \\frac{8.0 \\pm \\sqrt{64 + 2943}}{9.81} = \\frac{8.0 \\pm 54.836}{9.81}$<br>Choosing the positive root: $t \\approx 6.40 \\text{ s}$."
     },
     {
       "id": "kin-hard-666d7586",
@@ -1310,7 +1315,7 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A projectile is fired horizontally with a speed of 45.0 m s^-1 from the top of a cliff 120 m high. How far from the base of the cliff (in meters) will it strike the level ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A projectile is fired horizontally with a speed of 45.0 ms<sup>-1</sup> from the top of a cliff 120 m high. How far from the base of the cliff (in meters) will it strike the level ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 222.5,
       "unit": "m",
       "tolerance": 1.0,
@@ -1329,11 +1334,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A cannonball is fired from a 60.0 m high cliff at an angle of 30.0° above the horizontal with an initial speed of 50.0 m s^-1. Calculate the time of flight in seconds before it hits the sea below. (Use g = 9.81 m s^-2)",
+      "question_text": "A cannonball is fired from a 60.0 m high cliff at an angle of 30.0° above the horizontal with an initial speed of 50.0 ms<sup>-1</sup>. Calculate the time of flight in seconds before it hits the sea below. (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 6.88,
       "unit": "s",
       "tolerance": 0.1,
-      "markscheme_answer": "Vertical components: $u_y = 50.0 \\sin(30^\\circ) = 25.0 \\text{ m s^-1}$.<br>$s_y = -60.0 \\text{ m}$ (taking launch point as origin). $a_y = -9.81 \\text{ m s^-1}^2$.<br>$s_y = u_y t + \\frac{1}{2}a_y t^2 \\implies -60.0 = 25.0t - 4.905t^2$<br>$4.905t^2 - 25.0t - 60.0 = 0$<br>$t = \\frac{25.0 \\pm \\sqrt{625 - 4(4.905)(-60.0)}}{9.81} = \\frac{25.0 \\pm \\sqrt{625 + 1177.2}}{9.81} = \\frac{25.0 \\pm 42.45}{9.81}$<br>Taking the positive root: $t \\approx 6.88 \\text{ s}$."
+      "markscheme_answer": "Vertical components: $u_y = 50.0 \\sin(30^\\circ) = 25.0 \\text{ ms<sup>-1</sup>}$.<br>$s_y = -60.0 \\text{ m}$ (taking launch point as origin). $a_y = -9.81 \\text{ ms<sup>-1</sup>}^2$.<br>$s_y = u_y t + \\frac{1}{2}a_y t^2 \\implies -60.0 = 25.0t - 4.905t^2$<br>$4.905t^2 - 25.0t - 60.0 = 0$<br>$t = \\frac{25.0 \\pm \\sqrt{625 - 4(4.905)(-60.0)}}{9.81} = \\frac{25.0 \\pm \\sqrt{625 + 1177.2}}{9.81} = \\frac{25.0 \\pm 42.45}{9.81}$<br>Taking the positive root: $t \\approx 6.88 \\text{ s}$."
     },
     {
       "id": "kin-hard-8b72e202",
@@ -1347,7 +1352,7 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A speeder traveling at a constant 30.0 m s^-1 passes a hidden police car. Exactly 2.0 seconds after the speeder passes, the police car begins pursuit, accelerating from rest at 4.0 m s^-2. How many seconds does it take the police car to catch the speeder (measured from the moment the police car starts moving)?",
+      "question_text": "A speeder traveling at a constant 30.0 ms<sup>-1</sup> passes a hidden police car. Exactly 2.0 seconds after the speeder passes, the police car begins pursuit, accelerating from rest at 4.0 ms<sup>-2</sup>. How many seconds does it take the police car to catch the speeder (measured from the moment the police car starts moving)?",
       "answer": 16.8,
       "unit": "s",
       "tolerance": 0.2,
@@ -1366,11 +1371,11 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A hot-air balloon is rising vertically at 12 m s^-1. An object is thrown downwards from the basket with a velocity of 5 m s^-1 relative to the balloon. If it takes 4.0 s to hit the ground, what was the height of the balloon (in meters) when the object was thrown? (Use g = 9.81 m s^-2)",
+      "question_text": "A hot-air balloon is rising vertically at 12 ms<sup>-1</sup>. An object is thrown downwards from the basket with a velocity of 5 ms<sup>-1</sup> relative to the balloon. If it takes 4.0 s to hit the ground, what was the height of the balloon (in meters) when the object was thrown? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 50.5,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "Initial velocity of object relative to ground: $u = 12 \\text{ (up)} - 5 \\text{ (down)} = +7 \\text{ m s^-1}$ (upwards).<br>Time $t = 4.0 \\text{ s}$, $a = -9.81 \\text{ m s^-1}^2$.<br>Displacement $s = ut + \\frac{1}{2}at^2 = 7(4.0) + 0.5(-9.81)(4.0)^2 = 28 - 78.48 = -50.48 \\text{ m}$.<br>The displacement is 50.48 m downwards, so the initial height was 50.5 m."
+      "markscheme_answer": "Initial velocity of object relative to ground: $u = 12 \\text{ (up)} - 5 \\text{ (down)} = +7 \\text{ ms<sup>-1</sup>}$ (upwards).<br>Time $t = 4.0 \\text{ s}$, $a = -9.81 \\text{ ms<sup>-1</sup>}^2$.<br>Displacement $s = ut + \\frac{1}{2}at^2 = 7(4.0) + 0.5(-9.81)(4.0)^2 = 28 - 78.48 = -50.48 \\text{ m}$.<br>The displacement is 50.48 m downwards, so the initial height was 50.5 m."
     },
     {
       "id": "kin-hard-e1710e6a",
@@ -1385,7 +1390,7 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A stunt plane is flying horizontally at 45.0 m s^-1 at an altitude of 180 m above flat ground. A sack of flour is released to strike a target on the ground. How large must the horizontal distance x (in meters) from the plane to the target be at the instant of release? (Use g = 9.81 m s^-2)",
+      "question_text": "A stunt plane is flying horizontally at 45.0 ms<sup>-1</sup> at an altitude of 180 m above flat ground. A sack of flour is released to strike a target on the ground. How large must the horizontal distance x (in meters) from the plane to the target be at the instant of release? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 273,
       "unit": "m",
       "tolerance": 2.0,
@@ -1404,11 +1409,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A ball is thrown from the top of one building toward a tall building 40.0 m away. The initial velocity of the ball is 18.0 m s^-1 at an angle of 35.0° above the horizontal. How far below its original level (in meters) will the ball strike the opposite wall? (Use g = 9.81 m s^-2)",
+      "question_text": "A ball is thrown from the top of one building toward a tall building 40.0 m away. The initial velocity of the ball is 18.0 ms<sup>-1</sup> at an angle of 35.0° above the horizontal. How far below its original level (in meters) will the ball strike the opposite wall? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 25.1,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "$u_x = 18.0 \\cos(35^\\circ) \\approx 14.74 \\text{ m s^-1}$.<br>$u_y = 18.0 \\sin(35^\\circ) \\approx 10.32 \\text{ m s^-1}$.<br>Time to reach wall: $t = \\frac{s_x}{u_x} = \\frac{40.0}{14.74} \\approx 2.71 \\text{ s}$.<br>Vertical position: $s_y = u_y t - \\frac{1}{2}gt^2 = 10.32(2.71) - 4.905(2.71)^2 = 27.97 - 36.02 = -8.05 \\text{ m}$.<br>Wait, let's recalculate accurately:<br>$u_x = 18\\cos(35) = 14.7447$. $t = 40/14.7447 = 2.7128$.<br>$s_y = 18\\sin(35)(2.7128) - 0.5(9.81)(2.7128)^2 = 28.007 - 36.110 = -8.10 \\text{ m}$.<br>If the math requires a larger drop, let's look at the numbers again. If answer was 25.1, I need to check the script. Let's fix the question values: Let distance be 60.0m.<br>Let's use 60.0m. $t = 60/14.7447 = 4.069$. $s_y = 10.324(4.069) - 4.905(4.069)^2 = 42.0 - 81.2 = -39.2$m. Let's provide exact answer for 60m: 39.2m."
+      "markscheme_answer": "$u_x = 18.0 \\cos(35^\\circ) \\approx 14.74 \\text{ ms<sup>-1</sup>}$.<br>$u_y = 18.0 \\sin(35^\\circ) \\approx 10.32 \\text{ ms<sup>-1</sup>}$.<br>Time to reach wall: $t = \\frac{s_x}{u_x} = \\frac{40.0}{14.74} \\approx 2.71 \\text{ s}$.<br>Vertical position: $s_y = u_y t - \\frac{1}{2}gt^2 = 10.32(2.71) - 4.905(2.71)^2 = 27.97 - 36.02 = -8.05 \\text{ m}$.<br>Wait, let's recalculate accurately:<br>$u_x = 18\\cos(35) = 14.7447$. $t = 40/14.7447 = 2.7128$.<br>$s_y = 18\\sin(35)(2.7128) - 0.5(9.81)(2.7128)^2 = 28.007 - 36.110 = -8.10 \\text{ m}$.<br>If the math requires a larger drop, let's look at the numbers again. If answer was 25.1, I need to check the script. Let's fix the question values: Let distance be 60.0m.<br>Let's use 60.0m. $t = 60/14.7447 = 4.069$. $s_y = 10.324(4.069) - 4.905(4.069)^2 = 42.0 - 81.2 = -39.2$m. Let's provide exact answer for 60m: 39.2m."
     },
     {
       "id": "kin-hard-6d0403f3",
@@ -1423,11 +1428,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A ball is thrown from the top of one building toward a tall building 60.0 m away. The initial velocity of the ball is 18.0 m s^-1 at an angle of 35.0° above the horizontal. How far below its original level (in meters) will the ball strike the opposite wall? (Use g = 9.81 m s^-2)",
+      "question_text": "A ball is thrown from the top of one building toward a tall building 60.0 m away. The initial velocity of the ball is 18.0 ms<sup>-1</sup> at an angle of 35.0° above the horizontal. How far below its original level (in meters) will the ball strike the opposite wall? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 39.2,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "$u_x = 18.0 \\cos(35^\\circ) = 14.745 \\text{ m s^-1}$.<br>$u_y = 18.0 \\sin(35^\\circ) = 10.324 \\text{ m s^-1}$.<br>Time to reach wall: $t = \\frac{60.0}{14.745} = 4.069 \\text{ s}$.<br>Vertical position: $s_y = u_y t - \\frac{1}{2}gt^2 = 10.324(4.069) - 4.905(4.069)^2 = 42.01 - 81.21 = -39.2 \\text{ m}$.<br>The ball strikes 39.2 m below the original level."
+      "markscheme_answer": "$u_x = 18.0 \\cos(35^\\circ) = 14.745 \\text{ ms<sup>-1</sup>}$.<br>$u_y = 18.0 \\sin(35^\\circ) = 10.324 \\text{ ms<sup>-1</sup>}$.<br>Time to reach wall: $t = \\frac{60.0}{14.745} = 4.069 \\text{ s}$.<br>Vertical position: $s_y = u_y t - \\frac{1}{2}gt^2 = 10.324(4.069) - 4.905(4.069)^2 = 42.01 - 81.21 = -39.2 \\text{ m}$.<br>The ball strikes 39.2 m below the original level."
     },
     {
       "id": "kin-hard-0013ccab",
@@ -1442,7 +1447,7 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "Two balls are dropped to the ground from different heights. One is dropped 1.5 s after the other, but they both strike the ground at the exact same time, 5.0 s after the FIRST was dropped. What is the difference in the heights (in meters) from which they were dropped? (Use g = 9.81 m s^-2)",
+      "question_text": "Two balls are dropped to the ground from different heights. One is dropped 1.5 s after the other, but they both strike the ground at the exact same time, 5.0 s after the FIRST was dropped. What is the difference in the heights (in meters) from which they were dropped? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 62.5,
       "unit": "m",
       "tolerance": 0.5,
@@ -1461,11 +1466,11 @@
         "Gravity"
       ],
       "type": "numerical",
-      "question_text": "A nut comes loose from a bolt on the bottom of an elevator as the elevator is moving up the shaft at a constant 4.0 m s^-1. The nut strikes the bottom of the shaft exactly 2.5 s after it fell off. How far from the bottom of the shaft was the elevator (in meters) at the instant the nut fell off? (Use g = 9.81 m s^-2)",
+      "question_text": "A nut comes loose from a bolt on the bottom of an elevator as the elevator is moving up the shaft at a constant 4.0 ms<sup>-1</sup>. The nut strikes the bottom of the shaft exactly 2.5 s after it fell off. How far from the bottom of the shaft was the elevator (in meters) at the instant the nut fell off? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 20.7,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "Let the bottom of the shaft be $y=0$. Let $h$ be the height of the elevator when the nut falls.<br>Initial velocity of nut: $u = +4.0 \\text{ m s^-1}$ (it was moving up with the elevator).<br>Acceleration of nut: $a = -9.81 \\text{ m s^-1}^2$.<br>Displacement of nut: $s = -h$ (since it hits the bottom $y=0$ from height $h$).<br>Time $t = 2.5 \\text{ s}$.<br>$s = ut + \\frac{1}{2}at^2 \\implies -h = (4.0)(2.5) - 0.5(9.81)(2.5)^2$<br>$-h = 10.0 - 30.656 = -20.656 \\implies h \\approx 20.7 \\text{ m}$."
+      "markscheme_answer": "Let the bottom of the shaft be $y=0$. Let $h$ be the height of the elevator when the nut falls.<br>Initial velocity of nut: $u = +4.0 \\text{ ms<sup>-1</sup>}$ (it was moving up with the elevator).<br>Acceleration of nut: $a = -9.81 \\text{ ms<sup>-1</sup>}^2$.<br>Displacement of nut: $s = -h$ (since it hits the bottom $y=0$ from height $h$).<br>Time $t = 2.5 \\text{ s}$.<br>$s = ut + \\frac{1}{2}at^2 \\implies -h = (4.0)(2.5) - 0.5(9.81)(2.5)^2$<br>$-h = 10.0 - 30.656 = -20.656 \\implies h \\approx 20.7 \\text{ m}$."
     },
     {
       "id": "kin-hard-c3051692",
@@ -1480,11 +1485,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A batter hits a baseball with a velocity of 35.0 m s^-1 at an angle of 28.0° above the horizontal. The ball is hit at a height of 1.0 m above the ground. A fielder is backed up against the wall, which is 105 m from home plate. How high above the ground (in meters) is the ball when it passes over the fielder? (Use g = 9.81 m s^-2)",
+      "question_text": "A batter hits a baseball with a velocity of 35.0 ms<sup>-1</sup> at an angle of 28.0° above the horizontal. The ball is hit at a height of 1.0 m above the ground. A fielder is backed up against the wall, which is 105 m from home plate. How high above the ground (in meters) is the ball when it passes over the fielder? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 3.7,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "Horizontal: $u_x = 35 \\cos(28^\\circ) = 30.90 \\text{ m s^-1}$.<br>Vertical: $u_y = 35 \\sin(28^\\circ) = 16.43 \\text{ m s^-1}$.<br>Time to reach wall: $t = \\frac{105}{30.90} = 3.398 \\text{ s}$.<br>Vertical displacement from bat: $s_y = u_y t - \\frac{1}{2}gt^2 = 16.43(3.398) - 4.905(3.398)^2 = 55.83 - 56.63 = -0.80 \\text{ m}$.<br>The ball drops 0.80 m from its initial height.<br>Total height = $1.0 - 0.80 = 0.20 \\text{ m}$. Wait, this means it hits the ground. Let me re-calculate with higher velocity. Let $v=42.0$ m s^-1 at $32.0^\\circ$ and wall at $110$ m.<br>$u_x = 42\\cos(32) = 35.62$. $t = 110/35.62 = 3.088$.<br>$u_y = 42\\sin(32) = 22.26$. $s_y = 22.26(3.088) - 4.905(3.088)^2 = 68.74 - 46.77 = 21.97$m.<br>Total height = $1.0 + 21.97 = 22.97$m. Okay, that's a massive home run. Let's use this data instead and provide the answer 23.0m."
+      "markscheme_answer": "Horizontal: $u_x = 35 \\cos(28^\\circ) = 30.90 \\text{ ms<sup>-1</sup>}$.<br>Vertical: $u_y = 35 \\sin(28^\\circ) = 16.43 \\text{ ms<sup>-1</sup>}$.<br>Time to reach wall: $t = \\frac{105}{30.90} = 3.398 \\text{ s}$.<br>Vertical displacement from bat: $s_y = u_y t - \\frac{1}{2}gt^2 = 16.43(3.398) - 4.905(3.398)^2 = 55.83 - 56.63 = -0.80 \\text{ m}$.<br>The ball drops 0.80 m from its initial height.<br>Total height = $1.0 - 0.80 = 0.20 \\text{ m}$. Wait, this means it hits the ground. Let me re-calculate with higher velocity. Let $v=42.0$ ms<sup>-1</sup> at $32.0^\\circ$ and wall at $110$ m.<br>$u_x = 42\\cos(32) = 35.62$. $t = 110/35.62 = 3.088$.<br>$u_y = 42\\sin(32) = 22.26$. $s_y = 22.26(3.088) - 4.905(3.088)^2 = 68.74 - 46.77 = 21.97$m.<br>Total height = $1.0 + 21.97 = 22.97$m. Okay, that's a massive home run. Let's use this data instead and provide the answer 23.0m."
     },
     {
       "id": "kin-hard-257d9307",
@@ -1499,11 +1504,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A batter hits a baseball with a velocity of 42.0 m s^-1 at an angle of 32.0° above the horizontal. The ball is hit at a height of 1.0 m above the ground. A fielder is backed up against the wall, which is 110 m from home plate. How high above the ground (in meters) is the ball when it passes the fielder? (Use g = 9.81 m s^-2)",
+      "question_text": "A batter hits a baseball with a velocity of 42.0 ms<sup>-1</sup> at an angle of 32.0° above the horizontal. The ball is hit at a height of 1.0 m above the ground. A fielder is backed up against the wall, which is 110 m from home plate. How high above the ground (in meters) is the ball when it passes the fielder? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 23.0,
       "unit": "m",
       "tolerance": 0.5,
-      "markscheme_answer": "Horizontal: $u_x = 42.0 \\cos(32^\\circ) = 35.618 \\text{ m s^-1}$.<br>Vertical: $u_y = 42.0 \\sin(32^\\circ) = 22.257 \\text{ m s^-1}$.<br>Time to reach wall: $t = \\frac{110}{35.618} = 3.088 \\text{ s}$.<br>Vertical displacement from bat: $s_y = u_y t - \\frac{1}{2}gt^2 = 22.257(3.088) - 4.905(3.088)^2 = 68.73 - 46.77 = 21.96 \\text{ m}$.<br>Total height from ground = initial height + $s_y$ = $1.0 + 21.96 = 22.96 \\approx 23.0 \\text{ m}$."
+      "markscheme_answer": "Horizontal: $u_x = 42.0 \\cos(32^\\circ) = 35.618 \\text{ ms<sup>-1</sup>}$.<br>Vertical: $u_y = 42.0 \\sin(32^\\circ) = 22.257 \\text{ ms<sup>-1</sup>}$.<br>Time to reach wall: $t = \\frac{110}{35.618} = 3.088 \\text{ s}$.<br>Vertical displacement from bat: $s_y = u_y t - \\frac{1}{2}gt^2 = 22.257(3.088) - 4.905(3.088)^2 = 68.73 - 46.77 = 21.96 \\text{ m}$.<br>Total height from ground = initial height + $s_y$ = $1.0 + 21.96 = 22.96 \\approx 23.0 \\text{ m}$."
     },
     {
       "id": "kin-hard-c2ff113f",
@@ -1518,11 +1523,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A body is projected DOWNWARD at an angle of 25° with the horizontal from the top of a building 120 m high. Its initial speed is 30 m s^-1. How far from the foot of the building (in meters) will it strike the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A body is projected DOWNWARD at an angle of 25° with the horizontal from the top of a building 120 m high. Its initial speed is 30 ms<sup>-1</sup>. How far from the foot of the building (in meters) will it strike the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 98.7,
       "unit": "m",
       "tolerance": 1.0,
-      "markscheme_answer": "$u_y = 30 \\sin(25^\\circ) = 12.68 \\text{ m s^-1}$ (downwards).<br>Taking down as positive: $u_y = +12.68$, $a = 9.81$, $s = 120$.<br>$s = u_y t + \\frac{1}{2}at^2 \\implies 120 = 12.68t + 4.905t^2$<br>$4.905t^2 + 12.68t - 120 = 0$<br>$t = \\frac{-12.68 + \\sqrt{160.78 - 4(4.905)(-120)}}{9.81} = \\frac{-12.68 + \\sqrt{2515}}{9.81} = \\frac{-12.68 + 50.15}{9.81} = 3.82 \\text{ s}$.<br>Horizontal distance: $s_x = u_x t = 30 \\cos(25^\\circ) \\times 3.82 = 27.189 \\times 3.82 \\approx 103.8 \\text{ m}$.<br>Wait, let me recalculate accurately: $t = 3.819$ s. $s_x = 27.1892 * 3.819 = 103.83$. I will change the answer to 103.8."
+      "markscheme_answer": "$u_y = 30 \\sin(25^\\circ) = 12.68 \\text{ ms<sup>-1</sup>}$ (downwards).<br>Taking down as positive: $u_y = +12.68$, $a = 9.81$, $s = 120$.<br>$s = u_y t + \\frac{1}{2}at^2 \\implies 120 = 12.68t + 4.905t^2$<br>$4.905t^2 + 12.68t - 120 = 0$<br>$t = \\frac{-12.68 + \\sqrt{160.78 - 4(4.905)(-120)}}{9.81} = \\frac{-12.68 + \\sqrt{2515}}{9.81} = \\frac{-12.68 + 50.15}{9.81} = 3.82 \\text{ s}$.<br>Horizontal distance: $s_x = u_x t = 30 \\cos(25^\\circ) \\times 3.82 = 27.189 \\times 3.82 \\approx 103.8 \\text{ m}$.<br>Wait, let me recalculate accurately: $t = 3.819$ s. $s_x = 27.1892 * 3.819 = 103.83$. I will change the answer to 103.8."
     },
     {
       "id": "kin-hard-ecf6cd06",
@@ -1537,11 +1542,11 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A rock is thrown DOWNWARD at an angle of 25° with the horizontal from the top of a building 120 m high. Its initial speed is 30.0 m s^-1. How far from the foot of the building (in meters) will it strike the ground? (Use g = 9.81 m s^-2)",
+      "question_text": "A rock is thrown DOWNWARD at an angle of 25° with the horizontal from the top of a building 120 m high. Its initial speed is 30.0 ms<sup>-1</sup>. How far from the foot of the building (in meters) will it strike the ground? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 103.8,
       "unit": "m",
       "tolerance": 1.0,
-      "markscheme_answer": "Initial vertical velocity: $u_y = 30.0 \\sin(25^\\circ) = 12.68 \\text{ m s^-1}$ (downwards).<br>Taking downwards as positive: $s = 120 \\text{ m}$, $a = 9.81 \\text{ m s^-1}^2$.<br>$120 = 12.68t + 4.905t^2 \\implies 4.905t^2 + 12.68t - 120 = 0$<br>Using quadratic formula (positive root): $t = 3.82 \\text{ s}$.<br>Initial horizontal velocity: $u_x = 30.0 \\cos(25^\\circ) = 27.19 \\text{ m s^-1}$.<br>Horizontal distance $x = u_x t = 27.19 \\times 3.82 = 103.8 \\text{ m}$."
+      "markscheme_answer": "Initial vertical velocity: $u_y = 30.0 \\sin(25^\\circ) = 12.68 \\text{ ms<sup>-1</sup>}$ (downwards).<br>Taking downwards as positive: $s = 120 \\text{ m}$, $a = 9.81 \\text{ ms<sup>-1</sup>}^2$.<br>$120 = 12.68t + 4.905t^2 \\implies 4.905t^2 + 12.68t - 120 = 0$<br>Using quadratic formula (positive root): $t = 3.82 \\text{ s}$.<br>Initial horizontal velocity: $u_x = 30.0 \\cos(25^\\circ) = 27.19 \\text{ ms<sup>-1</sup>}$.<br>Horizontal distance $x = u_x t = 27.19 \\times 3.82 = 103.8 \\text{ m}$."
     },
     {
       "id": "kin-hard-2db92f01",
@@ -1556,7 +1561,7 @@
         "Projectile"
       ],
       "type": "numerical",
-      "question_text": "A marble, rolling with speed 1.50 m s^-1, rolls horizontally off the edge of a table that is 95.0 cm high. How far horizontally (in meters) from the table edge does the marble strike the floor? (Use g = 9.81 m s^-2)",
+      "question_text": "A marble, rolling with speed 1.50 ms<sup>-1</sup>, rolls horizontally off the edge of a table that is 95.0 cm high. How far horizontally (in meters) from the table edge does the marble strike the floor? (Use g = 9.81 ms<sup>-2</sup>)",
       "answer": 0.66,
       "unit": "m",
       "tolerance": 0.05,
@@ -1574,11 +1579,11 @@
         "Numerical"
       ],
       "type": "numerical",
-      "question_text": "A high-speed train running along a straight track at 65.0 m s^-1 is slowed uniformly to a stop in 48.0 s. What is its stopping distance in meters?",
+      "question_text": "A high-speed train running along a straight track at 65.0 ms<sup>-1</sup> is slowed uniformly to a stop in 48.0 s. What is its stopping distance in meters?",
       "answer": 1560,
       "unit": "m",
       "tolerance": 10,
-      "markscheme_answer": "Since acceleration is uniform, average velocity $v_{avg} = \\frac{65.0 + 0}{2} = 32.5 \\text{ m s^-1}$.<br>Stopping distance $s = v_{avg} \\times t = 32.5 \\times 48.0 = 1560 \\text{ m}$."
+      "markscheme_answer": "Since acceleration is uniform, average velocity $v_{avg} = \\frac{65.0 + 0}{2} = 32.5 \\text{ ms<sup>-1</sup>}$.<br>Stopping distance $s = v_{avg} \\times t = 32.5 \\times 48.0 = 1560 \\text{ m}$."
     }
   ]
 }
