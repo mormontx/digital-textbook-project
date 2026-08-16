@@ -884,6 +884,306 @@
       "unit": "s",
       "tolerance": 0.05,
       "markscheme_answer": "The *later* time means it is coming back down.<br>On the way down, the velocity is $v = -10 \\text{ m s}^{-1}$.<br>Using $v = u + at$, we have $-10 = 22 - 9.81t \\implies 9.81t = 32 \\implies t \\approx 3.26 \\text{ s}$."
+    },
+    {
+      "id": "kin-graph-7d06a938",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-7d06a938.svg",
+      "question_text": "The velocity-time graph below represents a car's journey. What is the total distance traveled in 13 seconds?",
+      "answer": 117.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$<br>Distance = $\\frac{1}{2} \\times 13 \\times 18 = 117.0$ m."
+    },
+    {
+      "id": "kin-graph-4090c59c",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-4090c59c.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 17 seconds. Determine the object's acceleration during the first 6 seconds.",
+      "answer": 2.5,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{15 - 0}{6 - 0} = 2.5$ m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-65203209",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-65203209.svg",
+      "question_text": "The velocity-time graph below represents a car's journey. What is the total distance traveled in 10 seconds?",
+      "answer": 75.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$<br>Distance = $\\frac{1}{2} \\times 10 \\times 15 = 75.0$ m."
+    },
+    {
+      "id": "kin-graph-f28f566e",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-f28f566e.svg",
+      "question_text": "The velocity-time graph below represents a car's journey. What is the total distance traveled in 7 seconds?",
+      "answer": 63.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$<br>Distance = $\\frac{1}{2} \\times 7 \\times 18 = 63.0$ m."
+    },
+    {
+      "id": "kin-graph-94f336ad",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-94f336ad.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 13 seconds. Calculate the total distance traveled.",
+      "answer": 189.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area under curve.<br>Area = triangle 1 + rectangle + triangle 2<br>Area = 0.5(2)(21) + (5)(21) + 0.5(6)(21) = 189.0 m."
+    },
+    {
+      "id": "kin-graph-3ea2844b",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-3ea2844b.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 10 seconds. Determine the object's acceleration during the first 2 seconds.",
+      "answer": 12.0,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{24 - 0}{2 - 0} = 12.0$ m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-f276616b",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-f276616b.svg",
+      "question_text": "Determine the object's deceleration (magnitude of negative acceleration) between $t = 7$ s and $t = 10$ s.",
+      "answer": 8.0,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Deceleration is the magnitude of the negative slope.<br>a = $\\frac{0 - 24}{10 - 7} = -8.0$ m/s\u00b2.<br>Magnitude = 8.0 m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-eaeff02a",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-eaeff02a.svg",
+      "question_text": "Calculate the total distance traveled by the object during the 5 second interval shown in the graph.",
+      "answer": 45.5,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Total distance = Area of first triangle + Area of trapezium.<br>Triangle area = $0.5 \\times 2 \\times 8 = 8.0$<br>Trapezium area = $0.5 \\times (8 + 17) \\times 3 = 37.5$<br>Total = 45.5 m."
+    },
+    {
+      "id": "kin-graph-6150cf82",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-6150cf82.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 10 seconds. Determine the object's acceleration during the first 5 seconds.",
+      "answer": 4.0,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{20 - 0}{5 - 0} = 4.0$ m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-1b69735d",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-1b69735d.svg",
+      "question_text": "Calculate the total distance traveled by the object during the 9 second interval shown in the graph.",
+      "answer": 144.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Total distance = Area of first triangle + Area of trapezium.<br>Triangle area = $0.5 \\times 3 \\times 14 = 21.0$<br>Trapezium area = $0.5 \\times (14 + 27) \\times 6 = 123.0$<br>Total = 144.0 m."
+    },
+    {
+      "id": "kin-graph-62a544bc",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-62a544bc.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 15 seconds. Determine the object's acceleration during the first 3 seconds.",
+      "answer": 4.0,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{12 - 0}{3 - 0} = 4.0$ m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-3abee2b0",
+      "level": "HL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "intermediate",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-3abee2b0.svg",
+      "question_text": "Calculate the total distance traveled by the object during the 7 second interval shown in the graph.",
+      "answer": 118.5,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Total distance = Area of first triangle + Area of trapezium.<br>Triangle area = $0.5 \\times 2 \\times 16 = 16.0$<br>Trapezium area = $0.5 \\times (16 + 25) \\times 5 = 102.5$<br>Total = 118.5 m."
+    },
+    {
+      "id": "kin-graph-27966c28",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-27966c28.svg",
+      "question_text": "The velocity-time graph below represents a car's journey. What is the total distance traveled in 12 seconds?",
+      "answer": 108.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$<br>Distance = $\\frac{1}{2} \\times 12 \\times 18 = 108.0$ m."
+    },
+    {
+      "id": "kin-graph-e1cd6a12",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-e1cd6a12.svg",
+      "question_text": "The velocity-time graph below shows the motion of an object over 12 seconds. Determine the object's acceleration during the first 2 seconds.",
+      "answer": 8.0,
+      "unit": "m/s\u00b2",
+      "tolerance": 0.1,
+      "markscheme_answer": "Acceleration = slope of the v-t graph.<br>a = $\\frac{\\Delta v}{\\Delta t} = \\frac{16 - 0}{2 - 0} = 8.0$ m/s\u00b2."
+    },
+    {
+      "id": "kin-graph-5fa640b8",
+      "level": "SL",
+      "paper": "Paper 2",
+      "topic": "kinematics",
+      "subtopic": "A.1 Kinematics",
+      "difficulty": "beginner",
+      "tags": [
+        "Graphical",
+        "Numerical",
+        "Calculator Allowed"
+      ],
+      "type": "numerical",
+      "image": "assets/images/monster_graphs/kin-graph-5fa640b8.svg",
+      "question_text": "The velocity-time graph below represents a car's journey. What is the total distance traveled in 12 seconds?",
+      "answer": 138.0,
+      "unit": "m",
+      "tolerance": 0.1,
+      "markscheme_answer": "Distance = area of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$<br>Distance = $\\frac{1}{2} \\times 12 \\times 23 = 138.0$ m."
     }
   ]
 }
