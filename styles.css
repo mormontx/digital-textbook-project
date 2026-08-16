@@ -51,12 +51,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 18px; /* Added to increase all rem units by 2px */
+}
+
 body {
     font-family: var(--font-serif);
     color: #111111;
     line-height: 1.8;
     background-color: var(--background);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 

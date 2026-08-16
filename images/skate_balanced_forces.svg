@@ -1,107 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="system-ui, sans-serif">
-  
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
   <!-- Title -->
-  <text x="350" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Balanced vs. Unbalanced Forces</text>
+  <text x="350" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Balanced vs. Unbalanced Forces</text>
 
   <!-- Divider -->
-  <line x1="350" y1="40" x2="350" y2="310" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="350" y1="40" x2="350" y2="310" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="5,5"/>
 
   <!-- ===== LEFT: BALANCED ===== -->
-  <text x="175" y="54" text-anchor="middle" font-size="13" font-weight="600" fill="#5a7a5a">Balanced</text>
-  <text x="175" y="68" text-anchor="middle" font-size="10" fill="#888">F_net = 0, a = 0</text>
+  <text x="175" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Balanced</text>
+  <text x="175" y="68" text-anchor="middle" font-size="11" fill="#64748b">F<tspan baseline-shift="sub" font-size="8.5" font-weight="600">net</tspan> = 0, a = 0</text>
 
-  <!-- Box -->
-  <rect x="140" y="130" width="70" height="50" rx="3" fill="#ffffff" stroke="#999" stroke-width="1.5"/>
-  <text x="175" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
+  <!-- Box m -->
+  <rect x="140" y="130" width="70" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="175" y="161" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">m</text>
 
   <!-- Ground -->
-  <line x1="60" y1="183" x2="290" y2="183" stroke="#aaa" stroke-width="1.5"/>
-  <g stroke="#ccc" stroke-width="0.7">
-    <line x1="70"  y1="183" x2="62"  y2="191"/>
-    <line x1="90"  y1="183" x2="82"  y2="191"/>
-    <line x1="110" y1="183" x2="102" y2="191"/>
-    <line x1="130" y1="183" x2="122" y2="191"/>
-    <line x1="150" y1="183" x2="142" y2="191"/>
-    <line x1="170" y1="183" x2="162" y2="191"/>
-    <line x1="190" y1="183" x2="182" y2="191"/>
-    <line x1="210" y1="183" x2="202" y2="191"/>
-    <line x1="230" y1="183" x2="222" y2="191"/>
-    <line x1="250" y1="183" x2="242" y2="191"/>
-    <line x1="270" y1="183" x2="262" y2="191"/>
+  <line x1="60" y1="182" x2="290" y2="182" stroke="#64748b" stroke-width="2"/>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="70"  y1="182" x2="60"  y2="192"/>
+    <line x1="90"  y1="182" x2="80"  y2="192"/>
+    <line x1="110" y1="182" x2="100" y2="192"/>
+    <line x1="130" y1="182" x2="120" y2="192"/>
+    <line x1="150" y1="182" x2="140" y2="192"/>
+    <line x1="170" y1="182" x2="160" y2="192"/>
+    <line x1="190" y1="182" x2="180" y2="192"/>
+    <line x1="210" y1="182" x2="200" y2="192"/>
+    <line x1="230" y1="182" x2="220" y2="192"/>
+    <line x1="250" y1="182" x2="240" y2="192"/>
+    <line x1="270" y1="182" x2="260" y2="192"/>
   </g>
 
-  <!-- N up (same length as W) -->
-  <line x1="175" y1="126" x2="175" y2="84" stroke="#5a7a5a" stroke-width="2"/>
-  <polygon points="170,88 175,74 180,88" fill="#5a7a5a"/>
-  <text x="186" y="92" font-size="11" font-weight="600" fill="#5a7a5a">N</text>
+  <!-- N up: GREEN -->
+  <line x1="175" y1="126" x2="175" y2="82" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="169,86 175,70 181,86" fill="#16a34a"/>
+  <text x="187" y="90" font-size="13" font-weight="700" fill="#16a34a">N</text>
 
-  <!-- W down (same length as N) -->
-  <line x1="175" y1="187" x2="175" y2="229" stroke="#666" stroke-width="2"/>
-  <polygon points="170,225 175,239 180,225" fill="#666"/>
-  <text x="186" y="234" font-size="11" font-weight="600" fill="#666">W</text>
+  <!-- W down: PURPLE -->
+  <line x1="175" y1="186" x2="175" y2="230" stroke="#9333ea" stroke-width="2.5"/>
+  <polygon points="169,226 175,242 181,226" fill="#9333ea"/>
+  <text x="187" y="235" font-size="13" font-weight="700" fill="#9333ea">W</text>
 
-  <!-- f left (same length as F_push) -->
-  <line x1="136" y1="155" x2="96" y2="155" stroke="#a04040" stroke-width="2"/>
-  <polygon points="100,150 86,155 100,160" fill="#a04040"/>
-  <text x="80" y="152" text-anchor="end" font-size="11" font-weight="600" fill="#a04040">f</text>
+  <!-- f left: TURQUOISE -->
+  <line x1="136" y1="155" x2="94" y2="155" stroke="#0891b2" stroke-width="2.5"/>
+  <polygon points="98,149 82,155 98,161" fill="#0891b2"/>
+  <text x="74" y="152" text-anchor="end" font-size="13" font-weight="700" fill="#0891b2">f</text>
 
-  <!-- F_push right (same length as f) -->
-  <line x1="214" y1="155" x2="254" y2="155" stroke="#3a6a9a" stroke-width="2"/>
-  <polygon points="250,150 264,155 250,160" fill="#3a6a9a"/>
-  <text x="270" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
+  <!-- F right: PINK -->
+  <line x1="214" y1="155" x2="256" y2="155" stroke="#ec4899" stroke-width="2.5"/>
+  <polygon points="252,149 268,155 252,161" fill="#ec4899"/>
+  <text x="276" y="152" font-size="13" font-weight="700" fill="#ec4899">F</text>
 
-  <!-- Result -->
-  <rect x="75" y="255" width="200" height="48" rx="5" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="175" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#5a7a5a">Result: a = 0</text>
-  <text x="175" y="292" text-anchor="middle" font-size="10" fill="#666">Constant velocity (or at rest)</text>
+  <!-- Result Box -->
+  <rect x="75" y="255" width="200" height="50" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="175" y="275" text-anchor="middle" font-size="12" font-weight="700" fill="#16a34a">Result: a = 0</text>
+  <text x="175" y="293" text-anchor="middle" font-size="10.5" fill="#475569">Constant velocity (or at rest)</text>
+
 
   <!-- ===== RIGHT: UNBALANCED ===== -->
-  <text x="525" y="54" text-anchor="middle" font-size="13" font-weight="600" fill="#a04040">Unbalanced</text>
-  <text x="525" y="68" text-anchor="middle" font-size="10" fill="#888">F_net &gt; 0, a &gt; 0</text>
+  <text x="525" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#ec4899">Unbalanced</text>
+  <text x="525" y="68" text-anchor="middle" font-size="11" fill="#64748b">F<tspan baseline-shift="sub" font-size="8.5" font-weight="600">net</tspan> &gt; 0, a &gt; 0</text>
 
-  <!-- Box -->
-  <rect x="490" y="130" width="70" height="50" rx="3" fill="#ffffff" stroke="#999" stroke-width="1.5"/>
-  <text x="525" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#666">m</text>
+  <!-- Box m -->
+  <rect x="490" y="130" width="70" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="525" y="161" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">m</text>
 
   <!-- Ground -->
-  <line x1="410" y1="183" x2="640" y2="183" stroke="#aaa" stroke-width="1.5"/>
-  <g stroke="#ccc" stroke-width="0.7">
-    <line x1="420" y1="183" x2="412" y2="191"/>
-    <line x1="440" y1="183" x2="432" y2="191"/>
-    <line x1="460" y1="183" x2="452" y2="191"/>
-    <line x1="480" y1="183" x2="472" y2="191"/>
-    <line x1="500" y1="183" x2="492" y2="191"/>
-    <line x1="520" y1="183" x2="512" y2="191"/>
-    <line x1="540" y1="183" x2="532" y2="191"/>
-    <line x1="560" y1="183" x2="552" y2="191"/>
-    <line x1="580" y1="183" x2="572" y2="191"/>
-    <line x1="600" y1="183" x2="592" y2="191"/>
-    <line x1="620" y1="183" x2="612" y2="191"/>
+  <line x1="410" y1="182" x2="640" y2="182" stroke="#64748b" stroke-width="2"/>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="420" y1="182" x2="410" y2="192"/>
+    <line x1="440" y1="182" x2="430" y2="192"/>
+    <line x1="460" y1="182" x2="450" y2="192"/>
+    <line x1="480" y1="182" x2="470" y2="192"/>
+    <line x1="500" y1="182" x2="490" y2="192"/>
+    <line x1="520" y1="182" x2="510" y2="192"/>
+    <line x1="540" y1="182" x2="530" y2="192"/>
+    <line x1="560" y1="182" x2="550" y2="192"/>
+    <line x1="580" y1="182" x2="570" y2="192"/>
+    <line x1="600" y1="182" x2="590" y2="192"/>
+    <line x1="620" y1="182" x2="610" y2="192"/>
   </g>
 
-  <!-- N up -->
-  <line x1="525" y1="126" x2="525" y2="84" stroke="#5a7a5a" stroke-width="2"/>
-  <polygon points="520,88 525,74 530,88" fill="#5a7a5a"/>
-  <text x="536" y="92" font-size="11" font-weight="600" fill="#5a7a5a">N</text>
+  <!-- N up: GREEN -->
+  <line x1="525" y1="126" x2="525" y2="82" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="519,86 525,70 531,86" fill="#16a34a"/>
+  <text x="537" y="90" font-size="13" font-weight="700" fill="#16a34a">N</text>
 
-  <!-- W down -->
-  <line x1="525" y1="187" x2="525" y2="229" stroke="#666" stroke-width="2"/>
-  <polygon points="520,225 525,239 530,225" fill="#666"/>
-  <text x="536" y="234" font-size="11" font-weight="600" fill="#666">W</text>
+  <!-- W down: PURPLE -->
+  <line x1="525" y1="186" x2="525" y2="230" stroke="#9333ea" stroke-width="2.5"/>
+  <polygon points="519,226 525,242 531,226" fill="#9333ea"/>
+  <text x="537" y="235" font-size="13" font-weight="700" fill="#9333ea">W</text>
 
-  <!-- f left (SHORT) -->
-  <line x1="486" y1="155" x2="456" y2="155" stroke="#a04040" stroke-width="2"/>
-  <polygon points="460,150 446,155 460,160" fill="#a04040"/>
-  <text x="440" y="152" text-anchor="end" font-size="11" font-weight="600" fill="#a04040">f</text>
+  <!-- f left (SHORT): TURQUOISE -->
+  <line x1="486" y1="155" x2="454" y2="155" stroke="#0891b2" stroke-width="2.5"/>
+  <polygon points="458,149 442,155 458,161" fill="#0891b2"/>
+  <text x="434" y="152" text-anchor="end" font-size="13" font-weight="700" fill="#0891b2">f</text>
 
-  <!-- F_push right (LONG — bigger than friction) -->
-  <line x1="564" y1="155" x2="630" y2="155" stroke="#3a6a9a" stroke-width="2.5"/>
-  <polygon points="626,149 642,155 626,161" fill="#3a6a9a"/>
-  <text x="648" y="152" font-size="11" font-weight="600" fill="#3a6a9a">F</text>
+  <!-- F right (LONG): PINK -->
+  <line x1="564" y1="155" x2="632" y2="155" stroke="#ec4899" stroke-width="3"/>
+  <polygon points="628,148 646,155 628,162" fill="#ec4899"/>
+  <text x="654" y="152" font-size="13" font-weight="700" fill="#ec4899">F</text>
 
-  <!-- Result -->
-  <rect x="425" y="255" width="200" height="48" rx="5" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="525" y="274" text-anchor="middle" font-size="11" font-weight="600" fill="#a04040">Result: a = F_net / m</text>
-  <text x="525" y="292" text-anchor="middle" font-size="10" fill="#666">Object accelerates to the right</text>
+  <!-- Result Box: YELLOW/AMBER ACCENT -->
+  <rect x="425" y="255" width="200" height="50" rx="8" fill="#fefce8" stroke="#fde047" stroke-width="1.5"/>
+  <text x="525" y="275" text-anchor="middle" font-size="12" font-weight="700" fill="#ca8a04">Result: a = F<tspan baseline-shift="sub" font-size="9" font-weight="700">net</tspan> / m</text>
+  <text x="525" y="293" text-anchor="middle" font-size="10.5" fill="#854d0e">Object accelerates to the right</text>
 </svg>

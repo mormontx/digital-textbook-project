@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Tracker Activity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --panel-bg: #ffffff;
+            --panel-border: #cbd5e1;
+            --header-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            --accent-green: #16a34a;
+            --accent-pink: #ec4899;
+            --accent-purple: #9333ea;
+            --accent-blue: #2563eb;
+            --accent-yellow: #eab308;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --font-main: 'Sora', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            margin: 0 auto;
+            padding: 0.75rem;
+            max-width: 980px;
+        }
+
+        .container {
+            background: var(--panel-bg);
+            border: 2px solid var(--panel-border);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        :fullscreen .container, :-webkit-full-screen .container {
+            border-radius: 0;
+            border: none;
+            height: 100vh;
+            max-width: 100%;
+        }
+
+        :fullscreen body, :-webkit-full-screen body {
+            padding: 0;
+            max-width: 100%;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--header-gradient);
+            padding: 0.85rem 1.25rem;
+            border-bottom: 1px solid var(--panel-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .header h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .badge {
+            background: #dcfce7;
+            color: var(--accent-green);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .fullscreen-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #334155;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            font-family: var(--font-main);
+        }
+
+        .fullscreen-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+            color: #0f172a;
+        }
+
+        /* Parameter Sliders Bar */
+        .parameter-bar {
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .param-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .param-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        .param-slider {
+            flex: 1;
+            accent-color: var(--accent-purple);
+            cursor: pointer;
+        }
+
+        .param-val {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #0f172a;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        .workspace {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 1rem;
+            padding: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .workspace {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-box {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 290px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .playback-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            background: #ffffff;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        button.sim-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: var(--font-main);
+            transition: all 0.15s ease;
+        }
+
+        button.sim-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+            color: #0f172a;
+        }
+
+        button.sim-btn.primary {
+            background: var(--accent-green);
+            color: #ffffff;
+            border-color: var(--accent-green);
+        }
+
+        button.sim-btn.primary:hover {
+            background: #15803d;
+            border-color: #15803d;
+        }
+
+        button.sim-btn.purple {
+            background: var(--accent-purple);
+            color: #ffffff;
+            border-color: var(--accent-purple);
+        }
+
+        button.sim-btn.purple:hover {
+            background: #7e22ce;
+        }
+
+        .frame-indicator {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        /* Analytics Tab */
+        .analytics-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .graph-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .graph-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 145px;
+        }
+
+        .graph-card h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .graph-card canvas {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .data-table-container {
+            max-height: 140px;
+            overflow-y: auto;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        table.data-table th {
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+            padding: 5px 6px;
+            border-bottom: 1px solid #cbd5e1;
+            position: sticky;
+            top: 0;
+        }
+
+        table.data-table td {
+            padding: 3px 6px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+
+        table.data-table tr.active-row {
+            background: #fdf2f8;
+            font-weight: 600;
+            color: #be185d;
+        }
+
+        .findings-banner {
+            background: #faf5ff;
+            border: 1.5px solid #d8b4fe;
+            border-radius: 10px;
+            padding: 0.85rem 1.25rem;
+            margin: 0 1.25rem 1.25rem 1.25rem;
+            font-size: 0.9rem;
+            color: #581c87;
+            line-height: 1.6;
+        }
+
+        .findings-banner strong {
+            color: #6b21a8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="simContainer">
+    <div class="header">
+        <h2>
+            <span>📹 Interactive Video Tracker Experiment</span>
+        </h2>
+        <div class="header-actions">
+            <span class="badge">Kinematics Lab</span>
+            <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen">
+                <span id="fsIcon">⛶</span> <span id="fsText">Fullscreen</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Parameter Sliders -->
+    <div class="parameter-bar">
+        <div class="param-group">
+            <span class="param-label" style="color: var(--accent-pink);">Launch Speed (u<sub>x</sub>):</span>
+            <input type="range" class="param-slider" id="speedSlider" min="2.0" max="8.0" step="0.5" value="4.0">
+            <span class="param-val" id="speedVal">4.0 ms⁻¹</span>
+        </div>
+        <div class="param-group">
+            <span class="param-label" style="color: var(--accent-purple);">Release Height (h):</span>
+            <input type="range" class="param-slider" id="heightSlider" min="1.0" max="3.5" step="0.1" value="1.8">
+            <span class="param-val" id="heightVal">1.8 m</span>
+        </div>
+    </div>
+
+    <div class="workspace">
+        <!-- Left Column: Video Tracking Canvas -->
+        <div class="video-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #334155;">Simulated Video Feed (60 fps)</span>
+                <span id="coordDisplay" style="font-size: 0.8rem; font-family: monospace; color: #64748b;">Click on ball to mark point</span>
+            </div>
+
+            <div class="canvas-container" id="canvasContainer">
+                <canvas id="videoCanvas"></canvas>
+            </div>
+
+            <div class="playback-controls">
+                <div class="btn-group">
+                    <button class="sim-btn" id="prevBtn">⏮ Prev</button>
+                    <button class="sim-btn primary" id="playBtn">▶ Play</button>
+                    <button class="sim-btn" id="nextBtn">Next ⏭</button>
+                </div>
+                <div class="btn-group">
+                    <button class="sim-btn purple" id="autoTrackBtn">⚡ Auto-Track</button>
+                    <button class="sim-btn" id="resetBtn">↺ Clear</button>
+                </div>
+                <div class="frame-indicator">
+                    Time: <span id="timeLabel" style="font-weight: 700; color: #0f172a;">0.00 s</span>
+                </div>
+            </div>
+            <div style="font-size: 0.8rem; color: #64748b; text-align: center;">
+                💡 <em>Click the moving ball at each frame or press <strong>Auto-Track</strong> to capture all points instantly!</em>
+            </div>
+        </div>
+
+        <!-- Right Column: Live Graphs & Data Table -->
+        <div class="analytics-box">
+            <div class="graph-grid">
+                <!-- X vs T -->
+                <div class="graph-card">
+                    <h4><span>Horizontal: x(t)</span> <span style="color: var(--accent-pink);">Linear</span></h4>
+                    <canvas id="xGraph"></canvas>
+                </div>
+                <!-- Y vs T -->
+                <div class="graph-card">
+                    <h4><span>Vertical: y(t)</span> <span style="color: var(--accent-purple);">Parabolic</span></h4>
+                    <canvas id="yGraph"></canvas>
+                </div>
+                <!-- Vx vs T -->
+                <div class="graph-card">
+                    <h4><span>Velocity: v<sub>x</sub>(t)</span> <span style="color: var(--accent-pink);">Constant</span></h4>
+                    <canvas id="vxGraph"></canvas>
+                </div>
+                <!-- Vy vs T -->
+                <div class="graph-card">
+                    <h4><span>Velocity: v<sub>y</sub>(t)</span> <span style="color: var(--accent-purple);">Slope = -g</span></h4>
+                    <canvas id="vyGraph"></canvas>
+                </div>
+            </div>
+
+            <!-- Real-time Data Table -->
+            <div class="data-table-container">
+                <table class="data-table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>t (s)</th>
+                            <th>x (m)</th>
+                            <th>y (m)</th>
+                            <th>v<sub>x</sub> (ms⁻¹)</th>
+                            <th>v<sub>y</sub> (ms⁻¹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Findings Summary with Clean Clean Math HTML Rendering -->
+    <div class="findings-banner">
+        <strong>Physical Conclusion:</strong> 
+        Horizontal position grows linearly (<em>v</em><sub>x</sub> = <span id="summaryVx">4.0</span> ms<sup>-1</sup> = constant), while vertical position drops quadratically (<em>a</em><sub>y</sub> = -9.8 ms<sup>-2</sup> with <em>u</em><sub>y</sub> = 0). The two dimensions act completely independently!
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('videoCanvas');
+    const ctx = canvas.getContext('2d');
+    const xGraph = document.getElementById('xGraph');
+    const yGraph = document.getElementById('yGraph');
+    const vxGraph = document.getElementById('vxGraph');
+    const vyGraph = document.getElementById('vyGraph');
+
+    // Dynamic Physics parameters
+    const g = 9.8;
+    let u_x = 4.0; // m/s
+    let h0 = 1.8;  // height in meters
+    let totalTime = Math.sqrt((2 * h0) / g);
+    const dt = 0.05;
+    let numFrames = Math.max(2, Math.round(totalTime / dt) + 1);
+
+    let currentFrame = 0;
+    let isPlaying = false;
+    let playInterval = null;
+    let trackedPoints = [];
+
+    const speedSlider = document.getElementById('speedSlider');
+    const heightSlider = document.getElementById('heightSlider');
+    const speedVal = document.getElementById('speedVal');
+    const heightVal = document.getElementById('heightVal');
+    const summaryVx = document.getElementById('summaryVx');
+
+    function updatePhysicsParams() {
+        u_x = parseFloat(speedSlider.value);
+        h0 = parseFloat(heightSlider.value);
+        speedVal.textContent = u_x.toFixed(1) + ' ms⁻¹';
+        heightVal.textContent = h0.toFixed(1) + ' m';
+        summaryVx.textContent = u_x.toFixed(1);
+
+        totalTime = Math.sqrt((2 * h0) / g);
+        numFrames = Math.max(2, Math.round(totalTime / dt) + 1);
+
+        trackedPoints = [];
+        currentFrame = 0;
+        if (isPlaying) togglePlay();
+        render();
+    }
+
+    speedSlider.addEventListener('input', updatePhysicsParams);
+    heightSlider.addEventListener('input', updatePhysicsParams);
+
+    function resizeCanvas() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width * window.devicePixelRatio;
+        canvas.height = rect.height * window.devicePixelRatio;
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+        [xGraph, yGraph, vxGraph, vyGraph].forEach(gCanvas => {
+            const gRect = gCanvas.parentElement.getBoundingClientRect();
+            gCanvas.width = (gRect.width - 16) * window.devicePixelRatio;
+            gCanvas.height = (gRect.height - 30) * window.devicePixelRatio;
+        });
+        render();
+    }
+
+    function worldToScreen(wx, wy) {
+        const w = canvas.width / window.devicePixelRatio;
+        const h = canvas.height / window.devicePixelRatio;
+        const padding = 35;
+        const maxExpectedX = Math.max(3.0, u_x * totalTime * 1.15);
+        const maxExpectedY = Math.max(2.2, h0 * 1.15);
+        const sx = padding + (wx / maxExpectedX) * (w - padding * 2);
+        const sy = padding + ((maxExpectedY - wy) / maxExpectedY) * (h - padding * 2);
+        return { x: sx, y: sy };
+    }
+
+    function getTrueState(t) {
+        const x = u_x * t;
+        const y = Math.max(0, h0 - 0.5 * g * t * t);
+        const vx = u_x;
+        const vy = -g * t;
+        return { t, x, y, vx, vy };
+    }
+
+    function render() {
+        const w = canvas.width / window.devicePixelRatio;
+        const h = canvas.height / window.devicePixelRatio;
+        ctx.clearRect(0, 0, w, h);
+
+        // Draw background grid
+        ctx.strokeStyle = '#f1f5f9';
+        ctx.lineWidth = 1;
+        for (let x = 0; x < w; x += 25) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, h);
+            ctx.stroke();
+        }
+        for (let y = 0; y < h; y += 25) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(w, y);
+            ctx.stroke();
+        }
+
+        // Draw ground
+        const groundPos = worldToScreen(0, 0);
+        ctx.strokeStyle = '#94a3b8';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(10, groundPos.y + 10);
+        ctx.lineTo(w - 10, groundPos.y + 10);
+        ctx.stroke();
+
+        ctx.fillStyle = '#64748b';
+        ctx.font = '11px Sora, sans-serif';
+        ctx.fillText("Ground Level (y = 0m)", 15, groundPos.y + 24);
+
+        // Draw Cliff / Platform at release height
+        const startPos = worldToScreen(0, h0);
+        ctx.save();
+        ctx.fillStyle = '#e2e8f0';
+        ctx.strokeStyle = '#64748b';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.rect(0, startPos.y + 8, startPos.x, groundPos.y - startPos.y + 2);
+        ctx.fill();
+        ctx.stroke();
+
+        // Release label
+        ctx.fillStyle = '#475569';
+        ctx.font = '10px Sora, sans-serif';
+        ctx.fillText(`Cliff (h = ${h0.toFixed(1)}m)`, 8, startPos.y + 24);
+        ctx.restore();
+
+        // Draw tracked points trail
+        trackedPoints.forEach((p, idx) => {
+            const pos = worldToScreen(p.x, p.y);
+            ctx.fillStyle = '#22c55e';
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, 5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#15803d';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Crosshair
+            ctx.strokeStyle = 'rgba(34, 197, 94, 0.6)';
+            ctx.beginPath();
+            ctx.moveTo(pos.x - 7, pos.y);
+            ctx.lineTo(pos.x + 7, pos.y);
+            ctx.moveTo(pos.x, pos.y - 7);
+            ctx.lineTo(pos.x, pos.y + 7);
+            ctx.stroke();
+
+            ctx.fillStyle = '#166534';
+            ctx.font = '9px Sora, sans-serif';
+            ctx.fillText(`P${idx+1}`, pos.x + 8, pos.y - 4);
+        });
+
+        // Connect tracked points with yellow dashed line
+        if (trackedPoints.length > 1) {
+            ctx.beginPath();
+            ctx.setLineDash([5, 4]);
+            ctx.strokeStyle = '#eab308';
+            ctx.lineWidth = 2.5;
+            trackedPoints.forEach((p, i) => {
+                const pos = worldToScreen(p.x, p.y);
+                if (i === 0) ctx.moveTo(pos.x, pos.y);
+                else ctx.lineTo(pos.x, pos.y);
+            });
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+
+        // Draw Current Ball Position
+        const tNow = Math.min(totalTime, currentFrame * dt);
+        const curState = getTrueState(tNow);
+        const ballPos = worldToScreen(curState.x, curState.y);
+
+        // Ball
+        ctx.save();
+        ctx.shadowColor = 'rgba(147, 51, 234, 0.4)';
+        ctx.shadowBlur = 12;
+        ctx.fillStyle = '#9333ea';
+        ctx.beginPath();
+        ctx.arc(ballPos.x, ballPos.y, 8, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.restore();
+
+        // Vectors on ball: Horizontal in Light Pink, Vertical in Purple
+        ctx.save();
+        ctx.strokeStyle = '#ec4899';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(ballPos.x, ballPos.y);
+        ctx.lineTo(ballPos.x + curState.vx * 6, ballPos.y);
+        ctx.stroke();
+
+        if (curState.vy < 0) {
+            ctx.strokeStyle = '#9333ea';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.moveTo(ballPos.x, ballPos.y);
+            ctx.lineTo(ballPos.x, ballPos.y - curState.vy * 6);
+            ctx.stroke();
+        }
+        ctx.restore();
+
+        document.getElementById('timeLabel').textContent = tNow.toFixed(2) + ' s';
+        renderGraphs();
+        updateTable();
+    }
+
+    function renderGraphs() {
+        const maxX = Math.max(3.0, u_x * totalTime * 1.1);
+        const maxY = Math.max(2.0, h0 * 1.1);
+        const maxVx = Math.max(6.0, u_x * 1.2);
+        const maxVy = -(g * totalTime * 1.1);
+
+        drawSubGraph(xGraph, trackedPoints.map(p => ({ x: p.t, y: p.x })), totalTime * 1.1, maxX, '#ec4899', 't (s)', 'x (m)');
+        drawSubGraph(yGraph, trackedPoints.map(p => ({ x: p.t, y: p.y })), totalTime * 1.1, maxY, '#9333ea', 't (s)', 'y (m)');
+        drawSubGraph(vxGraph, trackedPoints.map(p => ({ x: p.t, y: p.vx })), totalTime * 1.1, maxVx, '#ec4899', 't (s)', 'vx (ms⁻¹)');
+        drawSubGraph(vyGraph, trackedPoints.map(p => ({ x: p.t, y: p.vy })), totalTime * 1.1, maxVy, '#9333ea', 't (s)', 'vy (ms⁻¹)');
+    }
+
+    function drawSubGraph(gCanvas, data, maxT, maxY, color, xLabel, yLabel) {
+        const gctx = gCanvas.getContext('2d');
+        const w = gCanvas.width / window.devicePixelRatio;
+        const h = gCanvas.height / window.devicePixelRatio;
+        gctx.clearRect(0, 0, w, h);
+
+        const padL = 28, padR = 10, padT = 10, padB = 20;
+
+        gctx.strokeStyle = '#cbd5e1';
+        gctx.lineWidth = 1;
+        gctx.beginPath();
+        gctx.moveTo(padL, padT);
+        gctx.lineTo(padL, h - padB);
+        gctx.lineTo(w - padR, h - padB);
+        gctx.stroke();
+
+        gctx.strokeStyle = '#f1f5f9';
+        for (let i = 1; i <= 3; i++) {
+            const gy = padT + (i / 4) * (h - padT - padB);
+            gctx.beginPath();
+            gctx.moveTo(padL, gy);
+            gctx.lineTo(w - padR, gy);
+            gctx.stroke();
+        }
+
+        if (data.length > 0) {
+            gctx.strokeStyle = color;
+            gctx.lineWidth = 2;
+            gctx.beginPath();
+            data.forEach((pt, i) => {
+                const px = padL + (pt.x / maxT) * (w - padL - padR);
+                let py;
+                if (maxY < 0) {
+                    py = padT + (pt.y / maxY) * (h - padT - padB);
+                } else {
+                    py = (h - padB) - (pt.y / maxY) * (h - padT - padB);
+                }
+                if (i === 0) gctx.moveTo(px, py);
+                else gctx.lineTo(px, py);
+            });
+            gctx.stroke();
+
+            data.forEach(pt => {
+                const px = padL + (pt.x / maxT) * (w - padL - padR);
+                let py;
+                if (maxY < 0) {
+                    py = padT + (pt.y / maxY) * (h - padT - padB);
+                } else {
+                    py = (h - padB) - (pt.y / maxY) * (h - padT - padB);
+                }
+                gctx.fillStyle = color;
+                gctx.beginPath();
+                gctx.arc(px, py, 3, 0, Math.PI * 2);
+                gctx.fill();
+            });
+        }
+    }
+
+    function updateTable() {
+        const tbody = document.getElementById('tableBody');
+        tbody.innerHTML = '';
+        trackedPoints.forEach((p, i) => {
+            const tr = document.createElement('tr');
+            if (p.frame === currentFrame) tr.classList.add('active-row');
+            tr.innerHTML = `
+                <td>${p.t.toFixed(2)}</td>
+                <td>${p.x.toFixed(2)}</td>
+                <td>${p.y.toFixed(2)}</td>
+                <td>${p.vx.toFixed(2)}</td>
+                <td>${p.vy.toFixed(2)}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function trackCurrent() {
+        const t = Math.min(totalTime, currentFrame * dt);
+        const st = getTrueState(t);
+        if (!trackedPoints.some(p => p.frame === currentFrame)) {
+            trackedPoints.push({ frame: currentFrame, ...st });
+            trackedPoints.sort((a, b) => a.frame - b.frame);
+        }
+    }
+
+    document.getElementById('autoTrackBtn').addEventListener('click', () => {
+        trackedPoints = [];
+        for (let f = 0; f < numFrames; f++) {
+            const t = Math.min(totalTime, f * dt);
+            trackedPoints.push({ frame: f, ...getTrueState(t) });
+        }
+        currentFrame = numFrames - 1;
+        render();
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+        trackedPoints = [];
+        currentFrame = 0;
+        if (isPlaying) togglePlay();
+        render();
+    });
+
+    function togglePlay() {
+        isPlaying = !isPlaying;
+        const btn = document.getElementById('playBtn');
+        if (isPlaying) {
+            btn.textContent = '⏸ Pause';
+            playInterval = setInterval(() => {
+                if (currentFrame < numFrames - 1) {
+                    currentFrame++;
+                    trackCurrent();
+                    render();
+                } else {
+                    togglePlay();
+                }
+            }, 250);
+        } else {
+            btn.textContent = '▶ Play';
+            clearInterval(playInterval);
+        }
+    }
+    document.getElementById('playBtn').addEventListener('click', togglePlay);
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        if (currentFrame < numFrames - 1) {
+            currentFrame++;
+            trackCurrent();
+            render();
+        }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        if (currentFrame > 0) {
+            currentFrame--;
+            render();
+        }
+    });
+
+    canvas.addEventListener('click', (e) => {
+        trackCurrent();
+        if (currentFrame < numFrames - 1) {
+            currentFrame++;
+        }
+        render();
+    });
+
+    // Fullscreen Toggle
+    const fsBtn = document.getElementById('fullscreenBtn');
+    const simContainer = document.getElementById('simContainer');
+
+    fsBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+            if (simContainer.requestFullscreen) {
+                simContainer.requestFullscreen();
+            } else if (simContainer.webkitRequestFullscreen) {
+                simContainer.webkitRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+        document.getElementById('fsIcon').textContent = isFs ? '✖' : '⛶';
+        document.getElementById('fsText').textContent = isFs ? 'Exit' : 'Fullscreen';
+        setTimeout(resizeCanvas, 100);
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('load', () => {
+        resizeCanvas();
+        trackCurrent();
+        render();
+    });
+</script>
+
+</body>
+</html>
