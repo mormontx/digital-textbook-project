@@ -1213,14 +1213,28 @@ function gradeAnswer(questionId) {
         const userIdx = parseInt(selected.value);
         const correctIdx = q.answer;
         
+        // Reset borders
+        const allOptions = document.querySelectorAll(`input[name="mcq-${questionId}"]`);
+        allOptions.forEach(opt => {
+            opt.parentElement.style.border = '1px solid rgba(76, 29, 149, 0.5)';
+            opt.parentElement.style.background = 'rgba(76, 29, 149, 0.2)';
+        });
+        
+        const correctInput = document.querySelector(`input[name="mcq-${questionId}"][value="${correctIdx}"]`);
+        
         if (userIdx === correctIdx) {
             feedbackEl.innerHTML = `<span style="color: #22c55e; font-weight: bold;">Correct!</span>`;
             selected.parentElement.style.border = '2px solid #22c55e';
-            selected.parentElement.style.background = 'rgba(34, 197, 94, 0.1)';
+            selected.parentElement.style.background = 'rgba(34, 197, 94, 0.2)';
         } else {
-            feedbackEl.innerHTML = '<span style="color: #ef4444; font-weight: bold;">Incorrect.</span> See Markscheme.';
+            feedbackEl.innerHTML = '<span style="color: #ef4444; font-weight: bold;">Incorrect.</span> The correct answer is highlighted in green.';
             selected.parentElement.style.border = '2px solid #ef4444';
-            selected.parentElement.style.background = 'rgba(239, 68, 68, 0.1)';
+            selected.parentElement.style.background = 'rgba(239, 68, 68, 0.2)';
+            
+            if (correctInput) {
+                correctInput.parentElement.style.border = '2px solid #22c55e';
+                correctInput.parentElement.style.background = 'rgba(34, 197, 94, 0.2)';
+            }
         }
     }
     
