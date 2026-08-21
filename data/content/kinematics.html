@@ -385,97 +385,122 @@ li {
 .anim-thermometer { animation: pulse-red 2s infinite; color: #ef4444; }
 .anim-dart { animation: fly-dart 2s infinite ease-in; color: #3b82f6; }
 
-/* Position Redesign Styles */
-.position-components {
-    display: flex;
+/* Position Section — Image-Driven Cards */
+.position-hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 2rem 0;
-    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .position-hero { grid-template-columns: 1fr; }
 }
 
-.position-step {
-    flex: 1;
-    min-width: 200px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.position-step:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-color: #cbd5e1;
-}
-
-.step-icon {
-    font-size: 1.75rem;
+.pos-card {
     background: #ffffff;
-    min-width: 48px;
-    height: 48px;
+    border: 2px solid #22c55e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
+    transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
+}
+.pos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.35);
+}
+.pos-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #22c55e;
+    filter: grayscale(100%) brightness(0.95) !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+.pos-card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.pos-card-number {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: #22c55e;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
 }
-
-.step-content strong {
-    display: block;
-    color: #1e293b;
-    font-size: 1.05rem;
-    margin-bottom: 0.25rem;
-}
-
-.step-content span {
-    color: #64748b;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    display: block;
-}
-
-/* Treasure Cards */
-.treasure-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border-top: 4px solid #8b5cf6; /* Purple accent */
-}
-
-.treasure-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-top-color: #39ff14; /* Toxic green on hover */
-}
-
-.treasure-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-.treasure-card h4 {
-    color: #1e293b;
-    font-size: 1.1rem;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
+.pos-card-body h4 {
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+    font-size: 1.15rem;
     font-weight: 700;
 }
-
-.treasure-card p {
-    color: #475569;
-    font-size: 0.95rem;
-    line-height: 1.6;
+.pos-card-body p {
     margin: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    font-weight: 400 !important;
+}
+
+/* Mad Driver Scenario Strip */
+.scenario-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem 0;
+}
+@media (max-width: 768px) {
+    .scenario-strip { grid-template-columns: 1fr; }
+}
+
+.scenario-card {
+    background: #ffffff;
+    border: 2px solid #22c55e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
+    transition: all 0.3s ease;
+}
+.scenario-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.35);
+}
+.scenario-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #22c55e;
+    filter: grayscale(100%) brightness(0.95) !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+.scenario-card-body {
+    padding: 1.25rem;
+}
+.scenario-card-body h4 {
+    color: #b91c1c;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.scenario-card-body p {
+    color: #4b5563;
+    font-size: 0.93rem;
+    line-height: 1.55;
+    margin: 0;
+    font-style: italic;
+    font-weight: 400 !important;
 }
 
 /* Chalkboard GIF Simulation */
@@ -736,49 +761,60 @@ img.color-exception {
 
 
 <h2>Position</h2>
-<p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body’s precise location in space. Defining a position accurately always demands three distinct pieces of information:</p>
+<p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body's precise location in space. Defining a position accurately always demands three distinct pieces of information:</p>
 
-<div class="position-components">
-    <div class="position-step">
-        <div class="step-icon">📍</div>
-        <div class="step-content">
-            <strong>1. Reference Point</strong>
-            <span>A baseline starting location</span>
+<!-- Three Pillars of Position — Karakalem Cards -->
+<div class="position-hero">
+    <div class="pos-card">
+        <img class="pos-card-img" src="images/karakalem_ref.jpg" alt="Pencil sketch of a glass jar on a table with a reference point X marked">
+        <div class="pos-card-body">
+            <span class="pos-card-number">1</span>
+            <h4>Reference Point</h4>
+            <p>A fixed baseline — the "starting X" from which all measurements begin. Without it, every instruction is meaningless.</p>
         </div>
     </div>
-    <div class="position-step">
-        <div class="step-icon">📏</div>
-        <div class="step-content">
-            <strong>2. Distance</strong>
-            <span>Physical separation from baseline</span>
+    <div class="pos-card">
+        <img class="pos-card-img" src="images/karakalem_dist.jpg" alt="Pencil sketch of a wooden ruler measuring between Point A and Point B">
+        <div class="pos-card-body">
+            <span class="pos-card-number">2</span>
+            <h4>Distance</h4>
+            <p>The physical separation between two points — how far apart they are. It is a scalar quantity (magnitude only).</p>
         </div>
     </div>
-    <div class="position-step">
-        <div class="step-icon">🧭</div>
-        <div class="step-content">
-            <strong>3. Direction</strong>
-            <span>Line of orientation</span>
+    <div class="pos-card">
+        <img class="pos-card-img" src="images/karakalem_dir.jpg" alt="Pencil sketch of a wooden signpost pointing West and East">
+        <div class="pos-card-body">
+            <span class="pos-card-number">3</span>
+            <h4>Direction</h4>
+            <p>The line of orientation relative to the baseline. Direction transforms a mere "distance" into a true position vector.</p>
         </div>
     </div>
 </div>
 
-<p>If any single one of these elements is missing, determining the object’s actual position becomes impossible. Imagine trying to find buried treasure:</p>
+<p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 0.5rem;">If any single one of these elements is missing, determining an object's actual position becomes impossible. Meet our friend, the <strong>Mad Driver</strong> — he'll show you exactly what goes wrong:</p>
 
-<div class="grid-3" style="margin-top: 1.5rem;">
-    <div class="treasure-card">
-        <div class="treasure-icon">🏝️</div>
-        <h4>Missing Reference Point</h4>
-        <p>"Walk 10 paces North... but from where?" Without a starting 'X', you are lost.</p>
+<!-- Mad Driver Scenarios -->
+<div class="scenario-strip">
+    <div class="scenario-card">
+        <img class="scenario-card-img" src="images/mad_driver_ref.jpg" alt="Mad Driver at the starting point sign">
+        <div class="scenario-card-body">
+            <h4>&#10060; No Reference Point</h4>
+            <p>"Drive 50 feet East... but from where?" Without a starting sign, the Mad Driver is completely lost before he even moves.</p>
+        </div>
     </div>
-    <div class="treasure-card">
-        <div class="treasure-icon">📜</div>
-        <h4>Missing Distance</h4>
-        <p>"Walk North from the palm tree... but how far?" You could walk forever!</p>
+    <div class="scenario-card">
+        <img class="scenario-card-img" src="images/mad_driver_dist.jpg" alt="Mad Driver with a measuring tape flying behind him">
+        <div class="scenario-card-body">
+            <h4>&#10060; No Distance</h4>
+            <p>"Drive East from the sign... but how far?" He could drive forever and never know when to stop!</p>
+        </div>
     </div>
-    <div class="treasure-card">
-        <div class="treasure-icon">⚓</div>
-        <h4>Missing Direction</h4>
-        <p>"Walk 10 paces from the tree..." You'd have to search a massive circle around the tree.</p>
+    <div class="scenario-card">
+        <img class="scenario-card-img" src="images/mad_driver_dir.jpg" alt="Mad Driver holding a compass looking confused">
+        <div class="scenario-card-body">
+            <h4>&#10060; No Direction</h4>
+            <p>"Drive 50 feet from the sign..." He'd have to search an entire circle around it. North? South? Who knows!</p>
+        </div>
     </div>
 </div>
 
