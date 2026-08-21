@@ -385,25 +385,97 @@ li {
 .anim-thermometer { animation: pulse-red 2s infinite; color: #ef4444; }
 .anim-dart { animation: fly-dart 2s infinite ease-in; color: #3b82f6; }
 
-/* Pirate Analogy Cards */
-/* Splash Pirate Cards */
-.pirate-card {
-    background: #eaffd9; /* light toxic green */
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    padding: 2rem 1.5rem;
-    box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.2), 0 4px 15px rgba(0,0,0,0.05);
-    animation: blob-morph 8s ease-in-out infinite alternate;
-    position: relative;
-    border: none;
-    text-align: center;
+/* Position Redesign Styles */
+.position-components {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
-.pirate-card h4 { color: #166534; margin-top: 0; margin-bottom: 0.5rem;}
-.pirate-card p { font-style: italic; color: #14532d; font-size: 0.95rem; margin: 0; font-weight: 400 !important;}
 
-@keyframes blob-morph {
-    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-    100% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+.position-step {
+    flex: 1;
+    min-width: 200px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.position-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #cbd5e1;
+}
+
+.step-icon {
+    font-size: 1.75rem;
+    background: #ffffff;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.step-content strong {
+    display: block;
+    color: #1e293b;
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.step-content span {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: block;
+}
+
+/* Treasure Cards */
+.treasure-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-top: 4px solid #8b5cf6; /* Purple accent */
+}
+
+.treasure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-top-color: #39ff14; /* Toxic green on hover */
+}
+
+.treasure-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.treasure-card h4 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.treasure-card p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Chalkboard GIF Simulation */
@@ -666,25 +738,46 @@ img.color-exception {
 <h2>Position</h2>
 <p><span class="glossary-term">Position<span class="glossary-tooltip"><span class="glossary-tooltip-title">Position</span>The exact location of an object in space relative to a reference point.<a href="#" class="glossary-tooltip-link">See entire glossary</a></span></span> serves as the measurement of a body’s precise location in space. Defining a position accurately always demands three distinct pieces of information:</p>
 
-<ul style="margin: 1.5rem 0 2rem 1.5rem; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-    <li><strong>1. Reference Point:</strong> A baseline starting location to work from.</li>
-    <li><strong>2. Distance:</strong> The physical separation from the baseline.</li>
-    <li><strong>3. Direction:</strong> The line of orientation relative to the baseline.</li>
-</ul>
+<div class="position-components">
+    <div class="position-step">
+        <div class="step-icon">📍</div>
+        <div class="step-content">
+            <strong>1. Reference Point</strong>
+            <span>A baseline starting location</span>
+        </div>
+    </div>
+    <div class="position-step">
+        <div class="step-icon">📏</div>
+        <div class="step-content">
+            <strong>2. Distance</strong>
+            <span>Physical separation from baseline</span>
+        </div>
+    </div>
+    <div class="position-step">
+        <div class="step-icon">🧭</div>
+        <div class="step-content">
+            <strong>3. Direction</strong>
+            <span>Line of orientation</span>
+        </div>
+    </div>
+</div>
 
 <p>If any single one of these elements is missing, determining the object’s actual position becomes impossible. Imagine trying to find buried treasure:</p>
 
-<div class="grid-3">
-    <div class="pirate-card">
-        <h4>🏴‍☠️ Missing Reference Point</h4>
+<div class="grid-3" style="margin-top: 1.5rem;">
+    <div class="treasure-card">
+        <div class="treasure-icon">🏝️</div>
+        <h4>Missing Reference Point</h4>
         <p>"Walk 10 paces North... but from where?" Without a starting 'X', you are lost.</p>
     </div>
-    <div class="pirate-card">
-        <h4>🏴‍☠️ Missing Distance</h4>
+    <div class="treasure-card">
+        <div class="treasure-icon">📜</div>
+        <h4>Missing Distance</h4>
         <p>"Walk North from the palm tree... but how far?" You could walk forever!</p>
     </div>
-    <div class="pirate-card">
-        <h4>🏴‍☠️ Missing Direction</h4>
+    <div class="treasure-card">
+        <div class="treasure-icon">⚓</div>
+        <h4>Missing Direction</h4>
         <p>"Walk 10 paces from the tree..." You'd have to search a massive circle around the tree.</p>
     </div>
 </div>
